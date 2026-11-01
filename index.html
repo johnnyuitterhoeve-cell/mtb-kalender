@@ -382,4 +382,38 @@
                                         <input required type="date" value={newDate} onChange={(e) => setNewDate(e.target.value)} className="w-full bg-slate-950 border border-slate-700 rounded p-2 text-sm text-slate-100" />
                                     </div>
                                     <div>
-                                        <label className="text-xs text
+                                        <label className="text-xs text-slate-400 block mb-1">Plaatsnaam:</label>
+                                        <input required type="text" value={newLocation} onChange={(e) => setNewLocation(e.target.value)} className="w-full bg-slate-950 border border-slate-700 rounded p-2 text-sm text-slate-100" placeholder="bijv. Breda" />
+                                    </div>
+                                    <div>
+                                        <label className="text-xs text-slate-400 block mb-1">Type:</label>
+                                        <select value={newType} onChange={(e) => setNewType(e.target.value)} className="w-full bg-slate-950 border border-slate-700 rounded p-2 text-sm text-slate-100">
+                                            <option value="MTB">MTB</option>
+                                            <option value="Gravel">Gravel</option>
+                                            <option value="Both">Beide (MTB & Gravel)</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label className="text-xs text-slate-400 block mb-1">Afstanden (komma-gescheiden):</label>
+                                        <input type="text" value={newDistances} onChange={(e) => setNewDistances(e.target.value)} className="w-full bg-slate-950 border border-slate-700 rounded p-2 text-sm text-slate-100" placeholder="35, 55, 85" />
+                                    </div>
+                                    <div>
+                                        <label className="text-xs text-slate-400 block mb-1">Link naar bron (URL):</label>
+                                        <input type="url" value={newSourceUrl} onChange={(e) => setNewSourceUrl(e.target.value)} className="w-full bg-slate-950 border border-slate-700 rounded p-2 text-sm text-slate-100" placeholder="https://..." />
+                                    </div>
+                                    <div className="flex justify-end gap-2 pt-2">
+                                        <button type="button" onClick={() => setShowAddModal(false)} className="px-4 py-2 bg-slate-800 text-slate-300 rounded-lg text-sm">Annuleren</button>
+                                        <button type="submit" className="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg text-sm font-semibold">Opslaan</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    )}
+                </div>
+            );
+        }
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>

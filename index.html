@@ -61,7 +61,7 @@
         function App() {
             const [homeTown, setHomeTown] = React.useState("'s-Heer Arendskerke");
             const [selectedDiscipline, setSelectedDiscipline] = React.useState('All');
-            const [selectedDate, setSelectedDate] = React.useState('All'); // Specifieke datum of maand
+            const [selectedDate, setSelectedDate] = React.useState('All'); 
             const [sortBy, setSortBy] = React.useState('date'); // 'date' of 'distance'
             const [maxDistance, setMaxDistance] = React.useState(250);
             const [minRouteLength, setMinRouteLength] = React.useState(0);
@@ -114,13 +114,10 @@
                 .filter(event => {
                     if (selectedDiscipline !== 'All' && event.type !== 'Both' && event.type !== selectedDiscipline) return false;
                     
-                    // Filter op specifieke datum of maand
                     if (selectedDate !== 'All') {
                         if (selectedDate.length === 10) {
-                            // Exacte datum (YYYY-MM-DD)
                             if (event.date !== selectedDate) return false;
                         } else {
-                            // Maand (YYYY-MM)
                             if (!event.date.startsWith(selectedDate)) return false;
                         }
                     }
@@ -143,7 +140,6 @@
                         const coordB = TOWN_COORDINATES[b.location];
                         const distA = coordA ? calculateDistance(homeCoords.lat, homeCoords.lng, coordA.lat, coordA.lng) : 9999;
                         const distB = coordB ? calculateDistance(homeCoords.lat, homeCoords.lng, coordB.lat, coordB.lng) : 9999;
-                        // Als afstand gelijk is, sorteer dan alsnog op datum
                         if (distA === distB) {
                             return new Date(a.date) - new Date(b.date);
                         }
@@ -190,6 +186,7 @@
                                 </select>
                             </div>
 
+                            {/* SORTEEROPTIE HERSTELD */}
                             <div>
                                 <label className="text-sm text-slate-300 font-medium block mb-2">Sorteervolgorde:</label>
                                 <select 
@@ -282,29 +279,26 @@
                                     className="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 placeholder-slate-500 focus:outline-none focus:border-emerald-500"
                                 />
                                 
-                                {/* Specifieke datumkiezer / maandselectie */}
-                                <div className="flex gap-2">
-                                    <select 
-                                        value={selectedDate}
-                                        onChange={(e) => setSelectedDate(e.target.value)}
-                                        className="bg-slate-900 border border-slate-800 text-emerald-400 font-semibold rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-emerald-500 cursor-pointer min-w-[190px]"
-                                    >
-                                        <option value="All">📅 Alle Data & Maanden</option>
-                                        <optgroup label="Specifieke Data">
-                                            <option value="2026-11-01">1 November 2026</option>
-                                            <option value="2026-11-08">8 November 2026</option>
-                                            <option value="2026-11-15">15 November 2026</option>
-                                            <option value="2026-11-22">22 November 2026</option>
-                                            <option value="2026-11-29">29 November 2026</option>
-                                        </optgroup>
-                                        <optgroup label="Hele Maanden">
-                                            <option value="2026-11">Heel November 2026</option>
-                                            <option value="2026-12">Heel December 2026</option>
-                                            <option value="2027-01">Heel Januari 2027</option>
-                                            <option value="2027-02">Heel Februari 2027</option>
-                                        </optgroup>
-                                    </select>
-                                </div>
+                                <select 
+                                    value={selectedDate}
+                                    onChange={(e) => setSelectedDate(e.target.value)}
+                                    className="bg-slate-900 border border-slate-800 text-emerald-400 font-semibold rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-emerald-500 cursor-pointer min-w-[190px]"
+                                >
+                                    <option value="All">📅 Alle Data & Maanden</option>
+                                    <optgroup label="Specifieke Data">
+                                        <option value="2026-11-01">1 November 2026</option>
+                                        <option value="2026-11-08">8 November 2026</option>
+                                        <option value="2026-11-15">15 November 2026</option>
+                                        <option value="2026-11-22">22 November 2026</option>
+                                        <option value="2026-11-29">29 November 2026</option>
+                                    </optgroup>
+                                    <optgroup label="Hele Maanden">
+                                        <option value="2026-11">Heel November 2026</option>
+                                        <option value="2026-12">Heel December 2026</option>
+                                        <option value="2027-01">Heel Januari 2027</option>
+                                        <option value="2027-02">Heel Februari 2027</option>
+                                    </optgroup>
+                                </select>
                             </div>
 
                             <div className="space-y-3">
@@ -388,38 +382,4 @@
                                         <input required type="date" value={newDate} onChange={(e) => setNewDate(e.target.value)} className="w-full bg-slate-950 border border-slate-700 rounded p-2 text-sm text-slate-100" />
                                     </div>
                                     <div>
-                                        <label className="text-xs text-slate-400 block mb-1">Plaatsnaam:</label>
-                                        <input required type="text" value={newLocation} onChange={(e) => setNewLocation(e.target.value)} className="w-full bg-slate-950 border border-slate-700 rounded p-2 text-sm text-slate-100" placeholder="bijv. Breda" />
-                                    </div>
-                                    <div>
-                                        <label className="text-xs text-slate-400 block mb-1">Type:</label>
-                                        <select value={newType} onChange={(e) => setNewType(e.target.value)} className="w-full bg-slate-950 border border-slate-700 rounded p-2 text-sm text-slate-100">
-                                            <option value="MTB">MTB</option>
-                                            <option value="Gravel">Gravel</option>
-                                            <option value="Both">Beide (MTB & Gravel)</option>
-                                        </select>
-                                    </div>
-                                    <div>
-                                        <label className="text-xs text-slate-400 block mb-1">Afstanden (komma-gescheiden):</label>
-                                        <input type="text" value={newDistances} onChange={(e) => setNewDistances(e.target.value)} className="w-full bg-slate-950 border border-slate-700 rounded p-2 text-sm text-slate-100" placeholder="35, 55, 85" />
-                                    </div>
-                                    <div>
-                                        <label className="text-xs text-slate-400 block mb-1">Link naar bron (URL):</label>
-                                        <input type="url" value={newSourceUrl} onChange={(e) => setNewSourceUrl(e.target.value)} className="w-full bg-slate-950 border border-slate-700 rounded p-2 text-sm text-slate-100" placeholder="https://..." />
-                                    </div>
-                                    <div className="flex justify-end gap-2 pt-2">
-                                        <button type="button" onClick={() => setShowAddModal(false)} className="px-4 py-2 bg-slate-800 text-slate-300 rounded-lg text-sm">Annuleren</button>
-                                        <button type="submit" className="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg text-sm font-semibold">Opslaan</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    )}
-                </div>
-            );
-        }
-
-        ReactDOM.render(<App />, document.getElementById('root'));
-    </script>
-</body>
-</html>
+                                        <label className="text-xs text

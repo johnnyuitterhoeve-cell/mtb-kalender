@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MTB & Gravel Toertochten Kalender</title>
-    <!-- Tailwind CSS voor styling -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- React & Babel voor draaien direct in de browser -->
-    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <!-- React 18 -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <!-- Babel voor JSX -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body class="bg-slate-950 text-slate-100 min-h-screen">
-    <div id="root"></div>
+    <div id="root">
+        <div style="display: flex; justify-content: center; align-items: center; height: 100vh; color: #34d399; font-family: sans-serif; font-size: 1.2rem;">
+            Kalender wordt geladen, sir... 🚴‍♂️
+        </div>
+    </div>
 
     <script type="text/babel">
         const TOWN_COORDINATES = {
@@ -76,7 +81,10 @@
                     .then(res => res.json())
                     .then(data => setEvents(data))
                     .catch(err => {
-                        console.log("Geen events.json gevonden", err);
+                        console.log("Geen events.json, fallback dataset", err);
+                        setEvents([
+                            { id: 'mb-01', title: "Toertocht Herentals", date: "2026-11-01", location: "Herentals", type: "Gravel", distances: [55, 75], organizer: "Mountainbike.be", sourceUrl: "https://www.mountainbike.be/toertochten-overzicht", price: "€ 7.00" }
+                        ]);
                     });
             }, []);
 
@@ -245,7 +253,6 @@
                                 </label>
                             </div>
 
-                            {/* DATABRONNEN LINKS ONDER */}
                             <div className="bg-slate-950 p-4 rounded-lg border border-slate-800 text-xs text-slate-400 space-y-2">
                                 <h3 className="font-bold text-slate-300 uppercase tracking-wider text-[10px] text-emerald-400">🌐 Synchronisatie Bronnen</h3>
                                 <ul className="space-y-1 list-disc pl-4 text-slate-400">
@@ -377,7 +384,7 @@
                                         </select>
                                     </div>
                                     <div>
-                                        <label className="text-xs text-slate-400 block multib-1">Afstanden (komma-gescheiden):</label>
+                                        <label className="text-xs text-slate-400 block mb-1">Afstanden (komma-gescheiden):</label>
                                         <input type="text" value={newDistances} onChange={(e) => setNewDistances(e.target.value)} className="w-full bg-slate-950 border border-slate-700 rounded p-2 text-sm text-slate-100" placeholder="35, 55, 85" />
                                     </div>
                                     <div>

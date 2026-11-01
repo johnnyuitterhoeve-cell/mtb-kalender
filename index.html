@@ -18,14 +18,14 @@
         </header>
 
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
-            <!-- Linkerzijbalk (Sorteervolgorde keuzemenu is hier verwijderd) -->
+            <!-- Linkerzijbalk -->
             <aside class="bg-slate-900 p-6 rounded-xl border border-slate-800 h-fit space-y-6">
                 <h2 class="text-xl font-semibold text-emerald-400">Filters & Instellingen</h2>
                 
                 <div>
                     <label class="block text-sm font-medium text-slate-300 mb-2">Jouw Woonplaats:</label>
                     <select id="originCity" class="w-full bg-slate-800 border border-slate-700 rounded-lg p-2.5 text-slate-200 focus:outline-none focus:border-emerald-500">
-                        <option value="s-Heer Arendskerke">'s-Heer Arendskerke</option>
+                        <option value="'s-Heer Arendskerke">'s-Heer Arendskerke</option>
                     </select>
                 </div>
 
@@ -41,7 +41,7 @@
 
             <!-- Hoofdinhoud -->
             <main class="lg:col-span-3 space-y-4">
-                <div class="flex gap-4 mb-6">
+                <div class="flex flex-col sm:flex-row gap-4 mb-6">
                     <input type="text" id="searchInput" placeholder="Zoek op plaatsnaam, titel of organisatie..." class="flex-1 bg-slate-900 border border-slate-800 rounded-lg px-4 py-3 text-slate-100 placeholder-slate-500 focus:outline-none focus:border-emerald-500">
                     <input type="date" id="dateInput" class="bg-slate-900 border border-slate-800 rounded-lg px-4 py-3 text-slate-100 focus:outline-none focus:border-emerald-500">
                 </div>
@@ -64,7 +64,7 @@
         };
 
         function calculateDistance(loc1, loc2) {
-            if (!coordinates[loc1] || !coordinates[loc2]) return Math.floor(Math.random() * 50) + 20; // fallback
+            if (!coordinates[loc1] || !coordinates[loc2]) return 35;
             const c1 = coordinates[loc1], c2 = coordinates[loc2];
             const R = 6371;
             const dLat = (c2.lat - c1.lat) * Math.PI / 180;
@@ -77,6 +77,7 @@
         }
 
         let allEvents = [];
+        let selectedType = 'Alle';
 
         async function loadEvents() {
             try {
@@ -85,6 +86,7 @@
                 renderEvents();
             } catch (error) {
                 console.error('Fout bij laden events:', error);
+                document.getElementById('eventsContainer').innerHTML = `<div class="text-center py-12 text-slate-500">Kan events.json niet laden.</div>`;
             }
         }
 
@@ -98,52 +100,8 @@
                 const matchText = (ev.title + ' ' + ev.location + ' ' + ev.organizer).toLowerCase();
                 const matchesSearch = matchText.includes(searchVal);
                 const matchesDate = !dateVal || ev.date === dateVal;
-                return matchesSearch && matchesDate;
+                const matchesType = selectedType === 'Alle' || ev.type === selectedType;
+                return matchesSearch && matchesDate && matchesType;
             });
 
-            // Automatische sortering op reisafstand vanaf gekozen woonplaats
-            filtered.sort((a, b) => {
-                const distA = calculateDistance(origin, a.location);
-                const distB = calculateDistance(origin, b.location);
-                return distA - distB;
-            });
-
-            if (filtered.length === 0) {
-                container.innerHTML = `<div class="text-center py-12 text-slate-500">Geen tochten gevonden voor deze selectie.</div>`;
-                return;
-            }
-
-            container.innerHTML = filtered.map(ev => {
-                const dist = calculateDistance(origin, ev.location);
-                return `
-                    <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 hover:border-slate-700 transition">
-                        <div class="space-y-2">
-                            <div class="flex items-center gap-3">
-                                <span class="px-2.5 py-1 rounded text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">${ev.type}</span>
-                                <span class="text-xs text-slate-400 flex items-center gap-1">📅 ${ev.date}</span>
-                                <span class="text-xs text-rose-400 font-medium bg-rose-500/10 px-2 py-0.5 rounded border border-rose-500/20">🚗 ${dist} km rijden</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-white">${ev.title}</h3>
-                            <div class="flex flex-wrap items-center gap-4 text-sm text-slate-400">
-                                <span>📍 ${ev.location}</span>
-                                <span>👥 ${ev.organizer}</span>
-                                <span class="text-emerald-400 font-medium">💶 ${ev.price}</span>
-                                <a href="${ev.sourceUrl}" target="_blank" class="text-indigo-400 hover:underline flex items-center gap-1">🔗 Bron bekijken</a>
-                            </div>
-                        </div>
-                        <div class="flex flex-wrap gap-2">
-                            ${ev.distances.map(d => `<span class="bg-slate-800 text-slate-300 text-xs px-3 py-1.5 rounded-lg border border-slate-700">${d} km</span>`).join('')}
-                        </div>
-                    </div>
-                `;
-            }).join('');
-        }
-
-        document.getElementById('searchInput').addEventListener('input', renderEvents);
-        document.getElementById('dateInput').addEventListener('input', renderEvents);
-        document.getElementById('originCity').addEventListener('change', renderEvents);
-
-        loadEvents();
-    </script>
-</body>
-</html>
+            //

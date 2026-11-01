@@ -1,5 +1,66 @@
 [
     {
+        "id": "mb-roosendaal-01",
+        "title": "Veldtoertocht Roosendaal",
+        "date": "2026-11-01",
+        "location": "Roosendaal",
+        "type": "MTB",
+        "distances": [
+            23,
+            33,
+            43
+        ],
+        "organizer": "WTC Roosendaal / Mountainbike.be",
+        "sourceUrl": "https://www.mountainbike.be/toertochten-overzicht",
+        "price": "€ 6.00"
+    },
+    {
+        "id": "mb-herentals-01",
+        "title": "Toertocht Herentals",
+        "date": "2026-11-01",
+        "location": "Herentals",
+        "type": "Gravel",
+        "distances": [
+            55,
+            75
+        ],
+        "organizer": "Mountainbike.be",
+        "sourceUrl": "https://www.mountainbike.be/toertochten-overzicht",
+        "price": "€ 7.00"
+    },
+    {
+        "id": "mb-minderhout-01",
+        "title": "Veldtoertocht Minderhout",
+        "date": "2026-11-01",
+        "location": "Minderhout",
+        "type": "MTB",
+        "distances": [
+            23,
+            47,
+            50
+        ],
+        "organizer": "Mountainbike.be",
+        "sourceUrl": "https://www.mountainbike.be/toertochten-overzicht",
+        "price": "€ 6.00"
+    },
+    {
+        "id": "mb-weelde-01",
+        "title": "KWB Mountainbiketocht Weelde",
+        "date": "2026-11-01",
+        "location": "Weelde",
+        "type": "MTB",
+        "distances": [
+            20,
+            28,
+            37,
+            45,
+            55
+        ],
+        "organizer": "Mountainbike.be",
+        "sourceUrl": "https://www.mountainbike.be/toertochten-overzicht",
+        "price": "€ 5.00"
+    },
+    {
         "id": "mb-01",
         "title": "Toertocht Herentals",
         "date": "2026-11-01",

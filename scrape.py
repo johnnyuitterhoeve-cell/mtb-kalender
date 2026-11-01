@@ -16,7 +16,12 @@ from urllib.parse import urljoin
 import requests
 from bs4 import BeautifulSoup
 
-HEADERS = {"User-Agent": "mtb-gravel-kalender/1.0 (persoonlijk project, 1 verzoek per seconde)"}
+HEADERS = {"User-Agent": "mtb-gravel-kalender/1.0 (persoonlijk project, 1 verzoek per seconde)"}  # voor Nominatim
+BROWSER_HEADERS = {
+    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml",
+    "Accept-Language": "nl-NL,nl;q=0.9",
+}
 WEEKS_AHEAD = 12
 EVENTS_FILE = "events.json"
 GEO_FILE = "geocache.json"
@@ -108,10 +113,13 @@ def mountainbike_be():
         y, w, _ = (monday + timedelta(weeks=i)).isocalendar()
         url = f"https://www.mountainbike.be/toertochten-overzicht/{y}W{w:02d}"
         try:
-            r = requests.get(url, headers=HEADERS, timeout=30)
+            r = requests.get(url, headers=BROWSER_HEADERS, timeout=30)
             r.raise_for_status()
         except requests.RequestException as e:
             print(f"  {y}W{w:02d}: mislukt ({e})")
+            if getattr(e, "response", None) is not None and e.response.status_code in (401, 403, 429):
+                print("  De site weigert de toegang; verdere weken worden overgeslagen.")
+                break
             continue
         soup = BeautifulSoup(r.text, "html.parser")
         count = 0

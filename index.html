@@ -59,14 +59,9 @@
                 </div>
 
                 <div class="pt-6 border-t border-slate-800 space-y-2">
-                    <h3 class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Gekoppelde bronnen</h3>
-                    <ul class="text-xs text-slate-400 space-y-1">
-                        <li>• Mountainbike.be</li>
-                        <li>• Fietssport.nl</li>
-                        <li>• MTB-You</li>
-                        <li>• GoDare</li>
-                        <li>• GravelBike.nl</li>
-                    </ul>
+                    <h3 class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Bronnen</h3>
+                    <ul id="sourceList" class="text-xs text-slate-400 space-y-1.5"></ul>
+                    <p id="sourceUpdated" class="text-xs text-slate-500 pt-1"></p>
                 </div>
             </aside>
 
@@ -174,7 +169,7 @@
                 organizer: e.organizer || e.organisator || '',
                 sourceUrl: e.sourceUrl || e.url || '#',
                 price: e.price || e.prijs || '',
-                lat: e.lat, lon: e.lon
+                lat: e.lat, lon: e.lon, source: e.source || ''
             };
         }
 
@@ -375,6 +370,48 @@
             }).join('');
         }
 
+        // ---------- Bronstatus ----------
+        var KNOWN_SOURCES = ['Mountainbike.be', 'Fietssport.nl', 'MTB-You', 'GoDare', 'GravelBike.nl'];
+        var sourceInfo = null;
+
+        function renderSources() {
+            var html = KNOWN_SOURCES.map(function (name) {
+                var info = sourceInfo && sourceInfo.sources.filter(function (s) { return s.name === name; })[0];
+                var dot = 'bg-slate-600', text = 'geen gegevens', title = '';
+                if (info && info.status === 'ok') {
+                    dot = 'bg-emerald-500'; text = info.count + ' tochten';
+                } else if (info && info.status === 'fout') {
+                    dot = 'bg-rose-500';
+                    text = /40[13]|429/.test(info.message || '') ? 'geen toegang' : 'niet beschikbaar';
+                    title = info.message || '';
+                } else if (info) {
+                    text = 'nog niet gekoppeld';
+                } else {
+                    var n = allEvents.filter(function (e) { return e.source === name; }).length;
+                    if (n) { dot = 'bg-emerald-500'; text = n + ' tochten'; }
+                }
+                return '<li class="flex items-center gap-2" title="' + esc(title) + '">' +
+                    '<span class="inline-block w-2 h-2 rounded-full ' + dot + '"></span>' +
+                    '<span class="text-slate-300">' + esc(name) + '</span>' +
+                    '<span class="ml-auto text-slate-500">' + esc(text) + '</span></li>';
+            }).join('');
+            $('sourceList').innerHTML = html;
+            var up = '';
+            if (sourceInfo && sourceInfo.updated) {
+                var d = new Date(sourceInfo.updated);
+                if (!isNaN(d)) up = 'Laatst bijgewerkt: ' + d.toLocaleString('nl-NL', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
+            }
+            $('sourceUpdated').textContent = up;
+        }
+
+        function loadSources() {
+            return fetch('sources.json?v=' + Date.now(), { cache: 'no-store' })
+                .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+                .then(function (j) { if (j && Array.isArray(j.sources)) sourceInfo = j; })
+                .catch(function () { /* geen bronstatus beschikbaar */ })
+                .then(renderSources);
+        }
+
         // ---------- events.json laden ----------
         function loadEvents() {
             return fetch('events.json?v=' + Date.now(), { cache: 'no-store' })
@@ -437,7 +474,8 @@
         // Eerst direct tonen met fallback, daarna vervangen door events.json
         $('originLabel').textContent = 'Afstanden vanaf: ' + home.label;
         renderEvents();
-        loadEvents();
+        renderSources();
+        loadEvents().then(loadSources);
     })();
     </script>
 </body>

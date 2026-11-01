@@ -34,6 +34,7 @@ PROVINCES = {
     "Ovl": ("Oost-Vlaanderen", "be"), "Vlb": ("Vlaams-Brabant", "be"),
     "Wbr": ("Waals-Brabant", "be"), "Wvl": ("West-Vlaanderen", "be"),
     "Lim": ("Limburg", "be,nl"),
+    "BL": (None, "be,nl,de"),
     "Dre": ("Drenthe", "nl"), "Fle": ("Flevoland", "nl"), "Fri": ("Friesland", "nl"),
     "Gel": ("Gelderland", "nl"), "Gdl": ("Gelderland", "nl"), "Gro": ("Groningen", "nl"),
     "Nbr": ("Noord-Brabant", "nl"), "Nho": ("Noord-Holland", "nl"), "Ove": ("Overijssel", "nl"),
@@ -142,9 +143,124 @@ def mountainbike_be():
     return events
 
 
+# ---------- bron: Fietssport.nl ----------
+FS_URL = "https://www.fietssport.nl/toertochten"
+FS_HREF_RE = re.compile(r"/toertochten/(\d+)/")
+FS_DATE_RE = re.compile(
+    r"^(?:(Vandaag)|(Morgen)|(?:Maan|Dins|Woens|Donder|Vrij|Zater|Zon)dag\s+(\d{1,2})\s+([A-Za-z]{3})\.?(?:\s+(\d{4}))?)\s+",
+    re.IGNORECASE,
+)
+MONTHS = {"jan": 1, "feb": 2, "mrt": 3, "apr": 4, "mei": 5, "jun": 6,
+          "jul": 7, "aug": 8, "sep": 9, "okt": 10, "nov": 11, "dec": 12}
+# Provinciecodes van Fietssport -> codes zoals Mountainbike.be (zo delen ze de coördinaten-cache)
+FS_PROV = {"NB": "Nbr", "OV": "Ove", "LB": "Lim", "NH": "Nho", "DR": "Dre", "GD": "Gel",
+           "GR": "Gro", "FL": "Fle", "ZL": "Zee", "FR": "Fri", "UT": "Utr", "ZH": "Zho", "BL": "BL"}
+PARTICLES = {"de", "den", "het", "ter", "te", "op", "aan", "st.", "sint", "nabij", "'t"}
+
+
+def fs_date(m, today):
+    if m.group(1):
+        return today
+    if m.group(2):
+        return today + timedelta(days=1)
+    day, mon, year = int(m.group(3)), MONTHS.get(m.group(4).lower()), m.group(5)
+    if not mon:
+        return None
+    try:
+        if year:
+            return date(int(year), mon, day)
+        d = date(today.year, mon, day)
+        return d if d >= today - timedelta(days=1) else date(today.year + 1, mon, day)
+    except ValueError:
+        return None
+
+
+def split_name(strings, name_part, prov_code):
+    # Eerst proberen met de losse tekstdelen van de link (plaats staat dan los van de titel)
+    for i, s in enumerate(strings):
+        if "(" + prov_code + ")" in s:
+            s2 = re.sub(r"\s*\([A-Z]{2}\)\s*$", "", s).strip()
+            if not s2 and i > 0:
+                s2 = strings[i - 1].strip()
+            if s2 and s2 != name_part and name_part.endswith(s2):
+                return name_part[:-len(s2)].strip(), s2
+            break
+    # Anders: de plaats is het laatste woord (of de laatste twee bij "De Lutte", "Den Hoorn")
+    words = name_part.split()
+    n = 2 if len(words) >= 3 and words[-2].lower() in PARTICLES else 1
+    place = " ".join(words[-n:])
+    title = " ".join(words[:-n]) or name_part
+    return title, place
+
+
+def parse_fs_entry(strings, href, today):
+    # Geeft een event, "SKIP" (racefiets/recreatief) of None (niet herkend)
+    hm = FS_HREF_RE.search(href)
+    full = re.sub(r"\s+", " ", " ".join(strings)).strip()
+    dm = FS_DATE_RE.match(full)
+    if not hm or not dm:
+        return None
+    d = fs_date(dm, today)
+    rest = full[dm.end():]
+    if d is None or "•" not in rest:
+        return None
+    left, right = rest.split("•", 1)
+    left = left.strip()
+    pm = re.search(r"\(([A-Z]{2})\)\s*$", left)
+    if not pm:
+        return None
+    code = pm.group(1)
+    name_part = left[:pm.start()].strip()
+
+    tm = re.match(r"\s*(Mountainbike|Gravelbike|Challenge MTB)", right)
+    if not tm:
+        return "SKIP"
+    kind = "Gravel" if tm.group(1) == "Gravelbike" else "MTB"
+    distances = list(dict.fromkeys(int(x) for x in re.findall(r"(\d+)\s*km", right)))
+    title, place = split_name(strings, name_part, code)
+    return {
+        "id": "fs-" + hm.group(1),
+        "title": title,
+        "date": d.isoformat(),
+        "location": place,
+        "type": kind,
+        "distances": distances,
+        "organizer": "Fietssport.nl",
+        "sourceUrl": urljoin("https://www.fietssport.nl", href),
+        "price": "",
+        "source": "Fietssport.nl",
+        "_prov": FS_PROV.get(code, code),
+    }
+
+
+def fietssport_nl():
+    r = requests.get(FS_URL, headers=BROWSER_HEADERS, timeout=30)
+    r.raise_for_status()
+    soup = BeautifulSoup(r.text, "html.parser")
+    today = date.today()
+    events, seen, unparsed, skipped = [], set(), [], 0
+    for a in soup.select('a[href*="/toertochten/"]'):
+        href = a.get("href", "")
+        if not FS_HREF_RE.search(href):
+            continue
+        strings = list(a.stripped_strings)
+        ev = parse_fs_entry(strings, href, today)
+        if ev == "SKIP":
+            skipped += 1
+        elif ev is None:
+            unparsed.append(" ".join(strings)[:120])
+        elif ev["id"] not in seen and ev["date"] >= today.isoformat():
+            seen.add(ev["id"])
+            events.append(ev)
+    print(f"  {len(events)} MTB/gravel-tochten, {skipped} racefiets/recreatief overgeslagen")
+    if unparsed:
+        print(f"  {len(unparsed)} regels niet herkend, bijvoorbeeld: {unparsed[:3]}")
+    return events
+
+
 SOURCES = {
     "Mountainbike.be": mountainbike_be,
-    # "Fietssport.nl": fietssport_nl,   # nog te bouwen
+    "Fietssport.nl": fietssport_nl,
     # "MTB-You": mtb_you,               # nog te bouwen
     # "GoDare": godare,                 # nog te bouwen
     # "GravelBike.nl": gravelbike_nl,   # nog te bouwen
@@ -164,6 +280,7 @@ GEO = load_json(GEO_FILE, {})
 
 
 def geocode(place, prov):
+    place = re.sub(r"^nabij\s+", "", place, flags=re.IGNORECASE)
     key = f"{place}|{prov}"
     if key in GEO:
         return GEO[key]
@@ -204,11 +321,17 @@ def main():
     if not events:
         sys.exit("Geen enkele tocht opgehaald; events.json blijft ongewijzigd.")
 
-    seen, unique = set(), []
+    # Dezelfde tocht op meerdere sites: zelfde dag en plaats, en dezelfde titel of
+    # hetzelfde type met een gemeenschappelijke afstand. De eerste bron wint.
+    unique = []
     for ev in events:
-        key = (ev["title"].lower(), ev["date"], ev["location"].lower())
-        if key not in seen:
-            seen.add(key)
+        dup = any(
+            u["date"] == ev["date"] and u["location"].lower() == ev["location"].lower()
+            and (u["title"].lower() == ev["title"].lower()
+                 or (u["type"] == ev["type"] and set(u["distances"]) & set(ev["distances"])))
+            for u in unique
+        )
+        if not dup:
             unique.append(ev)
 
     for ev in unique:

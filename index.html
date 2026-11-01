@@ -10,28 +10,25 @@
     <div class="max-w-7xl mx-auto px-4 py-8">
         <header class="flex justify-between items-center mb-8 border-b border-slate-800 pb-4">
             <div>
-                <h1 class="text-3xl font-bold flex items-center gap-2">
-                    <span>🚴</span> MTB & Gravel Kalender
-                </h1>
+                <h1 class="text-3xl font-bold flex items-center gap-2"><span>🚴</span> MTB & Gravel Kalender</h1>
                 <p class="text-slate-400 text-sm mt-1">Automatisch gesynchroniseerd met al je favoriete websites</p>
             </div>
         </header>
 
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
-            <!-- Linkerzijbalk met filters én websites onderaan -->
             <aside class="bg-slate-900 p-6 rounded-xl border border-slate-800 h-fit space-y-6 flex flex-col justify-between">
                 <div class="space-y-6">
                     <h2 class="text-xl font-semibold text-emerald-400">Filters & Instellingen</h2>
-                    
+
                     <div>
-                        <label class="block text-sm font-medium text-slate-300 mb-2">Jouw Woonplaats:</label>
+                        <label for="originCity" class="block text-sm font-medium text-slate-300 mb-2">Jouw woonplaats:</label>
                         <select id="originCity" class="w-full bg-slate-800 border border-slate-700 rounded-lg p-2.5 text-slate-200 focus:outline-none focus:border-emerald-500">
                             <option value="'s-Heer Arendskerke">'s-Heer Arendskerke</option>
                         </select>
                     </div>
 
                     <div>
-                        <label class="block text-sm font-medium text-slate-300 mb-2">Type Fiets:</label>
+                        <span class="block text-sm font-medium text-slate-300 mb-2">Type fiets:</span>
                         <div id="typeFilters" class="flex gap-2">
                             <button class="type-btn px-4 py-2 rounded-lg text-sm font-medium bg-emerald-600 text-white" data-type="Alle">Alle</button>
                             <button class="type-btn px-4 py-2 rounded-lg text-sm font-medium bg-slate-800 text-slate-300 hover:bg-slate-700" data-type="MTB">MTB</button>
@@ -40,24 +37,23 @@
                     </div>
 
                     <div>
-                        <label class="block text-sm font-medium text-slate-300 mb-2">Max. Reisafstand: <span id="maxDistVal" class="text-emerald-400">250</span> km</label>
+                        <label for="maxDistance" class="block text-sm font-medium text-slate-300 mb-2">Max. reisafstand: <span id="maxDistVal" class="text-emerald-400">250</span> km</label>
                         <input type="range" id="maxDistance" min="10" max="250" value="250" class="w-full accent-emerald-500 cursor-pointer">
                     </div>
 
                     <div>
-                        <label class="block text-sm font-medium text-slate-300 mb-2">Min. Parcourslengte: <span id="minDistVal" class="text-emerald-400">Alle</span></label>
+                        <label for="minDistance" class="block text-sm font-medium text-slate-300 mb-2">Min. parcourslengte: <span id="minDistVal" class="text-emerald-400">Alle</span></label>
                         <input type="range" id="minDistance" min="0" max="100" value="0" step="5" class="w-full accent-emerald-500 cursor-pointer">
                     </div>
 
                     <div class="flex items-center gap-3 pt-2 border-t border-slate-800">
                         <input type="checkbox" id="favoritesOnly" class="w-4 h-4 accent-emerald-500 rounded cursor-pointer">
-                        <label for="favoritesOnly" class="text-sm font-medium text-slate-300 cursor-pointer">⭐ Alleen Favorieten tonen</label>
+                        <label for="favoritesOnly" class="text-sm font-medium text-slate-300 cursor-pointer">⭐ Alleen favorieten tonen</label>
                     </div>
                 </div>
 
-                <!-- Bronplatforms onderaan de zijbalk -->
                 <div class="pt-6 border-t border-slate-800 space-y-2">
-                    <h3 class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Gekoppelde Bronnen</h3>
+                    <h3 class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Gekoppelde bronnen</h3>
                     <ul class="text-xs text-slate-400 space-y-1">
                         <li>• Mountainbike.be</li>
                         <li>• Fietssport.nl</li>
@@ -68,245 +64,287 @@
                 </div>
             </aside>
 
-            <!-- Hoofdinhoud -->
             <main class="lg:col-span-3 space-y-4">
-                <div class="flex flex-col sm:flex-row gap-4 mb-6">
+                <div class="flex flex-col sm:flex-row gap-4 mb-2">
                     <input type="text" id="searchInput" placeholder="Zoek op plaatsnaam, titel of organisatie..." class="flex-1 bg-slate-900 border border-slate-800 rounded-lg px-4 py-3 text-slate-100 placeholder-slate-500 focus:outline-none focus:border-emerald-500">
                     <input type="date" id="dateInput" class="bg-slate-900 border border-slate-800 rounded-lg px-4 py-3 text-slate-100 focus:outline-none focus:border-emerald-500">
                 </div>
-
-                <div id="eventsContainer" class="space-y-4">
-                    <!-- Evenementen worden hier dynamisch ingeladen -->
-                </div>
+                <p id="statusLine" class="text-xs text-slate-500"></p>
+                <div id="eventsContainer" class="space-y-4"></div>
             </main>
         </div>
     </div>
 
     <script>
-        const coordinates = {
+    (function () {
+        'use strict';
+
+        // ---------- Coördinaten (lat/lon) ----------
+        var coordinates = {
             "'s-Heer Arendskerke": { lat: 51.488, lon: 3.864 },
             "Roosendaal": { lat: 51.532, lon: 4.462 },
-            "Herentals": { lat: 51.178, lon: 4.707 },
+            "Herentals": { lat: 51.178, lon: 4.833 },
             "Minderhout": { lat: 51.391, lon: 4.764 },
             "Weelde": { lat: 51.428, lon: 4.939 },
-            "Baardegem": { lat: 50.950, lon: 4.133 },
-            "Moerzeke": { lat: 51.055, lon: 4.172 },
-            "Hoeilaart": { lat: 50.743, lon: 4.472 }
+            "Baardegem": { lat: 50.950, lon: 4.075 },
+            "Moerzeke": { lat: 51.055, lon: 4.130 },
+            "Hoeilaart": { lat: 50.743, lon: 4.472 },
+            "As": { lat: 50.967, lon: 5.583 },
+            "Sint-Martens-Latem": { lat: 51.017, lon: 3.633 },
+            "Aarschot": { lat: 50.983, lon: 4.833 },
+            "Ieper": { lat: 50.850, lon: 2.883 },
+            "Lochristi": { lat: 51.093, lon: 3.833 },
+            "Helchteren": { lat: 51.067, lon: 5.367 },
+            "Lille": { lat: 51.243, lon: 4.817 },
+            "Oostakker": { lat: 51.083, lon: 3.783 },
+            "Rhenen": { lat: 51.959, lon: 5.567 }
         };
 
-        function calculateDistance(loc1, loc2) {
-            if (!coordinates[loc1] || !coordinates[loc2]) return 45;
-            const c1 = coordinates[loc1], c2 = coordinates[loc2];
-            const R = 6371;
-            const dLat = (c2.lat - c1.lat) * Math.PI / 180;
-            const dLon = (c2.lon - c1.lon) * Math.PI / 180;
-            const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
-                      Math.cos(c1.lat * Math.PI / 180) * Math.cos(c2.lat * Math.PI / 180) *
-                      Math.sin(dLon/2) * Math.sin(dLon/2);
-            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-            return Math.round(R * c * 1.3);
+        // ---------- Fallback-data (wordt gebruikt als events.json niet laadt) ----------
+        var D = '2026-11-01', MB = 'https://www.mountainbike.be/toertochten-overzicht';
+        function ev(id, title, date, location, type, distances, organizer, url, price) {
+            return { id: id, title: title, date: date, location: location, type: type,
+                     distances: distances, organizer: organizer, sourceUrl: url, price: price };
         }
-
-        let allEvents = [
-            {
-                "id": "mb-roosendaal-01",
-                "title": "Veldtoertocht Roosendaal",
-                "date": "2026-11-01",
-                "location": "Roosendaal",
-                "type": "MTB",
-                "distances": [23, 33, 43],
-                "organizer": "WTC Roosendaal",
-                "sourceUrl": "https://www.mountainbike.be/toertochten-overzicht",
-                "price": "€ 6.00"
-            },
-            {
-                "id": "mb-herentals-01",
-                "title": "Toertocht Herentals",
-                "date": "2026-11-01",
-                "location": "Herentals",
-                "type": "Gravel",
-                "distances": [55, 75],
-                "organizer": "Mountainbike.be",
-                "sourceUrl": "https://www.mountainbike.be/toertochten-overzicht",
-                "price": "€ 7.00"
-            },
-            {
-                "id": "mb-minderhout-01",
-                "title": "Veldtoertocht Minderhout",
-                "date": "2026-11-01",
-                "location": "Minderhout",
-                "type": "MTB",
-                "distances": [23, 47, 50],
-                "organizer": "Mountainbike.be",
-                "sourceUrl": "https://www.mountainbike.be/toertochten-overzicht",
-                "price": "€ 6.00"
-            },
-            {
-                "id": "mb-weelde-01",
-                "title": "KWB Mountainbiketocht Weelde",
-                "date": "2026-11-01",
-                "location": "Weelde",
-                "type": "MTB",
-                "distances": [20, 28, 37, 45, 55],
-                "organizer": "Mountainbike.be",
-                "sourceUrl": "https://www.mountainbike.be/toertochten-overzicht",
-                "price": "€ 5.00"
-            },
-            {
-                "id": "mb-baardegem-01",
-                "title": "Offroad Tocht Baardegem",
-                "date": "2026-11-01",
-                "location": "Baardegem",
-                "type": "MTB",
-                "distances": [25, 40, 55],
-                "organizer": "Mountainbike.be",
-                "sourceUrl": "https://www.mountainbike.be/toertochten-overzicht",
-                "price": "€ 6.00"
-            },
-            {
-                "id": "mb-moerzeke-01",
-                "title": "Scheldeland Veldtoertocht",
-                "date": "2026-11-01",
-                "location": "Moerzeke",
-                "type": "MTB",
-                "distances": [18, 31, 48, 54],
-                "organizer": "Mountainbike.be",
-                "sourceUrl": "https://www.mountainbike.be/toertochten-overzicht",
-                "price": "€ 6.00"
-            },
-            {
-                "id": "mb-hoeilaart-01",
-                "title": "Zoniënwoud Gravel Ride",
-                "date": "2026-11-01",
-                "location": "Hoeilaart",
-                "type": "Gravel",
-                "distances": [20, 50, 75, 105],
-                "organizer": "Mountainbike.be",
-                "sourceUrl": "https://www.mountainbike.be/toertochten-overzicht",
-                "price": "€ 10.00"
-            }
+        var FALLBACK_EVENTS = [
+            ev('mb-roosendaal-01', 'Veldtoertocht Roosendaal', D, 'Roosendaal', 'MTB', [23, 33, 43], 'WTC Roosendaal / Mountainbike.be', MB, '€ 6.00'),
+            ev('mb-herentals-01', 'Toertocht Herentals', D, 'Herentals', 'Gravel', [55, 75], 'Mountainbike.be', MB, '€ 7.00'),
+            ev('mb-minderhout-01', 'Veldtoertocht Minderhout', D, 'Minderhout', 'MTB', [23, 47, 50], 'Mountainbike.be', MB, '€ 6.00'),
+            ev('mb-weelde-01', 'KWB Mountainbiketocht Weelde', D, 'Weelde', 'MTB', [20, 28, 37, 45, 55], 'Mountainbike.be', MB, '€ 5.00'),
+            ev('mb-04', 'Limburgse Wandeldagen MTB & Gravel', D, 'As', 'Both', [27, 32, 46, 65, 80], 'Mountainbike.be', MB, '€ 8.00'),
+            ev('mb-05', 'Offroad Tocht Baardegem', D, 'Baardegem', 'MTB', [25, 40, 55], 'Mountainbike.be', MB, '€ 6.00'),
+            ev('mb-06', 'Scheldeland Veldtoertocht', D, 'Moerzeke', 'MTB', [18, 31, 48, 54], 'Mountainbike.be', MB, '€ 6.00'),
+            ev('mb-07', 'Leiestreek Veldtoertocht', D, 'Sint-Martens-Latem', 'MTB', [20, 28, 35, 45, 55], 'Mountainbike.be', MB, '€ 6.00'),
+            ev('mb-08', 'Hagelandse MTB Rit', D, 'Aarschot', 'MTB', [28, 50, 65], 'Mountainbike.be', MB, '€ 7.00'),
+            ev('mb-09', 'Zoniënwoud Gravel Ride', D, 'Hoeilaart', 'Gravel', [20, 50, 75, 105], 'Mountainbike.be', MB, '€ 10.00'),
+            ev('mb-10', 'Heuvelland Offroad Ieper', D, 'Ieper', 'MTB', [29, 34, 49, 55, 74, 79], 'Mountainbike.be', MB, '€ 8.00'),
+            ev('mb-11', 'Veldtoertocht Lochristi', '2026-11-08', 'Lochristi', 'MTB', [28, 42, 55], 'Mountainbike.be / WTC Lochristi', MB, '€ 6.00'),
+            ev('mb-12', 'Bos- en Heidetoertocht', '2026-11-15', 'Helchteren', 'MTB', [30, 43, 52], 'Mountainbike.be / MTB Helchteren', MB, '€ 7.00'),
+            ev('mb-13', 'Kempen MTB Classic', '2026-11-22', 'Lille', 'MTB', [30, 45, 60], 'Mountainbike.be / WTC De Lindeboom', MB, '€ 7.00'),
+            ev('mb-14', 'Oostakker Offroad Ride', '2026-11-29', 'Oostakker', 'Both', [35, 50, 70], 'Mountainbike.be / Offroad Club Gent', MB, '€ 8.00'),
+            ev('fs-01', 'Grivelty Heuvelrug', '2026-11-15', 'Rhenen', 'Gravel', [65, 90, 120], 'Fietssport.nl', 'https://www.fietssport.nl/toertochten', '€ 18.50')
         ];
 
-        let selectedType = 'Alle';
-        let favorites = JSON.parse(localStorage.getItem('mtb_favorites') || '[]');
+        // ---------- Hulpfuncties ----------
+        function $(id) { return document.getElementById(id); }
 
-        async function loadEvents() {
-            try {
-                const response = await fetch('events.json?' + new Date().getTime());
-                if (response.ok) {
-                    const data = await response.json();
-                    if (data && data.length > 0) {
-                        allEvents = data;
-                    }
-                }
-            } catch (error) {
-                console.log('Gebruikt standaard fallback data.');
-            }
-            renderEvents();
+        function esc(s) {
+            return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+                return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+            });
         }
 
-        function toggleFavorite(id, event) {
-            event.stopPropagation();
-            if (favorites.includes(id)) {
-                favorites = favorites.filter(fav => fav !== id);
-            } else {
-                favorites.push(id);
-            }
-            localStorage.setItem('mtb_favorites', JSON.stringify(favorites));
-            renderEvents();
+        function safeUrl(u) {
+            return /^https?:\/\//i.test(u || '') ? u : '#';
         }
 
+        function toNumbers(v) {
+            if (v == null) return [];
+            var arr = Array.isArray(v) ? v : (String(v).match(/\d+/g) || []);
+            return arr.map(Number).filter(function (n) { return !isNaN(n); });
+        }
+
+        function normalizeDate(d) {
+            if (!d) return '';
+            var s = String(d), m = s.match(/^(\d{2})[-\/](\d{2})[-\/](\d{4})/);
+            return m ? m[3] + '-' + m[2] + '-' + m[1] : s.slice(0, 10);
+        }
+
+        function normalizeType(t) {
+            var s = String(t || '').toLowerCase();
+            if (s.indexOf('both') > -1 || s.indexOf('beide') > -1 || (s.indexOf('mtb') > -1 && s.indexOf('gravel') > -1)) return 'Both';
+            if (s.indexOf('gravel') > -1) return 'Gravel';
+            return 'MTB';
+        }
+
+        function normalizeEvent(e, i) {
+            return {
+                id: e.id || ('ev-' + i),
+                title: e.title || e.titel || e.name || 'Onbekende tocht',
+                date: normalizeDate(e.date || e.datum),
+                location: e.location || e.locatie || '',
+                type: normalizeType(e.type),
+                distances: toNumbers(e.distances != null ? e.distances : (e.distance != null ? e.distance : e.afstanden)),
+                organizer: e.organizer || e.organisator || '',
+                sourceUrl: e.sourceUrl || e.url || '#',
+                price: e.price || e.prijs || '',
+                lat: e.lat, lon: e.lon
+            };
+        }
+
+        function dedupe(list) {
+            var seen = {};
+            return list.filter(function (e) {
+                var key = [e.title, e.date, e.location].join('|').toLowerCase();
+                if (seen[key]) return false;
+                seen[key] = true;
+                return true;
+            });
+        }
+
+        function prepare(list) { return dedupe(list.map(normalizeEvent)); }
+
+        // Afstand per auto (hemelsbreed x 1,3). null als de plaats onbekend is.
+        function calculateDistance(origin, e) {
+            var c1 = coordinates[origin];
+            var c2 = (e.lat != null && e.lon != null && !isNaN(+e.lat) && !isNaN(+e.lon))
+                ? { lat: +e.lat, lon: +e.lon } : coordinates[e.location];
+            if (!c1 || !c2) return null;
+            var R = 6371, rad = function (x) { return x * Math.PI / 180; };
+            var dLat = rad(c2.lat - c1.lat), dLon = rad(c2.lon - c1.lon);
+            var a = Math.pow(Math.sin(dLat / 2), 2) +
+                    Math.cos(rad(c1.lat)) * Math.cos(rad(c2.lat)) * Math.pow(Math.sin(dLon / 2), 2);
+            return Math.round(R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a)) * 1.3);
+        }
+
+        function formatDate(iso) {
+            var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso || '');
+            if (!m) return iso || 'Datum onbekend';
+            var d = new Date(+m[1], +m[2] - 1, +m[3]);
+            return d.toLocaleDateString('nl-NL', { weekday: 'short', day: 'numeric', month: 'long', year: 'numeric' });
+        }
+
+        // ---------- Status ----------
+        var allEvents = prepare(FALLBACK_EVENTS);
+        var selectedType = 'Alle';
+        var sourceLabel = 'ingebouwde data';
+        var favorites = [];
+        try { favorites = JSON.parse(localStorage.getItem('mtb_favorites') || '[]'); } catch (err) { favorites = []; }
+        if (!Array.isArray(favorites)) favorites = [];
+
+        function saveFavorites() {
+            try { localStorage.setItem('mtb_favorites', JSON.stringify(favorites)); } catch (err) { /* geen opslag beschikbaar */ }
+        }
+
+        // ---------- Renderen ----------
         function renderEvents() {
-            const container = document.getElementById('eventsContainer');
-            const searchVal = document.getElementById('searchInput').value.toLowerCase();
-            const dateVal = document.getElementById('dateInput').value;
-            const origin = document.getElementById('originCity').value;
-            const maxDist = parseInt(document.getElementById('maxDistance').value);
-            const minDist = parseInt(document.getElementById('minDistance').value);
-            const favsOnly = document.getElementById('favoritesOnly').checked;
+            var container = $('eventsContainer');
+            var searchVal = $('searchInput').value.toLowerCase().trim();
+            var dateVal = $('dateInput').value;
+            var origin = $('originCity').value;
+            var maxDist = parseInt($('maxDistance').value, 10);
+            var minDist = parseInt($('minDistance').value, 10);
+            var favsOnly = $('favoritesOnly').checked;
 
-            let filtered = allEvents.filter(ev => {
-                const matchText = (ev.title + ' ' + ev.location + ' ' + (ev.organizer || '')).toLowerCase();
-                const matchesSearch = matchText.includes(searchVal);
-                const matchesDate = !dateVal || ev.date === dateVal;
-                const matchesType = selectedType === 'Alle' || ev.type === selectedType;
-                
-                const dist = calculateDistance(origin, ev.location);
-                const matchesMaxDist = dist <= maxDist;
-                const matchesMinDist = minDist === 0 || (ev.distances && ev.distances.some(d => d >= minDist));
-                const matchesFav = !favsOnly || favorites.includes(ev.id);
-
-                return matchesSearch && matchesDate && matchesType && matchesMaxDist && matchesMinDist && matchesFav;
+            var rows = allEvents.map(function (e) {
+                return { ev: e, dist: calculateDistance(origin, e) };
+            }).filter(function (r) {
+                var e = r.ev;
+                var text = (e.title + ' ' + e.location + ' ' + e.organizer).toLowerCase();
+                var okType = selectedType === 'Alle' || e.type === selectedType || e.type === 'Both';
+                var okDist = r.dist === null || r.dist <= maxDist;
+                var okLen = minDist === 0 || e.distances.length === 0 || e.distances.some(function (d) { return d >= minDist; });
+                return text.indexOf(searchVal) > -1
+                    && (!dateVal || e.date === dateVal)
+                    && okType && okDist && okLen
+                    && (!favsOnly || favorites.indexOf(e.id) > -1);
             });
 
-            filtered.sort((a, b) => {
-                const distA = calculateDistance(origin, a.location);
-                const distB = calculateDistance(origin, b.location);
-                return distA - distB;
+            // Altijd op kortste reisafstand; onbekende afstand onderaan, daarna op datum
+            rows.sort(function (a, b) {
+                var da = a.dist === null ? 9999 : a.dist, db = b.dist === null ? 9999 : b.dist;
+                return (da - db) || a.ev.date.localeCompare(b.ev.date);
             });
 
-            if (filtered.length === 0) {
-                container.innerHTML = `<div class="text-center py-12 text-slate-500 bg-slate-900 border border-slate-800 rounded-xl">Geen tochten gevonden voor deze selectie.</div>`;
+            $('statusLine').textContent = rows.length + ' van ' + allEvents.length + ' tochten (' + sourceLabel + '), gesorteerd op reisafstand';
+
+            if (rows.length === 0) {
+                container.innerHTML = '<div class="text-center py-12 text-slate-500 bg-slate-900 border border-slate-800 rounded-xl">Geen tochten gevonden voor deze selectie. Pas de filters of de datum aan.</div>';
                 return;
             }
 
-            container.innerHTML = filtered.map(ev => {
-                const dist = calculateDistance(origin, ev.location);
-                const isFav = favorites.includes(ev.id);
-                return `
-                    <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 hover:border-slate-700 transition">
-                        <div class="space-y-2 flex-1">
-                            <div class="flex items-center gap-3">
-                                <span class="px-2.5 py-1 rounded text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">${ev.type}</span>
-                                <span class="text-xs text-slate-400 flex items-center gap-1">📅 ${ev.date}</span>
-                                <span class="text-xs text-rose-400 font-medium bg-rose-500/10 px-2 py-0.5 rounded border border-rose-500/20">🚗 ${dist} km rijden</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <h3 class="text-xl font-bold text-white">${ev.title}</h3>
-                                <button onclick="toggleFavorite('${ev.id}', event)" class="text-lg hover:scale-110 transition">${isFav ? '⭐' : '☆'}</button>
-                            </div>
-                            <div class="flex flex-wrap items-center gap-4 text-sm text-slate-400">
-                                <span>📍 ${ev.location}</span>
-                                <span>👥 ${ev.organizer || 'Onbekend'}</span>
-                                <span class="text-emerald-400 font-medium">💶 ${ev.price || '€ 5.00'}</span>
-                                <a href="${ev.sourceUrl}" target="_blank" class="text-indigo-400 hover:underline flex items-center gap-1">🔗 Bron bekijken</a>
-                            </div>
-                        </div>
-                        <div class="flex flex-wrap gap-2">
-                            ${(ev.distances || []).map(d => `<span class="bg-slate-800 text-slate-300 text-xs px-3 py-1.5 rounded-lg border border-slate-700">${d} km</span>`).join('')}
-                        </div>
-                    </div>
-                `;
+            container.innerHTML = rows.map(function (r) {
+                var e = r.ev, isFav = favorites.indexOf(e.id) > -1;
+                var typeLabel = e.type === 'Both' ? 'MTB & Gravel' : e.type;
+                return '' +
+                '<div class="bg-slate-900 border border-slate-800 rounded-xl p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 hover:border-slate-700 transition">' +
+                    '<div class="space-y-2 flex-1">' +
+                        '<div class="flex flex-wrap items-center gap-3">' +
+                            '<span class="px-2.5 py-1 rounded text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">' + esc(typeLabel) + '</span>' +
+                            '<span class="text-xs text-slate-400">📅 ' + esc(formatDate(e.date)) + '</span>' +
+                            (r.dist !== null ? '<span class="text-xs text-rose-400 font-medium bg-rose-500/10 px-2 py-0.5 rounded border border-rose-500/20">🚗 ' + r.dist + ' km rijden</span>' : '') +
+                        '</div>' +
+                        '<div class="flex items-center gap-3">' +
+                            '<h3 class="text-xl font-bold text-white">' + esc(e.title) + '</h3>' +
+                            '<button type="button" data-fav="' + esc(e.id) + '" aria-label="Favoriet" class="text-lg hover:scale-110 transition">' + (isFav ? '⭐' : '☆') + '</button>' +
+                        '</div>' +
+                        '<div class="flex flex-wrap items-center gap-4 text-sm text-slate-400">' +
+                            '<span>📍 ' + esc(e.location) + '</span>' +
+                            '<span>👥 ' + esc(e.organizer || 'Onbekend') + '</span>' +
+                            (e.price ? '<span class="text-emerald-400 font-medium">💶 ' + esc(e.price) + '</span>' : '') +
+                            '<a href="' + esc(safeUrl(e.sourceUrl)) + '" target="_blank" rel="noopener" class="text-indigo-400 hover:underline">🔗 Bron bekijken</a>' +
+                        '</div>' +
+                    '</div>' +
+                    '<div class="flex flex-wrap gap-2">' +
+                        e.distances.map(function (d) {
+                            return '<span class="bg-slate-800 text-slate-300 text-xs px-3 py-1.5 rounded-lg border border-slate-700">' + d + ' km</span>';
+                        }).join('') +
+                    '</div>' +
+                '</div>';
             }).join('');
         }
 
-        document.querySelectorAll('.type-btn').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                document.querySelectorAll('.type-btn').forEach(b => {
+        // ---------- events.json laden ----------
+        function loadEvents() {
+            return fetch('events.json?v=' + Date.now(), { cache: 'no-store' })
+                .then(function (res) {
+                    if (!res.ok) throw new Error('HTTP ' + res.status);
+                    return res.json();
+                })
+                .then(function (raw) {
+                    var list = Array.isArray(raw) ? raw : (raw && raw.events) || [];
+                    if (list.length) {
+                        allEvents = prepare(list);
+                        sourceLabel = 'events.json';
+                    }
+                    console.log('events.json geladen:', list.length, 'ruw,', allEvents.length, 'na ontdubbelen');
+                })
+                .catch(function (err) {
+                    console.warn('events.json niet geladen, fallback gebruikt:', err);
+                })
+                .then(renderEvents);
+        }
+
+        // ---------- Events koppelen ----------
+        document.querySelectorAll('.type-btn').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                document.querySelectorAll('.type-btn').forEach(function (b) {
                     b.classList.remove('bg-emerald-600', 'text-white');
                     b.classList.add('bg-slate-800', 'text-slate-300');
                 });
-                e.target.classList.remove('bg-slate-800', 'text-slate-300');
-                e.target.classList.add('bg-emerald-600', 'text-white');
-                selectedType = e.target.getAttribute('data-type');
+                btn.classList.remove('bg-slate-800', 'text-slate-300');
+                btn.classList.add('bg-emerald-600', 'text-white');
+                selectedType = btn.getAttribute('data-type');
                 renderEvents();
             });
         });
 
-        document.getElementById('searchInput').addEventListener('input', renderEvents);
-        document.getElementById('dateInput').addEventListener('input', renderEvents);
-        document.getElementById('originCity').addEventListener('change', renderEvents);
-        document.getElementById('maxDistance').addEventListener('input', (e) => {
-            document.getElementById('maxDistVal').innerText = e.target.value;
+        $('eventsContainer').addEventListener('click', function (e) {
+            var btn = e.target.closest('[data-fav]');
+            if (!btn) return;
+            var id = btn.getAttribute('data-fav'), i = favorites.indexOf(id);
+            if (i > -1) favorites.splice(i, 1); else favorites.push(id);
+            saveFavorites();
             renderEvents();
         });
-        document.getElementById('minDistance').addEventListener('input', (e) => {
-            document.getElementById('minDistVal').innerText = e.target.value === '0' ? 'Alle' : e.target.value + ' km';
-            renderEvents();
-        });
-        document.getElementById('favoritesOnly').addEventListener('change', renderEvents);
 
+        $('searchInput').addEventListener('input', renderEvents);
+        $('dateInput').addEventListener('input', renderEvents);
+        $('originCity').addEventListener('change', renderEvents);
+        $('favoritesOnly').addEventListener('change', renderEvents);
+        $('maxDistance').addEventListener('input', function (e) {
+            $('maxDistVal').textContent = e.target.value;
+            renderEvents();
+        });
+        $('minDistance').addEventListener('input', function (e) {
+            $('minDistVal').textContent = e.target.value === '0' ? 'Alle' : e.target.value + ' km';
+            renderEvents();
+        });
+
+        // Eerst direct tonen met fallback, daarna vervangen door events.json
+        renderEvents();
         loadEvents();
+    })();
     </script>
 </body>
 </html>

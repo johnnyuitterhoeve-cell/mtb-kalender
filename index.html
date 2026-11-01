@@ -61,8 +61,8 @@
         function App() {
             const [homeTown, setHomeTown] = React.useState("'s-Heer Arendskerke");
             const [selectedDiscipline, setSelectedDiscipline] = React.useState('All');
-            const [selectedExactDate, setSelectedExactDate] = React.useState(''); // Echte specifieke datum
-            const [sortBy, setSortBy] = React.useState('date'); // 'date' of 'distance'
+            const [selectedExactDate, setSelectedExactDate] = React.useState('');
+            const [sortBy, setSortBy] = React.useState('date');
             const [maxDistance, setMaxDistance] = React.useState(250);
             const [minRouteLength, setMinRouteLength] = React.useState(0);
             const [searchQuery, setSearchQuery] = React.useState('');
@@ -114,7 +114,6 @@
                 .filter(event => {
                     if (selectedDiscipline !== 'All' && event.type !== 'Both' && event.type !== selectedDiscipline) return false;
                     
-                    // Filter exact op de gekozen datum indien ingevuld
                     if (selectedExactDate && selectedExactDate !== '') {
                         if (event.date !== selectedExactDate) return false;
                     }
@@ -276,7 +275,6 @@
                                 />
                                 
                                 <div className="flex items-center gap-2">
-                                    {/* Echte losse datumkiezer */}
                                     <input 
                                         type="date"
                                         value={selectedExactDate}

@@ -2,8 +2,6 @@ import json
 import os
 
 def run_scraper():
-    # We zorgen voor een rijke, actuele set tochten van je favoriete platforms
-    # Zodat je app altijd direct gevuld is zonder afhankelijkheid van externe web-parsers die kunnen breken.
     events = [
         {
             "id": "mb-roosendaal-01",
@@ -51,7 +49,6 @@ def run_scraper():
         }
     ]
 
-    # Bestaande handmatige toevoegingen of favorieten behouden
     if os.path.exists('events.json'):
         try:
             with open('events.json', 'r', encoding='utf-8') as f:
@@ -62,11 +59,10 @@ def run_scraper():
         except:
             pass
 
-    # Wegschrijven naar events.json
     with open('events.json', 'w', encoding='utf-8') as f:
         json.dump(events, f, ensure_ascii=False, indent=4)
     
-    print(f"Succes! Totaal aantal tochten opgeslagen: {len(events)}")
+    print(f"Update succesvol. Totaal aantal tochten: {len(events)}")
 
 if __name__ == "__main__":
     run_scraper()

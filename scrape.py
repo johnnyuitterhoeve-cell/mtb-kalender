@@ -10,7 +10,7 @@ import re
 import sys
 import time
 import unicodedata
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta, timezone
 from urllib.parse import urljoin
 
 import requests
@@ -25,6 +25,8 @@ BROWSER_HEADERS = {
 WEEKS_AHEAD = 12
 EVENTS_FILE = "events.json"
 GEO_FILE = "geocache.json"
+SOURCES_FILE = "sources.json"
+ALL_SOURCES = ["Mountainbike.be", "Fietssport.nl", "MTB-You", "GoDare", "GravelBike.nl"]
 NOMINATIM = "https://nominatim.openstreetmap.org/search"
 
 # Provinciecode op Mountainbike.be -> (volledige naam, landcodes voor de zoekopdracht)
@@ -110,6 +112,7 @@ def mountainbike_be():
     today = date.today()
     monday = today - timedelta(days=today.weekday())
     events, unparsed = [], []
+    blocked = None
     for i in range(WEEKS_AHEAD):
         y, w, _ = (monday + timedelta(weeks=i)).isocalendar()
         url = f"https://www.mountainbike.be/toertochten-overzicht/{y}W{w:02d}"
@@ -119,6 +122,7 @@ def mountainbike_be():
         except requests.RequestException as e:
             print(f"  {y}W{w:02d}: mislukt ({e})")
             if getattr(e, "response", None) is not None and e.response.status_code in (401, 403, 429):
+                blocked = e.response.status_code
                 print("  De site weigert de toegang; verdere weken worden overgeslagen.")
                 break
             continue
@@ -140,6 +144,8 @@ def mountainbike_be():
         time.sleep(1)
     if unparsed:
         print(f"  {len(unparsed)} regels niet herkend, bijvoorbeeld: {unparsed[:3]}")
+    if not events and blocked:
+        raise PermissionError(f"toegang geweigerd ({blocked})")
     return events
 
 
@@ -307,13 +313,14 @@ def geocode(place, prov):
 
 # ---------- hoofdprogramma ----------
 def main():
-    events = []
+    events, errors = [], {}
     for name, fetch in SOURCES.items():
         print(f"{name}:")
         try:
             found = fetch()
         except Exception as e:  # een kapotte bron mag de rest niet stoppen
             print(f"  FOUT: {e}")
+            errors[name] = str(e)[:120]
             found = []
         print(f"  totaal {len(found)}")
         events += found
@@ -340,6 +347,21 @@ def main():
             ev["lat"], ev["lon"] = coords
 
     unique.sort(key=lambda e: (e["date"], e["location"]))
+
+    counts = {}
+    for ev in unique:
+        counts[ev["source"]] = counts.get(ev["source"], 0) + 1
+    info = []
+    for name in ALL_SOURCES:
+        if name not in SOURCES:
+            info.append({"name": name, "status": "niet gekoppeld", "count": 0, "message": ""})
+        elif name in errors:
+            info.append({"name": name, "status": "fout", "count": 0, "message": errors[name]})
+        else:
+            info.append({"name": name, "status": "ok", "count": counts.get(name, 0), "message": ""})
+    with open(SOURCES_FILE, "w", encoding="utf-8") as f:
+        json.dump({"updated": datetime.now(timezone.utc).isoformat(timespec="seconds"), "sources": info},
+                  f, ensure_ascii=False, indent=2)
 
     with open(EVENTS_FILE, "w", encoding="utf-8") as f:
         json.dump(unique, f, ensure_ascii=False, indent=2)

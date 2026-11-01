@@ -31,5 +31,5 @@ jobs:
         run: |
           git config --global user.name "GitHub Action Bot"
           git config --global user.email "bot@users.noreply.github.com"
-          git add events.json geocache.json
+          git add events.json geocache.json sources.json
           git diff --quiet && git diff --cached --quiet || (git commit -m "Automatische update van toertochten databronnen" && git push)

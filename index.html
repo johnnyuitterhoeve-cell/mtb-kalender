@@ -21,6 +21,12 @@
             "Minderhout": { lat: 51.4167, lng: 4.7667 },
             "Weelde": { lat: 51.4075, lng: 4.9972 },
             "As": { lat: 51.0089, lng: 5.5861 },
+            "Baardegem": { lat: 50.9631, lng: 4.1450 },
+            "Moerzeke": { lat: 51.0608, lng: 4.1706 },
+            "Sint-Martens-Latem": { lat: 51.0189, lng: 3.6397 },
+            "Aarschot": { lat: 50.9861, lng: 4.8333 },
+            "Hoeilaart": { lat: 50.7667, lng: 4.4667 },
+            "Ieper": { lat: 50.8511, lng: 2.8858 },
             "Rhenen": { lat: 51.9583, lng: 5.5667 },
             "Gulpen": { lat: 50.8144, lng: 5.8900 },
             "Oudenaarde": { lat: 50.8466, lng: 3.6053 },
@@ -56,6 +62,7 @@
             const [homeTown, setHomeTown] = React.useState("'s-Heer Arendskerke");
             const [selectedDiscipline, setSelectedDiscipline] = React.useState('All');
             const [selectedMonth, setSelectedMonth] = React.useState('All');
+            const [sortBy, setSortBy] = React.useState('date'); // 'date' of 'distance'
             const [maxDistance, setMaxDistance] = React.useState(250);
             const [minRouteLength, setMinRouteLength] = React.useState(0);
             const [searchQuery, setSearchQuery] = React.useState('');
@@ -64,18 +71,11 @@
             const [showAddModal, setShowAddModal] = React.useState(false);
             const [events, setEvents] = React.useState([]);
 
-            // Automatisch inlezen van de gesynchroniseerde database (events.json)
             React.useEffect(() => {
                 fetch('./events.json')
                     .then(res => res.json())
                     .then(data => setEvents(data))
-                    .catch(err => {
-                        console.log("Geen events.json gevonden, laad standaardvoorraad.");
-                        setEvents([
-                            { id: 'mb-01', title: "Toertocht Herentals", date: "2026-11-01", location: "Herentals", type: "Gravel", distances: [55, 75], organizer: "Mountainbike.be", sourceUrl: "https://www.mountainbike.be/toertochten-overzicht", price: "€ 7.00" },
-                            { id: 'mb-02', title: "Veldtoertocht Minderhout", date: "2026-11-01", location: "Minderhout", type: "MTB", distances: [23, 47, 50], organizer: "Mountainbike.be", sourceUrl: "https://www.mountainbike.be/toertochten-overzicht", price: "€ 6.00" }
-                        ]);
-                    });
+                    .catch(err => console.log("Laden van events.json mislukt", err));
             }, []);
 
             const [newTitle, setNewTitle] = React.useState('');
@@ -126,7 +126,17 @@
                     if (minRouteLength > 0 && !event.distances.some(d => d >= minRouteLength)) return false;
                     return true;
                 })
-                .sort((a, b) => new Date(a.date) - new Date(b.date));
+                .sort((a, b) => {
+                    if (sortBy === 'distance') {
+                        const coordA = TOWN_COORDINATES[a.location];
+                        const coordB = TOWN_COORDINATES[b.location];
+                        const distA = coordA ? calculateDistance(homeCoords.lat, homeCoords.lng, coordA.lat, coordA.lng) : 9999;
+                        const distB = coordB ? calculateDistance(homeCoords.lat, homeCoords.lng, coordB.lat, coordB.lng) : 9999;
+                        return distA - distB;
+                    } else {
+                        return new Date(a.date) - new Date(b.date);
+                    }
+                });
 
             return (
                 <div className="max-w-7xl mx-auto p-4 sm:p-6">
@@ -162,6 +172,18 @@
                                     {Object.keys(TOWN_COORDINATES).map(town => (
                                         <option key={town} value={town}>{town}</option>
                                     ))}
+                                </select>
+                            </div>
+
+                            <div>
+                                <label className="text-sm text-slate-300 font-medium block mb-2">Sorteer op:</label>
+                                <select 
+                                    value={sortBy} 
+                                    onChange={(e) => setSortBy(e.target.value)}
+                                    className="w-full bg-slate-950 border border-slate-700 rounded-lg p-2 text-sm text-emerald-400 font-semibold focus:outline-none focus:border-emerald-500 cursor-pointer"
+                                >
+                                    <option value="date">📅 Eerstvolgende Datum</option>
+                                    <option value="distance">🚗 Dichtstbijzijnde Afstand</option>
                                 </select>
                             </div>
 
@@ -260,7 +282,7 @@
                             <div className="space-y-3">
                                 {filteredEvents.length === 0 ? (
                                     <div className="bg-slate-900 border border-slate-800 p-8 rounded-xl text-center text-slate-400">
-                                        Geen toertochten gevonden. (Als de events.json nog gegenereerd wordt door GitHub, even een minuutje geduld!).
+                                        Geen toertochten gevonden.
                                     </div>
                                 ) : (
                                     filteredEvents.map(event => {

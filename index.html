@@ -21,10 +21,16 @@
                     <h2 class="text-xl font-semibold text-emerald-400">Filters & Instellingen</h2>
 
                     <div>
-                        <label for="originCity" class="block text-sm font-medium text-slate-300 mb-2">Jouw woonplaats:</label>
-                        <select id="originCity" class="w-full bg-slate-800 border border-slate-700 rounded-lg p-2.5 text-slate-200 focus:outline-none focus:border-emerald-500">
-                            <option value="'s-Heer Arendskerke">'s-Heer Arendskerke</option>
-                        </select>
+                        <label for="postcodeInput" class="block text-sm font-medium text-slate-300 mb-2">Jouw postcode:</label>
+                        <div class="flex gap-2">
+                            <input type="text" id="postcodeInput" placeholder="bv. 4411AB of 2300" maxlength="7" class="min-w-0 flex-1 bg-slate-800 border border-slate-700 rounded-lg p-2.5 text-slate-200 placeholder-slate-500 focus:outline-none focus:border-emerald-500">
+                            <select id="countrySelect" class="bg-slate-800 border border-slate-700 rounded-lg px-2 text-slate-200 focus:outline-none focus:border-emerald-500">
+                                <option value="nl">NL</option>
+                                <option value="be">BE</option>
+                            </select>
+                            <button id="postcodeBtn" type="button" class="px-3 rounded-lg bg-emerald-600 text-white text-sm font-medium hover:bg-emerald-500">OK</button>
+                        </div>
+                        <p id="originLabel" class="text-xs text-slate-400 mt-2"></p>
                     </div>
 
                     <div>
@@ -186,7 +192,7 @@
 
         // Afstand per auto (hemelsbreed x 1,3). null als de plaats onbekend is.
         function calculateDistance(origin, e) {
-            var c1 = coordinates[origin];
+            var c1 = origin;
             var c2 = (e.lat != null && e.lon != null && !isNaN(+e.lat) && !isNaN(+e.lon))
                 ? { lat: +e.lat, lon: +e.lon } : coordinates[e.location];
             if (!c1 || !c2) return null;
@@ -208,6 +214,91 @@
         var allEvents = prepare(FALLBACK_EVENTS);
         var selectedType = 'Alle';
         var sourceLabel = 'ingebouwde data';
+
+        // Startpunt: standaard 's-Heer Arendskerke, of de opgeslagen postcode
+        var home = { lat: 51.488, lon: 3.864, label: "'s-Heer Arendskerke (standaard)" };
+        try {
+            var savedHome = JSON.parse(localStorage.getItem('mtb_home'));
+            if (savedHome && savedHome.lat && savedHome.lon) home = savedHome;
+        } catch (err) { /* standaard */ }
+
+        function setHome(h) {
+            home = h;
+            try { localStorage.setItem('mtb_home', JSON.stringify(h)); } catch (err) { /* geen opslag */ }
+            $('originLabel').textContent = 'Afstanden vanaf: ' + h.label;
+            renderEvents();
+        }
+
+        function nominatimPostcode(digits, country) {
+            return fetch('https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=' + country + '&postalcode=' + digits)
+                .then(function (r) { return r.json(); })
+                .then(function (res) {
+                    if (!res || !res[0]) throw new Error('niet gevonden');
+                    return { lat: +res[0].lat, lon: +res[0].lon, label: digits + ' ' + String(res[0].display_name).split(',')[0] };
+                });
+        }
+
+        function geocodePostcode(pc, country) {
+            var clean = pc.replace(/\s+/g, '').toUpperCase();
+            var digits = clean.slice(0, 4);
+            if (country === 'nl' && /^\d{4}[A-Z]{2}$/.test(clean)) {
+                // PDOK: exact op volledige Nederlandse postcode
+                return fetch('https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?rows=1&fq=type:postcode&q=' + clean)
+                    .then(function (r) { return r.json(); })
+                    .then(function (j) {
+                        var d = j.response && j.response.docs && j.response.docs[0];
+                        var m = d && /POINT\(([-\d.]+) ([-\d.]+)\)/.exec(d.centroide_ll || '');
+                        if (!m) throw new Error('niet gevonden');
+                        return { lat: +m[2], lon: +m[1], label: digits + ' ' + clean.slice(4) + (d.woonplaatsnaam ? ' ' + d.woonplaatsnaam : '') };
+                    })
+                    .catch(function () { return nominatimPostcode(digits, country); });
+            }
+            return nominatimPostcode(digits, country);
+        }
+
+        function applyPostcode() {
+            var pc = $('postcodeInput').value.trim(), lab = $('originLabel');
+            if (!/^\d{4}\s?([A-Za-z]{2})?$/.test(pc)) {
+                lab.textContent = 'Vul een geldige postcode in, bijvoorbeeld 4411AB of 2300.';
+                return;
+            }
+            lab.textContent = 'Postcode zoeken...';
+            geocodePostcode(pc, $('countrySelect').value).then(setHome).catch(function () {
+                lab.textContent = 'Postcode niet gevonden. Controleer de postcode en het land.';
+            });
+        }
+
+        // Onbekende tochtplaatsen zoeken we één keer op en onthouden we (max. 1 zoekopdracht per seconde)
+        var geoCache = {};
+        try { geoCache = JSON.parse(localStorage.getItem('mtb_geo') || '{}'); } catch (err) { geoCache = {}; }
+        Object.keys(geoCache).forEach(function (k) { if (!coordinates[k]) coordinates[k] = geoCache[k]; });
+        var geoQueue = [], geoBusy = false;
+
+        function queueGeocode() {
+            allEvents.forEach(function (e) {
+                var own = e.lat != null && e.lon != null;
+                if (e.location && !own && !coordinates[e.location] && geoQueue.indexOf(e.location) < 0) geoQueue.push(e.location);
+            });
+            if (!geoBusy) nextGeocode();
+        }
+
+        function nextGeocode() {
+            var name = geoQueue.shift();
+            if (!name) { geoBusy = false; return; }
+            geoBusy = true;
+            fetch('https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=nl,be,de,lu&q=' + encodeURIComponent(name))
+                .then(function (r) { return r.json(); })
+                .then(function (res) {
+                    if (res && res[0]) {
+                        var c = { lat: +res[0].lat, lon: +res[0].lon };
+                        coordinates[name] = c; geoCache[name] = c;
+                        try { localStorage.setItem('mtb_geo', JSON.stringify(geoCache)); } catch (err) { /* geen opslag */ }
+                        renderEvents();
+                    }
+                })
+                .catch(function () { /* overslaan */ })
+                .then(function () { setTimeout(nextGeocode, 1100); });
+        }
         var favorites = [];
         try { favorites = JSON.parse(localStorage.getItem('mtb_favorites') || '[]'); } catch (err) { favorites = []; }
         if (!Array.isArray(favorites)) favorites = [];
@@ -221,7 +312,7 @@
             var container = $('eventsContainer');
             var searchVal = $('searchInput').value.toLowerCase().trim();
             var dateVal = $('dateInput').value;
-            var origin = $('originCity').value;
+            var origin = home;
             var maxDist = parseInt($('maxDistance').value, 10);
             var minDist = parseInt($('minDistance').value, 10);
             var favsOnly = $('favoritesOnly').checked;
@@ -296,6 +387,7 @@
                     if (list.length) {
                         allEvents = prepare(list);
                         sourceLabel = 'events.json';
+                        queueGeocode();
                     }
                     console.log('events.json geladen:', list.length, 'ruw,', allEvents.length, 'na ontdubbelen');
                 })
@@ -330,7 +422,8 @@
 
         $('searchInput').addEventListener('input', renderEvents);
         $('dateInput').addEventListener('input', renderEvents);
-        $('originCity').addEventListener('change', renderEvents);
+        $('postcodeBtn').addEventListener('click', applyPostcode);
+        $('postcodeInput').addEventListener('keydown', function (e) { if (e.key === 'Enter') applyPostcode(); });
         $('favoritesOnly').addEventListener('change', renderEvents);
         $('maxDistance').addEventListener('input', function (e) {
             $('maxDistVal').textContent = e.target.value;
@@ -342,6 +435,7 @@
         });
 
         // Eerst direct tonen met fallback, daarna vervangen door events.json
+        $('originLabel').textContent = 'Afstanden vanaf: ' + home.label;
         renderEvents();
         loadEvents();
     })();

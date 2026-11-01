@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MTB & Gravel Toertochten Kalender</title>
-    <!-- Tailwind CSS voor styling -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- React & Babel voor draaien direct in de browser -->
+    <!-- React & ReactDOM -->
     <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <!-- Babel -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body class="bg-slate-950 text-slate-100 min-h-screen">
-    <div id="root"></div>
+    <div id="root">
+        <div style="display: flex; justify-content: center; align-items: center; height: 100vh; color: #34d399; font-family: sans-serif;">
+            Bezig met laden van de kalender...
+        </div>
+    </div>
 
     <script type="text/babel">
         const TOWN_COORDINATES = {
@@ -61,7 +66,8 @@
         function App() {
             const [homeTown, setHomeTown] = React.useState("'s-Heer Arendskerke");
             const [selectedDiscipline, setSelectedDiscipline] = React.useState('All');
-            const [selectedMonth, setSelectedMonth] = React.useState('All');
+            const [selectedExactDate, setSelectedExactDate] = React.useState(''); // Echte specifieke datum
+            const [sortBy, setSortBy] = React.useState('date');
             const [maxDistance, setMaxDistance] = React.useState(250);
             const [minRouteLength, setMinRouteLength] = React.useState(0);
             const [searchQuery, setSearchQuery] = React.useState('');
@@ -75,7 +81,7 @@
                     .then(res => res.json())
                     .then(data => setEvents(data))
                     .catch(err => {
-                        console.log("Geen events.json gevonden, laad standaardvoorraad.");
+                        console.log("Kan events.json niet laden, gebruik standaard data", err);
                         setEvents([
                             { id: 'mb-01', title: "Toertocht Herentals", date: "2026-11-01", location: "Herentals", type: "Gravel", distances: [55, 75], organizer: "Mountainbike.be", sourceUrl: "https://www.mountainbike.be/toertochten-overzicht", price: "€ 7.00" }
                         ]);
@@ -117,6 +123,302 @@
             const filteredEvents = events
                 .filter(event => {
                     if (selectedDiscipline !== 'All' && event.type !== 'Both' && event.type !== selectedDiscipline) return false;
-                    if (selectedMonth !== 'All' && !event.date.startsWith(selectedMonth)) return false;
+                    
+                    // Filter exact op de gekozen datum indien ingevuld
+                    if (selectedExactDate && selectedExactDate !== '') {
+                        if (event.date !== selectedExactDate) return false;
+                    }
+
                     if (onlyFavorites && !favorites.includes(event.id)) return false;
-                    if (searchQuery && !event.title.toLowerCase().includes(searchQuery.toLowerCase()) && !event
+                    if (searchQuery && !event.title.toLowerCase().includes(searchQuery.toLowerCase()) && !event.location.toLowerCase().includes(searchQuery.toLowerCase()) && !event.organizer.toLowerCase().includes(searchQuery.toLowerCase())) return false;
+                    
+                    const eventCoords = TOWN_COORDINATES[event.location];
+                    if (eventCoords) {
+                        const dist = calculateDistance(homeCoords.lat, homeCoords.lng, eventCoords.lat, eventCoords.lng);
+                        if (dist > maxDistance) return false;
+                    }
+                    
+                    if (minRouteLength > 0 && !event.distances.some(d => d >= minRouteLength)) return false;
+                    return true;
+                })
+                .sort((a, b) => {
+                    if (sortBy === 'distance') {
+                        const coordA = TOWN_COORDINATES[a.location];
+                        const coordB = TOWN_COORDINATES[b.location];
+                        const distA = coordA ? calculateDistance(homeCoords.lat, homeCoords.lng, coordA.lat, coordA.lng) : 9999;
+                        const distB = coordB ? calculateDistance(homeCoords.lat, homeCoords.lng, coordB.lat, coordB.lng) : 9999;
+                        if (distA === distB) {
+                            return new Date(a.date) - new Date(b.date);
+                        }
+                        return distA - distB;
+                    } else {
+                        return new Date(a.date) - new Date(b.date);
+                    }
+                });
+
+            return (
+                <div className="max-w-7xl mx-auto p-4 sm:p-6">
+                    <header className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8 border-b border-slate-800 pb-4">
+                        <div>
+                            <h1 className="text-2xl sm:text-3xl font-extrabold text-emerald-400 flex items-center gap-2">
+                                🚴‍♂️ MTB & Gravel Kalender
+                            </h1>
+                            <p className="text-slate-400 text-sm mt-1">Automatisch gesynchroniseerd met al je favoriete websites</p>
+                        </div>
+                        <div>
+                            <button 
+                                onClick={() => setShowAddModal(true)}
+                                className="bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-lg text-sm font-medium transition"
+                            >
+                                ➕ Tocht Toevoegen
+                            </button>
+                        </div>
+                    </header>
+
+                    <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+                        {/* Sidebar Filters */}
+                        <div className="bg-slate-900 border border-slate-800 p-5 rounded-xl space-y-6 h-fit">
+                            <h2 className="font-bold text-lg text-emerald-400 border-b border-slate-800 pb-2">Filters & Instellingen</h2>
+                            
+                            <div>
+                                <label className="text-sm text-slate-300 font-medium block mb-2">Jouw Woonplaats:</label>
+                                <select 
+                                    value={homeTown} 
+                                    onChange={(e) => setHomeTown(e.target.value)}
+                                    className="w-full bg-slate-950 border border-slate-700 rounded-lg p-2 text-sm text-slate-200 focus:outline-none focus:border-emerald-500"
+                                >
+                                    {Object.keys(TOWN_COORDINATES).map(town => (
+                                        <option key={town} value={town}>{town}</option>
+                                    ))}
+                                </select>
+                            </div>
+
+                            <div>
+                                <label className="text-sm text-slate-300 font-medium block mb-2">Sorteervolgorde:</label>
+                                <select 
+                                    value={sortBy} 
+                                    onChange={(e) => setSortBy(e.target.value)}
+                                    className="w-full bg-slate-950 border border-slate-700 rounded-lg p-2 text-sm text-emerald-400 font-semibold focus:outline-none focus:border-emerald-500 cursor-pointer"
+                                >
+                                    <option value="date">📅 Eerstvolgende Datum</option>
+                                    <option value="distance">🚗 Dichtstbijzijnde Afstand eerst</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label className="text-sm text-slate-300 font-medium block mb-2">Type Fiets:</label>
+                                <div className="grid grid-cols-3 gap-1 bg-slate-950 p-1 rounded-lg border border-slate-800">
+                                    {['All', 'MTB', 'Gravel'].map(type => (
+                                        <button 
+                                            key={type}
+                                            onClick={() => setSelectedDiscipline(type)}
+                                            className={`py-1.5 text-xs font-semibold rounded ${selectedDiscipline === type ? 'bg-emerald-600 text-white' : 'text-slate-400 hover:text-white'}`}
+                                        >
+                                            {type === 'All' ? 'Alle' : type}
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
+
+                            <div>
+                                <div className="flex justify-between text-sm mb-2">
+                                    <span className="text-slate-300 font-medium">Max. Reisafstand:</span>
+                                    <span className="text-emerald-400 font-bold">{maxDistance} km</span>
+                                </div>
+                                <input 
+                                    type="range" min="30" max="300" step="10"
+                                    value={maxDistance} 
+                                    onChange={(e) => setMaxDistance(Number(e.target.value))}
+                                    className="w-full accent-emerald-500"
+                                />
+                            </div>
+
+                            <div>
+                                <div className="flex justify-between text-sm mb-2">
+                                    <span className="text-slate-300 font-medium">Min. Parcourslengte:</span>
+                                    <span className="text-emerald-400 font-bold">{minRouteLength === 0 ? 'Alle' : minRouteLength + ' km'}</span>
+                                </div>
+                                <input 
+                                    type="range" min="0" max="120" step="10"
+                                    value={minRouteLength} 
+                                    onChange={(e) => setMinRouteLength(Number(e.target.value))}
+                                    className="w-full accent-emerald-500"
+                                />
+                            </div>
+
+                            <div className="pt-2 border-b border-slate-800 pb-4">
+                                <label className="flex items-center gap-2 text-sm text-slate-300 cursor-pointer">
+                                    <input 
+                                        type="checkbox" 
+                                        checked={onlyFavorites} 
+                                        onChange={(e) => setOnlyFavorites(e.target.checked)}
+                                        className="rounded accent-emerald-500 w-4 h-4"
+                                    />
+                                    ⭐ Alleen Favorieten tonen
+                                </label>
+                            </div>
+
+                            {/* DATABRONNEN LINKS ONDER */}
+                            <div className="bg-slate-950 p-4 rounded-lg border border-slate-800 text-xs text-slate-400 space-y-2">
+                                <h3 className="font-bold text-slate-300 uppercase tracking-wider text-[10px] text-emerald-400">🌐 Synchronisatie Bronnen</h3>
+                                <ul className="space-y-1 list-disc pl-4 text-slate-400">
+                                    <li>Mountainbike.be (BE)</li>
+                                    <li>Fietssport.nl (NL)</li>
+                                    <li>MTB-You.be/nl (BE/NL)</li>
+                                    <li>GoDare.today (BE/NL)</li>
+                                    <li>GravelBike.be</li>
+                                </ul>
+                                <div className="pt-2 border-t border-slate-800 flex justify-between text-[11px] text-slate-500">
+                                    <span>Status: <strong className="text-emerald-500">Automatisch</strong></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Main Content */}
+                        <div className="lg:col-span-3 space-y-4">
+                            <div className="flex flex-col sm:flex-row gap-3">
+                                <input 
+                                    type="text" 
+                                    placeholder="Zoek op plaatsnaam, titel of organisatie..."
+                                    value={searchQuery}
+                                    onChange={(e) => setSearchQuery(e.target.value)}
+                                    className="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 placeholder-slate-500 focus:outline-none focus:border-emerald-500"
+                                />
+                                
+                                {/* Echte specifieke datumkiezer rechtsboven */}
+                                <div className="flex items-center gap-2">
+                                    <input 
+                                        type="date"
+                                        value={selectedExactDate}
+                                        onChange={(e) => setSelectedExactDate(e.target.value)}
+                                        className="bg-slate-900 border border-slate-800 text-emerald-400 font-semibold rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-emerald-500 cursor-pointer"
+                                        title="Kies een specifieke datum"
+                                    />
+                                    {selectedExactDate && (
+                                        <button 
+                                            onClick={() => setSelectedExactDate('')}
+                                            className="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs px-3 py-3 rounded-xl transition"
+                                            title="Wis datumfilter"
+                                        >
+                                            ✕ Wis
+                                        </button>
+                                    )}
+                                </div>
+                            </div>
+
+                            <div className="space-y-3">
+                                {filteredEvents.length === 0 ? (
+                                    <div className="bg-slate-900 border border-slate-800 p-8 rounded-xl text-center text-slate-400">
+                                        Geen toertochten gevonden voor deze specifieke datum. Klik op '✕ Wis' om alle tochten weer te zien.
+                                    </div>
+                                ) : (
+                                    filteredEvents.map(event => {
+                                        const eventCoords = TOWN_COORDINATES[event.location];
+                                        const travelDist = eventCoords ? calculateDistance(homeCoords.lat, homeCoords.lng, eventCoords.lat, eventCoords.lng) : null;
+                                        const isFav = favorites.includes(event.id);
+
+                                        return (
+                                            <div key={event.id} className="bg-slate-900 border border-slate-800 hover:border-slate-700 p-5 rounded-xl flex flex-col sm:flex-row justify-between sm:items-center gap-4 transition">
+                                                <div className="space-y-2">
+                                                    <div className="flex items-center gap-2">
+                                                        <span className={`text-xs uppercase font-extrabold px-2.5 py-0.5 rounded ${event.type === 'MTB' ? 'bg-emerald-950 text-emerald-400 border border-emerald-800' : event.type === 'Gravel' ? 'bg-amber-950 text-amber-400 border border-amber-800' : 'bg-purple-950 text-purple-400 border border-purple-800'}`}>
+                                                            {event.type}
+                                                        </span>
+                                                        <span className="text-xs bg-emerald-500/10 text-emerald-400 font-bold px-2 py-0.5 rounded border border-emerald-500/20">
+                                                            📅 {formatDateNL(event.date)}
+                                                        </span>
+                                                        {travelDist && (
+                                                            <span className="text-xs bg-slate-800 text-slate-300 px-2 py-0.5 rounded-full">
+                                                                🚗 {travelDist} km rijden
+                                                            </span>
+                                                        )}
+                                                    </div>
+
+                                                    <h3 className="text-lg font-bold text-slate-100">{event.title}</h3>
+
+                                                    <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-slate-400">
+                                                        <span>📍 {event.location}</span>
+                                                        <span>👥 {event.organizer}</span>
+                                                        <span>💳 {event.price}</span>
+                                                        {event.sourceUrl && event.sourceUrl !== '#' && (
+                                                            <a href={event.sourceUrl} target="_blank" rel="noreferrer" className="text-xs text-emerald-400 hover:underline font-medium">🔗 Bron bekijken</a>
+                                                        )}
+                                                    </div>
+
+                                                    <div className="flex items-center gap-1.5 pt-1">
+                                                        <span className="text-xs text-slate-400">Afstanden:</span>
+                                                        {event.distances.map(d => (
+                                                            <span key={d} className="bg-slate-800 border border-slate-700 text-slate-200 text-xs px-2 py-0.5 rounded font-semibold">
+                                                                {d} km
+                                                            </span>
+                                                        ))}
+                                                    </div>
+                                                </div>
+
+                                                <div className="flex sm:flex-col items-end justify-between sm:justify-center gap-2">
+                                                    <button 
+                                                        onClick={() => toggleFavorite(event.id)}
+                                                        className={`p-2 rounded-lg border text-lg transition ${isFav ? 'bg-amber-500/10 border-amber-500 text-amber-400' : 'bg-slate-800 border-slate-700 text-slate-400 hover:text-white'}`}
+                                                        title="Favoriet"
+                                                    >
+                                                        {isFav ? '★' : '☆'}
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        );
+                                    })
+                                )}
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Modal voor handmatig toevoegen */}
+                    {showAddModal && (
+                        <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4 z-50">
+                            <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl w-full max-w-md space-y-4">
+                                <h3 className="text-xl font-bold text-emerald-400">Nieuwe Toertocht Toevoegen</h3>
+                                <form onSubmit={handleAddEvent} className="space-y-3">
+                                    <div>
+                                        <label className="text-xs text-slate-400 block mb-1">Naam tocht:</label>
+                                        <input required type="text" value={newTitle} onChange={(e) => setNewTitle(e.target.value)} className="w-full bg-slate-950 border border-slate-700 rounded p-2 text-sm text-slate-100" placeholder="bijv. Zeeuwse Gravel Classic" />
+                                    </div>
+                                    <div>
+                                        <label className="text-xs text-slate-400 block mb-1">Datum:</label>
+                                        <input required type="date" value={newDate} onChange={(e) => setNewDate(e.target.value)} className="w-full bg-slate-950 border border-slate-700 rounded p-2 text-sm text-slate-100" />
+                                    </div>
+                                    <div>
+                                        <label className="text-xs text-slate-400 block mb-1">Plaatsnaam:</label>
+                                        <input required type="text" value={newLocation} onChange={(e) => setNewLocation(e.target.value)} className="w-full bg-slate-950 border border-slate-700 rounded p-2 text-sm text-slate-100" placeholder="bijv. Breda" />
+                                    </div>
+                                    <div>
+                                        <label className="text-xs text-slate-400 block mb-1">Type:</label>
+                                        <select value={newType} onChange={(e) => setNewType(e.target.value)} className="w-full bg-slate-950 border border-slate-700 rounded p-2 text-sm text-slate-100">
+                                            <option value="MTB">MTB</option>
+                                            <option value="Gravel">Gravel</option>
+                                            <option value="Both">Beide (MTB & Gravel)</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label className="text-xs text-slate-400 block mb-1">Afstanden (komma-gescheiden):</label>
+                                        <input type="text" value={newDistances} onChange={(e) => setNewDistances(e.target.value)} className="w-full bg-slate-950 border border-slate-700 rounded p-2 text-sm text-slate-100" placeholder="35, 55, 85" />
+                                    </div>
+                                    <div>
+                                        <label className="text-xs text-slate-400 block mb-1">Link naar bron (URL):</label>
+                                        <input type="url" value={newSourceUrl} onChange={(e) => setNewSourceUrl(e.target.value)} className="w-full bg-slate-950 border border-slate-700 rounded p-2 text-sm text-slate-100" placeholder="https://..." />
+                                    </div>
+                                    <div className="flex justify-end gap-2 pt-2">
+                                        <button type="button" onClick={() => setShowAddModal(false)} className="px-4 py-2 bg-slate-800 text-slate-300 rounded-lg text-sm">Annuleren</button>
+                                        <button type="submit" className="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg text-sm font-semibold">Opslaan</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    )}
+                </div>
+            );
+        }
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>

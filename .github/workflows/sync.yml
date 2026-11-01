@@ -1,79 +1,33 @@
-name: Sync Toertochten Database
+name: Synchroniseer Toertochten
 
 on:
   schedule:
-    - cron: '0 6 * * *' # Draait elke dag automatisch om 06:00 uur 's ochtends
-  workflow_dispatch: # Maakt handmatige sync mogelijk via de knop in GitHub Actions!
-
-permissions:
-  contents: write
+    - cron: '0 6 * * *' # Draait elke ochtend om 06:00 uur automatisch
+  workflow_dispatch: # Zodat je hem ook handmatig kunt aanklikken op GitHub!
 
 jobs:
-  sync-data:
+  sync:
+  ---
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Python
+      - name: Python instellen
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
-      - name: Install dependencies
+      - name: Benodigde pakketten installeren
         run: |
           pip install requests beautifulsoup4
 
-      - name: Run Scraper Script
+      - name: Scraper script uitvoeren
+        run: python scrape.py
+
+      - name: Wijzigingen opslaan in events.json
         run: |
-          python -c "
-          import json
-          import datetime
-          import requests
-          from bs4 import BeautifulSoup
-
-          events = []
-
-          # 1. Scrapen van Mountainbike.be toertochten
-          try:
-              url = 'https://www.mountainbike.be/toertochten-overzicht'
-              headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
-              response = requests.get(url, headers=headers, timeout=15)
-              if response.status_code == 200:
-                  soup = BeautifulSoup(response.text, 'html.parser')
-                  # Hier zoeken we naar de rijen in de kalendertabel van mountainbike.be
-                  # (Het script verzamelt zowel de actuele live data als bekende vaste klassiekers)
-          except Exception as e:
-              print(f'Fout bij ophalen Mountainbike.be: {e}')
-
-          # Voor nu vullen we een robuuste set aan met echte actuele data en structuur
-          # Die de komende tijd automatisch wordt aangevuld door de live parser:
-          base_events = [
-              { 'id': 'mb-01', 'title': 'Toertocht Herentals', 'date': '2026-11-01', 'location': 'Herentals', 'type': 'Gravel', 'distances': [55, 75], 'organizer': 'Mountainbike.be', 'sourceUrl': 'https://www.mountainbike.be/toertochten-overzicht', 'price': '€ 7.00' },
-              { 'id': 'mb-02', 'title': 'Veldtoertocht Minderhout', 'date': '2026-11-01', 'location': 'Minderhout', 'type': 'MTB', 'distances': [23, 47, 50], 'organizer': 'Mountainbike.be', 'sourceUrl': 'https://www.mountainbike.be/toertochten-overzicht', 'price': '€ 6.00' },
-              { 'id': 'mb-03', 'title': 'KWB Mountainbiketocht Weelde', 'date': '2026-11-01', 'location': 'Weelde', 'type': 'MTB', 'distances': [20, 28, 37, 45, 55], 'organizer': 'Mountainbike.be', 'sourceUrl': 'https://www.mountainbike.be/toertochten-overzicht', 'price': '€ 6.00' },
-              { 'id': 'mb-04', 'title': 'Limburgse Wandeldagen MTB & Gravel', 'date': '2026-11-01', 'location': 'As', 'type': 'Both', 'distances': [27, 32, 46, 65, 80], 'organizer': 'Mountainbike.be', 'sourceUrl': 'https://www.mountainbike.be/toertochten-overzicht', 'price': '€ 8.00' },
-              { 'id': 'mb-05', 'title': 'Offroad Tocht Baardegem', 'date': '2026-11-01', 'location': 'Baardegem', 'type': 'MTB', 'distances': [25, 40, 55], 'organizer': 'Mountainbike.be', 'sourceUrl': 'https://www.mountainbike.be/toertochten-overzicht', 'price': '€ 6.00' },
-              { 'id': 'mb-06', 'title': 'Scheldeland Veldtoertocht', 'date': '2026-11-01', 'location': 'Moerzeke', 'type': 'MTB', 'distances': [18, 31, 48, 54], 'organizer': 'Mountainbike.be', 'sourceUrl': 'https://www.mountainbike.be/toertochten-overzicht', 'price': '€ 6.00' },
-              { 'id': 'mb-07', 'title': 'Leiestreek Veldtoertocht', 'date': '2026-11-01', 'location': 'Sint-Martens-Latem', 'type': 'MTB', 'distances': [20, 28, 35, 45, 55], 'organizer': 'Mountainbike.be', 'sourceUrl': 'https://www.mountainbike.be/toertochten-overzicht', 'price': '€ 6.00' },
-              { 'id': 'mb-08', 'title': 'Hagelandse MTB Rit', 'date': '2026-11-01', 'location': 'Aarschot', 'type': 'MTB', 'distances': [28, 50, 65], 'organizer': 'Mountainbike.be', 'sourceUrl': 'https://www.mountainbike.be/toertochten-overzicht', 'price': '€ 7.00' },
-              { 'id': 'mb-09', 'title': 'Zoniënwoud Gravel Ride', 'date': '2026-11-01', 'location': 'Hoeilaart', 'type': 'Gravel', 'distances': [20, 50, 75, 105], 'organizer': 'Mountainbike.be', 'sourceUrl': 'https://www.mountainbike.be/toertochten-overzicht', 'price': '€ 10.00' },
-              { 'id': 'mb-10', 'title': 'Heuvelland Offroad Ieper', 'date': '2026-11-01', 'location': 'Ieper', 'type': 'MTB', 'distances': [29, 34, 49, 55, 74, 79], 'organizer': 'Mountainbike.be', 'sourceUrl': 'https://www.mountainbike.be/toertochten-overzicht', 'price': '€ 8.00' },
-              { 'id': 'mb-11', 'title': 'Veldtoertocht Lochristi', 'date': '2026-11-08', 'location': 'Lochristi', 'type': 'MTB', 'distances': [28, 42, 55], 'organizer': 'Mountainbike.be / WTC Lochristi', 'sourceUrl': 'https://www.mountainbike.be/toertochten-overzicht', 'price': '€ 6.00' },
-              { 'id': 'mb-12', 'title': 'Bos- en Heidetoertocht', 'date': '2026-11-15', 'location': 'Helchteren', 'type': 'MTB', 'distances': [30, 43, 52], 'organizer': 'Mountainbike.be / MTB Helchteren', 'sourceUrl': 'https://www.mountainbike.be/toertochten-overzicht', 'price': '€ 7.00' },
-              { 'id': 'mb-13', 'title': 'Kempen MTB Classic', 'date': '2026-11-22', 'location': 'Lille', 'type': 'MTB', 'distances': [30, 45, 60], 'organizer': 'Mountainbike.be / WTC De Lindeboom', 'sourceUrl': 'https://www.mountainbike.be/toertochten-overzicht', 'price': '€ 7.00' },
-              { 'id': 'mb-14', 'title': 'Oostakker Offroad Ride', 'date': '2026-11-29', 'location': 'Oostakker', 'type': 'Both', 'distances': [35, 50, 70], 'organizer': 'Mountainbike.be / Offroad Club Gent', 'sourceUrl': 'https://www.mountainbike.be/toertochten-overzicht', 'price': '€ 8.00' },
-              { 'id': 'fs-01', 'title': 'Grivelty Heuvelrug', 'date': '2026-11-15', 'location': 'Rhenen', 'type': 'Gravel', 'distances': [65, 90, 120], 'organizer': 'Fietssport.nl', 'sourceUrl': 'https://www.fietssport.nl/toertochten', 'price': '€ 18.50' }
-          ]
-
-          with open('events.json', 'w', encoding='utf-8') as f:
-              json.dump(base_events, f, ensure_ascii=False, indent=4)
-          print('events.json succesvol bijgewerkt met alle bronnen!')
-          "
-
-      - name: Commit and push changes if any
-        run: |
-          git config --global user.name 'GitHub Actions Bot'
-          git config --global user.email 'actions@github.com'
+          git config --global user.name "GitHub Action Bot"
+          git config --global user.email "bot@users.noreply.github.com"
           git add events.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m 'Update tochten database via scraper' && git push)
+          git diff --quiet && git diff --cached --quiet || (git commit -m "Automatische update van toertochten databronnen" && git push)

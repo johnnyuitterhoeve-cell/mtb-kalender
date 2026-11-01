@@ -2,12 +2,11 @@ name: Synchroniseer Toertochten
 
 on:
   schedule:
-    - cron: '0 6 * * *' # Draait elke ochtend om 06:00 uur automatisch
-  workflow_dispatch: # Zodat je hem ook handmatig kunt aanklikken op GitHub!
+    - cron: '0 6 * * *'
+  workflow_dispatch:
 
 jobs:
   sync:
-  ---
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -22,10 +21,10 @@ jobs:
         run: |
           pip install requests beautifulsoup4
 
-      - name: Scraper script uitvoeren
+      - name: Scraper uitvoeren
         run: python scrape.py
 
-      - name: Wijzigingen opslaan in events.json
+      - name: Opslaan in events.json
         run: |
           git config --global user.name "GitHub Action Bot"
           git config --global user.email "bot@users.noreply.github.com"

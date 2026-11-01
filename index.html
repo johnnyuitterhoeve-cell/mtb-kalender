@@ -18,7 +18,7 @@
         </header>
 
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
-            <!-- Linkerzijbalk met alle filters -->
+            <!-- Linkerzijbalk met filters -->
             <aside class="bg-slate-900 p-6 rounded-xl border border-slate-800 h-fit space-y-6">
                 <h2 class="text-xl font-semibold text-emerald-400">Filters & Instellingen</h2>
                 
@@ -104,4 +104,90 @@
                 renderEvents();
             } catch (error) {
                 console.error('Fout bij laden events:', error);
-                document.getElementById('eventsContainer').innerHTML = `<div class="text-center py-12 text-slate-500 bg-slate-900 border border-slate-
+                document.getElementById('eventsContainer').innerHTML = `<div class="text-center py-12 text-slate-500 bg-slate-900 border border-slate-800 rounded-xl">Kan events.json niet laden. Controleer of het bestand in de hoofdmap staat.</div>`;
+            }
+        }
+
+        function toggleFavorite(id, event) {
+            event.stopPropagation();
+            if (favorites.includes(id)) {
+                favorites = favorites.filter(fav => fav !== id);
+            } else {
+                favorites.push(id);
+            }
+            localStorage.setItem('mtb_favorites', JSON.stringify(favorites));
+            renderEvents();
+        }
+
+        function renderEvents() {
+            const container = document.getElementById('eventsContainer');
+            const searchVal = document.getElementById('searchInput').value.toLowerCase();
+            const dateVal = document.getElementById('dateInput').value;
+            const origin = document.getElementById('originCity').value;
+            const maxDist = parseInt(document.getElementById('maxDistance').value);
+            const minDist = parseInt(document.getElementById('minDistance').value);
+            const favsOnly = document.getElementById('favoritesOnly').checked;
+
+            let filtered = allEvents.filter(ev => {
+                const matchText = (ev.title + ' ' + ev.location + ' ' + (ev.organizer || '')).toLowerCase();
+                const matchesSearch = matchText.includes(searchVal);
+                // Als er geen datum is gekozen, tonen we alle tochten automatisch
+                const matchesDate = !dateVal || ev.date === dateVal;
+                const matchesType = selectedType === 'Alle' || ev.type === selectedType;
+                
+                const dist = calculateDistance(origin, ev.location);
+                const matchesMaxDist = dist <= maxDist;
+                const matchesMinDist = minDist === 0 || (ev.distances && ev.distances.some(d => d >= minDist));
+                const matchesFav = !favsOnly || favorites.includes(ev.id);
+
+                return matchesSearch && matchesDate && matchesType && matchesMaxDist && matchesMinDist && matchesFav;
+            });
+
+            filtered.sort((a, b) => {
+                const distA = calculateDistance(origin, a.location);
+                const distB = calculateDistance(origin, b.location);
+                return distA - distB;
+            });
+
+            if (filtered.length === 0) {
+                container.innerHTML = `<div class="text-center py-12 text-slate-500 bg-slate-900 border border-slate-800 rounded-xl">Geen tochten gevonden voor deze selectie.</div>`;
+                return;
+            }
+
+            container.innerHTML = filtered.map(ev => {
+                const dist = calculateDistance(origin, ev.location);
+                const isFav = favorites.includes(ev.id);
+                return `
+                    <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 hover:border-slate-700 transition">
+                        <div class="space-y-2 flex-1">
+                            <div class="flex items-center gap-3">
+                                <span class="px-2.5 py-1 rounded text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">${ev.type}</span>
+                                <span class="text-xs text-slate-400 flex items-center gap-1">📅 ${ev.date}</span>
+                                <span class="text-xs text-rose-400 font-medium bg-rose-500/10 px-2 py-0.5 rounded border border-rose-500/20">🚗 ${dist} km rijden</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <h3 class="text-xl font-bold text-white">${ev.title}</h3>
+                                <button onclick="toggleFavorite('${ev.id}', event)" class="text-lg hover:scale-110 transition">${isFav ? '⭐' : '☆'}</button>
+                            </div>
+                            <div class="flex flex-wrap items-center gap-4 text-sm text-slate-400">
+                                <span>📍 ${ev.location}</span>
+                                <span>👥 ${ev.organizer || 'Onbekend'}</span>
+                                <span class="text-emerald-400 font-medium">💶 ${ev.price || '€ 5.00'}</span>
+                                <a href="${ev.sourceUrl}" target="_blank" class="text-indigo-400 hover:underline flex items-center gap-1">🔗 Bron bekijken</a>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            ${(ev.distances || []).map(d => `<span class="bg-slate-800 text-slate-300 text-xs px-3 py-1.5 rounded-lg border border-slate-700">\${d} km</span>`).join('')}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        document.querySelectorAll('.type-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                document.querySelectorAll('.type-btn').forEach(b => {
+                    b.classList.remove('bg-emerald-600', 'text-white');
+                    b.classList.add('bg-slate-800', 'text-slate-300');
+                });
+                e.target

@@ -61,7 +61,7 @@
         function App() {
             const [homeTown, setHomeTown] = React.useState("'s-Heer Arendskerke");
             const [selectedDiscipline, setSelectedDiscipline] = React.useState('All');
-            const [selectedMonth, setSelectedMonth] = React.useState('All');
+            const [selectedDateFilter, setSelectedDateFilter] = React.useState('All'); // Specifieke datum of maand
             const [sortBy, setSortBy] = React.useState('date'); // 'date' of 'distance'
             const [maxDistance, setMaxDistance] = React.useState(250);
             const [minRouteLength, setMinRouteLength] = React.useState(0);
@@ -75,9 +75,7 @@
                 fetch('./events.json')
                     .then(res => res.json())
                     .then(data => setEvents(data))
-                    .catch(err => {
-                        console.log("Geen events.json gevonden", err);
-                    });
+                    .catch(err => console.log("Laden van events.json mislukt", err));
             }, []);
 
             const [newTitle, setNewTitle] = React.useState('');
@@ -115,7 +113,16 @@
             const filteredEvents = events
                 .filter(event => {
                     if (selectedDiscipline !== 'All' && event.type !== 'Both' && event.type !== selectedDiscipline) return false;
-                    if (selectedMonth !== 'All' && !event.date.startsWith(selectedMonth)) return false;
+                    
+                    // Filter op specifieke datum of maand
+                    if (selectedDateFilter !== 'All') {
+                        if (selectedDateFilter.length === 10) {
+                            if (event.date !== selectedDateFilter) return false;
+                        } else {
+                            if (!event.date.startsWith(selectedDateFilter)) return false;
+                        }
+                    }
+
                     if (onlyFavorites && !favorites.includes(event.id)) return false;
                     if (searchQuery && !event.title.toLowerCase().includes(searchQuery.toLowerCase()) && !event.location.toLowerCase().includes(searchQuery.toLowerCase()) && !event.organizer.toLowerCase().includes(searchQuery.toLowerCase())) return false;
                     
@@ -180,7 +187,6 @@
                                 </select>
                             </div>
 
-                            {/* SORTEEROPTIE HERSTELD */}
                             <div>
                                 <label className="text-sm text-slate-300 font-medium block mb-2">Sorteervolgorde:</label>
                                 <select 
@@ -272,16 +278,27 @@
                                     onChange={(e) => setSearchQuery(e.target.value)}
                                     className="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 placeholder-slate-500 focus:outline-none focus:border-emerald-500"
                                 />
+                                
+                                {/* Uitgebreide datum- en maandkeuze */}
                                 <select 
-                                    value={selectedMonth}
-                                    onChange={(e) => setSelectedMonth(e.target.value)}
-                                    className="bg-slate-900 border border-slate-800 text-emerald-400 font-semibold rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-emerald-500 cursor-pointer min-w-[170px]"
+                                    value={selectedDateFilter}
+                                    onChange={(e) => setSelectedDateFilter(e.target.value)}
+                                    className="bg-slate-900 border border-slate-800 text-emerald-400 font-semibold rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-emerald-500 cursor-pointer min-w-[210px]"
                                 >
-                                    <option value="All">📅 Alle Maanden</option>
-                                    <option value="2026-11">November 2026</option>
-                                    <option value="2026-12">December 2026</option>
-                                    <option value="2027-01">Januari 2027</option>
-                                    <option value="2027-02">Februari 2027</option>
+                                    <option value="All">📅 Alle Data & Maanden</option>
+                                    <optgroup label="Specifieke Data">
+                                        <option value="2026-11-01">1 November 2026</option>
+                                        <option value="2026-11-08">8 November 2026</option>
+                                        <option value="2026-11-15">15 November 2026</option>
+                                        <option value="2026-11-22">22 November 2026</option>
+                                        <option value="2026-11-29">29 November 2026</option>
+                                    </optgroup>
+                                    <optgroup label="Hele Maanden">
+                                        <option value="2026-11">Heel November 2026</option>
+                                        <option value="2026-12">Heel December 2026</option>
+                                        <option value="2027-01">Heel Januari 2027</option>
+                                        <option value="2027-02">Heel Februari 2027</option>
+                                    </optgroup>
                                 </select>
                             </div>
 
@@ -387,17 +404,4 @@
                                     </div>
                                     <div className="flex justify-end gap-2 pt-2">
                                         <button type="button" onClick={() => setShowAddModal(false)} className="px-4 py-2 bg-slate-800 text-slate-300 rounded-lg text-sm">Annuleren</button>
-                                        <button type="submit" className="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg text-sm font-semibold">Opslaan</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    )}
-                </div>
-            );
-        }
-
-        ReactDOM.render(<App />, document.getElementById('root'));
-    </script>
-</body>
-</html>
+                                        <button type="submit" className="px-4 py-2 bg-emerald

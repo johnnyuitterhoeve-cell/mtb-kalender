@@ -1,299 +1,5 @@
 [
   {
-    "id": "fs-59734",
-    "title": "DRP MTB Assen Herfsttocht",
-    "date": "2026-11-01",
-    "location": "Assen",
-    "type": "MTB",
-    "distances": [
-      30,
-      60,
-      80
-    ],
-    "organizer": "Fietssport.nl",
-    "sourceUrl": "https://www.fietssport.nl/toertochten/59734/drp-mtb-assen-herfsttocht-2026",
-    "price": "",
-    "source": "Fietssport.nl",
-    "lat": 52.9972,
-    "lon": 6.5506
-  },
-  {
-    "id": "fs-59847",
-    "title": "Helletocht",
-    "date": "2026-11-01",
-    "location": "De Lutte",
-    "type": "MTB",
-    "distances": [
-      30,
-      45,
-      55
-    ],
-    "organizer": "Fietssport.nl",
-    "sourceUrl": "https://www.fietssport.nl/toertochten/59847/helletocht-2026",
-    "price": "",
-    "source": "Fietssport.nl",
-    "lat": 52.3144,
-    "lon": 6.9906
-  },
-  {
-    "id": "fs-59707",
-    "title": "Mulderij & Partners Hunebed MTB Classic",
-    "date": "2026-11-01",
-    "location": "Emmen",
-    "type": "MTB",
-    "distances": [
-      38,
-      60,
-      75
-    ],
-    "organizer": "Fietssport.nl",
-    "sourceUrl": "https://www.fietssport.nl/toertochten/59707/mulderij-en-partners-hunebed-mtb-classic-2026",
-    "price": "",
-    "source": "Fietssport.nl",
-    "lat": 52.7529,
-    "lon": 6.9525
-  },
-  {
-    "id": "fs-59424",
-    "title": "Gorsselse Heideveldtoertocht Gravel",
-    "date": "2026-11-01",
-    "location": "Gorssel",
-    "type": "Gravel",
-    "distances": [
-      50,
-      65,
-      85
-    ],
-    "organizer": "Fietssport.nl",
-    "sourceUrl": "https://www.fietssport.nl/toertochten/59424/gorsselse-heideveldtoertocht-gravel-2026",
-    "price": "",
-    "source": "Fietssport.nl",
-    "lat": 52.1996,
-    "lon": 6.2002
-  },
-  {
-    "id": "fs-59423",
-    "title": "Gorsselse Heideveldtoertocht MTB",
-    "date": "2026-11-01",
-    "location": "Gorssel",
-    "type": "MTB",
-    "distances": [
-      40,
-      55
-    ],
-    "organizer": "Fietssport.nl",
-    "sourceUrl": "https://www.fietssport.nl/toertochten/59423/gorsselse-heideveldtoertocht-mtb-2026",
-    "price": "",
-    "source": "Fietssport.nl",
-    "lat": 52.1996,
-    "lon": 6.2002
-  },
-  {
-    "id": "fs-59872",
-    "title": "Bikse Bos en Heidetocht MTB",
-    "date": "2026-11-01",
-    "location": "Hilvarenbeek",
-    "type": "MTB",
-    "distances": [
-      25,
-      45
-    ],
-    "organizer": "Fietssport.nl",
-    "sourceUrl": "https://www.fietssport.nl/toertochten/59872/bikse-bos-en-heidetocht-mtb",
-    "price": "",
-    "source": "Fietssport.nl",
-    "lat": 51.487,
-    "lon": 5.147
-  },
-  {
-    "id": "fs-59873",
-    "title": "Bikse Bos en Heidetocht gravel",
-    "date": "2026-11-01",
-    "location": "Hilvarenbeek",
-    "type": "Gravel",
-    "distances": [
-      65,
-      100
-    ],
-    "organizer": "Fietssport.nl",
-    "sourceUrl": "https://www.fietssport.nl/toertochten/59873/bikse-bos-en-heidetocht-gravel",
-    "price": "",
-    "source": "Fietssport.nl",
-    "lat": 51.487,
-    "lon": 5.147
-  },
-  {
-    "id": "fs-59726",
-    "title": "Brabants Mooiste",
-    "date": "2026-11-01",
-    "location": "Nistelrode",
-    "type": "MTB",
-    "distances": [
-      45,
-      55
-    ],
-    "organizer": "Fietssport.nl",
-    "sourceUrl": "https://www.fietssport.nl/toertochten/59726/brabants-mooiste-2026",
-    "price": "",
-    "source": "Fietssport.nl",
-    "lat": 51.7046,
-    "lon": 5.5614
-  },
-  {
-    "id": "fs-59727",
-    "title": "Brabants Mooiste Gravel",
-    "date": "2026-11-01",
-    "location": "Nistelrode",
-    "type": "Gravel",
-    "distances": [
-      72
-    ],
-    "organizer": "Fietssport.nl",
-    "sourceUrl": "https://www.fietssport.nl/toertochten/59727/brabants-mooiste-gravel-2026",
-    "price": "",
-    "source": "Fietssport.nl",
-    "lat": 51.7046,
-    "lon": 5.5614
-  },
-  {
-    "id": "fs-59989",
-    "title": "Huijskes MTB toertocht",
-    "date": "2026-11-01",
-    "location": "Overloon",
-    "type": "MTB",
-    "distances": [
-      35,
-      45,
-      55
-    ],
-    "organizer": "Fietssport.nl",
-    "sourceUrl": "https://www.fietssport.nl/toertochten/59989/huijskes-mtb-toertocht",
-    "price": "",
-    "source": "Fietssport.nl",
-    "lat": 51.5711,
-    "lon": 5.947
-  },
-  {
-    "id": "fs-60032",
-    "title": "Veldtoertocht Audax",
-    "date": "2026-11-01",
-    "location": "Roosendaal",
-    "type": "MTB",
-    "distances": [
-      23,
-      33,
-      43
-    ],
-    "organizer": "Fietssport.nl",
-    "sourceUrl": "https://www.fietssport.nl/toertochten/60032/veldtoertocht-audax-2026",
-    "price": "",
-    "source": "Fietssport.nl",
-    "lat": 51.5331,
-    "lon": 4.4561
-  },
-  {
-    "id": "fs-59828",
-    "title": "Atb tocht De berg",
-    "date": "2026-11-01",
-    "location": "Stramproy",
-    "type": "Gravel",
-    "distances": [
-      55
-    ],
-    "organizer": "Fietssport.nl",
-    "sourceUrl": "https://www.fietssport.nl/toertochten/59828/atb-tocht-de-berg",
-    "price": "",
-    "source": "Fietssport.nl",
-    "lat": 51.1932,
-    "lon": 5.7235
-  },
-  {
-    "id": "fs-59704",
-    "title": "CarProf Wils ATB najaarstocht",
-    "date": "2026-11-01",
-    "location": "Valkenswaard",
-    "type": "MTB",
-    "distances": [
-      30,
-      40,
-      50
-    ],
-    "organizer": "Fietssport.nl",
-    "sourceUrl": "https://www.fietssport.nl/toertochten/59704/carprof-wils-atb-najaarstocht-2026",
-    "price": "",
-    "source": "Fietssport.nl",
-    "lat": 51.3202,
-    "lon": 5.4582
-  },
-  {
-    "id": "fs-60414",
-    "title": "CarProf Wils gravel najaarstocht",
-    "date": "2026-11-01",
-    "location": "Valkenswaard",
-    "type": "Gravel",
-    "distances": [
-      60,
-      80
-    ],
-    "organizer": "Fietssport.nl",
-    "sourceUrl": "https://www.fietssport.nl/toertochten/60414/carprof-wils-gravel-najaarstocht-2026",
-    "price": "",
-    "source": "Fietssport.nl",
-    "lat": 51.3202,
-    "lon": 5.4582
-  },
-  {
-    "id": "fs-60557",
-    "title": "ATB Top Noord-Holland, Dijkgatbos",
-    "date": "2026-11-01",
-    "location": "Wieringerwerf",
-    "type": "MTB",
-    "distances": [
-      4
-    ],
-    "organizer": "Fietssport.nl",
-    "sourceUrl": "https://www.fietssport.nl/toertochten/60557/atb-top-noord-holland-dijkgatbos-2026",
-    "price": "",
-    "source": "Fietssport.nl",
-    "lat": 52.8516,
-    "lon": 5.0229
-  },
-  {
-    "id": "fs-59947",
-    "title": "Grensland Graveltocht",
-    "date": "2026-11-01",
-    "location": "Winterswijk",
-    "type": "Gravel",
-    "distances": [
-      60,
-      80
-    ],
-    "organizer": "Fietssport.nl",
-    "sourceUrl": "https://www.fietssport.nl/toertochten/59947/grensland-graveltocht-2026",
-    "price": "",
-    "source": "Fietssport.nl",
-    "lat": 51.968,
-    "lon": 6.7379
-  },
-  {
-    "id": "fs-58217",
-    "title": "Grensland MTB",
-    "date": "2026-11-01",
-    "location": "Winterswijk",
-    "type": "MTB",
-    "distances": [
-      35,
-      45,
-      55
-    ],
-    "organizer": "Fietssport.nl",
-    "sourceUrl": "https://www.fietssport.nl/toertochten/58217/grensland-mtb-2026",
-    "price": "",
-    "source": "Fietssport.nl",
-    "lat": 51.968,
-    "lon": 6.7379
-  },
-  {
     "id": "fs-59781",
     "title": "Avadent Herfstbostocht Gravel Arnhem",
     "date": "2026-11-07",
@@ -898,24 +604,6 @@
     "lon": 6.7924
   },
   {
-    "id": "fs-57027",
-    "title": "Achterhoeks Argste Vishandel Bomers MTB Tocht",
-    "date": "2026-11-22",
-    "location": "Lichtenvoorde",
-    "type": "MTB",
-    "distances": [
-      35,
-      50,
-      60
-    ],
-    "organizer": "Fietssport.nl",
-    "sourceUrl": "https://www.fietssport.nl/toertochten/57027/achterhoeks-argste-vishandel-bomers-mtb-tocht",
-    "price": "",
-    "source": "Fietssport.nl",
-    "lat": 51.9891,
-    "lon": 6.5717
-  },
-  {
     "id": "fs-57026",
     "title": "Achterhoeks Argste Vishandel Bomers Gravelride",
     "date": "2026-11-22",
@@ -928,6 +616,24 @@
     ],
     "organizer": "Fietssport.nl",
     "sourceUrl": "https://www.fietssport.nl/toertochten/57026/achterhoeks-argste-vishandel-bomers-gravelride",
+    "price": "",
+    "source": "Fietssport.nl",
+    "lat": 51.9891,
+    "lon": 6.5717
+  },
+  {
+    "id": "fs-57027",
+    "title": "Achterhoeks Argste Vishandel Bomers MTB Tocht",
+    "date": "2026-11-22",
+    "location": "Lichtenvoorde",
+    "type": "MTB",
+    "distances": [
+      35,
+      50,
+      60
+    ],
+    "organizer": "Fietssport.nl",
+    "sourceUrl": "https://www.fietssport.nl/toertochten/57027/achterhoeks-argste-vishandel-bomers-mtb-tocht",
     "price": "",
     "source": "Fietssport.nl",
     "lat": 51.9891,

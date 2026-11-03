@@ -969,6 +969,7 @@
     "location": "Vorden",
     "type": "Gravel",
     "distances": [
+      50,
       60,
       80
     ],
@@ -1676,7 +1677,7 @@
     "location": "Someren",
     "type": "Gravel",
     "distances": [
-      65
+      70
     ],
     "organizer": "Fietssport.nl",
     "sourceUrl": "https://www.fietssport.nl/toertochten/59479/gravel-tocht-memorial-jo-boerekamp-2026",

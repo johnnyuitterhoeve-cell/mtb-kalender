@@ -52,10 +52,6 @@
                         <input type="range" id="minDistance" min="0" max="100" value="0" step="5" class="w-full accent-emerald-500 cursor-pointer">
                     </div>
 
-                    <div class="flex items-center gap-3 pt-2 border-t border-slate-800">
-                        <input type="checkbox" id="favoritesOnly" class="w-4 h-4 accent-emerald-500 rounded cursor-pointer">
-                        <label for="favoritesOnly" class="text-sm font-medium text-slate-300 cursor-pointer">⭐ Alleen favorieten tonen</label>
-                    </div>
                 </div>
 
                 <div class="pt-6 border-t border-slate-800 space-y-2">
@@ -68,7 +64,13 @@
             <main class="lg:col-span-3 space-y-4">
                 <div class="flex flex-col sm:flex-row gap-4 mb-2">
                     <input type="text" id="searchInput" placeholder="Zoek op plaatsnaam, titel of organisatie..." class="flex-1 bg-slate-900 border border-slate-800 rounded-lg px-4 py-3 text-slate-100 placeholder-slate-500 focus:outline-none focus:border-emerald-500">
-                    <input type="date" id="dateInput" class="bg-slate-900 border border-slate-800 rounded-lg px-4 py-3 text-slate-100 focus:outline-none focus:border-emerald-500">
+                    <div class="relative sm:w-56">
+                        <input type="hidden" id="dateInput" value="">
+                        <button type="button" id="dateBtn" class="w-full h-full bg-slate-900 border border-slate-800 rounded-lg px-4 py-3 text-left text-slate-100 hover:border-slate-700 focus:outline-none focus:border-emerald-500 flex items-center justify-between gap-3">
+                            <span id="dateBtnLabel">Alle datums</span><span>📅</span>
+                        </button>
+                        <div id="calendarPop" class="hidden absolute right-0 mt-2 z-20 w-72 bg-slate-900 border border-slate-700 rounded-xl shadow-xl p-4"></div>
+                    </div>
                 </div>
                 <p id="statusLine" class="text-xs text-slate-500"></p>
                 <div id="eventsContainer" class="space-y-4"></div>
@@ -342,12 +344,68 @@
                 .catch(function () { /* overslaan */ })
                 .then(function () { setTimeout(nextGeocode, 1100); });
         }
-        var favorites = [];
-        try { favorites = JSON.parse(localStorage.getItem('mtb_favorites') || '[]'); } catch (err) { favorites = []; }
-        if (!Array.isArray(favorites)) favorites = [];
+        // ---------- Kalender om een datum te kiezen ----------
+        var MONTH_NAMES = ['januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 'augustus', 'september', 'oktober', 'november', 'december'];
+        var calMonth = new Date(new Date().getFullYear(), new Date().getMonth(), 1);
 
-        function saveFavorites() {
-            try { localStorage.setItem('mtb_favorites', JSON.stringify(favorites)); } catch (err) { /* geen opslag beschikbaar */ }
+        function pad2(n) { return (n < 10 ? '0' : '') + n; }
+        function isoOf(y, m, d) { return y + '-' + pad2(m + 1) + '-' + pad2(d); }
+
+        function renderCalendar() {
+            var y = calMonth.getFullYear(), m = calMonth.getMonth();
+            var counts = {};
+            allEvents.forEach(function (e) { if (e.date) counts[e.date] = (counts[e.date] || 0) + 1; });
+            var selected = $('dateInput').value;
+            var now = new Date(), todayIso = isoOf(now.getFullYear(), now.getMonth(), now.getDate());
+            var offset = (new Date(y, m, 1).getDay() + 6) % 7;   // week begint op maandag
+            var days = new Date(y, m + 1, 0).getDate();
+            var html = '<div class="flex items-center justify-between mb-3">' +
+                '<button type="button" data-cal="prev" aria-label="Vorige maand" class="px-3 py-1 rounded hover:bg-slate-800 text-slate-300">‹</button>' +
+                '<span class="text-sm font-semibold text-slate-100">' + MONTH_NAMES[m] + ' ' + y + '</span>' +
+                '<button type="button" data-cal="next" aria-label="Volgende maand" class="px-3 py-1 rounded hover:bg-slate-800 text-slate-300">›</button></div>' +
+                '<div class="grid grid-cols-7 gap-1 text-center text-xs text-slate-500 mb-1">' +
+                ['ma', 'di', 'wo', 'do', 'vr', 'za', 'zo'].map(function (d) { return '<span>' + d + '</span>'; }).join('') +
+                '</div><div class="grid grid-cols-7 gap-1">';
+            for (var i = 0; i < offset; i++) html += '<span></span>';
+            for (var d = 1; d <= days; d++) {
+                var iso = isoOf(y, m, d), n = counts[iso] || 0;
+                var cls = 'relative h-9 rounded-lg text-sm transition ';
+                if (iso === selected) cls += 'bg-emerald-600 text-white font-semibold';
+                else if (n) cls += 'bg-slate-800 text-slate-100 hover:bg-slate-700';
+                else cls += 'text-slate-600 hover:bg-slate-800';
+                if (iso === todayIso && iso !== selected) cls += ' ring-1 ring-emerald-500';
+                html += '<button type="button" data-day="' + iso + '" class="' + cls + '" title="' + (n ? n + ' tochten' : 'Geen tochten') + '">' + d +
+                    (n && iso !== selected ? '<span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-emerald-400"></span>' : '') + '</button>';
+            }
+            html += '</div><div class="flex justify-between mt-3">' +
+                '<button type="button" data-cal="clear" class="text-xs text-slate-400 hover:text-slate-200">Alle datums</button>' +
+                '<button type="button" data-cal="today" class="text-xs text-emerald-400 hover:text-emerald-300">Vandaag</button></div>';
+            $('calendarPop').innerHTML = html;
+        }
+
+        function setDate(iso) {
+            $('dateInput').value = iso;
+            $('dateBtnLabel').textContent = iso ? formatDate(iso) : 'Alle datums';
+            $('calendarPop').classList.add('hidden');
+            renderEvents();
+        }
+
+        // ---------- Google Agenda ----------
+        function gcalUrl(e, variants) {
+            if (!/^\d{4}-\d{2}-\d{2}$/.test(e.date || '')) return '';
+            var nd = new Date(+e.date.slice(0, 4), +e.date.slice(5, 7) - 1, +e.date.slice(8, 10) + 1);
+            var end = nd.getFullYear() + pad2(nd.getMonth() + 1) + pad2(nd.getDate());
+            var lines = variants.filter(function (v) { return v.distances.length; }).map(function (v) {
+                return (v.type === 'Both' ? 'MTB & Gravel' : v.type) + ': ' + v.distances.join(', ') + ' km';
+            });
+            if (e.price) lines.push('Inschrijfgeld: ' + e.price);
+            if (e.organizer) lines.push('Organisatie: ' + e.organizer);
+            if (e.sourceUrl && e.sourceUrl !== '#') lines.push(e.sourceUrl);
+            return 'https://calendar.google.com/calendar/render?action=TEMPLATE' +
+                '&text=' + encodeURIComponent(e.title) +
+                '&dates=' + e.date.replace(/-/g, '') + '/' + end +
+                '&location=' + encodeURIComponent(e.location) +
+                '&details=' + encodeURIComponent(lines.join('\n'));
         }
 
         // ---------- Renderen ----------
@@ -358,7 +416,6 @@
             var origin = home;
             var maxDist = parseInt($('maxDistance').value, 10);
             var minDist = parseInt($('minDistance').value, 10);
-            var favsOnly = $('favoritesOnly').checked;
 
             var rows = allEvents.map(function (e) {
                 var vs = e.variants.filter(function (v) {
@@ -371,12 +428,11 @@
                 var okLen = minDist === 0 || r.variants.some(function (v) {
                     return v.distances.length === 0 || v.distances.some(function (d) { return d >= minDist; });
                 });
-                var okFav = !favsOnly || e.ids.some(function (id) { return favorites.indexOf(id) > -1; });
                 return r.variants.length > 0
                     && text.indexOf(searchVal) > -1
                     && (!dateVal || e.date === dateVal)
                     && (r.dist === null || r.dist <= maxDist)
-                    && okLen && okFav;
+                    && okLen;
             });
 
             // Altijd op kortste reisafstand; onbekende afstand onderaan, daarna op datum
@@ -394,8 +450,8 @@
 
             container.innerHTML = rows.map(function (r) {
                 var e = r.ev;
-                var isFav = e.ids.some(function (id) { return favorites.indexOf(id) > -1; });
                 var multi = r.variants.length > 1;
+                var gcal = gcalUrl(e, r.variants);
                 var badges = r.variants.map(function (v) {
                     var lbl = v.type === 'Both' ? 'MTB & Gravel' : v.type;
                     return '<span class="px-2.5 py-1 rounded text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">' + esc(lbl) + '</span>';
@@ -417,13 +473,13 @@
                         '</div>' +
                         '<div class="flex items-center gap-3">' +
                             '<h3 class="text-xl font-bold text-white">' + esc(e.title) + '</h3>' +
-                            '<button type="button" data-fav="' + esc(e.id) + '" aria-label="Favoriet" class="text-lg hover:scale-110 transition">' + (isFav ? '⭐' : '☆') + '</button>' +
                         '</div>' +
                         '<div class="flex flex-wrap items-center gap-4 text-sm text-slate-400">' +
                             '<span>📍 ' + esc(e.location) + '</span>' +
                             '<span>👥 ' + esc(e.organizer || 'Onbekend') + '</span>' +
                             (e.price ? '<span class="text-emerald-400 font-medium">💶 ' + esc(e.price) + '</span>' : '') +
                             '<a href="' + esc(safeUrl(e.sourceUrl)) + '" target="_blank" rel="noopener" class="text-indigo-400 hover:underline">🔗 Bron bekijken</a>' +
+                            (gcal ? '<a href="' + esc(gcal) + '" target="_blank" rel="noopener" class="text-emerald-400 hover:underline">📅 Zet in Google Agenda</a>' : '') +
                         '</div>' +
                     '</div>' +
                     '<div class="flex flex-col gap-2 md:items-end">' + distHtml + '</div>' +
@@ -432,7 +488,7 @@
         }
 
         // ---------- Bronstatus ----------
-        var KNOWN_SOURCES = ['Mountainbike.be', 'Fietssport.nl', 'MTB-You', 'GoDare', 'GravelBike.nl'];
+        var KNOWN_SOURCES = ['Mountainbike.be', 'Fietssport.nl', 'MTB-You', 'GoDare', 'Battistrada'];
         var sourceInfo = null;
 
         function renderSources() {
@@ -441,6 +497,8 @@
                 var dot = 'bg-slate-600', text = 'geen gegevens', title = '';
                 if (info && info.status === 'ok') {
                     dot = 'bg-emerald-500'; text = info.count + ' tochten';
+                } else if (info && info.status === 'oud') {
+                    dot = 'bg-amber-500'; text = info.count + ' tochten (oud)'; title = info.message || '';
                 } else if (info && info.status === 'fout') {
                     dot = 'bg-rose-500';
                     text = /40[13]|429/.test(info.message || '') ? 'geen toegang' : 'niet beschikbaar';
@@ -509,24 +567,34 @@
             });
         });
 
-        $('eventsContainer').addEventListener('click', function (e) {
-            var btn = e.target.closest('[data-fav]');
-            if (!btn) return;
-            var id = btn.getAttribute('data-fav');
-            var found = allEvents.filter(function (x) { return x.id === id; })[0];
-            var ids = found ? found.ids : [id];
-            var has = ids.some(function (x) { return favorites.indexOf(x) > -1; });
-            favorites = favorites.filter(function (x) { return ids.indexOf(x) < 0; });
-            if (!has) favorites.push(id);
-            saveFavorites();
-            renderEvents();
-        });
-
         $('searchInput').addEventListener('input', renderEvents);
-        $('dateInput').addEventListener('input', renderEvents);
+        $('dateBtn').addEventListener('click', function (ev) {
+            ev.stopPropagation();
+            var pop = $('calendarPop');
+            if (pop.classList.contains('hidden')) {
+                var sel = $('dateInput').value;
+                if (sel) calMonth = new Date(+sel.slice(0, 4), +sel.slice(5, 7) - 1, 1);
+                renderCalendar();
+                pop.classList.remove('hidden');
+            } else {
+                pop.classList.add('hidden');
+            }
+        });
+        $('calendarPop').addEventListener('click', function (ev) {
+            ev.stopPropagation();
+            var b = ev.target.closest('button');
+            if (!b) return;
+            var act = b.getAttribute('data-cal'), day = b.getAttribute('data-day');
+            if (act === 'prev') { calMonth = new Date(calMonth.getFullYear(), calMonth.getMonth() - 1, 1); renderCalendar(); }
+            else if (act === 'next') { calMonth = new Date(calMonth.getFullYear(), calMonth.getMonth() + 1, 1); renderCalendar(); }
+            else if (act === 'clear') { setDate(''); }
+            else if (act === 'today') { var t = new Date(); setDate(isoOf(t.getFullYear(), t.getMonth(), t.getDate())); }
+            else if (day) { setDate($('dateInput').value === day ? '' : day); }
+        });
+        document.addEventListener('click', function () { $('calendarPop').classList.add('hidden'); });
+        document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape') $('calendarPop').classList.add('hidden'); });
         $('postcodeBtn').addEventListener('click', applyPostcode);
         $('postcodeInput').addEventListener('keydown', function (e) { if (e.key === 'Enter') applyPostcode(); });
-        $('favoritesOnly').addEventListener('change', renderEvents);
         $('maxDistance').addEventListener('input', function (e) {
             $('maxDistVal').textContent = e.target.value;
             renderEvents();

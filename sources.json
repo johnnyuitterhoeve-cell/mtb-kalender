@@ -1,32 +1,32 @@
 {
-  "updated": "2026-11-03T06:42:10+00:00",
+  "updated": "2026-11-03T18:04:50+00:00",
   "sources": [
     {
       "name": "Mountainbike.be",
-      "status": "fout",
-      "count": 0,
-      "message": "toegang geweigerd (403)"
+      "status": "ok",
+      "count": 122,
+      "message": ""
     },
     {
       "name": "Fietssport.nl",
       "status": "ok",
-      "count": 131,
+      "count": 97,
       "message": ""
     },
     {
       "name": "MTB-You",
-      "status": "niet gekoppeld",
-      "count": 0,
+      "status": "ok",
+      "count": 14,
       "message": ""
     },
     {
       "name": "GoDare",
-      "status": "niet gekoppeld",
-      "count": 0,
+      "status": "ok",
+      "count": 49,
       "message": ""
     },
     {
-      "name": "GravelBike.nl",
+      "name": "Battistrada",
       "status": "niet gekoppeld",
       "count": 0,
       "message": ""

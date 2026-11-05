@@ -24,11 +24,11 @@ if errorlevel 1 (
     goto klaar
 )
 
-git add events.json geocache.json sources.json detailcache.json
+git add events.json geocache.json sources.json detailcache.json index.html scrape.py
 git diff --cached --quiet
 if errorlevel 1 (
     git commit -m "Lokale update van toertochten"
-    git pull --rebase -X theirs
+    git pull --rebase --autostash -X theirs
     git push
 ) else (
     echo Geen wijzigingen om te uploaden.

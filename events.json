@@ -14,6 +14,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261107-arnhem-herfstbostocht-mtb-arnhem",
     "price": "€ 14,00 – € 17,00",
     "source": "Mountainbike.be",
+    "country": "NL",
     "lat": 51.9843,
     "lon": 5.9109
   },
@@ -30,6 +31,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/59781/avadent-herfstbostocht-gravel-arnhem-2026",
     "price": "€ 15,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.9843,
     "lon": 5.9109
   },
@@ -50,6 +52,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261107-astene-versele-classic",
     "price": "€ 0,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 50.9846,
     "lon": 3.5628
   },
@@ -70,6 +73,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261107-brugge-33e-bossentocht",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.2086,
     "lon": 3.2268
   },
@@ -87,6 +91,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60058/tc-dse-gravelride",
     "price": "€ 10,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.5696,
     "lon": 4.6357
   },
@@ -107,6 +112,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261107-knokke-heist-18e-wacky-toertocht",
     "price": "€ 6,00 – € 12,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.3434,
     "lon": 3.2885
   },
@@ -125,6 +131,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/3de-gravel-zwinclassic-vbr",
     "price": "",
     "source": "GoDare",
+    "country": "BE",
     "lat": 51.3434,
     "lon": 3.2885
   },
@@ -144,6 +151,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261107-lokeren-bospark-classic",
     "price": "€ 5,00 – € 7,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.1484,
     "lon": 3.9442
   },
@@ -161,6 +169,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261107-nijkerk-voek-herfstklassieker",
     "price": "€ 5,00 – € 6,00",
     "source": "Mountainbike.be",
+    "country": "NL",
     "lat": 52.2149,
     "lon": 5.4781
   },
@@ -177,6 +186,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/brugse-bikers-gravel-75km",
     "price": "",
     "source": "GoDare",
+    "country": "BE",
     "lat": 51.192,
     "lon": 3.178
   },
@@ -194,6 +204,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261107-wapenveld-swolsebostocht-",
     "price": "€ 8,00 – € 10,00",
     "source": "Mountainbike.be",
+    "country": "NL",
     "lat": 52.4315,
     "lon": 6.0729
   },
@@ -210,6 +221,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60174/swolsebostocht-2026",
     "price": "€ 8,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 52.4315,
     "lon": 6.0729
   },
@@ -228,6 +240,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261108-alphen-veldtoertocht-",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "NL",
     "lat": 51.4829,
     "lon": 4.9553
   },
@@ -249,6 +262,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261108-beaufort-knight-ride",
     "price": "€ 10,00",
     "source": "Mountainbike.be",
+    "country": "",
     "lat": 50.2144,
     "lon": 3.9615
   },
@@ -268,6 +282,7 @@
     "sourceUrl": "https://mtb-you.com/calendar/tour/21574/alpe-du-genhout-atb-graveltocht",
     "price": "",
     "source": "MTB-You",
+    "country": "NL",
     "lat": 50.9241,
     "lon": 5.822
   },
@@ -289,6 +304,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261108-brecht-veldtoertocht",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.3485,
     "lon": 4.6399
   },
@@ -310,6 +326,7 @@
     "sourceUrl": "https://mtb-you.com/calendar/tour/21801/veldtoertocht-en-graveltocht-doorheen-de-brechtse-velden-en",
     "price": "",
     "source": "MTB-You",
+    "country": "BE",
     "lat": 51.3359,
     "lon": 4.6282
   },
@@ -330,6 +347,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261108-den-dungen-bioracer-mtb-gravel-tocht",
     "price": "€ 6,00 – € 7,00",
     "source": "Mountainbike.be",
+    "country": "NL",
     "lat": 51.6656,
     "lon": 5.3713
   },
@@ -348,6 +366,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261108-heusden-zolder-mountainbiketoertocht",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "",
     "lat": 51.0328,
     "lon": 5.2797
   },
@@ -364,6 +383,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/graveltocht-vwb-3",
     "price": "",
     "source": "GoDare",
+    "country": "BE",
     "lat": 51.0328,
     "lon": 5.2797
   },
@@ -383,6 +403,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261108-houthulst-heuveltjes-van-erika",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 50.9774,
     "lon": 2.9524
   },
@@ -404,6 +425,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261108-huizingen-dworpse-bikers-mtb-en-gravel-classic",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 50.7481,
     "lon": 4.2767
   },
@@ -425,6 +447,7 @@
     "sourceUrl": "https://mtb-you.com/calendar/tour/21746/toertocht-kampenhout-tvv-11-11-11",
     "price": "",
     "source": "MTB-You",
+    "country": "BE",
     "lat": 50.9413,
     "lon": 4.5607
   },
@@ -445,7 +468,8 @@
     "organizer": "11 Kampenhout",
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261108-kempenhout-toertocht-kampenhout-tvv-11-11-11",
     "price": "€ 6,00 – € 7,00",
-    "source": "Mountainbike.be"
+    "source": "Mountainbike.be",
+    "country": "BE"
   },
   {
     "id": "mb-20261108-koewacht-wim-hendriks-trofee",
@@ -461,6 +485,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261108-koewacht-wim-hendriks-trofee",
     "price": "€ 7,00",
     "source": "Mountainbike.be",
+    "country": "NL",
     "lat": 51.229,
     "lon": 3.9702
   },
@@ -479,6 +504,7 @@
     "sourceUrl": "https://mtb-you.com/calendar/tour/21753/boterkoektocht-15",
     "price": "",
     "source": "MTB-You",
+    "country": "NL",
     "lat": 52.4446,
     "lon": 6.8214
   },
@@ -496,6 +522,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/tbb-totaal-boterkoektocht-gravel",
     "price": "",
     "source": "GoDare",
+    "country": "NL",
     "lat": 52.4441,
     "lon": 6.8244
   },
@@ -514,6 +541,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/mtb-tocht-vwb-12",
     "price": "",
     "source": "GoDare",
+    "country": "BE",
     "lat": 51.1319,
     "lon": 5.4546
   },
@@ -531,6 +559,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261108-rollegem-wtc-de-platse-offroad-classic-",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 50.7688,
     "lon": 3.2626
   },
@@ -551,6 +580,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261108-seraing-le-chemin-des-sangliers",
     "price": "€ 2,00 – € 7,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 50.6152,
     "lon": 5.5089
   },
@@ -569,6 +599,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261108-ter-apel-gronings-mooiste",
     "price": "€ 8,00 – € 10,00",
     "source": "Mountainbike.be",
+    "country": "NL",
     "lat": 52.8742,
     "lon": 7.0618
   },
@@ -585,6 +616,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/59879/gronings-mooiste-graveltocht-2026",
     "price": "€ 15,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 52.8742,
     "lon": 7.0618
   },
@@ -601,6 +633,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60455/kidz-route",
     "price": "€ 0,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 52.8742,
     "lon": 7.0618
   },
@@ -617,6 +650,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/gronings-mooiste-graveltocht-2026",
     "price": "",
     "source": "GoDare",
+    "country": "NL",
     "lat": 52.8742,
     "lon": 7.0618
   },
@@ -635,6 +669,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261108-tubbergen-boterkoektocht-",
     "price": "€ 8,00 – € 10,00",
     "source": "Mountainbike.be",
+    "country": "NL",
     "lat": 52.404,
     "lon": 6.7744
   },
@@ -652,6 +687,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/59600/tbb-totaal-boterkoektocht-gravel",
     "price": "€ 10,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 52.404,
     "lon": 6.7744
   },
@@ -670,6 +706,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261108-vosselaar-glaswerk-vanheertum-vtt",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.3129,
     "lon": 4.8878
   },
@@ -692,6 +729,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261108-weert-land-van-horne-bike-fest",
     "price": "€ 8,00 – € 22,50",
     "source": "Mountainbike.be",
+    "country": "",
     "lat": 51.2356,
     "lon": 5.7051
   },
@@ -711,6 +749,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/59527/land-van-horne-bike-fest-gravelride",
     "price": "€ 23,50",
     "source": "Fietssport.nl",
+    "country": "",
     "lat": 51.2356,
     "lon": 5.7051
   },
@@ -729,6 +768,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261108-zeeland-mtb-ride-maashorst",
     "price": "€ 5,00 – € 6,00",
     "source": "Mountainbike.be",
+    "country": "NL",
     "lat": 51.6946,
     "lon": 5.6729
   },
@@ -747,6 +787,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/59715/gravel-ride-maashorst-2026",
     "price": "€ 6,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.6946,
     "lon": 5.6729
   },
@@ -763,6 +804,7 @@
     "sourceUrl": "https://mtb-you.com/calendar/tour/21755/seniorenmountainbikers-okra-42",
     "price": "",
     "source": "MTB-You",
+    "country": "NL",
     "lat": 51.3096,
     "lon": 5.2554
   },
@@ -779,6 +821,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261110-bergeijk-nederland-seniorenmountainbikers-okra",
     "price": "",
     "source": "Mountainbike.be",
+    "country": "NL",
     "lat": 51.3212,
     "lon": 5.3569
   },
@@ -797,6 +840,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261110-pittem-10e-pittem-by-night-mtb-",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 50.9952,
     "lon": 3.2668
   },
@@ -815,6 +859,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261111-eksaarde-gezoardse-feesten-mtb-toers-",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.1488,
     "lon": 3.9652
   },
@@ -834,6 +879,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261111-geel-ten-aard-33e-veldtoertocht-gta-classic",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.1902,
     "lon": 4.9555
   },
@@ -853,6 +899,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261111-gesves-la-gesvoise",
     "price": "€ 5,00 – € 7,50",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 50.4029,
     "lon": 5.0776
   },
@@ -873,6 +920,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261111-hoegaarden-frans-claes-classic-",
     "price": "€ 0,00 – € 12,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 50.7742,
     "lon": 4.887
   },
@@ -890,6 +938,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/frans-claes-classic-11-5",
     "price": "",
     "source": "GoDare",
+    "country": "BE",
     "lat": 50.7742,
     "lon": 4.887
   },
@@ -906,6 +955,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/anti-tank-gravel",
     "price": "",
     "source": "GoDare",
+    "country": "BE",
     "lat": 51.3282,
     "lon": 4.4352
   },
@@ -925,6 +975,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261111-koersel-mountainbikerit",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "",
     "lat": 51.0698,
     "lon": 5.2711
   },
@@ -943,6 +994,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/mtb-rit-vwb-2",
     "price": "",
     "source": "GoDare",
+    "country": "BE",
     "lat": 51.0698,
     "lon": 5.2711
   },
@@ -962,6 +1014,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261111-kruisem-vtt-amp-cyclo-dwars-door-kruishoutem",
     "price": "€ 2,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 50.9086,
     "lon": 3.5649
   },
@@ -983,6 +1036,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261111-oostmalle-veldtourtochten-",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.302,
     "lon": 4.734
   },
@@ -1002,6 +1056,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261111-pittem-28e-helletocht-mtb-pittem",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 50.9952,
     "lon": 3.2668
   },
@@ -1019,6 +1074,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/4-gravelrit-pittem-vbr",
     "price": "",
     "source": "GoDare",
+    "country": "BE",
     "lat": 50.9952,
     "lon": 3.2668
   },
@@ -1037,6 +1093,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261111-varsenare-20e-st-maartenstocht",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.19,
     "lon": 3.1434
   },
@@ -1059,6 +1116,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261111-wervik-flandrien-classic-der-raketten",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 50.7782,
     "lon": 3.044
   },
@@ -1078,6 +1136,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261114-apeldoorn-11-bergen-mtb-tocht",
     "price": "€ 6,50 – € 7,00",
     "source": "Mountainbike.be",
+    "country": "",
     "lat": 52.1796,
     "lon": 5.9301
   },
@@ -1094,6 +1153,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/59737/11-bergen-graveltocht-2026",
     "price": "€ 6,50",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 52.1796,
     "lon": 5.9301
   },
@@ -1113,6 +1173,7 @@
     "sourceUrl": "https://mtb-you.com/calendar/tour/21577/breuls-euregio-classic",
     "price": "",
     "source": "MTB-You",
+    "country": "BE",
     "lat": 51.036,
     "lon": 5.7121
   },
@@ -1134,6 +1195,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261114-maasmechelen-breuls-euregio-classic-mtb-amp-gravel",
     "price": "€ 7,00 – € 14,00",
     "source": "Mountainbike.be",
+    "country": "",
     "lat": 50.9634,
     "lon": 5.696
   },
@@ -1152,6 +1214,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261114-maldegem-23e-drongengoed-vtt",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.2089,
     "lon": 3.4452
   },
@@ -1171,6 +1234,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261114-moerkerke-vtt-heleblitz-classic",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.2455,
     "lon": 3.341
   },
@@ -1188,6 +1252,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261114-nijverdal-volkerwessels-voskamp-holterberg-atb-tocht",
     "price": "€ 5,00 – € 7,00",
     "source": "Mountainbike.be",
+    "country": "NL",
     "lat": 52.3592,
     "lon": 6.4654
   },
@@ -1205,6 +1270,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60486/volkerwessels-voskamp-holterbergtocht-gravel",
     "price": "€ 12,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 52.3592,
     "lon": 6.4654
   },
@@ -1224,6 +1290,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261114-oekene-25e-mtb-tocht-amp-9e-cyclotocht-oekene",
     "price": "€ 5,00 – € 7,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 50.9209,
     "lon": 3.1603
   },
@@ -1241,6 +1308,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261115-aalten-veldtoertocht-peddelaars",
     "price": "€ 7,00 – € 9,00",
     "source": "Mountainbike.be",
+    "country": "NL",
     "lat": 51.9142,
     "lon": 6.5774
   },
@@ -1257,6 +1325,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/59766/graveltocht-peddelaars-aalten-2026",
     "price": "€ 7,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.9142,
     "lon": 6.5774
   },
@@ -1273,6 +1342,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/la-balade-des-voisins-4",
     "price": "",
     "source": "GoDare",
+    "country": "BE",
     "lat": 50.6689,
     "lon": 3.3176
   },
@@ -1289,6 +1359,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261115-de-panne-panne-beach-endurance",
     "price": "€ 25,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.0988,
     "lon": 2.5924
   },
@@ -1308,6 +1379,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261115-eksel-crossen-door-de-bossen-",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "",
     "lat": 51.1538,
     "lon": 5.3923
   },
@@ -1327,6 +1399,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/hei-en-vennentocht-2026",
     "price": "",
     "source": "GoDare",
+    "country": "BE",
     "lat": 50.9655,
     "lon": 5.5001
   },
@@ -1345,6 +1418,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261115-geraardsbergen-cameleon-ride",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 50.7716,
     "lon": 3.8827
   },
@@ -1361,6 +1435,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/cameleon-ride-2",
     "price": "",
     "source": "GoDare",
+    "country": "BE",
     "lat": 50.7716,
     "lon": 3.8827
   },
@@ -1378,6 +1453,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261115-haarle-dutch-masters-of-mtb",
     "price": "€ 36,50 – € 59,50",
     "source": "Mountainbike.be",
+    "country": "NL",
     "lat": 52.3592,
     "lon": 6.3806
   },
@@ -1395,6 +1471,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261115-hulst-toerclub-hulst-offroad",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "NL",
     "lat": 51.3316,
     "lon": 4.0877
   },
@@ -1415,6 +1492,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261115-kalmthout-stephan-aerts-classic-2026",
     "price": "€ 4,00 – € 7,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.3828,
     "lon": 4.4765
   },
@@ -1433,6 +1511,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/stephan-aerts-classic-2026",
     "price": "",
     "source": "GoDare",
+    "country": "BE",
     "lat": 51.3828,
     "lon": 4.4765
   },
@@ -1450,6 +1529,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261115-langenboom-atb-kuuletocht",
     "price": "€ 6,00 – € 7,00",
     "source": "Mountainbike.be",
+    "country": "NL",
     "lat": 51.7006,
     "lon": 5.7287
   },
@@ -1468,6 +1548,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60111/graveltocht-kuuletocht-2026-met-3-afstanden",
     "price": "€ 7,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.7006,
     "lon": 5.7287
   },
@@ -1485,6 +1566,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60520/presto-pedale-gravel-ride-2026-locatie-merksplas",
     "price": "€ 7,00",
     "source": "Fietssport.nl",
+    "country": "",
     "lat": 51.358,
     "lon": 4.8627
   },
@@ -1504,6 +1586,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261115-moerkerke-vtt-heleblitz-classic",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.2455,
     "lon": 3.341
   },
@@ -1522,6 +1605,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261115-netersel-hei-en-vennentocht",
     "price": "€ 6,00 – € 7,00",
     "source": "Mountainbike.be",
+    "country": "NL",
     "lat": 51.4043,
     "lon": 5.208
   },
@@ -1540,6 +1624,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/56921/presto-pedale-gravel-ride-2026-locatie-netersel",
     "price": "€ 7,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.4043,
     "lon": 5.208
   },
@@ -1559,6 +1644,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261115-oekene-25e-mtb-tocht-amp-9e-cyclotocht-oekene",
     "price": "€ 5,00 – € 7,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 50.9209,
     "lon": 3.1603
   },
@@ -1576,6 +1662,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261115-oldenzaal-rudi-kemna-classic-039-veldtoer",
     "price": "€ 5,00 – € 7,50",
     "source": "Mountainbike.be",
+    "country": "NL",
     "lat": 52.3117,
     "lon": 6.9242
   },
@@ -1594,6 +1681,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261115-tremelo-mountainbiketocht-tremelobos",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 50.9919,
     "lon": 4.7041
   },
@@ -1613,6 +1701,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/59610/seiterse-gravel-tocht-2026",
     "price": "€ 7,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.6135,
     "lon": 5.5447
   },
@@ -1635,6 +1724,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261115-zoersel-fingo-classic",
     "price": "€ 6,00 – € 10,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.2717,
     "lon": 4.7133
   },
@@ -1653,6 +1743,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/fingo-classic-gravel-vwb-2",
     "price": "",
     "source": "GoDare",
+    "country": "BE",
     "lat": 51.2717,
     "lon": 4.7133
   },
@@ -1669,6 +1760,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261119-deinze-seniorenbikers-okra-oost-vlaanderen",
     "price": "",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 50.9842,
     "lon": 3.527
   },
@@ -1687,6 +1779,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261121-maldegem-32e-mosseltocht",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.2089,
     "lon": 3.4452
   },
@@ -1705,6 +1798,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261122-aartrijke-23e-vtt-classic-aartrijke",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.1192,
     "lon": 3.0903
   },
@@ -1722,6 +1816,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261122-de-klinge-memorial-patrick-meersschaert-",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.2565,
     "lon": 4.0898
   },
@@ -1740,6 +1835,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261122-den-helder-mtb-toertocht-texel",
     "price": "€ 16,50 – € 19,50",
     "source": "Mountainbike.be",
+    "country": "",
     "lat": 52.9509,
     "lon": 4.7936
   },
@@ -1758,6 +1854,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60390/mtb-toertocht-texel",
     "price": "€ 21,50",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 53.0253,
     "lon": 4.7527
   },
@@ -1774,6 +1871,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/la-gadouzienne-5",
     "price": "",
     "source": "GoDare",
+    "country": "BE",
     "lat": 50.6957,
     "lon": 4.0412
   },
@@ -1790,6 +1888,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/la-gadouzienne-gravel-vwb",
     "price": "",
     "source": "GoDare",
+    "country": "BE",
     "lat": 50.6957,
     "lon": 4.0412
   },
@@ -1809,6 +1908,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261122-enghien-la-gadouzienne",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 50.6957,
     "lon": 4.0412
   },
@@ -1828,6 +1928,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261122-evergem-vtt-cyclo-toyota-boone",
     "price": "€ 2,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.1088,
     "lon": 3.7079
   },
@@ -1844,6 +1945,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261122-hengelo-sterkr-toertocht",
     "price": "€ 6,00 – € 7,00",
     "source": "Mountainbike.be",
+    "country": "NL",
     "lat": 52.2659,
     "lon": 6.7924
   },
@@ -1860,6 +1962,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/59606/sterkr-toertocht-gravel-2026",
     "price": "€ 7,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 52.2659,
     "lon": 6.7924
   },
@@ -1876,6 +1979,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/sterkr-toertocht-gravel-2026",
     "price": "",
     "source": "GoDare",
+    "country": "NL",
     "lat": 52.2659,
     "lon": 6.7924
   },
@@ -1894,6 +1998,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261122-lichtenvoorde-achterhoeks-argste-vishandel-bomers-mtb-tocht",
     "price": "€ 6,00 – € 7,00",
     "source": "Mountainbike.be",
+    "country": "NL",
     "lat": 51.9891,
     "lon": 6.5717
   },
@@ -1912,6 +2017,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/57026/achterhoeks-argste-vishandel-bomers-gravelride",
     "price": "€ 7,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.9891,
     "lon": 6.5717
   },
@@ -1931,6 +2037,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261122-lommel-mountainbiketoertocht",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "",
     "lat": 51.2306,
     "lon": 5.3077
   },
@@ -1948,6 +2055,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/graveltocht-zandbikers-vwb-1",
     "price": "",
     "source": "GoDare",
+    "country": "BE",
     "lat": 51.2306,
     "lon": 5.3077
   },
@@ -1966,6 +2074,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261122-maldegem-32e-mosseltocht",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.2089,
     "lon": 3.4452
   },
@@ -1984,6 +2093,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/gravelrit-rwc-reusel-2026",
     "price": "",
     "source": "GoDare",
+    "country": "NL",
     "lat": 51.4571,
     "lon": 5.177
   },
@@ -2001,6 +2111,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261122-vlodrop-2-landen-toertocht",
     "price": "€ 8,00 – € 10,00",
     "source": "Mountainbike.be",
+    "country": "",
     "lat": 51.1321,
     "lon": 6.0779
   },
@@ -2017,6 +2128,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261124-dessel-seniorenmountainbikers-okra",
     "price": "",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.2391,
     "lon": 5.1128
   },
@@ -2034,6 +2146,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261128-ertvelde-houtland-vtt-amp-cyclo",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.1794,
     "lon": 3.7472
   },
@@ -2050,6 +2163,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60394/strandrace-katwijk-fietst",
     "price": "€ 23,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 52.1899,
     "lon": 4.4146
   },
@@ -2066,6 +2180,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261128-rillaar-rillaar-hurissalm-",
     "price": "€ 5,00 – € 7,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 50.9757,
     "lon": 4.8929
   },
@@ -2084,6 +2199,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261128-sint-kruis-brugge-brugse-zot-offroad",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.2185,
     "lon": 3.273
   },
@@ -2101,6 +2217,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/59406/gooische-strade-bianche-xv-2026",
     "price": "€ 17,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 52.1746,
     "lon": 5.291
   },
@@ -2119,6 +2236,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261129-brecht-rondom-brecht",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.3485,
     "lon": 4.6399
   },
@@ -2137,6 +2255,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261129-brecht-strade-stoempatori-grvl",
     "price": "€ 15,50 – € 17,50",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.3485,
     "lon": 4.6399
   },
@@ -2151,6 +2270,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/strade-stoempatori-grvl-vwb",
     "price": "",
     "source": "GoDare",
+    "country": "BE",
     "lat": 51.3485,
     "lon": 4.6399
   },
@@ -2165,6 +2285,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/de-classic-beachrace",
     "price": "",
     "source": "GoDare",
+    "country": "BE",
     "lat": 51.2408,
     "lon": 2.9648
   },
@@ -2181,6 +2302,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/toertocht-gassel",
     "price": "",
     "source": "GoDare",
+    "country": "NL",
     "lat": 53.0253,
     "lon": 4.7527
   },
@@ -2198,6 +2320,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60428/toertocht-gassel-gravel",
     "price": "€ 7,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.7404,
     "lon": 5.7805
   },
@@ -2215,6 +2338,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/59892/hezinger-grens-classic-2026-gravel",
     "price": "€ 11,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 52.4338,
     "lon": 6.8323
   },
@@ -2233,6 +2357,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/59893/hezinger-grens-classic-2026-mtb",
     "price": "€ 11,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 52.4338,
     "lon": 6.8323
   },
@@ -2254,6 +2379,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261129-pelt-rupsen-mtb-amp-gravel-ride",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "",
     "lat": 51.2198,
     "lon": 5.4299
   },
@@ -2270,6 +2396,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60489/rtc-graveltocht",
     "price": "€ 7,50",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.6003,
     "lon": 4.7186
   },
@@ -2287,6 +2414,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/59801/rtc-veldrit-2026",
     "price": "€ 7,50",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.6003,
     "lon": 4.7186
   },
@@ -2305,6 +2433,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261129-tielrode-wase-ardennenrit",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.1126,
     "lon": 4.1753
   },
@@ -2322,6 +2451,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/wase-ardennenrit-gravel-vwb",
     "price": "",
     "source": "GoDare",
+    "country": "BE",
     "lat": 51.1126,
     "lon": 4.1753
   },
@@ -2339,6 +2469,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60063/atb-tocht-brabantia-2026",
     "price": "€ 7,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.4077,
     "lon": 5.3927
   },
@@ -2355,6 +2486,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/59843/pepernoten-gravel-tocht-2026",
     "price": "€ 7,00",
     "source": "Fietssport.nl",
+    "country": "",
     "lat": 51.4899,
     "lon": 5.8962
   },
@@ -2373,6 +2505,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/59844/pepernotentocht-2026",
     "price": "€ 7,00",
     "source": "Fietssport.nl",
+    "country": "",
     "lat": 51.4899,
     "lon": 5.8962
   },
@@ -2391,6 +2524,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/pepernotentocht-2026",
     "price": "",
     "source": "GoDare",
+    "country": "NL",
     "lat": 51.4899,
     "lon": 5.8962
   },
@@ -2408,6 +2542,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/59438/scheffer-keukens-graveltocht-2026",
     "price": "€ 6,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 52.0068,
     "lon": 6.3501
   },
@@ -2425,6 +2560,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/59439/scheffer-keukens-mtb-2026",
     "price": "€ 6,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 52.0068,
     "lon": 6.3501
   },
@@ -2439,6 +2575,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261129-zwevegem-transfo-bike-fest",
     "price": "€ 7,00 – € 9,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 50.7829,
     "lon": 3.3756
   },
@@ -2458,6 +2595,7 @@
     "sourceUrl": "https://mtb-you.com/calendar/tour/21642/transfo-bike-fest",
     "price": "",
     "source": "MTB-You",
+    "country": "BE",
     "lat": 50.8055,
     "lon": 3.3393
   },
@@ -2476,6 +2614,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261205-hertsberge-31e-bossen-van-vlaanderen",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.1054,
     "lon": 3.2735
   },
@@ -2494,6 +2633,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/59845/graveltocht-boekel-2026",
     "price": "€ 6,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.6059,
     "lon": 5.6991
   },
@@ -2515,6 +2655,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261206-dessel-sinterklaas-toertocht-mtb-amp-gravel",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.2391,
     "lon": 5.1128
   },
@@ -2534,6 +2675,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261206-geldrop-rondje-geldrop",
     "price": "€ 6,00 – € 7,00",
     "source": "Mountainbike.be",
+    "country": "NL",
     "lat": 51.4227,
     "lon": 5.5608
   },
@@ -2554,6 +2696,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261206-grote-brogel-brueghelbikers-mtb-toertocht-",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "",
     "lat": 51.1556,
     "lon": 5.5081
   },
@@ -2571,6 +2714,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/brueghelbikers-gravel-toertocht-vwb",
     "price": "",
     "source": "GoDare",
+    "country": "BE",
     "lat": 51.1556,
     "lon": 5.5081
   },
@@ -2587,6 +2731,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60219/niederrhein-gravel-race",
     "price": "€ 0,00",
     "source": "Fietssport.nl",
+    "country": "",
     "lat": 51.7896,
     "lon": 6.0074
   },
@@ -2605,6 +2750,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261206-lokeren-mtb-rit-lokeren",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.1484,
     "lon": 3.9442
   },
@@ -2621,6 +2767,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/maldegemse-poldertocht-10",
     "price": "",
     "source": "GoDare",
+    "country": "BE",
     "lat": 51.2089,
     "lon": 3.4452
   },
@@ -2640,7 +2787,8 @@
     "organizer": "WTC MAldegem",
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261206-meldgem-maldegemse-poldertocht",
     "price": "€ 2,00 – € 8,00",
-    "source": "Mountainbike.be"
+    "source": "Mountainbike.be",
+    "country": "BE"
   },
   {
     "id": "mb-20261206-rucphen-rogelli-veldtoertocht",
@@ -2656,6 +2804,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261206-rucphen-rogelli-veldtoertocht",
     "price": "€ 6,50 – € 7,50",
     "source": "Mountainbike.be",
+    "country": "NL",
     "lat": 51.5209,
     "lon": 4.5694
   },
@@ -2674,6 +2823,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261206-vorden-grote-veldrit",
     "price": "€ 6,00 – € 7,00",
     "source": "Mountainbike.be",
+    "country": "NL",
     "lat": 52.1041,
     "lon": 6.3126
   },
@@ -2691,6 +2841,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60422/achtkastelen-graveltocht-2026",
     "price": "€ 6,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 52.1041,
     "lon": 6.3126
   },
@@ -2709,6 +2860,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261206-weerde-2e-quot-the-hybrid-ride-best-of-both-worlds-quot-",
     "price": "€ 8,00 – € 12,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 50.975,
     "lon": 4.4755
   },
@@ -2725,6 +2877,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261208-veerle-laakdal-okra-groepsrit-",
     "price": "",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.0702,
     "lon": 4.9878
   },
@@ -2742,6 +2895,7 @@
     "sourceUrl": "https://mtb-you.com/calendar/tour/21673/mtb-lichtjestocht-2026-bosschenhoofd-avond-vol-fun-op-de",
     "price": "",
     "source": "MTB-You",
+    "country": "NL",
     "lat": 51.5546,
     "lon": 4.5564
   },
@@ -2758,6 +2912,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60468/veluwse-wintercompetitie-apeldoorn-2026",
     "price": "€ 7,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 52.1796,
     "lon": 5.9301
   },
@@ -2776,6 +2931,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261212-boekhoute-trapper-vtt-amp-cyclo",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.2577,
     "lon": 3.7176
   },
@@ -2794,6 +2950,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261212-jabbeke-vtt-permeke-by-diapal",
     "price": "€ 6,00 – € 7,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.1912,
     "lon": 3.1008
   },
@@ -2810,6 +2967,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261212-meijel-meel-by-night",
     "price": "€ 8,00 – € 10,00",
     "source": "Mountainbike.be",
+    "country": "",
     "lat": 51.3443,
     "lon": 5.8855
   },
@@ -2824,6 +2982,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/4de-strade-grigi-gravel-rit-vwb",
     "price": "",
     "source": "GoDare",
+    "country": "BE",
     "lat": 51.292,
     "lon": 4.5773
   },
@@ -2844,6 +3003,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261212-stroe-oliebollentocht-mtb",
     "price": "€ 8,00 – € 10,50",
     "source": "Mountainbike.be",
+    "country": "NL",
     "lat": 52.1862,
     "lon": 5.6921
   },
@@ -2861,6 +3021,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/59303/oliebollentocht-gravel-2026",
     "price": "€ 10,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 52.1862,
     "lon": 5.6921
   },
@@ -2877,6 +3038,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261212-velsen-noord-pier-huisduinen-pier-strandtoertocht",
     "price": "€ 17,00 – € 20,00",
     "source": "Mountainbike.be",
+    "country": "",
     "lat": 52.4739,
     "lon": 4.6379
   },
@@ -2897,6 +3059,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261213-budel-zwoegers-atb-tocht",
     "price": "€ 6,50 – € 7,50",
     "source": "Mountainbike.be",
+    "country": "NL",
     "lat": 51.2745,
     "lon": 5.5745
   },
@@ -2914,6 +3077,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/59486/zwoegers-graveltocht-2026",
     "price": "€ 7,50",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.2745,
     "lon": 5.5745
   },
@@ -2931,6 +3095,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/zwoegers-graveltocht-2026",
     "price": "",
     "source": "GoDare",
+    "country": "NL",
     "lat": 51.2503,
     "lon": 5.567
   },
@@ -2949,6 +3114,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/zwoegers-atb-tocht-2026",
     "price": "",
     "source": "GoDare",
+    "country": "NL",
     "lat": 51.2503,
     "lon": 5.567
   },
@@ -2967,6 +3133,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261213-den-helder-hrtc-dok-mtb-napoleontocht",
     "price": "€ 8,00 – € 10,00",
     "source": "Mountainbike.be",
+    "country": "",
     "lat": 52.9509,
     "lon": 4.7936
   },
@@ -2984,6 +3151,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261213-doetinchem-28e-hubo-rondje-doetinchem",
     "price": "€ 6,50 – € 7,50",
     "source": "Mountainbike.be",
+    "country": "NL",
     "lat": 51.9585,
     "lon": 6.2815
   },
@@ -3001,6 +3169,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/59456/graveltocht-rtv-de-zwaluwen-2026",
     "price": "€ 9,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.9585,
     "lon": 6.2815
   },
@@ -3019,6 +3188,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261213-hollain-vtt-de-la-ferme-fleurie",
     "price": "€ 4,50 – € 6,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 50.5416,
     "lon": 3.427
   },
@@ -3036,6 +3206,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/vtt-de-la-ferme-fleurie-6",
     "price": "",
     "source": "GoDare",
+    "country": "BE",
     "lat": 50.5416,
     "lon": 3.427
   },
@@ -3053,6 +3224,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261213-lonneker-op-en-um-039-n-bolt-mtb",
     "price": "€ 5,00 – € 6,00",
     "source": "Mountainbike.be",
+    "country": "NL",
     "lat": 52.2506,
     "lon": 6.9117
   },
@@ -3070,6 +3242,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261213-luyksgestel-plus-najaarstocht",
     "price": "€ 6,00 – € 7,00",
     "source": "Mountainbike.be",
+    "country": "NL",
     "lat": 51.2887,
     "lon": 5.3213
   },
@@ -3087,6 +3260,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261213-meijel-meel-by-day",
     "price": "€ 6,00 – € 7,00",
     "source": "Mountainbike.be",
+    "country": "",
     "lat": 51.3443,
     "lon": 5.8855
   },
@@ -3107,6 +3281,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261213-otegem-seyns-winter-krieretocht",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 50.8085,
     "lon": 3.4218
   },
@@ -3124,6 +3299,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261213-sint-anthonis-tos-winter-veldtourtocht",
     "price": "€ 4,00 – € 6,00",
     "source": "Mountainbike.be",
+    "country": "NL",
     "lat": 51.6269,
     "lon": 5.8817
   },
@@ -3142,6 +3318,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/seyns-krieretocht-1",
     "price": "",
     "source": "GoDare",
+    "country": "BE",
     "lat": 50.7517,
     "lon": 3.3684
   },
@@ -3160,6 +3337,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261213-sint-job-in-039-t-goor-24e-veldtoertocht-pedaleurs2960",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.292,
     "lon": 4.5773
   },
@@ -3177,6 +3355,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/59575/tos-graveltocht-2026",
     "price": "€ 7,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.6269,
     "lon": 5.8817
   },
@@ -3197,6 +3376,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/eindejaarstocht-23",
     "price": "",
     "source": "GoDare",
+    "country": "BE",
     "lat": 51.1041,
     "lon": 5.1769
   },
@@ -3214,6 +3394,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/59739/hattems-mooiste-2026",
     "price": "€ 10,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 52.4773,
     "lon": 6.056
   },
@@ -3231,6 +3412,7 @@
     "sourceUrl": "https://mtb-you.com/calendar/tour/18997/mtb-en-wandeltocht-vv-kloetinge-2",
     "price": "",
     "source": "MTB-You",
+    "country": "NL",
     "lat": 51.5014,
     "lon": 3.9168
   },
@@ -3248,6 +3430,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/vtt-en-cyclotocht-ernest-van-der-haeghen",
     "price": "",
     "source": "GoDare",
+    "country": "BE",
     "lat": 51.0727,
     "lon": 3.6751
   },
@@ -3267,6 +3450,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261219-menen-xmass-toertocht",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 50.7937,
     "lon": 3.167
   },
@@ -3284,6 +3468,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/59735/owsome-bikers-midwinter-jagermeistertocht-2026",
     "price": "€ 6,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 52.337,
     "lon": 6.1108
   },
@@ -3303,6 +3488,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/6e-gravel-spekenei-vwb",
     "price": "",
     "source": "GoDare",
+    "country": "BE",
     "lat": 51.3504,
     "lon": 4.7585
   },
@@ -3321,6 +3507,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/59535/atb-tocht-de-wekkers-deurne-2026",
     "price": "€ 7,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.4283,
     "lon": 5.828
   },
@@ -3338,6 +3525,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/59536/gravel-tocht-de-wekkers-deurne-2026",
     "price": "€ 7,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.4283,
     "lon": 5.828
   },
@@ -3355,6 +3543,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60462/witrijt-midwintertocht-2026",
     "price": "€ 7,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.3933,
     "lon": 5.3414
   },
@@ -3372,6 +3561,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/59818/atb-kersttoertocht-markelo-2026",
     "price": "€ 7,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 52.2347,
     "lon": 6.495
   },
@@ -3390,6 +3580,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/59820/gravel-kersttoertocht-markelo-2026",
     "price": "€ 7,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 52.2347,
     "lon": 6.495
   },
@@ -3409,6 +3600,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261220-menen-xmass-toertocht-",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 50.7937,
     "lon": 3.167
   },
@@ -3427,6 +3619,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261220-peer-x-mas-mtb-toertocht",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "",
     "lat": 51.1319,
     "lon": 5.4546
   },
@@ -3445,6 +3638,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261220-rijkevorsel-mtb-kersthappening",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.3504,
     "lon": 4.7585
   },
@@ -3462,6 +3656,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261220-schoondijke-sluis-veldtoertocht-freewheel-039-79-schoondijke",
     "price": "€ 4,00 – € 5,00",
     "source": "Mountainbike.be",
+    "country": "NL",
     "lat": 51.3536,
     "lon": 3.556
   },
@@ -3480,6 +3675,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60509/toertocht-rtc-de-smid",
     "price": "€ 10,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.5372,
     "lon": 4.5967
   },
@@ -3499,6 +3695,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261220-stekene-polken-mtb",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.2094,
     "lon": 4.0331
   },
@@ -3517,6 +3714,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261220-wuustwezel-gooreind-koerse-kerstgravel",
     "price": "€ 12,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.392,
     "lon": 4.5991
   },
@@ -3533,6 +3731,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261222-lichtaart-seniorenmountainbikers-okra-kerstrit",
     "price": "€ 0,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.2241,
     "lon": 4.9199
   },
@@ -3551,6 +3750,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60471/kerst-mtbgravel-tocht-leudal",
     "price": "€ 10,00",
     "source": "Fietssport.nl",
+    "country": "",
     "lat": 51.262,
     "lon": 5.9884
   },
@@ -3567,6 +3767,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60033/atb-kersttocht",
     "price": "€ 7,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.7464,
     "lon": 5.6315
   },
@@ -3583,6 +3784,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60034/gravel-kersttocht",
     "price": "€ 7,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.7464,
     "lon": 5.6315
   },
@@ -3599,6 +3801,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60339/kerstrit-van-nix",
     "price": "€ 8,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.3202,
     "lon": 5.4582
   },
@@ -3617,6 +3820,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261226-wingene-32e-kerstmeeting-vtt",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.0582,
     "lon": 3.278
   },
@@ -3635,6 +3839,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261227-de-haan-sylvester-vtt",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.2671,
     "lon": 3.0408
   },
@@ -3653,6 +3858,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261227-hooglede-24e-mtb-cyclo-gitsbergtoertocht",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 50.9883,
     "lon": 3.0818
   },
@@ -3670,6 +3876,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/59547/wageningse-wintertocht-2026",
     "price": "€ 10,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.9663,
     "lon": 5.6663
   },
@@ -3688,6 +3895,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261227-westmalle-mountainbiketoertocht",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.2969,
     "lon": 4.6938
   },
@@ -3704,6 +3912,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/vwb-gravelrit-vwb-2",
     "price": "",
     "source": "GoDare",
+    "country": "BE",
     "lat": 51.2969,
     "lon": 4.6938
   },
@@ -3727,6 +3936,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261228-heverlee-marathon-maniac",
     "price": "€ 14,50 – € 32,50",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 50.8646,
     "lon": 4.6938
   },
@@ -3747,6 +3957,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/marathon-maniac-6",
     "price": "",
     "source": "GoDare",
+    "country": "BE",
     "lat": 50.8646,
     "lon": 4.6938
   },
@@ -3765,6 +3976,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261228-hooglede-24e-mtb-cyclo-gitsbergtoertocht",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 50.9883,
     "lon": 3.0818
   },
@@ -3782,6 +3994,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60060/tchwv-4e-kerstdag-mtb-toertocht-2026",
     "price": "€ 7,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 52.5482,
     "lon": 6.581
   },
@@ -3800,6 +4013,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60149/meint-beukema-classic-2026",
     "price": "€ 8,50",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 53.2061,
     "lon": 6.1772
   },
@@ -3817,6 +4031,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/drenthe-1",
     "price": "",
     "source": "GoDare",
+    "country": "NL",
     "lat": 51.9914,
     "lon": 4.4739
   },
@@ -3834,6 +4049,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/59821/zorgsaam-carbidtocht-2026",
     "price": "€ 12,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 52.3905,
     "lon": 6.4515
   },
@@ -3856,6 +4072,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60216/derry-x-mas-gravelride-2026",
     "price": "€ 7,50",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 52.2149,
     "lon": 5.4781
   },
@@ -3873,6 +4090,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60255/drenthe-200",
     "price": "€ 52,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 53.0663,
     "lon": 6.4595
   },
@@ -3891,6 +4109,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261230-assebroek-34e-nieuwjaars-veldtoertocht",
     "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.1933,
     "lon": 3.2573
   },
@@ -3908,6 +4127,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60086/citylido-klassieker-gravel-tocht-2026",
     "price": "€ 12,50",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 52.0426,
     "lon": 6.617
   },
@@ -3925,6 +4145,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/56577/citylido-klassieker-mtb-tocht-2026",
     "price": "€ 12,50",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 52.0426,
     "lon": 6.617
   },
@@ -3944,6 +4165,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/59784/de-bernhisse-graveltocht-2026",
     "price": "€ 15,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.7352,
     "lon": 5.5266
   },
@@ -3962,6 +4184,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60521/eindejaarstocht-2026",
     "price": "€ 12,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 52.0796,
     "lon": 5.4904
   },
@@ -3978,6 +4201,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/ultra-vtt-bouillon",
     "price": "",
     "source": "GoDare",
+    "country": "BE",
     "lat": 50.0023,
     "lon": 5.7173
   },
@@ -3995,6 +4219,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/59534/35e-heicom-oudejaarsveldtoertocht-cyclo-78-wezep",
     "price": "€ 9,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 52.4765,
     "lon": 6.0256
   },
@@ -4011,6 +4236,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/ultra-vtt-des-forts-liegeois",
     "price": "",
     "source": "GoDare",
+    "country": "BE",
     "lat": 50.6451,
     "lon": 5.5736
   },
@@ -4027,6 +4253,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/ultra-vtt-des-lacs-de-l-eau-d-heure",
     "price": "",
     "source": "GoDare",
+    "country": "BE",
     "lat": 50.455,
     "lon": 3.952
   },
@@ -4043,6 +4270,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/diagonale-mont-de-l-enclus-orval",
     "price": "",
     "source": "GoDare",
+    "country": "BE",
     "lat": 50.7457,
     "lon": 3.5111
   },
@@ -4059,6 +4287,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/diagonale-mt-de-l-enclus-verviers",
     "price": "",
     "source": "GoDare",
+    "country": "BE",
     "lat": 50.7457,
     "lon": 3.5111
   },
@@ -4075,6 +4304,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/ultra-vtt-en-province-de-namur",
     "price": "",
     "source": "GoDare",
+    "country": "BE",
     "lat": 50.4665,
     "lon": 4.8662
   },
@@ -4093,6 +4323,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261231-retie-eindejaarstocht",
     "price": "€ 5,00 – € 7,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.2676,
     "lon": 5.0844
   },
@@ -4110,6 +4341,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/59477/atb-tocht-memorial-jo-boerekamp-2026",
     "price": "€ 7,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.3863,
     "lon": 5.6889
   },
@@ -4126,6 +4358,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/59479/gravel-tocht-memorial-jo-boerekamp-2026",
     "price": "€ 7,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.3863,
     "lon": 5.6889
   },
@@ -4142,6 +4375,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/gravel-tocht-memorial-jo-boerekamp-2026",
     "price": "",
     "source": "GoDare",
+    "country": "NL",
     "lat": 51.3863,
     "lon": 5.6889
   },
@@ -4158,6 +4392,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/diagonale-orval-mont-de-l-enclus",
     "price": "",
     "source": "GoDare",
+    "country": "BE",
     "lat": 49.6186,
     "lon": 5.3315
   },
@@ -4176,6 +4411,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261231-zulte-eindejaars-vtt-amp-cyclo-zulte",
     "price": "€ 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 50.94,
     "lon": 3.4753
   },
@@ -4193,6 +4429,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60387/goed-begintocht-gravelride",
     "price": "€ 8,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.7434,
     "lon": 5.7471
   },
@@ -4210,6 +4447,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60371/goed-begintocht-mtb",
     "price": "€ 8,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.7434,
     "lon": 5.7471
   },
@@ -4227,6 +4465,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20270103-huijbergen-atb-toertocht-huijbergen",
     "price": "€ 6,00",
     "source": "Mountainbike.be",
+    "country": "NL",
     "lat": 51.433,
     "lon": 4.3769
   },
@@ -4244,6 +4483,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60251/beemd-en-bergtoer-gravel-holten-2027",
     "price": "€ 14,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 52.2347,
     "lon": 6.495
   },
@@ -4263,6 +4503,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60252/beemd-en-bergtoer-mtb-holten-2027",
     "price": "€ 11,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 52.2347,
     "lon": 6.495
   },
@@ -4280,6 +4521,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60154/bike-basement-graveltocht-2027",
     "price": "€ 10,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 52.308,
     "lon": 6.5213
   },
@@ -4297,6 +4539,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60155/bike-basement-mtb-tocht-2027",
     "price": "€ 10,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 52.308,
     "lon": 6.5213
   },
@@ -4313,6 +4556,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60479/graveltoertocht-asten",
     "price": "€ 8,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.3869,
     "lon": 5.7914
   },
@@ -4331,6 +4575,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60478/veldtoertocht-asten",
     "price": "€ 8,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.3869,
     "lon": 5.7914
   },
@@ -4349,6 +4594,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/59909/nieuwjaarsveldrit-2027",
     "price": "€ 5,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.2674,
     "lon": 3.9072
   },
@@ -4367,6 +4613,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/59705/carprof-wils-nieuwjaarstocht-2027",
     "price": "€ 7,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.3202,
     "lon": 5.4582
   },
@@ -4384,6 +4631,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60331/helden-van-hemelrijk",
     "price": "€ 10,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.6441,
     "lon": 5.6557
   },
@@ -4401,6 +4649,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60347/b-b-veldtoertocht-2027",
     "price": "€ 7,50",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 52.6367,
     "lon": 6.208
   },
@@ -4418,6 +4667,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60001/droadnaegeltocht-2027",
     "price": "€ 6,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 52.2506,
     "lon": 6.9117
   },
@@ -4436,6 +4686,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60576/gerard-kocken-mtb-tocht-2027",
     "price": "€ 6,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.5711,
     "lon": 5.947
   },
@@ -4455,6 +4706,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60322/veldtoertocht-hel-van-rhenoy-2027",
     "price": "€ 0,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.884,
     "lon": 5.1551
   },
@@ -4473,6 +4725,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20270123-ichtegem-ichtegemse-winter-vtt",
     "price": "€ 0,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.0925,
     "lon": 3.0103
   },
@@ -4490,6 +4743,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60175/toffe-wintertocht-powered-by-svdo-tourbuffels",
     "price": "€ 10,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 52.3905,
     "lon": 6.4515
   },
@@ -4506,6 +4760,7 @@
     "sourceUrl": "https://mtb-you.com/calendar/tour/21701/17de-duin-strand-poldertocht",
     "price": "",
     "source": "MTB-You",
+    "country": "BE",
     "lat": 51.1249,
     "lon": 2.7651
   },
@@ -4525,6 +4780,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20270124-wechelderzande-31e-mountainbiketoertocht-van-liever-bergaf",
     "price": "€ 5,00 – € 7,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.2635,
     "lon": 4.7863
   },
@@ -4543,6 +4799,7 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20270124-ichtegem-ichtegemse-winter-vtt",
     "price": "€ 0,00 – € 8,00",
     "source": "Mountainbike.be",
+    "country": "BE",
     "lat": 51.0925,
     "lon": 3.0103
   },
@@ -4560,6 +4817,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60474/winter-bike-challenge-2027",
     "price": "€ 99,00",
     "source": "Fietssport.nl",
+    "country": "",
     "lat": 51.4371,
     "lon": 5.9799
   },
@@ -4577,6 +4835,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60199/airco-service-slotman-wintermarathon-2027",
     "price": "€ 14,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 52.4443,
     "lon": 6.3396
   },
@@ -4596,6 +4855,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60212/28e-atb-toertocht-uden-2027",
     "price": "€ 6,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.6591,
     "lon": 5.6149
   },
@@ -4613,6 +4873,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60213/graveltocht-uden-2027",
     "price": "€ 6,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.6591,
     "lon": 5.6149
   },
@@ -4627,6 +4888,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/duo-corporate-beachrace",
     "price": "",
     "source": "GoDare",
+    "country": "BE",
     "lat": 51.2408,
     "lon": 2.9648
   },
@@ -4644,6 +4906,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60504/kaaitjestocht-winkel-2027",
     "price": "€ 14,50",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 52.7545,
     "lon": 4.9028
   },
@@ -4661,6 +4924,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60424/bike-totaal-winterswijk-graveltocht-2027",
     "price": "€ 7,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.968,
     "lon": 6.7379
   },
@@ -4679,6 +4943,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60425/bike-totaal-winterswijk-mtb-tocht-2027",
     "price": "€ 7,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.968,
     "lon": 6.7379
   },
@@ -4696,6 +4961,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60416/jistrumer-coulissentocht-2027",
     "price": "€ 6,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 53.213,
     "lon": 6.0639
   },
@@ -4713,6 +4979,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60459/gooische-strade-bianche-xvi-2027",
     "price": "€ 18,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 52.1746,
     "lon": 5.291
   },
@@ -4730,6 +4997,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60261/veluws-mooiste-graveltocht",
     "price": "€ 10,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 52.1862,
     "lon": 5.6921
   },
@@ -4747,6 +5015,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60195/veluws-mooiste-mtb-tocht",
     "price": "€ 10,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 52.1862,
     "lon": 5.6921
   },
@@ -4765,6 +5034,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/59476/eshuis-accountants-holterberg-atb-tocht-2027",
     "price": "€ 0,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 52.3592,
     "lon": 6.4654
   },
@@ -4781,6 +5051,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60575/the-whoopers-gravel-toertocht-2027",
     "price": "€ 6,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.6783,
     "lon": 5.3991
   },
@@ -4799,6 +5070,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60574/the-whoopers-kmp-mtb-tocht-2027",
     "price": "€ 6,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.6783,
     "lon": 5.3991
   },
@@ -4817,6 +5089,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60227/winter-mtb-toertocht-bikefun-liessel",
     "price": "€ 7,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.4144,
     "lon": 5.8212
   },
@@ -4834,6 +5107,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60405/nightride-t-muurtje-2027",
     "price": "€ 12,50",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 51.9142,
     "lon": 6.5774
   },
@@ -4850,6 +5124,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/kaffee-vtt-4",
     "price": "",
     "source": "GoDare",
+    "country": "BE",
     "lat": 50.8432,
     "lon": 3.2046
   },
@@ -4868,6 +5143,7 @@
     "sourceUrl": "https://www.fietssport.nl/toertochten/60498/veldrit-tfc-surhuisterveen-2027",
     "price": "€ 8,00",
     "source": "Fietssport.nl",
+    "country": "NL",
     "lat": 53.1803,
     "lon": 6.1701
   },
@@ -4887,6 +5163,7 @@
     "sourceUrl": "https://mtb-you.com/calendar/tour/21575/5de-mtb-toertocht-gbs-de-zandloper",
     "price": "",
     "source": "MTB-You",
+    "country": "BE",
     "lat": 51.2337,
     "lon": 5.1528
   },
@@ -4905,6 +5182,7 @@
     "sourceUrl": "https://mtb-you.com/calendar/tour/21798/vtt-pek-slik-essen-be-2027",
     "price": "",
     "source": "MTB-You",
+    "country": "BE",
     "lat": 51.4495,
     "lon": 4.4659
   },
@@ -4921,6 +5199,7 @@
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/ride-to-unite-gravel",
     "price": "",
     "source": "GoDare",
+    "country": "BE",
     "lat": 50.8467,
     "lon": 4.3525
   },
@@ -4939,6 +5218,7 @@
     "sourceUrl": "https://mtb-you.com/calendar/tour/21342/gravel-man-2",
     "price": "",
     "source": "MTB-You",
+    "country": "BE",
     "lat": 51.0248,
     "lon": 3.0018
   },
@@ -4957,6 +5237,7 @@
     "sourceUrl": "https://mtb-you.com/calendar/tour/21343/gravel-man-3",
     "price": "",
     "source": "MTB-You",
+    "country": "BE",
     "lat": 51.0248,
     "lon": 3.0018
   }

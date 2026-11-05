@@ -715,6 +715,14 @@ def battistrada():
     return events
 
 
+def country_of(prov):
+    # Landcode (NL/BE/...) uit de provinciecode of het land van de bron; leeg als dat niet zeker is
+    if prov in ("NL", "BE", "DE", "FR", "LU"):
+        return prov
+    info = PROVINCES.get(prov)
+    return info[1].upper() if info and info[1] in ("nl", "be") else ""
+
+
 # ---------- afstanden en coördinaten via postcode ----------
 def km_between(lat1, lon1, lat2, lon2):
     rad = lambda x: x * 3.141592653589793 / 180
@@ -834,6 +842,8 @@ def main():
     for ev in events:
         prov = ev.pop("_prov", "")
         pc = ev.pop("_pc", None)
+        if not ev.get("country"):
+            ev["country"] = country_of(prov)
         if "lat" not in ev:
             coords = geocode_postcode(*pc) if pc else None
             if not coords:

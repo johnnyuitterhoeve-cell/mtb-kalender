@@ -171,7 +171,7 @@
                 organizer: e.organizer || e.organisator || '',
                 sourceUrl: e.sourceUrl || e.url || '#',
                 price: e.price || e.prijs || '',
-                lat: e.lat, lon: e.lon, source: e.source || ''
+                lat: e.lat, lon: e.lon, source: e.source || '', country: e.country || ''
             };
         }
 
@@ -391,20 +391,34 @@
         }
 
         // ---------- Google Agenda ----------
+        var COUNTRY_NAMES = { NL: 'Nederland', BE: 'België', DE: 'Duitsland', LU: 'Luxemburg', FR: 'Frankrijk' };
+
+        function placeText(e) {
+            return [e.location, COUNTRY_NAMES[e.country] || ''].filter(Boolean).join(', ');
+        }
+
+        // Google Maps-link naar de startplaats (op de coördinaten als die bekend zijn)
+        function mapsUrl(e) {
+            var hasCoords = e.lat != null && e.lon != null && !isNaN(+e.lat) && !isNaN(+e.lon);
+            var q = hasCoords ? (+e.lat) + ',' + (+e.lon) : placeText(e);
+            return 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(q);
+        }
+
         function gcalUrl(e, variants) {
             if (!/^\d{4}-\d{2}-\d{2}$/.test(e.date || '')) return '';
-            var nd = new Date(+e.date.slice(0, 4), +e.date.slice(5, 7) - 1, +e.date.slice(8, 10) + 1);
-            var end = nd.getFullYear() + pad2(nd.getMonth() + 1) + pad2(nd.getDate());
+            var day = e.date.replace(/-/g, '');
             var lines = variants.filter(function (v) { return v.distances.length; }).map(function (v) {
                 return (v.type === 'Both' ? 'MTB & Gravel' : v.type) + ': ' + v.distances.join(', ') + ' km';
             });
             if (e.price) lines.push('Inschrijfgeld: ' + e.price);
             if (e.organizer) lines.push('Organisatie: ' + e.organizer);
+            lines.push('Route: ' + mapsUrl(e));
             if (e.sourceUrl && e.sourceUrl !== '#') lines.push(e.sourceUrl);
             return 'https://calendar.google.com/calendar/render?action=TEMPLATE' +
                 '&text=' + encodeURIComponent(e.title) +
-                '&dates=' + e.date.replace(/-/g, '') + '/' + end +
-                '&location=' + encodeURIComponent(e.location) +
+                '&dates=' + day + 'T080000/' + day + 'T120000' +
+                '&ctz=' + encodeURIComponent('Europe/Amsterdam') +
+                '&location=' + encodeURIComponent(placeText(e)) +
                 '&details=' + encodeURIComponent(lines.join('\n'));
         }
 

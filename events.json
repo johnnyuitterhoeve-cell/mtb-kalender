@@ -2185,22 +2185,6 @@
     "lon": 4.7527
   },
   {
-    "id": "fs-60346",
-    "title": "Toertocht Gassel",
-    "date": "2026-11-29",
-    "location": "Gassel",
-    "type": "MTB",
-    "distances": [
-      45
-    ],
-    "organizer": "TWC De Tweewielers Gassel",
-    "sourceUrl": "https://www.fietssport.nl/toertochten/60346/toertocht-gassel",
-    "price": "€ 6,50",
-    "source": "Fietssport.nl",
-    "lat": 51.7404,
-    "lon": 5.7805
-  },
-  {
     "id": "fs-60428",
     "title": "Toertocht Gassel Gravel",
     "date": "2026-11-29",
@@ -2701,7 +2685,6 @@
     "type": "Gravel",
     "distances": [
       50,
-      60,
       80
     ],
     "organizer": "Achtkastelenrijders",

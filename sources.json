@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-03T18:04:50+00:00",
+  "updated": "2026-11-05T05:25:05+00:00",
   "sources": [
     {
       "name": "Mountainbike.be",
@@ -10,7 +10,7 @@
     {
       "name": "Fietssport.nl",
       "status": "ok",
-      "count": 97,
+      "count": 96,
       "message": ""
     },
     {

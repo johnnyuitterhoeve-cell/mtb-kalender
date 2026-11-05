@@ -270,6 +270,8 @@ def fietssport_nl():
 # ---------- details per tocht: inschrijfgeld en organisator ----------
 DETAIL_FILE = "detailcache.json"
 DETAIL_MAX_AGE_DAYS = 21
+DETAIL_VERSION = 2   # ophogen als de detailpagina's meer gegevens moeten opleveren (alles wordt dan opnieuw opgehaald)
+COUNTRY_NAMES = {"NL": "Nederland", "BE": "België", "DE": "Duitsland", "LU": "Luxemburg", "FR": "Frankrijk"}
 AMOUNT_RE = re.compile(r"€\s*(\d+(?:[.,]\d{1,2})?)")
 
 
@@ -294,6 +296,19 @@ def line_after(lines, label):
     return ""
 
 
+def block_after(lines, label, stops, max_lines=5):
+    # De regels na een label (bijv. "Startlocatie") tot een volgend label
+    out, started = [], False
+    for l in lines:
+        if not started:
+            started = l.lower() == label.lower()
+            continue
+        if l.lower() in stops or len(out) >= max_lines:
+            break
+        out.append(l)
+    return out
+
+
 def detail_fietssport(html):
     soup, lines = page_lines(html)
     nxt = line_after(lines, "Kosten deelname")
@@ -305,7 +320,23 @@ def detail_fietssport(html):
     else:
         price = ""
     org = line_after(lines, "Organisatie")
-    return {"price": price, "organizer": org if 0 < len(org) < 80 and org != "Website" else ""}
+    street = line_after(lines, "Startlocatie")
+    if street.lower() in ("kosten deelname", "kenmerken", "starttijd", "deelnemers verwacht") or len(street) > 100:
+        street = ""
+    coords = None
+    for a in soup.find_all("a", href=True):
+        m = re.search(r"maps/place/(-?\d+\.\d+),(-?\d+\.\d+)", a["href"])
+        if m:
+            coords = [round(float(m.group(1)), 5), round(float(m.group(2)), 5)]
+            break
+    return {
+        "price": price,
+        "organizer": org if 0 < len(org) < 80 and org != "Website" else "",
+        "start": street,
+        "start_partial": True,   # alleen straat en nummer; de plaats voegen we zelf toe
+        "start_lat": coords[0] if coords else None,
+        "start_lon": coords[1] if coords else None,
+    }
 
 
 def detail_mountainbike(html):
@@ -317,10 +348,18 @@ def detail_mountainbike(html):
         "price": format_price(AMOUNT_RE.findall(cells)),
         "organizer": org if 0 < len(org) < 80 else "",
         "title": h1.get_text(" ", strip=True) if h1 else "",
+        "start": ", ".join(block_after(lines, "Startlocatie", {"organisatie", "toelichting", "accomodaties", "info"})),
     }
 
 
-DETAIL_PARSERS = {"Fietssport.nl": detail_fietssport, "Mountainbike.be": detail_mountainbike}
+def detail_mtbyou(html):
+    soup, lines = page_lines(html)
+    name = block_after(lines, "Gebouw", {"adres"}, 1)
+    addr = block_after(lines, "Adres", {"image/svg+xml", "informatie", "mtb toertocht", "gravel toertocht"}, 3)
+    return {"price": "", "organizer": "", "start": ", ".join(name + addr)}
+
+
+DETAIL_PARSERS = {"Fietssport.nl": detail_fietssport, "Mountainbike.be": detail_mountainbike, "MTB-You": detail_mtbyou}
 
 
 def enrich_details(events, skip=()):
@@ -328,7 +367,8 @@ def enrich_details(events, skip=()):
     today = date.today()
     failures = fetched = 0
     need = sum(1 for ev in events if ev.get("source") in DETAIL_PARSERS
-               and ev.get("source") not in skip and ev["id"] not in cache)
+               and ev.get("source") not in skip
+               and cache.get(ev["id"], {}).get("v") != DETAIL_VERSION)
     print(f"Details ophalen voor {need} tochten (circa {need * 1.5 / 60:.0f} minuten)...")
     for ev in events:
         parser = DETAIL_PARSERS.get(ev.get("source"))
@@ -336,13 +376,14 @@ def enrich_details(events, skip=()):
             continue
         entry = cache.get(ev["id"])
         age = (today - date.fromisoformat(entry["fetched"])).days if entry else None
-        if (entry is None or age >= DETAIL_MAX_AGE_DAYS) and failures < 5:
+        if (entry is None or entry.get("v") != DETAIL_VERSION or age >= DETAIL_MAX_AGE_DAYS) and failures < 5:
             try:
                 time.sleep(1)
                 r = requests.get(ev["sourceUrl"], headers=BROWSER_HEADERS, timeout=30)
                 r.raise_for_status()
                 entry = parser(r.text)
                 entry["fetched"] = today.isoformat()
+                entry["v"] = DETAIL_VERSION
                 cache[ev["id"]] = entry
                 fetched += 1
                 failures = 0
@@ -357,6 +398,13 @@ def enrich_details(events, skip=()):
             for key in ("price", "organizer", "title"):
                 if entry.get(key):
                     ev[key] = entry[key]
+            if entry.get("start"):
+                start = entry["start"]
+                if entry.get("start_partial"):
+                    start = ", ".join(x for x in (start, ev["location"], COUNTRY_NAMES.get(ev.get("country", ""), "")) if x)
+                ev["start"] = start
+            if entry.get("start_lat") is not None and entry.get("start_lon") is not None:
+                ev["startLat"], ev["startLon"] = entry["start_lat"], entry["start_lon"]
     keep = {ev["id"] for ev in events}
     cache = {k: v for k, v in cache.items() if k in keep}
     with open(DETAIL_FILE, "w", encoding="utf-8") as f:

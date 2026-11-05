@@ -171,7 +171,8 @@
                 organizer: e.organizer || e.organisator || '',
                 sourceUrl: e.sourceUrl || e.url || '#',
                 price: e.price || e.prijs || '',
-                lat: e.lat, lon: e.lon, source: e.source || '', country: e.country || ''
+                lat: e.lat, lon: e.lon, source: e.source || '', country: e.country || '',
+                start: e.start || '', startLat: e.startLat, startLon: e.startLon
             };
         }
 
@@ -393,15 +394,26 @@
         // ---------- Google Agenda ----------
         var COUNTRY_NAMES = { NL: 'Nederland', BE: 'België', DE: 'Duitsland', LU: 'Luxemburg', FR: 'Frankrijk' };
 
+        function okNum(v) { return v != null && v !== '' && !isNaN(+v); }
+
+        // Startadres als dat bekend is, anders de plaats met het land erbij
         function placeText(e) {
+            if (e.start) return e.start;
             return [e.location, COUNTRY_NAMES[e.country] || ''].filter(Boolean).join(', ');
         }
 
-        // Google Maps-link naar de startplaats (op de coördinaten als die bekend zijn)
+        // Google Maps-link: exacte startcoördinaten > startadres > coördinaten van de plaats > plaatsnaam
         function mapsUrl(e) {
-            var hasCoords = e.lat != null && e.lon != null && !isNaN(+e.lat) && !isNaN(+e.lon);
-            var q = hasCoords ? (+e.lat) + ',' + (+e.lon) : placeText(e);
+            var q;
+            if (okNum(e.startLat) && okNum(e.startLon)) q = (+e.startLat) + ',' + (+e.startLon);
+            else if (e.start) q = e.start;
+            else if (okNum(e.lat) && okNum(e.lon)) q = (+e.lat) + ',' + (+e.lon);
+            else q = placeText(e);
             return 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(q);
+        }
+
+        function shortStart(e) {
+            return String(e.start || '').replace(/,\s*(Nederland|België|Duitsland|Luxemburg|Frankrijk)$/, '');
         }
 
         function gcalUrl(e, variants) {
@@ -490,6 +502,7 @@
                         '</div>' +
                         '<div class="flex flex-wrap items-center gap-4 text-sm text-slate-400">' +
                             '<span>📍 ' + esc(e.location) + '</span>' +
+                            (e.start ? '<a href="' + esc(mapsUrl(e)) + '" target="_blank" rel="noopener" class="text-slate-300 hover:underline" title="Open de startplaats in Google Maps">🏁 ' + esc(shortStart(e)) + '</a>' : '') +
                             '<span>👥 ' + esc(e.organizer || 'Onbekend') + '</span>' +
                             (e.price ? '<span class="text-emerald-400 font-medium">💶 ' + esc(e.price) + '</span>' : '') +
                             '<a href="' + esc(safeUrl(e.sourceUrl)) + '" target="_blank" rel="noopener" class="text-indigo-400 hover:underline">🔗 Bron bekijken</a>' +

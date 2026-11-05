@@ -16,7 +16,8 @@
     "source": "Mountainbike.be",
     "country": "NL",
     "lat": 51.9843,
-    "lon": 5.9109
+    "lon": 5.9109,
+    "start": "Clubhuis RETO, Daam Fockemalaan 5, 6815 DL Arnhem, Nederland"
   },
   {
     "id": "fs-59781",
@@ -33,7 +34,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.9843,
-    "lon": 5.9109
+    "lon": 5.9109,
+    "start": "Daam Fockemalaan 5, Arnhem, Nederland",
+    "startLat": 51.99963,
+    "startLon": 5.90266
   },
   {
     "id": "mb-20261107-astene-versele-classic",
@@ -54,7 +58,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 50.9846,
-    "lon": 3.5628
+    "lon": 3.5628,
+    "start": "Zaal Ten Hove, Nieuwstraat 3, 9800 Astene, België"
   },
   {
     "id": "mb-20261107-brugge-33e-bossentocht",
@@ -75,7 +80,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.2086,
-    "lon": 3.2268
+    "lon": 3.2268,
+    "start": "Voetbalkantine Eendracht Brugge, Koning Leopold III Laan 117, 8200 Brugge, België"
   },
   {
     "id": "fs-60058",
@@ -93,7 +99,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.5696,
-    "lon": 4.6357
+    "lon": 4.6357,
+    "start": ": De Santspuy Zandspui 45 4873 LZ Etten-Leur, Etten-Leur, Nederland",
+    "startLat": 51.53616,
+    "startLon": 4.65517
   },
   {
     "id": "mb-20261107-knokke-heist-18e-wacky-toertocht",
@@ -114,7 +123,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.3434,
-    "lon": 3.2885
+    "lon": 3.2885,
+    "start": "Sportrcentrum Molenhoek, Herenweg 11A, 8300 Knokke-Heist, België"
   },
   {
     "id": "gd-3de-gravel-zwinclassic-vbr",
@@ -153,7 +163,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.1484,
-    "lon": 3.9442
+    "lon": 3.9442,
+    "start": "Kantine Bosparkwijk, Nachtegaallaan 30, 9160 Lokeren, België"
   },
   {
     "id": "mb-20261107-nijkerk-voek-herfstklassieker",
@@ -171,7 +182,8 @@
     "source": "Mountainbike.be",
     "country": "NL",
     "lat": 52.2149,
-    "lon": 5.4781
+    "lon": 5.4781,
+    "start": "Sportpark De Burcht, Bloemendaalseweg  2, 3862 RN Nijkerk, Nederland"
   },
   {
     "id": "gd-brugse-bikers-gravel-75km",
@@ -206,7 +218,8 @@
     "source": "Mountainbike.be",
     "country": "NL",
     "lat": 52.4315,
-    "lon": 6.0729
+    "lon": 6.0729,
+    "start": "Sportpark, Zandbergen 14, 8191 NA Wapenveld, Nederland"
   },
   {
     "id": "fs-60174",
@@ -223,7 +236,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 52.4315,
-    "lon": 6.0729
+    "lon": 6.0729,
+    "start": "Zandbergen 14 Wapenveld, Wapenveld, Nederland",
+    "startLat": 52.43884,
+    "startLon": 6.08024
   },
   {
     "id": "mb-20261108-alphen-veldtoertocht-",
@@ -242,7 +258,8 @@
     "source": "Mountainbike.be",
     "country": "NL",
     "lat": 51.4829,
-    "lon": 4.9553
+    "lon": 4.9553,
+    "start": "Happy Alphen, Stationstraat 57, 5131 BM Alphen, Nederland"
   },
   {
     "id": "mb-20261108-beaufort-knight-ride",
@@ -264,7 +281,8 @@
     "source": "Mountainbike.be",
     "country": "",
     "lat": 50.2144,
-    "lon": 3.9615
+    "lon": 3.9615,
+    "start": "Beaufort Youth Hostel, Route de Dillingen 55, 6315 Beaufort, Luxemburg"
   },
   {
     "id": "my-21574",
@@ -284,7 +302,8 @@
     "source": "MTB-You",
     "country": "NL",
     "lat": 50.9241,
-    "lon": 5.822
+    "lon": 5.822,
+    "start": "Hoeve Printhagen, Printhagen 3, 6191 PR Beek, Beek, Nederland"
   },
   {
     "id": "mb-20261108-brecht-veldtoertocht",
@@ -306,7 +325,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.3485,
-    "lon": 4.6399
+    "lon": 4.6399,
+    "start": "Sporthal De Ring, Ambachtslaan 7, 2960 Brecht, België"
   },
   {
     "id": "my-21801",
@@ -328,7 +348,8 @@
     "source": "MTB-You",
     "country": "BE",
     "lat": 51.3359,
-    "lon": 4.6282
+    "lon": 4.6282,
+    "start": "Sporthal, Ambachtslaan 7, 2960 Brecht, Antwerpen, België"
   },
   {
     "id": "mb-20261108-den-dungen-bioracer-mtb-gravel-tocht",
@@ -349,7 +370,8 @@
     "source": "Mountainbike.be",
     "country": "NL",
     "lat": 51.6656,
-    "lon": 5.3713
+    "lon": 5.3713,
+    "start": "Boer Goossens, Heilig Hartplein 1, 5275 BM Den Dungen, Nederland"
   },
   {
     "id": "mb-20261108-heusden-zolder-mountainbiketoertocht",
@@ -368,7 +390,8 @@
     "source": "Mountainbike.be",
     "country": "",
     "lat": 51.0328,
-    "lon": 5.2797
+    "lon": 5.2797,
+    "start": "De Veen, Veenderweg 48, 3550 Heusden-Zolder, België"
   },
   {
     "id": "gd-graveltocht-vwb-3",
@@ -405,7 +428,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 50.9774,
-    "lon": 2.9524
+    "lon": 2.9524,
+    "start": "Sporthal, Paardedreef 6, 8650 Houthulst, België"
   },
   {
     "id": "mb-20261108-huizingen-dworpse-bikers-mtb-en-gravel-classic",
@@ -427,7 +451,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 50.7481,
-    "lon": 4.2767
+    "lon": 4.2767,
+    "start": "Provinciaal Domein Huizingen, H.Torleylaan 100, 1653 Huizingen, België"
   },
   {
     "id": "my-21746",
@@ -449,7 +474,8 @@
     "source": "MTB-You",
     "country": "BE",
     "lat": 50.9413,
-    "lon": 4.5607
+    "lon": 4.5607,
+    "start": "Sporthal De Zeyp, Zeypestraat 26, 1910 Kampenhout, Vlaams-Brabant, België"
   },
   {
     "id": "mb-20261108-kempenhout-toertocht-kampenhout-tvv-11-11-11",
@@ -469,7 +495,8 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261108-kempenhout-toertocht-kampenhout-tvv-11-11-11",
     "price": "€ 6,00 – € 7,00",
     "source": "Mountainbike.be",
-    "country": "BE"
+    "country": "BE",
+    "start": "Sporthal De Zeype, Zeypestraat 26, 1910 Kempenhout, België"
   },
   {
     "id": "mb-20261108-koewacht-wim-hendriks-trofee",
@@ -487,7 +514,8 @@
     "source": "Mountainbike.be",
     "country": "NL",
     "lat": 51.229,
-    "lon": 3.9702
+    "lon": 3.9702,
+    "start": "RKVV Koewacht, Berlaersstraat 4, 4576 AD Koewacht, Nederland"
   },
   {
     "id": "my-21753",
@@ -506,7 +534,8 @@
     "source": "MTB-You",
     "country": "NL",
     "lat": 52.4446,
-    "lon": 6.8214
+    "lon": 6.8214,
+    "start": "Camping Dal van Mosbeek, Uelserweg 153, 7663 TD Mander, Tubbergen, Nederland"
   },
   {
     "id": "gd-tbb-totaal-boterkoektocht-gravel",
@@ -561,7 +590,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 50.7688,
-    "lon": 3.2626
+    "lon": 3.2626,
+    "start": "Sporthal De Weimeersen, Rollegemkerkstraat, 8510 Rollegem, België"
   },
   {
     "id": "mb-20261108-seraing-le-chemin-des-sangliers",
@@ -582,7 +612,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 50.6152,
-    "lon": 5.5089
+    "lon": 5.5089,
+    "start": "Complexe sportif du Bois Abbaye, Avenue des Puddleurs  51-53, 4100 Seraing, België"
   },
   {
     "id": "mb-20261108-ter-apel-gronings-mooiste",
@@ -601,7 +632,8 @@
     "source": "Mountainbike.be",
     "country": "NL",
     "lat": 52.8742,
-    "lon": 7.0618
+    "lon": 7.0618,
+    "start": "Camping Moekesgat, Heembadweg 17, 9561 CS Ter Apel, Nederland"
   },
   {
     "id": "fs-59879",
@@ -618,7 +650,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 52.8742,
-    "lon": 7.0618
+    "lon": 7.0618,
+    "start": "Heembadweg 17, Ter Apel, Nederland",
+    "startLat": 52.88466,
+    "startLon": 7.06976
   },
   {
     "id": "fs-60455",
@@ -635,7 +670,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 52.8742,
-    "lon": 7.0618
+    "lon": 7.0618,
+    "start": "Camping Moekesgat, Heembadweg 17, Ter Apel, Nederland",
+    "startLat": 52.88527,
+    "startLon": 7.05996
   },
   {
     "id": "gd-gronings-mooiste-graveltocht-2026",
@@ -671,7 +709,8 @@
     "source": "Mountainbike.be",
     "country": "NL",
     "lat": 52.404,
-    "lon": 6.7744
+    "lon": 6.7744,
+    "start": "Camping Dal van Mosbeek, Uelserweg 153, 7663 TD Tubbergen, Nederland"
   },
   {
     "id": "fs-59600",
@@ -689,7 +728,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 52.404,
-    "lon": 6.7744
+    "lon": 6.7744,
+    "start": "Camping Dal van Mosbeek, Uelserweg 153, Mander, Tubbergen, Nederland",
+    "startLat": 52.44566,
+    "startLon": 6.82378
   },
   {
     "id": "mb-20261108-vosselaar-glaswerk-vanheertum-vtt",
@@ -708,7 +750,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.3129,
-    "lon": 4.8878
+    "lon": 4.8878,
+    "start": "Sporthal Diepvenneke, Diepvenneke 43, 2350 Vosselaar, België"
   },
   {
     "id": "mb-20261108-weert-land-van-horne-bike-fest",
@@ -731,7 +774,8 @@
     "source": "Mountainbike.be",
     "country": "",
     "lat": 51.2356,
-    "lon": 5.7051
+    "lon": 5.7051,
+    "start": "Outdoorcentrum, Kruispeelweg, 6006 SX Weert, Nederland"
   },
   {
     "id": "fs-59527",
@@ -751,7 +795,10 @@
     "source": "Fietssport.nl",
     "country": "",
     "lat": 51.2356,
-    "lon": 5.7051
+    "lon": 5.7051,
+    "start": "Blauwe Meertje Weert Outdoor Heihuisweg 2 Weert, Weert",
+    "startLat": 51.24534,
+    "startLon": 5.66985
   },
   {
     "id": "mb-20261108-zeeland-mtb-ride-maashorst",
@@ -770,7 +817,8 @@
     "source": "Mountainbike.be",
     "country": "NL",
     "lat": 51.6946,
-    "lon": 5.6729
+    "lon": 5.6729,
+    "start": "Voetbalvereniging Festilent, Boekelsedijk 3, 5411 NW Zeeland, Nederland"
   },
   {
     "id": "fs-59715",
@@ -789,7 +837,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.6946,
-    "lon": 5.6729
+    "lon": 5.6729,
+    "start": "Boekelsedijk 3, Zeeland, Nederland",
+    "startLat": 51.6841,
+    "startLon": 5.67453
   },
   {
     "id": "my-21755",
@@ -806,7 +857,8 @@
     "source": "MTB-You",
     "country": "NL",
     "lat": 51.3096,
-    "lon": 5.2554
+    "lon": 5.2554,
+    "start": "Hof van Heden, Witrijt 10, 5571 XH Bergeijk, Bergeijk, Nederland"
   },
   {
     "id": "mb-20261110-bergeijk-nederland-seniorenmountainbikers-okra",
@@ -823,7 +875,8 @@
     "source": "Mountainbike.be",
     "country": "NL",
     "lat": 51.3212,
-    "lon": 5.3569
+    "lon": 5.3569,
+    "start": "Hof van Heden, Witrijt 10, 5571XH Bergeijk Nederland, Nederland"
   },
   {
     "id": "mb-20261110-pittem-10e-pittem-by-night-mtb-",
@@ -842,7 +895,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 50.9952,
-    "lon": 3.2668
+    "lon": 3.2668,
+    "start": "Zaal de Magneet, Egemstraat 47, 8740 Pittem, België"
   },
   {
     "id": "mb-20261111-eksaarde-gezoardse-feesten-mtb-toers-",
@@ -861,7 +915,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.1488,
-    "lon": 3.9652
+    "lon": 3.9652,
+    "start": "Clubhouse 't Muilenestje, Muylaertstraat 6, 9160 Eksaarde, België"
   },
   {
     "id": "mb-20261111-geel-ten-aard-33e-veldtoertocht-gta-classic",
@@ -881,7 +936,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.1902,
-    "lon": 4.9555
+    "lon": 4.9555,
+    "start": "FC Beekhoek, Broekstraat 92, 2440 Geel-ten-Aard, België"
   },
   {
     "id": "mb-20261111-gesves-la-gesvoise",
@@ -901,7 +957,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 50.4029,
-    "lon": 5.0776
+    "lon": 5.0776,
+    "start": "Buvette Terrain Football, Rue de la Pichelotte 12, 5340 Gesves, België"
   },
   {
     "id": "mb-20261111-hoegaarden-frans-claes-classic-",
@@ -922,7 +979,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 50.7742,
-    "lon": 4.887
+    "lon": 4.887,
+    "start": "Den Venetiaen, Gemeenteplein 22, 3320 Hoegaarden, België"
   },
   {
     "id": "gd-frans-claes-classic-11-5",
@@ -977,7 +1035,8 @@
     "source": "Mountainbike.be",
     "country": "",
     "lat": 51.0698,
-    "lon": 5.2711
+    "lon": 5.2711,
+    "start": "Voetbalkantine Stal Sport, Nieuwendijk 57, 3582 Koersel, België"
   },
   {
     "id": "gd-mtb-rit-vwb-2",
@@ -1016,7 +1075,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 50.9086,
-    "lon": 3.5649
+    "lon": 3.5649,
+    "start": "Zaal Elckerlyc, Schoolweg 1, 9770 Kruisem, België"
   },
   {
     "id": "mb-20261111-oostmalle-veldtourtochten-",
@@ -1038,7 +1098,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.302,
-    "lon": 4.734
+    "lon": 4.734,
+    "start": "Bassisschool ' t Park, Herentalsebaan 54, 2390 Oostmalle, België"
   },
   {
     "id": "mb-20261111-pittem-28e-helletocht-mtb-pittem",
@@ -1058,7 +1119,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 50.9952,
-    "lon": 3.2668
+    "lon": 3.2668,
+    "start": "Zaal de Magneet, Egemstraat 47, 8740 Pittem, België"
   },
   {
     "id": "gd-4-gravelrit-pittem-vbr",
@@ -1095,7 +1157,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.19,
-    "lon": 3.1434
+    "lon": 3.1434,
+    "start": "Sport en Cultuurcentrum, Hof ter Straeten 2, 8490 Varsenare, België"
   },
   {
     "id": "mb-20261111-wervik-flandrien-classic-der-raketten",
@@ -1118,7 +1181,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 50.7782,
-    "lon": 3.044
+    "lon": 3.044,
+    "start": "Sportcentrum de Pionier, Gosserieslaan 6, 8940 Wervik, België"
   },
   {
     "id": "mb-20261114-apeldoorn-11-bergen-mtb-tocht",
@@ -1138,7 +1202,8 @@
     "source": "Mountainbike.be",
     "country": "",
     "lat": 52.1796,
-    "lon": 5.9301
+    "lon": 5.9301,
+    "start": "Sportpark, Orderbos 27, 7313 HN Apeldoorn, Nederland"
   },
   {
     "id": "fs-59737",
@@ -1155,7 +1220,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 52.1796,
-    "lon": 5.9301
+    "lon": 5.9301,
+    "start": "Sportpark Orderbos 27Parkeren op de Sportlaan., Apeldoorn, Nederland",
+    "startLat": 52.20151,
+    "startLon": 5.91727
   },
   {
     "id": "my-21577",
@@ -1175,7 +1243,8 @@
     "source": "MTB-You",
     "country": "BE",
     "lat": 51.036,
-    "lon": 5.7121
+    "lon": 5.7121,
+    "start": "de helix, Rijksweg 357, 3650 Dilsen-Stokkem, Limburg, België"
   },
   {
     "id": "mb-20261114-maasmechelen-breuls-euregio-classic-mtb-amp-gravel",
@@ -1197,7 +1266,8 @@
     "source": "Mountainbike.be",
     "country": "",
     "lat": 50.9634,
-    "lon": 5.696
+    "lon": 5.696,
+    "start": "De Helix, Rijksweg 357, 3630 Maasmechelen, België"
   },
   {
     "id": "mb-20261114-maldegem-23e-drongengoed-vtt",
@@ -1216,7 +1286,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.2089,
-    "lon": 3.4452
+    "lon": 3.4452,
+    "start": "Sporthal De Berken, Kleitkalseide 109, 9990 Maldegem, België"
   },
   {
     "id": "mb-20261114-moerkerke-vtt-heleblitz-classic",
@@ -1236,7 +1307,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.2455,
-    "lon": 3.341
+    "lon": 3.341,
+    "start": "Sportpark Meuleweg, Vissersstraat 2 A, 8340 Moerkerke, België"
   },
   {
     "id": "mb-20261114-nijverdal-volkerwessels-voskamp-holterberg-atb-tocht",
@@ -1254,7 +1326,8 @@
     "source": "Mountainbike.be",
     "country": "NL",
     "lat": 52.3592,
-    "lon": 6.4654
+    "lon": 6.4654,
+    "start": "Ardoer camping De Noetselerberg, Holterweg 116, 7441 DK Nijverdal, Nederland"
   },
   {
     "id": "fs-60486",
@@ -1272,7 +1345,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 52.3592,
-    "lon": 6.4654
+    "lon": 6.4654,
+    "start": "Holterweg 116 (Camping Noetselerberg), Nijverdal, Nederland",
+    "startLat": 52.35035,
+    "startLon": 6.45341
   },
   {
     "id": "mb-20261114-oekene-25e-mtb-tocht-amp-9e-cyclotocht-oekene",
@@ -1292,7 +1368,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 50.9209,
-    "lon": 3.1603
+    "lon": 3.1603,
+    "start": "Par. Centrum De Regenboog, Sint-Eloois-Winkelsestraat 59, 8800 Oekene, België"
   },
   {
     "id": "mb-20261115-aalten-veldtoertocht-peddelaars",
@@ -1310,7 +1387,8 @@
     "source": "Mountainbike.be",
     "country": "NL",
     "lat": 51.9142,
-    "lon": 6.5774
+    "lon": 6.5774,
+    "start": "Sportpark, Bocholtsestraatweg 67 A, 7121 JB Aalten, Nederland"
   },
   {
     "id": "fs-59766",
@@ -1327,7 +1405,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.9142,
-    "lon": 6.5774
+    "lon": 6.5774,
+    "start": "Bocholtsestraatweg 67a, Aalten, Nederland",
+    "startLat": 51.91124,
+    "startLon": 6.58514
   },
   {
     "id": "gd-la-balade-des-voisins-4",
@@ -1361,7 +1442,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.0988,
-    "lon": 2.5924
+    "lon": 2.5924,
+    "start": "Strand, Leopold I Esplanade, 8660 De Panne, België"
   },
   {
     "id": "mb-20261115-eksel-crossen-door-de-bossen-",
@@ -1381,7 +1463,8 @@
     "source": "Mountainbike.be",
     "country": "",
     "lat": 51.1538,
-    "lon": 5.3923
+    "lon": 5.3923,
+    "start": "Sporthal, Dennenstraat 8, 3941 Eksel, België"
   },
   {
     "id": "gd-hei-en-vennentocht-2026",
@@ -1420,7 +1503,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 50.7716,
-    "lon": 3.8827
+    "lon": 3.8827,
+    "start": "Prov. Domein De Gavers, Onkerzelestraat 280, 9500 Geraardsbergen, België"
   },
   {
     "id": "gd-cameleon-ride-2",
@@ -1455,7 +1539,8 @@
     "source": "Mountainbike.be",
     "country": "NL",
     "lat": 52.3592,
-    "lon": 6.3806
+    "lon": 6.3806,
+    "start": "Manege Haarle, Haarlerveldweg  1, 7448 PR Haarle, Nederland"
   },
   {
     "id": "mb-20261115-hulst-toerclub-hulst-offroad",
@@ -1473,7 +1558,8 @@
     "source": "Mountainbike.be",
     "country": "NL",
     "lat": 51.3316,
-    "lon": 4.0877
+    "lon": 4.0877,
+    "start": "Partycentrum 't Spoor 011, Spoorweg 8, 461 DX  Hulst, Nederland"
   },
   {
     "id": "mb-20261115-kalmthout-stephan-aerts-classic-2026",
@@ -1494,7 +1580,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.3828,
-    "lon": 4.4765
+    "lon": 4.4765,
+    "start": "GITOK Bovenbouw, Heuvelspad 20, 2920 Kalmthout, België"
   },
   {
     "id": "gd-stephan-aerts-classic-2026",
@@ -1531,7 +1618,8 @@
     "source": "Mountainbike.be",
     "country": "NL",
     "lat": 51.7006,
-    "lon": 5.7287
+    "lon": 5.7287,
+    "start": "Sporthal de Wis, Dominicanenstraat 25, 5453 JN Langenboom, Nederland"
   },
   {
     "id": "fs-60111",
@@ -1550,7 +1638,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.7006,
-    "lon": 5.7287
+    "lon": 5.7287,
+    "start": "Dominicanenstraat 25, Langenboom, Nederland",
+    "startLat": 51.70052,
+    "startLon": 5.72915
   },
   {
     "id": "fs-60520",
@@ -1568,7 +1659,10 @@
     "source": "Fietssport.nl",
     "country": "",
     "lat": 51.358,
-    "lon": 4.8627
+    "lon": 4.8627,
+    "start": "Eindepoel 182330 Merksplas, België, Merksplas",
+    "startLat": 51.40514,
+    "startLon": 4.86905
   },
   {
     "id": "mb-20261115-moerkerke-vtt-heleblitz-classic",
@@ -1588,7 +1682,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.2455,
-    "lon": 3.341
+    "lon": 3.341,
+    "start": "Sportpark Meuleweg, Vissersstraat 2 A, 8340 Moerkerke, België"
   },
   {
     "id": "mb-20261115-netersel-hei-en-vennentocht",
@@ -1607,7 +1702,8 @@
     "source": "Mountainbike.be",
     "country": "NL",
     "lat": 51.4043,
-    "lon": 5.208
+    "lon": 5.208,
+    "start": "Café D’n Driesprong, Carolus Simplexplein 15, 5534 AJ Netersel, Nederland"
   },
   {
     "id": "fs-56921",
@@ -1626,7 +1722,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.4043,
-    "lon": 5.208
+    "lon": 5.208,
+    "start": "Carolus Simplexplein 15 in Netersel, Netersel, Nederland",
+    "startLat": 51.40388,
+    "startLon": 5.20809
   },
   {
     "id": "mb-20261115-oekene-25e-mtb-tocht-amp-9e-cyclotocht-oekene",
@@ -1646,7 +1745,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 50.9209,
-    "lon": 3.1603
+    "lon": 3.1603,
+    "start": "Par. Centrum De Regenboog, Sint-Eloois-Winkelsestraat 59, 8800 Oekene, België"
   },
   {
     "id": "mb-20261115-oldenzaal-rudi-kemna-classic-039-veldtoer",
@@ -1664,7 +1764,8 @@
     "source": "Mountainbike.be",
     "country": "NL",
     "lat": 52.3117,
-    "lon": 6.9242
+    "lon": 6.9242,
+    "start": "Clubgebouw OWC, Oude Almeloseweg 1, 7576 PE Oldenzaal, Nederland"
   },
   {
     "id": "mb-20261115-tremelo-mountainbiketocht-tremelobos",
@@ -1683,7 +1784,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 50.9919,
-    "lon": 4.7041
+    "lon": 4.7041,
+    "start": "VK Tremelo, Basdongenstraat 1, 3120 Tremelo, België"
   },
   {
     "id": "fs-59610",
@@ -1703,7 +1805,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.6135,
-    "lon": 5.5447
+    "lon": 5.5447,
+    "start": "Past. Clercxstraat 53-55, Veghel, Nederland",
+    "startLat": 51.59228,
+    "startLon": 5.54161
   },
   {
     "id": "mb-20261115-zoersel-fingo-classic",
@@ -1726,7 +1831,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.2717,
-    "lon": 4.7133
+    "lon": 4.7133,
+    "start": "KFC Eendracht Zoersel, Westmallebaan, 2980 Zoersel, België"
   },
   {
     "id": "gd-fingo-classic-gravel-vwb-2",
@@ -1762,7 +1868,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 50.9842,
-    "lon": 3.527
+    "lon": 3.527,
+    "start": "Naast de kerk van Astene, Nieuwstraat 3, 9800 Deinze, België"
   },
   {
     "id": "mb-20261121-maldegem-32e-mosseltocht",
@@ -1781,7 +1888,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.2089,
-    "lon": 3.4452
+    "lon": 3.4452,
+    "start": "Van Deynse, ²Krommeweg 80, 9990 Maldegem, België"
   },
   {
     "id": "mb-20261122-aartrijke-23e-vtt-classic-aartrijke",
@@ -1800,7 +1908,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.1192,
-    "lon": 3.0903
+    "lon": 3.0903,
+    "start": "KVV Aartrijke, Aartrijksestraat 63/Z, 8211 Aartrijke, België"
   },
   {
     "id": "mb-20261122-de-klinge-memorial-patrick-meersschaert-",
@@ -1818,7 +1927,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.2565,
-    "lon": 4.0898
+    "lon": 4.0898,
+    "start": "Sporthal, Kieldrechtstraat 12, 9170 De Klinge, België"
   },
   {
     "id": "mb-20261122-den-helder-mtb-toertocht-texel",
@@ -1837,7 +1947,8 @@
     "source": "Mountainbike.be",
     "country": "",
     "lat": 52.9509,
-    "lon": 4.7936
+    "lon": 4.7936,
+    "start": "TESO wachtlokaal, Havenplein 3Verhaven Texel, 1781 AB Den Helder, Nederland"
   },
   {
     "id": "fs-60390",
@@ -1856,7 +1967,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 53.0253,
-    "lon": 4.7527
+    "lon": 4.7527,
+    "start": "Pontweg 1, Den Hoorn, Nederland",
+    "startLat": 53.02267,
+    "startLon": 4.78426
   },
   {
     "id": "gd-la-gadouzienne-5",
@@ -1910,7 +2024,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 50.6957,
-    "lon": 4.0412
+    "lon": 4.0412,
+    "start": "Nautisport, Pavé de Soignies 36, 7850 Enghien, België"
   },
   {
     "id": "mb-20261122-evergem-vtt-cyclo-toyota-boone",
@@ -1930,7 +2045,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.1088,
-    "lon": 3.7079
+    "lon": 3.7079,
+    "start": "Oefenterrein Evergem 2020, Drogenbroodstraat, 9940 Evergem, België"
   },
   {
     "id": "mb-20261122-hengelo-sterkr-toertocht",
@@ -1947,7 +2063,8 @@
     "source": "Mountainbike.be",
     "country": "NL",
     "lat": 52.2659,
-    "lon": 6.7924
+    "lon": 6.7924,
+    "start": "BWO Sportcomplex De Noork, Oldenzaalsestraat 518, 7557 PW Hengelo, Nederland"
   },
   {
     "id": "fs-59606",
@@ -1964,7 +2081,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 52.2659,
-    "lon": 6.7924
+    "lon": 6.7924,
+    "start": "BWOSportcomplex De Noork Oldenzaalsestraat 518 7558 PW Hengelo, Hengelo, Nederland",
+    "startLat": 52.27423,
+    "startLon": 6.8251
   },
   {
     "id": "gd-sterkr-toertocht-gravel-2026",
@@ -2000,7 +2120,8 @@
     "source": "Mountainbike.be",
     "country": "NL",
     "lat": 51.9891,
-    "lon": 6.5717
+    "lon": 6.5717,
+    "start": "Sportpark, Kerkhoflaan 5, 7131 TE Lichtenvoorde, Nederland"
   },
   {
     "id": "fs-57026",
@@ -2019,7 +2140,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.9891,
-    "lon": 6.5717
+    "lon": 6.5717,
+    "start": "Eschpark 15, Lichtenvoorde, Nederland",
+    "startLat": 51.99292,
+    "startLon": 6.56622
   },
   {
     "id": "mb-20261122-lommel-mountainbiketoertocht",
@@ -2039,7 +2163,8 @@
     "source": "Mountainbike.be",
     "country": "",
     "lat": 51.2306,
-    "lon": 5.3077
+    "lon": 5.3077,
+    "start": "Sporthal, Kleuterstraat 4, 3920 Lommel, België"
   },
   {
     "id": "gd-graveltocht-zandbikers-vwb-1",
@@ -2076,7 +2201,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.2089,
-    "lon": 3.4452
+    "lon": 3.4452,
+    "start": "Van Deynse, ²Krommeweg 80, 9990 Maldegem, België"
   },
   {
     "id": "gd-gravelrit-rwc-reusel-2026",
@@ -2113,7 +2239,8 @@
     "source": "Mountainbike.be",
     "country": "",
     "lat": 51.1321,
-    "lon": 6.0779
+    "lon": 6.0779,
+    "start": "Tent, Markt 12, 6063 AD Vlodrop, Nederland"
   },
   {
     "id": "mb-20261124-dessel-seniorenmountainbikers-okra",
@@ -2130,7 +2257,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.2391,
-    "lon": 5.1128
+    "lon": 5.1128,
+    "start": "Parking Tabloo, Gravensteen 3, 2480 Dessel, België"
   },
   {
     "id": "mb-20261128-ertvelde-houtland-vtt-amp-cyclo",
@@ -2148,7 +2276,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.1794,
-    "lon": 3.7472
+    "lon": 3.7472,
+    "start": "Sportoase Ertvelde, Guldensporenlaan 34, 9940 Ertvelde, België"
   },
   {
     "id": "fs-60394",
@@ -2165,7 +2294,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 52.1899,
-    "lon": 4.4146
+    "lon": 4.4146,
+    "start": "Boulevard Zeezijde 21, Katwijk aan Zee, Katwijk, Nederland",
+    "startLat": 52.19206,
+    "startLon": 4.38053
   },
   {
     "id": "mb-20261128-rillaar-rillaar-hurissalm-",
@@ -2182,7 +2314,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 50.9757,
-    "lon": 4.8929
+    "lon": 4.8929,
+    "start": "Rillaar Het Schors, Diestsesteenweg 320, 3202 Rillaar, België"
   },
   {
     "id": "mb-20261128-sint-kruis-brugge-brugse-zot-offroad",
@@ -2201,7 +2334,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.2185,
-    "lon": 3.273
+    "lon": 3.273,
+    "start": "Sint-Andreaslyceum Sint-Kruis, Veltemweg, 8310 Sint-Kruis-Brugge, België"
   },
   {
     "id": "fs-59406",
@@ -2219,7 +2353,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 52.1746,
-    "lon": 5.291
+    "lon": 5.291,
+    "start": "Peter's Baan, Eemweg 2b Soest, Soest, Nederland",
+    "startLat": 52.1782,
+    "startLon": 5.31871
   },
   {
     "id": "mb-20261129-brecht-rondom-brecht",
@@ -2238,7 +2375,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.3485,
-    "lon": 4.6399
+    "lon": 4.6399,
+    "start": "Garage Felix, Heiken 66, 2960 Brecht, België"
   },
   {
     "id": "mb-20261129-brecht-strade-stoempatori-grvl",
@@ -2257,7 +2395,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.3485,
-    "lon": 4.6399
+    "lon": 4.6399,
+    "start": "Garage Felix, Heiken 66, 2960 Brecht, België"
   },
   {
     "id": "gd-strade-stoempatori-grvl-vwb",
@@ -2322,7 +2461,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.7404,
-    "lon": 5.7805
+    "lon": 5.7805,
+    "start": "Dorpstraat 2, Gassel, Nederland",
+    "startLat": 51.7401,
+    "startLon": 5.78052
   },
   {
     "id": "fs-59892",
@@ -2340,7 +2482,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 52.4338,
-    "lon": 6.8323
+    "lon": 6.8323,
+    "start": "Camping en vakantiepark de Witte berg, Wittebergweg 9, Nabij Vasse, Nederland",
+    "startLat": 52.42369,
+    "startLon": 6.89316
   },
   {
     "id": "fs-59893",
@@ -2359,7 +2504,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 52.4338,
-    "lon": 6.8323
+    "lon": 6.8323,
+    "start": "Camping en vakantiepark de Witte berg, Wittebergweg 9, Nabij Vasse, Nederland",
+    "startLat": 52.42366,
+    "startLon": 6.89317
   },
   {
     "id": "mb-20261129-pelt-rupsen-mtb-amp-gravel-ride",
@@ -2381,7 +2529,8 @@
     "source": "Mountainbike.be",
     "country": "",
     "lat": 51.2198,
-    "lon": 5.4299
+    "lon": 5.4299,
+    "start": "De Vranken, Herent 122, 3910 Pelt, België"
   },
   {
     "id": "fs-60489",
@@ -2398,7 +2547,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.6003,
-    "lon": 4.7186
+    "lon": 4.7186,
+    "start": "Heisprong 15, Prinsenbeek, Nederland",
+    "startLat": 51.60095,
+    "startLon": 4.70674
   },
   {
     "id": "fs-59801",
@@ -2416,7 +2568,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.6003,
-    "lon": 4.7186
+    "lon": 4.7186,
+    "start": "Heisprong 15, Prinsenbeek, Nederland",
+    "startLat": 51.60368,
+    "startLon": 4.70309
   },
   {
     "id": "mb-20261129-tielrode-wase-ardennenrit",
@@ -2435,7 +2590,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.1126,
-    "lon": 4.1753
+    "lon": 4.1753,
+    "start": "VK Tielrode, Burgemeester Siegfried Buytaertdreef 10, 9140 Tielrode, België"
   },
   {
     "id": "gd-wase-ardennenrit-gravel-vwb",
@@ -2471,7 +2627,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.4077,
-    "lon": 5.3927
+    "lon": 5.3927,
+    "start": "toterfout 13 A, Veldhoven, Nederland",
+    "startLat": 51.41722,
+    "startLon": 5.35172
   },
   {
     "id": "fs-59843",
@@ -2488,7 +2647,10 @@
     "source": "Fietssport.nl",
     "country": "",
     "lat": 51.4899,
-    "lon": 5.8962
+    "lon": 5.8962,
+    "start": "Lovinckplein 2, Ysselsteyn",
+    "startLat": 51.49017,
+    "startLon": 5.89552
   },
   {
     "id": "fs-59844",
@@ -2507,7 +2669,10 @@
     "source": "Fietssport.nl",
     "country": "",
     "lat": 51.4899,
-    "lon": 5.8962
+    "lon": 5.8962,
+    "start": "Lovinckplein 2, Ysselsteyn",
+    "startLat": 51.49014,
+    "startLon": 5.89557
   },
   {
     "id": "gd-pepernotentocht-2026",
@@ -2544,7 +2709,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 52.0068,
-    "lon": 6.3501
+    "lon": 6.3501,
+    "start": "Halseweg 31A, Zelhem, Nederland",
+    "startLat": 52.00591,
+    "startLon": 6.35714
   },
   {
     "id": "fs-59439",
@@ -2562,7 +2730,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 52.0068,
-    "lon": 6.3501
+    "lon": 6.3501,
+    "start": "Kantine SEV - Halseweg 31 A Zelhem, Zelhem, Nederland",
+    "startLat": 52.00602,
+    "startLon": 6.35353
   },
   {
     "id": "mb-20261129-zwevegem-transfo-bike-fest",
@@ -2577,7 +2748,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 50.7829,
-    "lon": 3.3756
+    "lon": 3.3756,
+    "start": "Transfo Zwevegem, Blokellestraat 113 B, 8550 Zwevegem, België"
   },
   {
     "id": "my-21642",
@@ -2597,7 +2769,8 @@
     "source": "MTB-You",
     "country": "BE",
     "lat": 50.8055,
-    "lon": 3.3393
+    "lon": 3.3393,
+    "start": "Polyvalente zaal Transfo site, Blokellestraat 113b, 8550 Zwevegem, West-Vlaanderen, België"
   },
   {
     "id": "mb-20261205-hertsberge-31e-bossen-van-vlaanderen",
@@ -2616,7 +2789,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.1054,
-    "lon": 3.2735
+    "lon": 3.2735,
+    "start": "Zaal Bulscampvelt, Wingensestraat 2, 8020 Hertsberge, België"
   },
   {
     "id": "fs-59845",
@@ -2635,7 +2809,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.6059,
-    "lon": 5.6991
+    "lon": 5.6991,
+    "start": "Sint Agathaplein 8, Boekel, Nederland",
+    "startLat": 51.60319,
+    "startLon": 5.67387
   },
   {
     "id": "mb-20261206-dessel-sinterklaas-toertocht-mtb-amp-gravel",
@@ -2657,7 +2834,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.2391,
-    "lon": 5.1128
+    "lon": 5.1128,
+    "start": "KFC Witgoor Sport, Wouwerstraat 45, 2480 Dessel, België"
   },
   {
     "id": "mb-20261206-geldrop-rondje-geldrop",
@@ -2677,7 +2855,8 @@
     "source": "Mountainbike.be",
     "country": "NL",
     "lat": 51.4227,
-    "lon": 5.5608
+    "lon": 5.5608,
+    "start": "Clubpaviljoen TML Dommelstreek, Kervel 10, 5667 KN Geldrop, Nederland"
   },
   {
     "id": "mb-20261206-grote-brogel-brueghelbikers-mtb-toertocht-",
@@ -2698,7 +2877,8 @@
     "source": "Mountainbike.be",
     "country": "",
     "lat": 51.1556,
-    "lon": 5.5081
+    "lon": 5.5081,
+    "start": "Voetbalterreinen Sporting Grote Brogel, Bocholterweg, 3990 Grote-Brogel, België"
   },
   {
     "id": "gd-brueghelbikers-gravel-toertocht-vwb",
@@ -2733,7 +2913,10 @@
     "source": "Fietssport.nl",
     "country": "",
     "lat": 51.7896,
-    "lon": 6.0074
+    "lon": 6.0074,
+    "start": "Treppkesweg 3, Kranenburg",
+    "startLat": 51.76232,
+    "startLon": 6.02623
   },
   {
     "id": "mb-20261206-lokeren-mtb-rit-lokeren",
@@ -2752,7 +2935,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.1484,
-    "lon": 3.9442
+    "lon": 3.9442,
+    "start": "Sportcentrum De Dam, Lokerhoutstraat 29, 9160 Lokeren, België"
   },
   {
     "id": "gd-maldegemse-poldertocht-10",
@@ -2788,7 +2972,8 @@
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261206-meldgem-maldegemse-poldertocht",
     "price": "€ 2,00 – € 8,00",
     "source": "Mountainbike.be",
-    "country": "BE"
+    "country": "BE",
+    "start": "Sporthal De Berken, Kleitkalseide 109 A, 9990 Meldgem, België"
   },
   {
     "id": "mb-20261206-rucphen-rogelli-veldtoertocht",
@@ -2806,7 +2991,8 @@
     "source": "Mountainbike.be",
     "country": "NL",
     "lat": 51.5209,
-    "lon": 4.5694
+    "lon": 4.5694,
+    "start": "Sportpark, Sportpromenade 5, 4715 SM Rucphen, Nederland"
   },
   {
     "id": "mb-20261206-vorden-grote-veldrit",
@@ -2825,7 +3011,8 @@
     "source": "Mountainbike.be",
     "country": "NL",
     "lat": 52.1041,
-    "lon": 6.3126
+    "lon": 6.3126,
+    "start": "Sportpark voetbalver., Oude Zutphenseweg 11, 7251 JX Vorden, Nederland"
   },
   {
     "id": "fs-60422",
@@ -2843,7 +3030,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 52.1041,
-    "lon": 6.3126
+    "lon": 6.3126,
+    "start": "Sportpark voetbalver., Oude Zutphenseweg 11, Vorden, Nederland",
+    "startLat": 52.11021,
+    "startLon": 6.33433
   },
   {
     "id": "mb-20261206-weerde-2e-quot-the-hybrid-ride-best-of-both-worlds-quot-",
@@ -2862,7 +3052,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 50.975,
-    "lon": 4.4755
+    "lon": 4.4755,
+    "start": "Ons Huis, Kostersvoetweg 2, 1982 Weerde, België"
   },
   {
     "id": "mb-20261208-veerle-laakdal-okra-groepsrit-",
@@ -2879,7 +3070,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.0702,
-    "lon": 4.9878
+    "lon": 4.9878,
+    "start": "Sporthal, Kwade Plas 1, 2431 Veerle Laakdal, België"
   },
   {
     "id": "my-21673",
@@ -2897,7 +3089,8 @@
     "source": "MTB-You",
     "country": "NL",
     "lat": 51.5546,
-    "lon": 4.5564
+    "lon": 4.5564,
+    "start": "Restaurant Bargo, Bredasebaan, 4744 RZ Bosschenhoofd, Halderberge, Nederland"
   },
   {
     "id": "fs-60468",
@@ -2914,7 +3107,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 52.1796,
-    "lon": 5.9301
+    "lon": 5.9301,
+    "start": "Sportpark Orderbos 21, Apeldoorn, Nederland",
+    "startLat": 52.20037,
+    "startLon": 5.91981
   },
   {
     "id": "mb-20261212-boekhoute-trapper-vtt-amp-cyclo",
@@ -2933,7 +3129,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.2577,
-    "lon": 3.7176
+    "lon": 3.7176,
+    "start": "Scoutslokalen Michiel De Ruyter, Vliet 20 A, 9961 Boekhoute, België"
   },
   {
     "id": "mb-20261212-jabbeke-vtt-permeke-by-diapal",
@@ -2952,7 +3149,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.1912,
-    "lon": 3.1008
+    "lon": 3.1008,
+    "start": "Vrijetijdscentrum, Vlamingveld 40, 8490 Jabbeke, België"
   },
   {
     "id": "mb-20261212-meijel-meel-by-night",
@@ -2969,7 +3167,8 @@
     "source": "Mountainbike.be",
     "country": "",
     "lat": 51.3443,
-    "lon": 5.8855
+    "lon": 5.8855,
+    "start": "De Heere van Meijel, Dorpsstraat 19, 5768 CD Meijel, Nederland"
   },
   {
     "id": "gd-4de-strade-grigi-gravel-rit-vwb",
@@ -3005,7 +3204,8 @@
     "source": "Mountainbike.be",
     "country": "NL",
     "lat": 52.1862,
-    "lon": 5.6921
+    "lon": 5.6921,
+    "start": "Camping de Meidoorn, Welgelegenweg 9, 3776 PR Stroe, Nederland"
   },
   {
     "id": "fs-59303",
@@ -3023,7 +3223,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 52.1862,
-    "lon": 5.6921
+    "lon": 5.6921,
+    "start": "Camping de Meidoorn, Welgelegenweg 9, Stroe, Nederland",
+    "startLat": 52.17971,
+    "startLon": 5.65494
   },
   {
     "id": "mb-20261212-velsen-noord-pier-huisduinen-pier-strandtoertocht",
@@ -3040,7 +3243,8 @@
     "source": "Mountainbike.be",
     "country": "",
     "lat": 52.4739,
-    "lon": 4.6379
+    "lon": 4.6379,
+    "start": "Strandpaviljoen Aloha, Reyndersweg 2, 1951 LA Velsen-Noord, Nederland"
   },
   {
     "id": "mb-20261213-budel-zwoegers-atb-tocht",
@@ -3061,7 +3265,8 @@
     "source": "Mountainbike.be",
     "country": "NL",
     "lat": 51.2745,
-    "lon": 5.5745
+    "lon": 5.5745,
+    "start": "Sporthal De Zuiderpoort, Sportlaan 1, 6021 KA Budel, Nederland"
   },
   {
     "id": "fs-59486",
@@ -3079,7 +3284,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.2745,
-    "lon": 5.5745
+    "lon": 5.5745,
+    "start": "Sportlaan 7, Budel, Nederland",
+    "startLat": 51.26105,
+    "startLon": 5.56958
   },
   {
     "id": "gd-zwoegers-graveltocht-2026",
@@ -3135,7 +3343,8 @@
     "source": "Mountainbike.be",
     "country": "",
     "lat": 52.9509,
-    "lon": 4.7936
+    "lon": 4.7936,
+    "start": "Ckubgebouw, Guldemondweg, 1785 CG Den helder, Nederland"
   },
   {
     "id": "mb-20261213-doetinchem-28e-hubo-rondje-doetinchem",
@@ -3153,7 +3362,8 @@
     "source": "Mountainbike.be",
     "country": "NL",
     "lat": 51.9585,
-    "lon": 6.2815
+    "lon": 6.2815,
+    "start": "Clubhuis RTV De Zwaluwen, Fabriekstraat 47, 7005 AP Doetinchem, Nederland"
   },
   {
     "id": "fs-59456",
@@ -3171,7 +3381,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.9585,
-    "lon": 6.2815
+    "lon": 6.2815,
+    "start": "Fabriekstraat 47, Doetinchem, Nederland",
+    "startLat": 51.95407,
+    "startLon": 6.28909
   },
   {
     "id": "mb-20261213-hollain-vtt-de-la-ferme-fleurie",
@@ -3190,7 +3403,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 50.5416,
-    "lon": 3.427
+    "lon": 3.427,
+    "start": "La Ferme Fleurie, Rue de Tournai 169, 7620 Hollain, België"
   },
   {
     "id": "gd-vtt-de-la-ferme-fleurie-6",
@@ -3226,7 +3440,8 @@
     "source": "Mountainbike.be",
     "country": "NL",
     "lat": 52.2506,
-    "lon": 6.9117
+    "lon": 6.9117,
+    "start": "Kantine VV LSV, Spölminkkamp 40, 7524 DV Lonneker, Nederland"
   },
   {
     "id": "mb-20261213-luyksgestel-plus-najaarstocht",
@@ -3244,7 +3459,8 @@
     "source": "Mountainbike.be",
     "country": "NL",
     "lat": 51.2887,
-    "lon": 5.3213
+    "lon": 5.3213,
+    "start": "Sportpark, Rijt 2, 5575 CD Luyksgestel, Nederland"
   },
   {
     "id": "mb-20261213-meijel-meel-by-day",
@@ -3262,7 +3478,8 @@
     "source": "Mountainbike.be",
     "country": "",
     "lat": 51.3443,
-    "lon": 5.8855
+    "lon": 5.8855,
+    "start": "De Heere van Meijel, Dorpsstraat 19, 5768 CD Meijel, Nederland"
   },
   {
     "id": "mb-20261213-otegem-seyns-winter-krieretocht",
@@ -3283,7 +3500,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 50.8085,
-    "lon": 3.4218
+    "lon": 3.4218,
+    "start": "OC De Spoele, Scheldestraat 14, 8583 Otegem, België"
   },
   {
     "id": "mb-20261213-sint-anthonis-tos-winter-veldtourtocht",
@@ -3301,7 +3519,8 @@
     "source": "Mountainbike.be",
     "country": "NL",
     "lat": 51.6269,
-    "lon": 5.8817
+    "lon": 5.8817,
+    "start": "Scouting Sint Patrick, St. Patrickpad 5, 5845 HW Sint Anthonis, Nederland"
   },
   {
     "id": "gd-seyns-krieretocht-1",
@@ -3339,7 +3558,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.292,
-    "lon": 4.5773
+    "lon": 4.5773,
+    "start": "Zaal ' t Goorhof, Kerklei 18, 2960 Sint-Job-in-'t-Goor, België"
   },
   {
     "id": "fs-59575",
@@ -3357,7 +3577,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.6269,
-    "lon": 5.8817
+    "lon": 5.8817,
+    "start": "Scouting Sint Patrick, St. Patrickpad 5, Sint Anthonis, St. Anthonis, Nederland",
+    "startLat": 51.62819,
+    "startLon": 5.87329
   },
   {
     "id": "gd-eindejaarstocht-23",
@@ -3396,7 +3619,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 52.4773,
-    "lon": 6.056
+    "lon": 6.056,
+    "start": "Konijnenbergerweg 2, Hattem, Nederland",
+    "startLat": 52.45821,
+    "startLon": 6.06707
   },
   {
     "id": "my-18997",
@@ -3414,7 +3640,8 @@
     "source": "MTB-You",
     "country": "NL",
     "lat": 51.5014,
-    "lon": 3.9168
+    "lon": 3.9168,
+    "start": "Voetbal kantine V.V. Kloetinge, Noordeinde 5c, 4481 BJ Kloetinge, Zeeland, Nederland"
   },
   {
     "id": "gd-vtt-en-cyclotocht-ernest-van-der-haeghen",
@@ -3452,7 +3679,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 50.7937,
-    "lon": 3.167
+    "lon": 3.167,
+    "start": "Park Ter Walle, J & M Sabbestraat 163, 8930 Menen, België"
   },
   {
     "id": "fs-59735",
@@ -3470,7 +3698,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 52.337,
-    "lon": 6.1108
+    "lon": 6.1108,
+    "start": "Café Ruimzicht, Eikelhofweg 9, 8121CV Olst, Olst, Nederland",
+    "startLat": 52.32654,
+    "startLon": 6.12992
   },
   {
     "id": "gd-6e-gravel-spekenei-vwb",
@@ -3509,7 +3740,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.4283,
-    "lon": 5.828
+    "lon": 5.828,
+    "start": "Sportpark Leeuwkensbroek, Kuilvenweg 9, Deurne, Nederland",
+    "startLat": 51.47521,
+    "startLon": 5.79826
   },
   {
     "id": "fs-59536",
@@ -3527,7 +3761,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.4283,
-    "lon": 5.828
+    "lon": 5.828,
+    "start": "Sportpark Leeuwkensbroek, Kuilvenweg 9, Deurne, Nederland",
+    "startLat": 51.47521,
+    "startLon": 5.79826
   },
   {
     "id": "fs-60462",
@@ -3545,7 +3782,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.3933,
-    "lon": 5.3414
+    "lon": 5.3414,
+    "start": "Dijk 15, Eersel, Nederland",
+    "startLat": 51.35793,
+    "startLon": 5.31138
   },
   {
     "id": "fs-59818",
@@ -3563,7 +3803,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 52.2347,
-    "lon": 6.495
+    "lon": 6.495,
+    "start": "De Haverkamp, Stationsstraat 28, Markelo, Nederland",
+    "startLat": 52.23079,
+    "startLon": 6.49713
   },
   {
     "id": "fs-59820",
@@ -3582,7 +3825,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 52.2347,
-    "lon": 6.495
+    "lon": 6.495,
+    "start": "De Haverkamp, Stationsstraat 28, Markelo, Nederland",
+    "startLat": 52.23107,
+    "startLon": 6.49735
   },
   {
     "id": "mb-20261220-menen-xmass-toertocht-",
@@ -3602,7 +3848,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 50.7937,
-    "lon": 3.167
+    "lon": 3.167,
+    "start": "Park Ter Walle, J&M Sabbestraat 163, 8930 Menen, België"
   },
   {
     "id": "mb-20261220-peer-x-mas-mtb-toertocht",
@@ -3621,7 +3868,8 @@
     "source": "Mountainbike.be",
     "country": "",
     "lat": 51.1319,
-    "lon": 5.4546
+    "lon": 5.4546,
+    "start": "KRC Peer, Lindebosstraat, 3990 Peer, België"
   },
   {
     "id": "mb-20261220-rijkevorsel-mtb-kersthappening",
@@ -3640,7 +3888,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.3504,
-    "lon": 4.7585
+    "lon": 4.7585,
+    "start": "Sporthal Kuiperij, Pioenstraat 19, 2310 Rijkevorsel, België"
   },
   {
     "id": "mb-20261220-schoondijke-sluis-veldtoertocht-freewheel-039-79-schoondijke",
@@ -3658,7 +3907,8 @@
     "source": "Mountainbike.be",
     "country": "NL",
     "lat": 51.3536,
-    "lon": 3.556
+    "lon": 3.556,
+    "start": "Sportpark de Molenkreek, Tragel 28, 4507 JD Schoondijke (Sluis), Nederland"
   },
   {
     "id": "fs-60509",
@@ -3677,7 +3927,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.5372,
-    "lon": 4.5967
+    "lon": 4.5967,
+    "start": "Sint Janstraat, Sprundel, Nederland",
+    "startLat": 51.53786,
+    "startLon": 4.59855
   },
   {
     "id": "mb-20261220-stekene-polken-mtb",
@@ -3697,7 +3950,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.2094,
-    "lon": 4.0331
+    "lon": 4.0331,
+    "start": "Groentenloods Van Hooste, Polken 96, 9190 Stekene, België"
   },
   {
     "id": "mb-20261220-wuustwezel-gooreind-koerse-kerstgravel",
@@ -3716,7 +3970,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.392,
-    "lon": 4.5991
+    "lon": 4.5991,
+    "start": "Voetbal Gooreind VV, Eikendreef, 2990 Wuustwezel, België"
   },
   {
     "id": "mb-20261222-lichtaart-seniorenmountainbikers-okra-kerstrit",
@@ -3733,7 +3988,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.2241,
-    "lon": 4.9199
+    "lon": 4.9199,
+    "start": "Sportcentrum, Molenstraat 54, 2460 Lichtaart, België"
   },
   {
     "id": "fs-60471",
@@ -3752,7 +4008,10 @@
     "source": "Fietssport.nl",
     "country": "",
     "lat": 51.262,
-    "lon": 5.9884
+    "lon": 5.9884,
+    "start": "Ligteveld 2 Neer, Neer",
+    "startLat": 51.26542,
+    "startLon": 5.99627
   },
   {
     "id": "fs-60033",
@@ -3769,7 +4028,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.7464,
-    "lon": 5.6315
+    "lon": 5.6315,
+    "start": "Pastoor van Winkelstraat, Schaijk, Nederland",
+    "startLat": 51.74594,
+    "startLon": 5.63564
   },
   {
     "id": "fs-60034",
@@ -3786,7 +4048,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.7464,
-    "lon": 5.6315
+    "lon": 5.6315,
+    "start": "Pastoor van Winkelstraat 2, Schaijk, Nederland",
+    "startLat": 51.74594,
+    "startLon": 5.63564
   },
   {
     "id": "fs-60339",
@@ -3803,7 +4068,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.3202,
-    "lon": 5.4582
+    "lon": 5.4582,
+    "start": "Markt 26, 5554 CC Valkenswaard, Valkenswaard, Nederland",
+    "startLat": 51.35056,
+    "startLon": 5.45859
   },
   {
     "id": "mb-20261226-wingene-32e-kerstmeeting-vtt",
@@ -3822,7 +4090,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.0582,
-    "lon": 3.278
+    "lon": 3.278,
+    "start": "De Tuimelaar, Beernemstraat z/n, 8750 Wingene, België"
   },
   {
     "id": "mb-20261227-de-haan-sylvester-vtt",
@@ -3841,7 +4110,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.2671,
-    "lon": 3.0408
+    "lon": 3.0408,
+    "start": "Sportcentrum Haneveld, Nieuwe Steenweg 74, 8420 De Haan, België"
   },
   {
     "id": "mb-20261227-hooglede-24e-mtb-cyclo-gitsbergtoertocht",
@@ -3860,7 +4130,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 50.9883,
-    "lon": 3.0818
+    "lon": 3.0818,
+    "start": "Sporthal Dominiek Savio, Koolskampstraat 24, 8830 Hooglede, België"
   },
   {
     "id": "fs-59547",
@@ -3878,7 +4149,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.9663,
-    "lon": 5.6663
+    "lon": 5.6663,
+    "start": "Clubhuis TCW, Nudepark 81, Wageningen, Nederland",
+    "startLat": 51.95892,
+    "startLon": 5.64658
   },
   {
     "id": "mb-20261227-westmalle-mountainbiketoertocht",
@@ -3897,7 +4171,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.2969,
-    "lon": 4.6938
+    "lon": 4.6938,
+    "start": "Gem. Sporthal, Berckhovestraat 25, 2390 Westmalle, België"
   },
   {
     "id": "gd-vwb-gravelrit-vwb-2",
@@ -3938,7 +4213,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 50.8646,
-    "lon": 4.6938
+    "lon": 4.6938,
+    "start": "Sporthal, Hertogstraat 182, 3001 Heverlee, België"
   },
   {
     "id": "gd-marathon-maniac-6",
@@ -3978,7 +4254,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 50.9883,
-    "lon": 3.0818
+    "lon": 3.0818,
+    "start": "Sporthal Dominiek Savio, Koolskampstraat 24, 8830 Hooglede, België"
   },
   {
     "id": "fs-60060",
@@ -3996,7 +4273,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 52.5482,
-    "lon": 6.581
+    "lon": 6.581,
+    "start": "Total Outdoor Vechtdal, Grote Beltenweg 17, Rheeze, Rheeze, Nederland",
+    "startLat": 52.54484,
+    "startLon": 6.56996
   },
   {
     "id": "fs-60149",
@@ -4015,7 +4295,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 53.2061,
-    "lon": 6.1772
+    "lon": 6.1772,
+    "start": "Bartemerwei 21a, Surhuizum, Nederland",
+    "startLat": 53.20638,
+    "startLon": 6.1803
   },
   {
     "id": "gd-drenthe-1",
@@ -4051,7 +4334,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 52.3905,
-    "lon": 6.4515
+    "lon": 6.4515,
+    "start": "Koemaste 11, Hellendoorn, Nederland",
+    "startLat": 52.38781,
+    "startLon": 6.45735
   },
   {
     "id": "fs-60216",
@@ -4074,7 +4360,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 52.2149,
-    "lon": 5.4781
+    "lon": 5.4781,
+    "start": "Luxoolseweg 32, Nijkerk, Nederland",
+    "startLat": 52.22305,
+    "startLon": 5.50215
   },
   {
     "id": "fs-60255",
@@ -4092,7 +4381,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 53.0663,
-    "lon": 6.4595
+    "lon": 6.4595,
+    "start": "Norg, Norg, Nederland",
+    "startLat": 53.0699,
+    "startLon": 6.46266
   },
   {
     "id": "mb-20261230-assebroek-34e-nieuwjaars-veldtoertocht",
@@ -4111,7 +4403,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.1933,
-    "lon": 3.2573
+    "lon": 3.2573,
+    "start": "Bloso Centrum Julien Saelens, Nijverheidsstraat 112, 8310 Assebroek, België"
   },
   {
     "id": "fs-60086",
@@ -4129,7 +4422,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 52.0426,
-    "lon": 6.617
+    "lon": 6.617,
+    "start": "Kerkstraat 6, Groenlo, Nederland",
+    "startLat": 52.04138,
+    "startLon": 6.61484
   },
   {
     "id": "fs-56577",
@@ -4147,7 +4443,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 52.0426,
-    "lon": 6.617
+    "lon": 6.617,
+    "start": "Kerkstraat 6, Groenlo, Nederland",
+    "startLat": 52.0413,
+    "startLon": 6.61481
   },
   {
     "id": "fs-59784",
@@ -4167,7 +4466,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.7352,
-    "lon": 5.5266
+    "lon": 5.5266,
+    "start": "Schoonstraat 99B, Heesch, Nederland",
+    "startLat": 51.72719,
+    "startLon": 5.53201
   },
   {
     "id": "fs-60521",
@@ -4186,7 +4488,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 52.0796,
-    "lon": 5.4904
+    "lon": 5.4904,
+    "start": "S.V. De Valleivogels, Sportpark de Bree-West, Breelaan 123, Scherpenzeel, Nederland",
+    "startLat": 52.08564,
+    "startLon": 5.48444
   },
   {
     "id": "gd-ultra-vtt-bouillon",
@@ -4221,7 +4526,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 52.4765,
-    "lon": 6.0256
+    "lon": 6.0256,
+    "start": "Vogelzang Veldweg, Hattemerbroek, Nederland",
+    "startLat": 52.46357,
+    "startLon": 6.02205
   },
   {
     "id": "gd-ultra-vtt-des-forts-liegeois",
@@ -4325,7 +4633,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.2676,
-    "lon": 5.0844
+    "lon": 5.0844,
+    "start": "GC Den Dries, Kerkhofstraat24, 2470 Retie, België"
   },
   {
     "id": "fs-59477",
@@ -4343,7 +4652,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.3863,
-    "lon": 5.6889
+    "lon": 5.6889,
+    "start": "camping de Kuilen, Someren, Nederland",
+    "startLat": 51.37661,
+    "startLon": 5.67139
   },
   {
     "id": "fs-59479",
@@ -4360,7 +4672,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.3863,
-    "lon": 5.6889
+    "lon": 5.6889,
+    "start": "Kuilvenweg 15, Someren, Nederland",
+    "startLat": 51.37524,
+    "startLon": 5.67219
   },
   {
     "id": "gd-gravel-tocht-memorial-jo-boerekamp-2026",
@@ -4413,7 +4728,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 50.94,
-    "lon": 3.4753
+    "lon": 3.4753,
+    "start": "Domein de Waalmeers, Waalstraat 188, 9870 Zulte, België"
   },
   {
     "id": "fs-60387",
@@ -4431,7 +4747,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.7434,
-    "lon": 5.7471
+    "lon": 5.7471,
+    "start": "Sportpark De KranenhofStoottroepenweg 2A, Escharen, Nederland",
+    "startLat": 51.80534,
+    "startLon": 5.7669
   },
   {
     "id": "fs-60371",
@@ -4449,7 +4768,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.7434,
-    "lon": 5.7471
+    "lon": 5.7471,
+    "start": "Sportpark De KranenhofStaatroepenweg 2A, Escharen, Nederland",
+    "startLat": 51.74318,
+    "startLon": 5.73306
   },
   {
     "id": "mb-20270103-huijbergen-atb-toertocht-huijbergen",
@@ -4467,7 +4789,8 @@
     "source": "Mountainbike.be",
     "country": "NL",
     "lat": 51.433,
-    "lon": 4.3769
+    "lon": 4.3769,
+    "start": "MFC De Kloek, Prior Borrekensstraat 1, 4635 AD Huijbergen, Nederland"
   },
   {
     "id": "fs-60251",
@@ -4485,7 +4808,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 52.2347,
-    "lon": 6.495
+    "lon": 6.495,
+    "start": "Borkeldweg 1, Markelo, Nederland",
+    "startLat": 52.26985,
+    "startLon": 6.47333
   },
   {
     "id": "fs-60252",
@@ -4505,7 +4831,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 52.2347,
-    "lon": 6.495
+    "lon": 6.495,
+    "start": "Borkeldweg 1, Markelo, Nederland",
+    "startLat": 52.26985,
+    "startLon": 6.47333
   },
   {
     "id": "fs-60154",
@@ -4523,7 +4852,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 52.308,
-    "lon": 6.5213
+    "lon": 6.5213,
+    "start": "Brekeldlaan 18 Rijssen, Rijssen, Nederland",
+    "startLat": 52.29928,
+    "startLon": 6.50707
   },
   {
     "id": "fs-60155",
@@ -4541,7 +4873,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 52.308,
-    "lon": 6.5213
+    "lon": 6.5213,
+    "start": "Brekeldlaan 18, Rijssen, Rijssen, Nederland",
+    "startLat": 52.29928,
+    "startLon": 6.50707
   },
   {
     "id": "fs-60479",
@@ -4558,7 +4893,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.3869,
-    "lon": 5.7914
+    "lon": 5.7914,
+    "start": "Beatrixlaan, Asten, Nederland",
+    "startLat": 51.37076,
+    "startLon": 5.82291
   },
   {
     "id": "fs-60478",
@@ -4577,7 +4915,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.3869,
-    "lon": 5.7914
+    "lon": 5.7914,
+    "start": "Beatrixlaan 42, Asten, Nederland",
+    "startLat": 51.4525,
+    "startLon": 5.7381
   },
   {
     "id": "fs-59909",
@@ -4596,7 +4937,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.2674,
-    "lon": 3.9072
+    "lon": 3.9072,
+    "start": "Sportpark FC Axel, Sportlaan 11, Axel, Nederland",
+    "startLat": 51.26508,
+    "startLon": 3.90838
   },
   {
     "id": "fs-59705",
@@ -4615,7 +4959,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.3202,
-    "lon": 5.4582
+    "lon": 5.4582,
+    "start": "Frans van Beststraat 7a, Valkenswaard, Nederland",
+    "startLat": 51.35261,
+    "startLon": 5.46437
   },
   {
     "id": "fs-60331",
@@ -4633,7 +4980,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.6441,
-    "lon": 5.6557
+    "lon": 5.6557,
+    "start": "Zeelandsedijk, Volkel, Nederland",
+    "startLat": 51.63334,
+    "startLon": 5.66344
   },
   {
     "id": "fs-60347",
@@ -4651,7 +5001,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 52.6367,
-    "lon": 6.208
+    "lon": 6.208,
+    "start": "Hoogeweg, Staphorst, Nederland",
+    "startLat": 52.6415,
+    "startLon": 6.21223
   },
   {
     "id": "fs-60001",
@@ -4669,7 +5022,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 52.2506,
-    "lon": 6.9117
+    "lon": 6.9117,
+    "start": "Kantine LSV Spölminkkamp 40 7524 DV Lonneker, Lonneker, Nederland",
+    "startLat": 52.24915,
+    "startLon": 6.90689
   },
   {
     "id": "fs-60576",
@@ -4688,7 +5044,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.5711,
-    "lon": 5.947
+    "lon": 5.947,
+    "start": "Museumpark 5A, Overloon, Nederland",
+    "startLat": 51.57096,
+    "startLon": 5.95288
   },
   {
     "id": "fs-60322",
@@ -4708,7 +5067,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.884,
-    "lon": 5.1551
+    "lon": 5.1551,
+    "start": "Dorpshuis 'De Betuwepoort', Rhenoy, Nederland",
+    "startLat": 51.88087,
+    "startLon": 5.15104
   },
   {
     "id": "mb-20270123-ichtegem-ichtegemse-winter-vtt",
@@ -4727,7 +5089,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.0925,
-    "lon": 3.0103
+    "lon": 3.0103,
+    "start": "Sportcentrum, Keibergstraat, 8480 Ichtegem, België"
   },
   {
     "id": "fs-60175",
@@ -4745,7 +5108,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 52.3905,
-    "lon": 6.4515
+    "lon": 6.4515,
+    "start": "Café De Barbier, Dorpsstraat 54, Hellendoorn, Nederland",
+    "startLat": 52.39125,
+    "startLon": 6.44966
   },
   {
     "id": "my-21701",
@@ -4762,7 +5128,8 @@
     "source": "MTB-You",
     "country": "BE",
     "lat": 51.1249,
-    "lon": 2.7651
+    "lon": 2.7651,
+    "start": "Jeugd- en SportArena, Dudenhofenlaan 2B, 8620 Nieuwpoort, West-Vlaanderen, België"
   },
   {
     "id": "mb-20270124-wechelderzande-31e-mountainbiketoertocht-van-liever-bergaf",
@@ -4782,7 +5149,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.2635,
-    "lon": 4.7863
+    "lon": 4.7863,
+    "start": "Voetbalkantine KFC De Vrede, Voetbalstraat 25, 2275 Wechelderzande, België"
   },
   {
     "id": "mb-20270124-ichtegem-ichtegemse-winter-vtt",
@@ -4801,7 +5169,8 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.0925,
-    "lon": 3.0103
+    "lon": 3.0103,
+    "start": "Sportcentrum, Keibergstraat, 8480 ichtegem, België"
   },
   {
     "id": "fs-60474",
@@ -4819,7 +5188,10 @@
     "source": "Fietssport.nl",
     "country": "",
     "lat": 51.4371,
-    "lon": 5.9799
+    "lon": 5.9799,
+    "start": "Peelheideweg 25, America",
+    "startLat": 51.45904,
+    "startLon": 5.94858
   },
   {
     "id": "fs-60199",
@@ -4837,7 +5209,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 52.4443,
-    "lon": 6.3396
+    "lon": 6.3396,
+    "start": "Verbindingsweg 1A, Lemelerveld, Nederland",
+    "startLat": 52.44111,
+    "startLon": 6.34383
   },
   {
     "id": "fs-60212",
@@ -4857,7 +5232,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.6591,
-    "lon": 5.6149
+    "lon": 5.6149,
+    "start": "Bedafseweg 22, Uden, Nederland",
+    "startLat": 51.6619,
+    "startLon": 5.57774
   },
   {
     "id": "fs-60213",
@@ -4875,7 +5253,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.6591,
-    "lon": 5.6149
+    "lon": 5.6149,
+    "start": "Bedafseweg 22, Uden, Nederland",
+    "startLat": 51.6619,
+    "startLon": 5.57774
   },
   {
     "id": "gd-duo-corporate-beachrace",
@@ -4908,7 +5289,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 52.7545,
-    "lon": 4.9028
+    "lon": 4.9028,
+    "start": "Bosstraat 94, Winkel, Nederland",
+    "startLat": 52.76184,
+    "startLon": 4.8979
   },
   {
     "id": "fs-60424",
@@ -4926,7 +5310,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.968,
-    "lon": 6.7379
+    "lon": 6.7379,
+    "start": "Huininkmaat 3 (aanrijden via de Eelinkstraat), Winterswijk, Nederland",
+    "startLat": 51.96507,
+    "startLon": 6.72605
   },
   {
     "id": "fs-60425",
@@ -4945,7 +5332,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.968,
-    "lon": 6.7379
+    "lon": 6.7379,
+    "start": "Huininkmaat 3, Winterswijk, Nederland",
+    "startLat": 51.96674,
+    "startLon": 6.73103
   },
   {
     "id": "fs-60416",
@@ -4963,7 +5353,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 53.213,
-    "lon": 6.0639
+    "lon": 6.0639,
+    "start": "Fjildwei 8, Jistrum, Nederland",
+    "startLat": 53.21107,
+    "startLon": 6.06545
   },
   {
     "id": "fs-60459",
@@ -4981,7 +5374,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 52.1746,
-    "lon": 5.291
+    "lon": 5.291,
+    "start": "Peter's Baan, Eemweg 2b Soest, Soest, Nederland",
+    "startLat": 52.17812,
+    "startLon": 5.32044
   },
   {
     "id": "fs-60261",
@@ -4999,7 +5395,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 52.1862,
-    "lon": 5.6921
+    "lon": 5.6921,
+    "start": "Camping de Meidoorn, Welgelegenweg 9, Stroe, Nederland",
+    "startLat": 52.18808,
+    "startLon": 5.66274
   },
   {
     "id": "fs-60195",
@@ -5017,7 +5416,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 52.1862,
-    "lon": 5.6921
+    "lon": 5.6921,
+    "start": "Camping de Meidoorn, Welgelegenweg 9, Stroe, Nederland",
+    "startLat": 52.18781,
+    "startLon": 5.66264
   },
   {
     "id": "fs-59476",
@@ -5036,7 +5438,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 52.3592,
-    "lon": 6.4654
+    "lon": 6.4654,
+    "start": "Ardoer camping Noetselerberg, Nijverdal, Nederland",
+    "startLat": 52.34958,
+    "startLon": 6.46017
   },
   {
     "id": "fs-60575",
@@ -5053,7 +5458,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.6783,
-    "lon": 5.3991
+    "lon": 5.3991,
+    "start": "Groenstraat 14e, Berlicum, Nederland",
+    "startLat": 51.67613,
+    "startLon": 5.41665
   },
   {
     "id": "fs-60574",
@@ -5072,7 +5480,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.6783,
-    "lon": 5.3991
+    "lon": 5.3991,
+    "start": "Groenstraat 14e, Berlicum, Nederland",
+    "startLat": 51.67079,
+    "startLon": 5.41392
   },
   {
     "id": "fs-60227",
@@ -5091,7 +5502,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.4144,
-    "lon": 5.8212
+    "lon": 5.8212,
+    "start": "Monseigneur Berkvensstraat 82Inschrijving en parkeen bij Sporthal de Smeltkroes, Liessel, Nederland",
+    "startLat": 51.41422,
+    "startLon": 5.8113
   },
   {
     "id": "fs-60405",
@@ -5109,7 +5523,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.9142,
-    "lon": 6.5774
+    "lon": 6.5774,
+    "start": "Bocholtsestraatweg 67a Aalten, Aalten, Nederland",
+    "startLat": 51.92095,
+    "startLon": 6.58076
   },
   {
     "id": "gd-kaffee-vtt-4",
@@ -5145,7 +5562,10 @@
     "source": "Fietssport.nl",
     "country": "NL",
     "lat": 53.1803,
-    "lon": 6.1701
+    "lon": 6.1701,
+    "start": "Blauknopke, Surhuisterveen, Nederland",
+    "startLat": 53.18486,
+    "startLon": 6.15605
   },
   {
     "id": "my-21575",
@@ -5165,7 +5585,8 @@
     "source": "MTB-You",
     "country": "BE",
     "lat": 51.2337,
-    "lon": 5.1528
+    "lon": 5.1528,
+    "start": "Gemeentelijke basisschool De Zandloper, Gemeenteheistraat 1, 2400 Mol, Antwerpen, België"
   },
   {
     "id": "my-21798",
@@ -5184,7 +5605,8 @@
     "source": "MTB-You",
     "country": "BE",
     "lat": 51.4495,
-    "lon": 4.4659
+    "lon": 4.4659,
+    "start": "Garage Akkermans, Nieuwmoersesteenweg 121, 2910 Essen, Antwerpen, België"
   },
   {
     "id": "gd-ride-to-unite-gravel",
@@ -5220,7 +5642,8 @@
     "source": "MTB-You",
     "country": "BE",
     "lat": 51.0248,
-    "lon": 3.0018
+    "lon": 3.0018,
+    "start": "Domein OC Albatros, Staatsbaan 241 D, 8610 Kortemark, West-Vlaanderen, België"
   },
   {
     "id": "my-21343",
@@ -5239,6 +5662,7 @@
     "source": "MTB-You",
     "country": "BE",
     "lat": 51.0248,
-    "lon": 3.0018
+    "lon": 3.0018,
+    "start": "OC Albatros, Staatsbaan 241 D, 8610 Kortemark, West-Vlaanderen, België"
   }
 ]

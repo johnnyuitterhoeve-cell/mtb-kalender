@@ -137,13 +137,14 @@
       90,
       110
     ],
-    "organizer": "GoDare",
+    "organizer": "WACKY RACERS",
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/3de-gravel-zwinclassic-vbr",
     "price": "",
     "source": "GoDare",
     "country": "BE",
     "lat": 51.3434,
-    "lon": 3.2885
+    "lon": 3.2885,
+    "start": "Sportcentrum Molenhoek, Herenweg  11A, 8300 Knokke-Heist, België"
   },
   {
     "id": "mb-20261107-lokeren-bospark-classic",
@@ -224,13 +225,14 @@
     "distances": [
       75
     ],
-    "organizer": "GoDare",
+    "organizer": "Kloppen deze gegevens niet?",
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/brugse-bikers-gravel-75km",
     "price": "",
     "source": "GoDare",
     "country": "BE",
     "lat": 51.192,
-    "lon": 3.178
+    "lon": 3.178,
+    "start": "8200 Sint-Andries, België"
   },
   {
     "id": "mb-20261107-wapenveld-swolsebostocht-",
@@ -432,13 +434,14 @@
     "distances": [
       70
     ],
-    "organizer": "GoDare",
+    "organizer": "WTC SPORTVRIENDEN BOEKT-ZOLDER",
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/graveltocht-vwb-3",
     "price": "",
     "source": "GoDare",
     "country": "BE",
     "lat": 51.0328,
-    "lon": 5.2797
+    "lon": 5.2797,
+    "start": "De Veen, Veenderweg 48, 3550 Heusden-Zolder, België"
   },
   {
     "id": "mb-20261108-houthulst-heuveltjes-van-erika",
@@ -596,13 +599,14 @@
       35,
       48
     ],
-    "organizer": "GoDare",
+    "organizer": "De Heidefietsers KWB Wijchmaal",
     "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/mtb-tocht-vwb-12",
     "price": "",
     "source": "GoDare",
     "country": "BE",
     "lat": 51.1319,
-    "lon": 5.4546
+    "lon": 5.4546,
+    "start": "Sporting Wijchmaal, Sportlaan 1, 3990 Peer, België"
   },
   {
     "id": "mb-20261108-rollegem-wtc-de-platse-offroad-classic-",
@@ -714,13 +718,14 @@
     "distances": [
       80
     ],
-    "organizer": "GoDare",
+    "organizer": "TFC De Ketting",
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/gronings-mooiste-graveltocht-2026",
     "price": "",
     "source": "GoDare",
     "country": "NL",
     "lat": 52.8742,
-    "lon": 7.0618
+    "lon": 7.0618,
+    "start": "Camping Moekesgat, Heembadweg  17, 9561SW Ter Apel, Nederland"
   },
   {
     "id": "mb-20261108-tubbergen-boterkoektocht-",
@@ -1037,13 +1042,14 @@
       63,
       200
     ],
-    "organizer": "GoDare",
+    "organizer": "eco mountainbike vzw",
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/frans-claes-classic-11-5",
     "price": "",
     "source": "GoDare",
     "country": "BE",
     "lat": 50.7742,
-    "lon": 4.887
+    "lon": 4.887,
+    "start": "Den Venetiaen, Gemeenteplein 22, 3320 Hoegaarden, België"
   },
   {
     "id": "gb-2026-11-11-antitank-gravel",
@@ -1192,13 +1198,14 @@
       65,
       75
     ],
-    "organizer": "GoDare",
+    "organizer": "BIKERSCLUB DE BIKEDEVILS",
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/4-gravelrit-pittem-vbr",
     "price": "",
     "source": "GoDare",
     "country": "BE",
     "lat": 50.9952,
-    "lon": 3.2668
+    "lon": 3.2668,
+    "start": "Zaal De Magneet, Egemstraat 47, 8740 Pittem, België, Facebook"
   },
   {
     "id": "mb-20261111-varsenare-20e-st-maartenstocht",
@@ -1654,13 +1661,14 @@
       80,
       100
     ],
-    "organizer": "GoDare",
+    "organizer": "VVKMS 44ste Sint-Maarten",
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/stephan-aerts-classic-2026",
     "price": "",
     "source": "GoDare",
     "country": "BE",
     "lat": 51.3828,
-    "lon": 4.4765
+    "lon": 4.4765,
+    "start": "GITOK bovenbouw, Heuvelspad 20, 2920 Kalmthout, België"
   },
   {
     "id": "mb-20261115-langenboom-atb-kuuletocht",
@@ -1905,13 +1913,14 @@
       75,
       100
     ],
-    "organizer": "GoDare",
+    "organizer": "KWB ZOERSEL",
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/fingo-classic-gravel-vwb-2",
     "price": "",
     "source": "GoDare",
     "country": "BE",
     "lat": 51.2717,
-    "lon": 4.7133
+    "lon": 4.7133,
+    "start": "KFC Eendracht Zoersel, Westmallebaan, 2980 Zoersel, België, Facebook"
   },
   {
     "id": "mb-20261119-deinze-seniorenbikers-okra-oost-vlaanderen",
@@ -2041,13 +2050,14 @@
     "distances": [
       60
     ],
-    "organizer": "GoDare",
+    "organizer": "CYCLO BOL D'AIR ENGHIEN",
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/la-gadouzienne-5",
     "price": "",
     "source": "GoDare",
     "country": "BE",
     "lat": 50.6957,
-    "lon": 4.0412
+    "lon": 4.0412,
+    "start": "Centre Nautisport, chaussée de Soignies  36, 7850 Edingen, België"
   },
   {
     "id": "gd-la-gadouzienne-gravel-vwb",
@@ -2058,13 +2068,14 @@
     "distances": [
       60
     ],
-    "organizer": "GoDare",
+    "organizer": "Cyclo Bol d'Air Edingen",
     "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/la-gadouzienne-gravel-vwb",
     "price": "",
     "source": "GoDare",
     "country": "BE",
     "lat": 50.6957,
-    "lon": 4.0412
+    "lon": 4.0412,
+    "start": "Centre Nautisport, chaussée de Soignies  36, 7850 Edingen, België"
   },
   {
     "id": "mb-20261122-enghien-la-gadouzienne",
@@ -2525,13 +2536,14 @@
     "location": "Brecht",
     "type": "Gravel",
     "distances": [],
-    "organizer": "GoDare",
+    "organizer": "WTC DE STOEMPERS",
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/strade-stoempatori-grvl-vwb",
     "price": "",
     "source": "GoDare",
     "country": "BE",
     "lat": 51.3485,
-    "lon": 4.6399
+    "lon": 4.6399,
+    "start": "Garage Felix, Heiken  66, 2960 Brecht, België"
   },
   {
     "id": "gd-de-classic-beachrace",
@@ -2805,13 +2817,14 @@
       40,
       55
     ],
-    "organizer": "GoDare",
+    "organizer": "Kloppen deze gegevens niet?",
     "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/pepernotentocht-2026",
     "price": "",
     "source": "GoDare",
     "country": "NL",
     "lat": 51.4899,
-    "lon": 5.8962
+    "lon": 5.8962,
+    "start": "Peelweg  47, 5813AD Ysselsteyn, Nederland"
   },
   {
     "id": "fs-59438",
@@ -3046,13 +3059,14 @@
     "distances": [
       50
     ],
-    "organizer": "GoDare",
+    "organizer": "WTC MALDEGEM VZW",
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/maldegemse-poldertocht-10",
     "price": "",
     "source": "GoDare",
     "country": "BE",
     "lat": 51.2089,
-    "lon": 3.4452
+    "lon": 3.4452,
+    "start": "Sporthal De Berken, Kleitkalseide  109A, 9990 Maldegem, België"
   },
   {
     "id": "mb-20261206-meldgem-maldegemse-poldertocht",
@@ -3432,13 +3446,14 @@
       49,
       66
     ],
-    "organizer": "GoDare",
+    "organizer": "TWC de Zwoegers",
     "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/zwoegers-atb-tocht-2026",
     "price": "",
     "source": "GoDare",
     "country": "NL",
     "lat": 51.2503,
-    "lon": 5.567
+    "lon": 5.567,
+    "start": "Sporthal De Zuiderpoort, Sportlaan  1, 6023BL Budel-Schoot, Nederland"
   },
   {
     "id": "mb-20261213-den-helder-hrtc-dok-mtb-napoleontocht",
@@ -3662,13 +3677,14 @@
       60,
       80
     ],
-    "organizer": "GoDare",
+    "organizer": "KRIERECROSSERS",
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/seyns-krieretocht-1",
     "price": "",
     "source": "GoDare",
     "country": "BE",
     "lat": 50.7517,
-    "lon": 3.3684
+    "lon": 3.3684,
+    "start": "Gemeentelijke Basisschool, Dalestraat  38, 8554 Sint-Denijs, België"
   },
   {
     "id": "mb-20261213-sint-job-in-039-t-goor-24e-veldtoertocht-pedaleurs2960",
@@ -3782,13 +3798,14 @@
       25,
       45
     ],
-    "organizer": "GoDare",
+    "organizer": "WC ARNOLD STANDAERT - WONDELGEM",
     "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/vtt-en-cyclotocht-ernest-van-der-haeghen",
     "price": "",
     "source": "GoDare",
     "country": "BE",
     "lat": 51.0727,
-    "lon": 3.6751
+    "lon": 3.6751,
+    "start": "Voetbalterrein KSCE Mariakerke, Polderkenslaan  31, 9030 Mariakerke, België"
   },
   {
     "id": "mb-20261219-menen-xmass-toertocht",
@@ -4372,13 +4389,14 @@
     "distances": [
       56
     ],
-    "organizer": "GoDare",
+    "organizer": "Fietsclub Westmalle",
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/vwb-gravelrit-vwb-2",
     "price": "",
     "source": "GoDare",
     "country": "BE",
     "lat": 51.2969,
-    "lon": 4.6938
+    "lon": 4.6938,
+    "start": "Sporthal, Berchovenstraat  25, 2390 Westmalle, België"
   },
   {
     "id": "mb-20261228-heverlee-marathon-maniac",
@@ -4729,13 +4747,14 @@
     "distances": [
       162
     ],
-    "organizer": "GoDare",
+    "organizer": "Kloppen deze gegevens niet?",
     "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/ultra-vtt-des-forts-liegeois",
     "price": "",
     "source": "GoDare",
     "country": "BE",
     "lat": 50.6451,
-    "lon": 5.5736
+    "lon": 5.5736,
+    "start": "Province de Liège x Au choix, 4000 Liège, België"
   },
   {
     "id": "gd-ultra-vtt-des-lacs-de-l-eau-d-heure",
@@ -4763,13 +4782,14 @@
     "distances": [
       337
     ],
-    "organizer": "GoDare",
+    "organizer": "Kloppen deze gegevens niet?",
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/diagonale-mont-de-l-enclus-orval",
     "price": "",
     "source": "GoDare",
     "country": "BE",
     "lat": 50.7457,
-    "lon": 3.5111
+    "lon": 3.5111,
+    "start": "Parking au Sommet x Mont de l'Enclus, 7750 Mont-de-l'Enclus, België"
   },
   {
     "id": "gd-diagonale-mt-de-l-enclus-verviers",
@@ -4797,13 +4817,14 @@
     "distances": [
       154
     ],
-    "organizer": "GoDare",
+    "organizer": "Kloppen deze gegevens niet?",
     "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/ultra-vtt-en-province-de-namur",
     "price": "",
     "source": "GoDare",
     "country": "BE",
     "lat": 50.4665,
-    "lon": 4.8662
+    "lon": 4.8662,
+    "start": "Province de Namur x Au choix sur la trace, 5000 Namur, België"
   },
   {
     "id": "mb-20261231-retie-eindejaarstocht",
@@ -4875,13 +4896,14 @@
     "distances": [
       65
     ],
-    "organizer": "GoDare",
+    "organizer": "Kloppen deze gegevens niet?",
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/gravel-tocht-memorial-jo-boerekamp-2026",
     "price": "",
     "source": "GoDare",
     "country": "NL",
     "lat": 51.3863,
-    "lon": 5.6889
+    "lon": 5.6889,
+    "start": "camping de Kuilen, 5711CN Someren, Nederland"
   },
   {
     "id": "gd-diagonale-orval-mont-de-l-enclus",
@@ -5744,13 +5766,14 @@
     "distances": [
       57
     ],
-    "organizer": "GoDare",
+    "organizer": "Scouts Tempeliers Gullegem-Moorsele",
     "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/kaffee-vtt-4",
     "price": "",
     "source": "GoDare",
     "country": "BE",
     "lat": 50.8432,
-    "lon": 3.2046
+    "lon": 3.2046,
+    "start": "Scouts Tempeliers Gullegem-Moorsele, Poststraat 29-31, 8560 Gullegem, België, Facebook"
   },
   {
     "id": "fs-60498",

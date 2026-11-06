@@ -360,7 +360,17 @@ def detail_mtbyou(html):
     return {"price": "", "organizer": "", "start": ", ".join(name + addr)}
 
 
-DETAIL_PARSERS = {"Fietssport.nl": detail_fietssport, "Mountainbike.be": detail_mountainbike, "MTB-You": detail_mtbyou}
+def detail_godare(html):
+    soup, lines = page_lines(html)
+    loc = block_after(lines, "Locatie", {"bezoek website", "organisatie"}, 5)
+    org = block_after(lines, "Organisatie", {"e-mailadres"}, 3)
+    name = org[-1] if org else ""
+    return {"price": "", "organizer": name if 0 < len(name) < 80 and name.lower() != "organisatie" else "",
+            "start": ", ".join(loc)}
+
+
+DETAIL_PARSERS = {"Fietssport.nl": detail_fietssport, "Mountainbike.be": detail_mountainbike,
+                  "MTB-You": detail_mtbyou, "GoDare": detail_godare}
 
 
 def enrich_details(events, skip=()):

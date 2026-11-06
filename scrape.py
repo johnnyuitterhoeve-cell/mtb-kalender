@@ -37,7 +37,8 @@ PROVINCES = {
     "Ovl": ("Oost-Vlaanderen", "be"), "Vlb": ("Vlaams-Brabant", "be"),
     "Wbr": ("Waals-Brabant", "be"), "Wvl": ("West-Vlaanderen", "be"),
     "Lim": ("Limburg", "be,nl"),
-    "BL": (None, "be,nl,de"),
+    "BL": (None, "be,nl,de,fr,lu"),
+    "DE": (None, "de"), "LU": (None, "lu"), "FR": (None, "fr"),
     "BE": (None, "be"), "NL": (None, "nl"),
     "Lui": ("Luik", "be"), "Bui": (None, "be,nl,de,fr,lu"),
     "Dre": ("Drenthe", "nl"), "Fle": ("Flevoland", "nl"), "Fri": ("Friesland", "nl"),
@@ -450,7 +451,7 @@ def kind_from_title(title, default="MTB"):
 MY_BASE = "https://mtb-you.com/calendar"
 MY_HREF_RE = re.compile(r"/calendar/tour/(\d+)/")
 MY_DATE_RE = re.compile(r"^(?:ma|di|wo|do|vr|za|zo)\.?\s+(\d{1,2})\s+([A-Za-z]{3})\.?\s+", re.IGNORECASE)
-MY_RE = re.compile(r"^(?P<title>.+)\s+(?P<pc>\d{4}(?:\s?[A-Z]{2})?)\s+(?P<place>.+?),\s*(?P<cc>BE|NL|DE|FR|LU)\b(?P<rest>.*)$")
+MY_RE = re.compile(r"^(?P<title>.+)\s+(?P<pc>\d{4,5}(?:\s?[A-Z]{2})?)\s+(?P<place>.+?),\s*(?P<cc>BE|NL|DE|FR|LU)\b(?P<rest>.*)$")
 BE_PROVINCES = ["Vlaams-Brabant", "West-Vlaanderen", "Oost-Vlaanderen", "Brabant Wallon", "Antwerpen",
                 "Hainaut", "Luxembourg", "Limburg", "Liège", "Namur", "Brussels", "Brussel", "Bruxelles"]
 
@@ -539,7 +540,7 @@ GD_MONTHS = {"januari": 1, "februari": 2, "maart": 3, "april": 4, "mei": 5, "jun
              "augustus": 8, "september": 9, "oktober": 10, "november": 11, "december": 12}
 GD_DATE_RE = re.compile(r"(\d{1,2})\s+(" + "|".join(GD_MONTHS) + r")\s+(\d{4})", re.IGNORECASE)
 GD_LOC_RE = re.compile(r"^(.+?)\s+-\s+(België|Nederland|Duitsland|Frankrijk|Luxemburg)$")
-GD_COUNTRY = {"België": "BE", "Nederland": "NL"}
+GD_COUNTRY = {"België": "BE", "Nederland": "NL", "Duitsland": "DE", "Frankrijk": "FR", "Luxemburg": "LU"}
 
 
 def parse_gd_card(h3, default_kind):
@@ -619,7 +620,7 @@ def godare():
 
 # ---------- bron: Gravelbike.be ----------
 GB_URL = "https://www.gravelbike.be/gravelevents"
-GB_COUNTRIES = {"NL", "BE"}
+GB_COUNTRIES = {"NL", "BE", "DE", "LU", "FR"}   # alleen landen waarvan we de plaatsen kunnen opzoeken
 GB_TAIL_RE = re.compile(
     r"^\s*-\s*(?P<days>\d{1,2}(?:\s*/\s*\d{1,2})*)\s*-\s*(?P<place>.+?)\s+(?P<cc>[A-Z]{2,3})\s*(?:\(.*\))?\s*$")
 
@@ -680,7 +681,7 @@ def gravelbike_be():
         if ev["date"] >= today.isoformat() and ev["id"] not in seen:
             seen.add(ev["id"])
             events.append(ev)
-    print(f"  {len(events)} gravelevents in Nederland en België")
+    print(f"  {len(events)} gravelevents in Nederland, België, Duitsland, Luxemburg en Frankrijk")
     if not events:
         print("  Geen events gevonden; is de opbouw van de pagina veranderd?")
     return events
@@ -722,7 +723,7 @@ def geocode_postcode(pc, cc):
     if coords is None:
         try:
             time.sleep(1.1)
-            r = requests.get(NOMINATIM, params={"postalcode": clean[:4], "countrycodes": cc.lower(),
+            r = requests.get(NOMINATIM, params={"postalcode": clean[:5] if cc in ("DE", "FR") else clean[:4], "countrycodes": cc.lower(),
                                                 "format": "json", "limit": 1}, headers=HEADERS, timeout=20)
             data = r.json()
             if data:

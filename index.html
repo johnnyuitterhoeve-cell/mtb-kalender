@@ -47,11 +47,6 @@
                         <input type="range" id="maxDistance" min="10" max="250" value="250" class="w-full accent-emerald-500 cursor-pointer">
                     </div>
 
-                    <div>
-                        <label for="minDistance" class="block text-sm font-medium text-slate-300 mb-2">Min. parcourslengte: <span id="minDistVal" class="text-emerald-400">Alle</span></label>
-                        <input type="range" id="minDistance" min="0" max="100" value="0" step="5" class="w-full accent-emerald-500 cursor-pointer">
-                    </div>
-
                 </div>
 
                 <div class="pt-6 border-t border-slate-800 space-y-2">
@@ -441,7 +436,6 @@
             var dateVal = $('dateInput').value;
             var origin = home;
             var maxDist = parseInt($('maxDistance').value, 10);
-            var minDist = parseInt($('minDistance').value, 10);
 
             var rows = allEvents.map(function (e) {
                 var vs = e.variants.filter(function (v) {
@@ -451,14 +445,10 @@
             }).filter(function (r) {
                 var e = r.ev;
                 var text = (e.title + ' ' + e.location + ' ' + e.organizer).toLowerCase();
-                var okLen = minDist === 0 || r.variants.some(function (v) {
-                    return v.distances.length === 0 || v.distances.some(function (d) { return d >= minDist; });
-                });
                 return r.variants.length > 0
                     && text.indexOf(searchVal) > -1
                     && (!dateVal || e.date === dateVal)
-                    && (r.dist === null || r.dist <= maxDist)
-                    && okLen;
+                    && (r.dist === null || r.dist <= maxDist);
             });
 
             // Altijd op kortste reisafstand; onbekende afstand onderaan, daarna op datum
@@ -624,10 +614,6 @@
         $('postcodeInput').addEventListener('keydown', function (e) { if (e.key === 'Enter') applyPostcode(); });
         $('maxDistance').addEventListener('input', function (e) {
             $('maxDistVal').textContent = e.target.value;
-            renderEvents();
-        });
-        $('minDistance').addEventListener('input', function (e) {
-            $('minDistVal').textContent = e.target.value === '0' ? 'Alle' : e.target.value + ' km';
             renderEvents();
         });
 

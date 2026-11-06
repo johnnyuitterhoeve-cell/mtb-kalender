@@ -21,12 +21,16 @@
                     <h2 class="text-xl font-semibold text-emerald-400">Filters & Instellingen</h2>
 
                     <div>
-                        <label for="postcodeInput" class="block text-sm font-medium text-slate-300 mb-2">Jouw postcode:</label>
+                        <label for="postcodeInput" class="block text-sm font-medium text-slate-300 mb-2">Jouw locatie:</label>
+                        <button id="locBtn" type="button" class="w-full mb-2 px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 text-sm hover:bg-slate-700">📍 Gebruik mijn locatie</button>
                         <div class="flex gap-2">
-                            <input type="text" id="postcodeInput" placeholder="bv. 4411AB of 2300" maxlength="7" class="min-w-0 flex-1 bg-slate-800 border border-slate-700 rounded-lg p-2.5 text-slate-200 placeholder-slate-500 focus:outline-none focus:border-emerald-500">
+                            <input type="text" id="postcodeInput" placeholder="of postcode" maxlength="8" class="min-w-0 flex-1 bg-slate-800 border border-slate-700 rounded-lg p-2.5 text-slate-200 placeholder-slate-500 focus:outline-none focus:border-emerald-500">
                             <select id="countrySelect" class="bg-slate-800 border border-slate-700 rounded-lg px-2 text-slate-200 focus:outline-none focus:border-emerald-500">
                                 <option value="nl">NL</option>
                                 <option value="be">BE</option>
+                                <option value="de">DE</option>
+                                <option value="lu">LU</option>
+                                <option value="fr">FR</option>
                             </select>
                             <button id="postcodeBtn" type="button" class="px-3 rounded-lg bg-emerald-600 text-white text-sm font-medium hover:bg-emerald-500">OK</button>
                         </div>
@@ -263,9 +267,14 @@
             if (savedHome && savedHome.lat && savedHome.lon) home = savedHome;
         } catch (err) { /* standaard */ }
 
-        function setHome(h) {
+        function setHome(h, persist) {
             home = h;
-            try { localStorage.setItem('mtb_home', JSON.stringify(h)); } catch (err) { /* geen opslag */ }
+            if (persist !== false) {   // een postcode onthouden we; een GPS-locatie niet
+                try {
+                    localStorage.setItem('mtb_home', JSON.stringify(h));
+                    localStorage.removeItem('mtb_loc_auto');
+                } catch (err) { /* geen opslag */ }
+            }
             $('originLabel').textContent = 'Afstanden vanaf: ' + h.label;
             renderEvents();
         }
@@ -281,7 +290,7 @@
 
         function geocodePostcode(pc, country) {
             var clean = pc.replace(/\s+/g, '').toUpperCase();
-            var digits = clean.slice(0, 4);
+            var digits = (country === 'de' || country === 'fr') ? clean.slice(0, 5) : clean.slice(0, 4);
             if (country === 'nl' && /^\d{4}[A-Z]{2}$/.test(clean)) {
                 // PDOK: exact op volledige Nederlandse postcode
                 return fetch('https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?rows=1&fq=type:postcode&q=' + clean)
@@ -297,14 +306,62 @@
             return nominatimPostcode(digits, country);
         }
 
+        // ---------- Locatie van je telefoon of computer ----------
+        function reverseLabel(h) {
+            // Alleen voor de plaatsnaam: de coördinaten worden daarvoor op ongeveer 1 km afgerond
+            fetch('https://nominatim.openstreetmap.org/reverse?format=json&zoom=10&accept-language=nl&lat=' + h.lat.toFixed(2) + '&lon=' + h.lon.toFixed(2))
+                .then(function (r) { return r.json(); })
+                .then(function (j) {
+                    var a = j && j.address;
+                    var name = a && (a.city || a.town || a.village || a.municipality || a.county);
+                    if (name && home === h) {
+                        h.label = name + ' (je locatie)';
+                        $('originLabel').textContent = 'Afstanden vanaf: ' + h.label;
+                    }
+                })
+                .catch(function () { /* het label blijft "je huidige locatie" */ });
+        }
+
+        function useLocation(silent) {
+            var lab = $('originLabel');
+            if (!navigator.geolocation) {
+                if (!silent) lab.textContent = 'Je browser ondersteunt geen locatie. Vul een postcode in.';
+                return;
+            }
+            if (!silent) lab.textContent = 'Locatie bepalen...';
+            navigator.geolocation.getCurrentPosition(function (pos) {
+                var h = { lat: pos.coords.latitude, lon: pos.coords.longitude, label: 'je huidige locatie' };
+                try { localStorage.setItem('mtb_loc_auto', '1'); } catch (err) { /* geen opslag */ }
+                setHome(h, false);
+                reverseLabel(h);
+            }, function (err) {
+                if (silent) return;
+                lab.textContent = err && err.code === 1
+                    ? 'Toegang tot je locatie is geweigerd. Sta locatie toe in je browser of vul een postcode in.'
+                    : 'Je locatie kon niet worden bepaald. Vul een postcode in.';
+            }, { timeout: 10000, maximumAge: 300000 });
+        }
+
+        // Na een eerdere keer "mijn locatie" gebruiken we die bij het openen automatisch, als de browser dat al toestaat
+        function autoLocation() {
+            var flag = null;
+            try { flag = localStorage.getItem('mtb_loc_auto'); } catch (err) { /* geen opslag */ }
+            if (flag !== '1' || !navigator.permissions || !navigator.permissions.query) return;
+            navigator.permissions.query({ name: 'geolocation' }).then(function (st) {
+                if (st.state === 'granted') useLocation(true);
+            }).catch(function () { /* niet ondersteund */ });
+        }
+
         function applyPostcode() {
-            var pc = $('postcodeInput').value.trim(), lab = $('originLabel');
-            if (!/^\d{4}\s?([A-Za-z]{2})?$/.test(pc)) {
-                lab.textContent = 'Vul een geldige postcode in, bijvoorbeeld 4411AB of 2300.';
+            var pc = $('postcodeInput').value.trim(), country = $('countrySelect').value, lab = $('originLabel');
+            var rules = { nl: /^\d{4}\s?([A-Za-z]{2})?$/, be: /^\d{4}$/, lu: /^\d{4}$/, de: /^\d{5}$/, fr: /^\d{5}$/ };
+            var examples = { nl: '4411AB', be: '2300', lu: '1111', de: '52062', fr: '75001' };
+            if (!rules[country].test(pc)) {
+                lab.textContent = 'Vul een geldige postcode in, bijvoorbeeld ' + examples[country] + '.';
                 return;
             }
             lab.textContent = 'Postcode zoeken...';
-            geocodePostcode(pc, $('countrySelect').value).then(setHome).catch(function () {
+            geocodePostcode(pc, country).then(setHome).catch(function () {
                 lab.textContent = 'Postcode niet gevonden. Controleer de postcode en het land.';
             });
         }
@@ -611,6 +668,7 @@
         document.addEventListener('click', function () { $('calendarPop').classList.add('hidden'); });
         document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape') $('calendarPop').classList.add('hidden'); });
         $('postcodeBtn').addEventListener('click', applyPostcode);
+        $('locBtn').addEventListener('click', function () { useLocation(false); });
         $('postcodeInput').addEventListener('keydown', function (e) { if (e.key === 'Enter') applyPostcode(); });
         $('maxDistance').addEventListener('input', function (e) {
             $('maxDistVal').textContent = e.target.value;
@@ -622,6 +680,7 @@
         renderEvents();
         renderSources();
         loadEvents().then(loadSources);
+        autoLocation();
     })();
     </script>
 </body>

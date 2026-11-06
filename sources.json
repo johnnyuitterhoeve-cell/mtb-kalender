@@ -1,16 +1,16 @@
 {
-  "updated": "2026-11-06T07:04:22+00:00",
+  "updated": "2026-11-06T12:03:07+00:00",
   "sources": [
     {
       "name": "Mountainbike.be",
       "status": "ok",
-      "count": 122,
+      "count": 124,
       "message": ""
     },
     {
       "name": "Fietssport.nl",
       "status": "ok",
-      "count": 96,
+      "count": 97,
       "message": ""
     },
     {
@@ -22,7 +22,7 @@
     {
       "name": "GoDare",
       "status": "ok",
-      "count": 50,
+      "count": 49,
       "message": ""
     },
     {

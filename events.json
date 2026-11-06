@@ -580,13 +580,14 @@
       65,
       100
     ],
-    "organizer": "GoDare",
+    "organizer": "WTC Tubbergen",
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/tbb-totaal-boterkoektocht-gravel",
     "price": "",
     "source": "GoDare",
     "country": "NL",
     "lat": 52.4441,
-    "lon": 6.8244
+    "lon": 6.8244,
+    "start": "Camping Dal van Mosbeek, Uelserweg 153, 7663TD Mander, Nederland"
   },
   {
     "id": "gd-mtb-tocht-vwb-12",
@@ -1075,13 +1076,14 @@
     "distances": [
       104
     ],
-    "organizer": "GoDare",
+    "organizer": "PlugPlug",
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/anti-tank-gravel",
     "price": "",
     "source": "GoDare",
     "country": "BE",
     "lat": 51.3282,
-    "lon": 4.4352
+    "lon": 4.4352,
+    "start": "Kapellen, 2950 Kapellen, België"
   },
   {
     "id": "mb-20261111-koersel-mountainbikerit",
@@ -1115,13 +1117,14 @@
       30,
       50
     ],
-    "organizer": "GoDare",
+    "organizer": "Team SMD (Stalse Moosdabbers)",
     "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/mtb-rit-vwb-2",
     "price": "",
     "source": "GoDare",
     "country": "BE",
     "lat": 51.0698,
-    "lon": 5.2711
+    "lon": 5.2711,
+    "start": "Voetbal kantine Stal Sport, Nieuwendijk  57, 3582 Koersel, België"
   },
   {
     "id": "mb-20261111-kruisem-vtt-amp-cyclo-dwars-door-kruishoutem",
@@ -1486,13 +1489,14 @@
     "distances": [
       48
     ],
-    "organizer": "GoDare",
+    "organizer": "PLEIN CADRE HERINNES-WARCOING",
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/la-balade-des-voisins-4",
     "price": "",
     "source": "GoDare",
     "country": "BE",
     "lat": 50.6689,
-    "lon": 3.3176
+    "lon": 3.3176,
+    "start": "Maison de village de Bailleul, Rue des Victimes  3, 7730 Bailleul, België"
   },
   {
     "id": "mb-20261115-de-panne-panne-beach-endurance",
@@ -1545,13 +1549,14 @@
       45,
       55
     ],
-    "organizer": "GoDare",
+    "organizer": "Kloppen deze gegevens niet?",
     "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/hei-en-vennentocht-2026",
     "price": "",
     "source": "GoDare",
     "country": "BE",
     "lat": 50.9655,
-    "lon": 5.5001
+    "lon": 5.5001,
+    "start": "Manege Kattevenia, Kattevennen  12, 3600 Genk, België"
   },
   {
     "id": "mb-20261115-geraardsbergen-cameleon-ride",
@@ -1582,13 +1587,14 @@
     "distances": [
       60
     ],
-    "organizer": "GoDare",
+    "organizer": "CAMELEON BIKE",
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/cameleon-ride-2",
     "price": "",
     "source": "GoDare",
     "country": "BE",
     "lat": 50.7716,
-    "lon": 3.8827
+    "lon": 3.8827,
+    "start": "Provinciaal Domein De Gavers, Onkerzelestraat, 9500 Geraardsbergen, België"
   },
   {
     "id": "mb-20261115-haarle-dutch-masters-of-mtb",
@@ -2196,13 +2202,14 @@
     "distances": [
       60
     ],
-    "organizer": "GoDare",
+    "organizer": "RTC Hengelo",
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/sterkr-toertocht-gravel-2026",
     "price": "",
     "source": "GoDare",
     "country": "NL",
     "lat": 52.2659,
-    "lon": 6.7924
+    "lon": 6.7924,
+    "start": "BWO Sportcomplex “De Noork”, Oldenzaalsestraat  518, 7558PW Hengelo, Nederland"
   },
   {
     "id": "mb-20261122-lichtenvoorde-achterhoeks-argste-vishandel-bomers-mtb-tocht",
@@ -2277,13 +2284,14 @@
       61,
       103
     ],
-    "organizer": "GoDare",
+    "organizer": "Zandbikers",
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/graveltocht-zandbikers-vwb-1",
     "price": "",
     "source": "GoDare",
     "country": "BE",
     "lat": 51.2306,
-    "lon": 5.3077
+    "lon": 5.3077,
+    "start": "Sporthal Kerkhoven, Kleuterstraat  4, 3920 Lommel, België"
   },
   {
     "id": "gb-2026-11-22-zandbikers-graveltocht",
@@ -2331,13 +2339,14 @@
       76,
       100
     ],
-    "organizer": "GoDare",
+    "organizer": "RWC Reusel",
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/gravelrit-rwc-reusel-2026",
     "price": "",
     "source": "GoDare",
     "country": "NL",
     "lat": 51.4571,
-    "lon": 5.177
+    "lon": 5.177,
+    "start": "Sportpark  9, 5541DR Reusel, Nederland"
   },
   {
     "id": "gb-2026-11-22-gravelty-herfst",
@@ -2552,13 +2561,14 @@
     "location": "Bredene",
     "type": "MTB",
     "distances": [],
-    "organizer": "GoDare",
+    "organizer": "Twins Club Bredene",
     "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/de-classic-beachrace",
     "price": "",
     "source": "GoDare",
     "country": "BE",
     "lat": 51.2408,
-    "lon": 2.9648
+    "lon": 2.9648,
+    "start": "Twins Club Bredene Strandpost 1, Driftweg 69, 8450 Bredene, België"
   },
   {
     "id": "gd-toertocht-gassel",
@@ -2569,13 +2579,14 @@
     "distances": [
       45
     ],
-    "organizer": "GoDare",
+    "organizer": "TWC De Tweewielers Gassel",
     "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/toertocht-gassel",
     "price": "",
     "source": "GoDare",
     "country": "NL",
     "lat": 53.0253,
-    "lon": 4.7527
+    "lon": 4.7527,
+    "start": "Pontweg  1, 1797SN Den Hoorn, Nederland"
   },
   {
     "id": "fs-60428",
@@ -2735,13 +2746,14 @@
       66,
       75
     ],
-    "organizer": "GoDare",
+    "organizer": "Ronde van het Waasland",
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/wase-ardennenrit-gravel-vwb",
     "price": "",
     "source": "GoDare",
     "country": "BE",
     "lat": 51.1126,
-    "lon": 4.1753
+    "lon": 4.1753,
+    "start": "Tielrode Burgemeester Siegfried, Buytaertdreef  10, 9140 Tielrode, België, Facebook"
   },
   {
     "id": "fs-60063",
@@ -3002,13 +3014,14 @@
       51,
       83
     ],
-    "organizer": "GoDare",
+    "organizer": "brueghelbikers",
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/brueghelbikers-gravel-toertocht-vwb",
     "price": "",
     "source": "GoDare",
     "country": "BE",
     "lat": 51.1556,
-    "lon": 5.5081
+    "lon": 5.5081,
+    "start": "voetbalkantine sporting grote brogel, bocholterweg, 3990 Grote-Brogel, België"
   },
   {
     "id": "fs-60219",
@@ -3299,19 +3312,24 @@
     "start": "De Heere van Meijel, Dorpsstraat 19, 5768 CD Meijel, Nederland"
   },
   {
-    "id": "gd-4de-strade-grigi-gravel-rit-vwb",
-    "title": "4de Strade GriGi gravel rit   VWB",
+    "id": "mb-20261212-sint-job-in-039-t-goor-4e-strade-grigi-gravelrit",
+    "title": "4e Strade Grigi Gravelrit",
     "date": "2026-12-12",
-    "location": "Sint-Job-in-'t-Goor",
+    "location": "Sint Job in ' t Goor",
     "type": "Gravel",
-    "distances": [],
-    "organizer": "GoDare",
-    "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/4de-strade-grigi-gravel-rit-vwb",
-    "price": "",
-    "source": "GoDare",
+    "distances": [
+      57,
+      83,
+      95
+    ],
+    "organizer": "Pedaleurs2960",
+    "sourceUrl": "https://www.mountainbike.be/toertochten/20261212-sint-job-in-039-t-goor-4e-strade-grigi-gravelrit",
+    "price": "€ 12,00 – € 15,00",
+    "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.292,
-    "lon": 4.5773
+    "lon": 4.5773,
+    "start": "Feestzaal ' t Goorhof, Berklei 18, 2960 Sint Job in ' t Goor, België"
   },
   {
     "id": "mb-20261212-stroe-oliebollentocht-mtb",
@@ -3427,13 +3445,14 @@
       60,
       72
     ],
-    "organizer": "GoDare",
+    "organizer": "TWC de Zwoegers",
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/zwoegers-graveltocht-2026",
     "price": "",
     "source": "GoDare",
     "country": "NL",
     "lat": 51.2503,
-    "lon": 5.567
+    "lon": 5.567,
+    "start": "Sportlaan  7, 6023BL Budel-Schoot, Nederland"
   },
   {
     "id": "gd-zwoegers-atb-tocht-2026",
@@ -3545,13 +3564,14 @@
       5,
       10
     ],
-    "organizer": "GoDare",
+    "organizer": "Telefoonnummer",
     "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/vtt-de-la-ferme-fleurie-6",
     "price": "",
     "source": "GoDare",
     "country": "BE",
     "lat": 50.5416,
-    "lon": 3.427
+    "lon": 3.427,
+    "start": "La Ferme fleurie, Rue de Tournai  169, 7620 Hollain, België"
   },
   {
     "id": "mb-20261213-lonneker-op-en-um-039-n-bolt-mtb",
@@ -3740,13 +3760,14 @@
       10,
       16
     ],
-    "organizer": "GoDare",
+    "organizer": "Torenvrienden Oostham",
     "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/eindejaarstocht-23",
     "price": "",
     "source": "GoDare",
     "country": "BE",
     "lat": 51.1041,
-    "lon": 5.1769
+    "lon": 5.1769,
+    "start": "Kristoffelheem, Schoolstraat  10, 3945 Oostham, België"
   },
   {
     "id": "fs-59739",
@@ -3768,6 +3789,23 @@
     "start": "Konijnenbergerweg 2, Hattem, Nederland",
     "startLat": 52.45821,
     "startLon": 6.06707
+  },
+  {
+    "id": "mb-20261219-kleotinge-mtb-en-wandeltocht-vv-kloetinge",
+    "title": "MTB en Wandeltocht vv Kloetinge",
+    "date": "2026-12-19",
+    "location": "Kleotinge",
+    "type": "MTB",
+    "distances": [
+      30,
+      50
+    ],
+    "organizer": "Voetbalvereniging Kloetinge",
+    "sourceUrl": "https://www.mountainbike.be/toertochten/20261219-kleotinge-mtb-en-wandeltocht-vv-kloetinge",
+    "price": "€ 7,50",
+    "source": "Mountainbike.be",
+    "country": "NL",
+    "start": "Sportpark Wesselopark, Noordeinde 5 C, 4481 BJ Kleotinge, Nederland"
   },
   {
     "id": "my-18997",
@@ -3861,13 +3899,14 @@
       90,
       110
     ],
-    "organizer": "GoDare",
+    "organizer": "GAMMELSE WIELERVRIENDEN VZW",
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/6e-gravel-spekenei-vwb",
     "price": "",
     "source": "GoDare",
     "country": "BE",
     "lat": 51.3504,
-    "lon": 4.7585
+    "lon": 4.7585,
+    "start": "Sporthal kuiperij, pioenstraat  19, 2310 Rijkevorsel, België"
   },
   {
     "id": "fs-59535",
@@ -4436,13 +4475,14 @@
       120,
       136
     ],
-    "organizer": "GoDare",
+    "organizer": "eco mountainbike team vzw",
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/marathon-maniac-6",
     "price": "",
     "source": "GoDare",
     "country": "BE",
     "lat": 50.8646,
-    "lon": 4.6938
+    "lon": 4.6938,
+    "start": "Sporthal Heverlee, Hertogstraat 180, 3001 Heverlee, België"
   },
   {
     "id": "mb-20261228-hooglede-24e-mtb-cyclo-gitsbergtoertocht",
@@ -4517,13 +4557,14 @@
       100,
       200
     ],
-    "organizer": "GoDare",
+    "organizer": "Enforce Sport Events",
     "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/drenthe-1",
     "price": "",
     "source": "GoDare",
     "country": "NL",
     "lat": 51.9914,
-    "lon": 4.4739
+    "lon": 4.4739,
+    "start": "Raadhuisstraat, 2652BC Berkel en Rodenrijs, Nederland"
   },
   {
     "id": "fs-59821",
@@ -4709,13 +4750,14 @@
     "distances": [
       170
     ],
-    "organizer": "GoDare",
+    "organizer": "Kloppen deze gegevens niet?",
     "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/ultra-vtt-bouillon",
     "price": "",
     "source": "GoDare",
     "country": "BE",
     "lat": 50.0023,
-    "lon": 5.7173
+    "lon": 5.7173,
+    "start": "Province du Luxembourg X Au choix, 6600 Bastogne, België"
   },
   {
     "id": "fs-59534",
@@ -4765,13 +4807,14 @@
     "distances": [
       174
     ],
-    "organizer": "GoDare",
+    "organizer": "Kloppen deze gegevens niet?",
     "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/ultra-vtt-des-lacs-de-l-eau-d-heure",
     "price": "",
     "source": "GoDare",
     "country": "BE",
     "lat": 50.455,
-    "lon": 3.952
+    "lon": 3.952,
+    "start": "Province de Hainaut X Au choix, 7000 Mons, België"
   },
   {
     "id": "gd-diagonale-mont-de-l-enclus-orval",
@@ -4800,13 +4843,14 @@
     "distances": [
       340
     ],
-    "organizer": "GoDare",
+    "organizer": "Kloppen deze gegevens niet?",
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/diagonale-mt-de-l-enclus-verviers",
     "price": "",
     "source": "GoDare",
     "country": "BE",
     "lat": 50.7457,
-    "lon": 3.5111
+    "lon": 3.5111,
+    "start": "Parking au Sommet x Mont de l'Enclus, 7750 Mont-de-l'Enclus, België"
   },
   {
     "id": "gd-ultra-vtt-en-province-de-namur",
@@ -4914,13 +4958,14 @@
     "distances": [
       308
     ],
-    "organizer": "GoDare",
+    "organizer": "Kloppen deze gegevens niet?",
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/diagonale-orval-mont-de-l-enclus",
     "price": "",
     "source": "GoDare",
     "country": "BE",
     "lat": 49.6186,
-    "lon": 5.3315
+    "lon": 5.3315,
+    "start": "Abbaye d'Orval 1 Orval, 6823 Villers-devant-Orval, België"
   },
   {
     "id": "mb-20261231-zulte-eindejaars-vtt-amp-cyclo-zulte",
@@ -5426,6 +5471,27 @@
     "startLon": 6.34383
   },
   {
+    "id": "fs-60637",
+    "title": "Wintereditie Hollands Venetië Tocht - Gravelride 2",
+    "date": "2027-01-31",
+    "location": "Steenwijk",
+    "type": "Gravel",
+    "distances": [
+      35,
+      70
+    ],
+    "organizer": "RTV Steenwijk",
+    "sourceUrl": "https://www.fietssport.nl/toertochten/60637/wintereditie-hollands-venetie-tocht-gravelride-2",
+    "price": "€ 15,00",
+    "source": "Fietssport.nl",
+    "country": "NL",
+    "lat": 52.7896,
+    "lon": 6.121,
+    "start": "Middenweg, Steenwijk, Nederland",
+    "startLat": 52.7888,
+    "startLon": 6.13865
+  },
+  {
     "id": "fs-60212",
     "title": "28e ATB toertocht Uden 2027",
     "date": "2027-01-31",
@@ -5476,13 +5542,14 @@
     "location": "Bredene",
     "type": "MTB",
     "distances": [],
-    "organizer": "GoDare",
+    "organizer": "Twins Club Bredene",
     "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/duo-corporate-beachrace",
     "price": "",
     "source": "GoDare",
     "country": "BE",
     "lat": 51.2408,
-    "lon": 2.9648
+    "lon": 2.9648,
+    "start": "Twins Club Bredene strandpost 1, Driftweg 69, 8450 Bredene, België"
   },
   {
     "id": "fs-60504",
@@ -5706,13 +5773,14 @@
       30,
       50
     ],
-    "organizer": "GoDare",
+    "organizer": "Roparunteam 14 in 't uur",
     "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/mtb-tocht-roparunteam-14-in-t-uur-2027",
     "price": "",
     "source": "GoDare",
     "country": "NL",
     "lat": 51.433,
-    "lon": 4.3769
+    "lon": 4.3769,
+    "start": "Café Trapke Op, Weg naar Wouw 17, 4635RJ Huijbergen, Nederland, Facebook"
   },
   {
     "id": "fs-60227",
@@ -5847,13 +5915,14 @@
     "distances": [
       400
     ],
-    "organizer": "GoDare",
+    "organizer": "Ride to Unite",
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/ride-to-unite-gravel",
     "price": "",
     "source": "GoDare",
     "country": "BE",
     "lat": 50.8467,
-    "lon": 4.3525
+    "lon": 4.3525,
+    "start": "1000 Brussel, België"
   },
   {
     "id": "my-21342",

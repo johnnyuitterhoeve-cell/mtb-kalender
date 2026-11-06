@@ -547,13 +547,17 @@
                         '<div class="flex items-center gap-3">' +
                             '<h3 class="text-xl font-bold text-white">' + esc(e.title) + '</h3>' +
                         '</div>' +
-                        '<div class="flex flex-wrap items-center gap-4 text-sm text-slate-400">' +
-                            '<span>📍 ' + esc(e.location) + '</span>' +
-                            (e.start ? '<a href="' + esc(mapsUrl(e)) + '" target="_blank" rel="noopener" class="text-slate-300 hover:underline" title="Open de startplaats in Google Maps">🏁 ' + esc(shortStart(e)) + '</a>' : '') +
-                            '<span>👥 ' + esc(e.organizer || 'Onbekend') + '</span>' +
-                            (e.price ? '<span class="text-emerald-400 font-medium">💶 ' + esc(e.price) + '</span>' : '') +
-                            '<a href="' + esc(safeUrl(e.sourceUrl)) + '" target="_blank" rel="noopener" class="text-indigo-400 hover:underline">🔗 Bron bekijken</a>' +
-                            (gcal ? '<a href="' + esc(gcal) + '" target="_blank" rel="noopener" class="text-emerald-400 hover:underline">📅 Zet in Google Agenda</a>' : '') +
+                        '<div class="space-y-1.5 text-sm text-slate-400">' +
+                            '<div class="flex flex-wrap items-center gap-x-4 gap-y-1">' +
+                                '<span>📍 ' + esc(e.location) + '</span>' +
+                                '<span>👥 ' + esc(e.organizer || 'Onbekend') + '</span>' +
+                                (e.price ? '<span class="text-emerald-400 font-medium">💶 ' + esc(e.price) + '</span>' : '') +
+                            '</div>' +
+                            (e.start ? '<div><a href="' + esc(mapsUrl(e)) + '" target="_blank" rel="noopener" class="text-slate-300 hover:underline" title="Open de startplaats in Google Maps">🏁 ' + esc(shortStart(e)) + '</a></div>' : '') +
+                            '<div class="flex flex-wrap items-center gap-x-4 gap-y-1">' +
+                                '<a href="' + esc(safeUrl(e.sourceUrl)) + '" target="_blank" rel="noopener" class="text-indigo-400 hover:underline">🔗 Bron bekijken</a>' +
+                                (gcal ? '<a href="' + esc(gcal) + '" target="_blank" rel="noopener" class="text-emerald-400 hover:underline">📅 Zet in Google Agenda</a>' : '') +
+                            '</div>' +
                         '</div>' +
                     '</div>' +
                     '<div class="flex flex-col gap-2 md:items-end">' + distHtml + '</div>' +

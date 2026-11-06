@@ -271,6 +271,7 @@ def fietssport_nl():
 # ---------- details per tocht: inschrijfgeld en organisator ----------
 DETAIL_FILE = "detailcache.json"
 DETAIL_MAX_AGE_DAYS = 21
+DETAIL_DELAY = {"GoDare": 3}   # seconden tussen verzoeken; GoDare geeft bij te snel vragen een 429
 DETAIL_VERSION = 2   # ophogen als de detailpagina's meer gegevens moeten opleveren (alles wordt dan opnieuw opgehaald)
 COUNTRY_NAMES = {"NL": "Nederland", "BE": "België", "DE": "Duitsland", "LU": "Luxemburg", "FR": "Frankrijk"}
 AMOUNT_RE = re.compile(r"€\s*(\d+(?:[.,]\d{1,2})?)")
@@ -377,6 +378,7 @@ def enrich_details(events, skip=()):
     cache = load_json(DETAIL_FILE, {})
     today = date.today()
     failures = fetched = 0
+    blocked = set()
     need = sum(1 for ev in events if ev.get("source") in DETAIL_PARSERS
                and ev.get("source") not in skip
                and cache.get(ev["id"], {}).get("v") != DETAIL_VERSION)
@@ -387,10 +389,18 @@ def enrich_details(events, skip=()):
             continue
         entry = cache.get(ev["id"])
         age = (today - date.fromisoformat(entry["fetched"])).days if entry else None
-        if (entry is None or entry.get("v") != DETAIL_VERSION or age >= DETAIL_MAX_AGE_DAYS) and failures < 5:
+        src = ev.get("source")
+        if ((entry is None or entry.get("v") != DETAIL_VERSION or age >= DETAIL_MAX_AGE_DAYS)
+                and failures < 5 and src not in blocked):
             try:
-                time.sleep(1)
+                time.sleep(DETAIL_DELAY.get(src, 1))
                 r = requests.get(ev["sourceUrl"], headers=BROWSER_HEADERS, timeout=30)
+                if r.status_code == 429:   # te snel: even wachten en één keer opnieuw proberen
+                    ra = r.headers.get("Retry-After", "")
+                    wait = min(int(ra), 120) if ra.isdigit() else 30
+                    print(f"  {src} vraagt om te wachten ({wait} s)...")
+                    time.sleep(wait)
+                    r = requests.get(ev["sourceUrl"], headers=BROWSER_HEADERS, timeout=30)
                 r.raise_for_status()
                 entry = parser(r.text)
                 entry["fetched"] = today.isoformat()
@@ -401,10 +411,15 @@ def enrich_details(events, skip=()):
                 if fetched % 25 == 0:
                     print(f"  {fetched} details opgehaald...")
             except (requests.RequestException, ValueError) as e:
-                failures += 1
-                print(f"  details mislukt voor {ev['id']}: {e}")
-                if failures >= 5:
-                    print("  Te veel mislukte verzoeken; details worden deze run overgeslagen.")
+                resp = getattr(e, "response", None)
+                if resp is not None and resp.status_code == 429:
+                    blocked.add(src)
+                    print(f"  {src} blijft vragen om te wachten; de rest volgt bij de volgende run.")
+                else:
+                    failures += 1
+                    print(f"  details mislukt voor {ev['id']}: {e}")
+                    if failures >= 5:
+                        print("  Te veel mislukte verzoeken; details worden deze run overgeslagen.")
         if entry:
             for key in ("price", "organizer", "title"):
                 if entry.get(key):

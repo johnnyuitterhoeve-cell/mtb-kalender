@@ -959,6 +959,16 @@
   "start_partial": true,
   "v": 2
  },
+ "fs-60637": {
+  "fetched": "2026-11-06",
+  "organizer": "RTV Steenwijk",
+  "price": "€ 15,00",
+  "start": "Middenweg",
+  "start_lat": 52.7888,
+  "start_lon": 6.13865,
+  "start_partial": true,
+  "v": 2
+ },
  "gd-3de-gravel-zwinclassic-vbr": {
   "fetched": "2026-11-06",
   "organizer": "WACKY RACERS",
@@ -973,6 +983,27 @@
   "start": "Zaal De Magneet, Egemstraat 47, 8740 Pittem, België, Facebook",
   "v": 2
  },
+ "gd-6e-gravel-spekenei-vwb": {
+  "fetched": "2026-11-06",
+  "organizer": "GAMMELSE WIELERVRIENDEN VZW",
+  "price": "",
+  "start": "Sporthal kuiperij, pioenstraat  19, 2310 Rijkevorsel, België",
+  "v": 2
+ },
+ "gd-anti-tank-gravel": {
+  "fetched": "2026-11-06",
+  "organizer": "PlugPlug",
+  "price": "",
+  "start": "Kapellen, 2950 Kapellen, België",
+  "v": 2
+ },
+ "gd-brueghelbikers-gravel-toertocht-vwb": {
+  "fetched": "2026-11-06",
+  "organizer": "brueghelbikers",
+  "price": "",
+  "start": "voetbalkantine sporting grote brogel, bocholterweg, 3990 Grote-Brogel, België",
+  "v": 2
+ },
  "gd-brugse-bikers-gravel-75km": {
   "fetched": "2026-11-06",
   "organizer": "Kloppen deze gegevens niet?",
@@ -980,11 +1011,60 @@
   "start": "8200 Sint-Andries, België",
   "v": 2
  },
+ "gd-cameleon-ride-2": {
+  "fetched": "2026-11-06",
+  "organizer": "CAMELEON BIKE",
+  "price": "",
+  "start": "Provinciaal Domein De Gavers, Onkerzelestraat, 9500 Geraardsbergen, België",
+  "v": 2
+ },
+ "gd-de-classic-beachrace": {
+  "fetched": "2026-11-06",
+  "organizer": "Twins Club Bredene",
+  "price": "",
+  "start": "Twins Club Bredene Strandpost 1, Driftweg 69, 8450 Bredene, België",
+  "v": 2
+ },
  "gd-diagonale-mont-de-l-enclus-orval": {
   "fetched": "2026-11-06",
   "organizer": "Kloppen deze gegevens niet?",
   "price": "",
   "start": "Parking au Sommet x Mont de l'Enclus, 7750 Mont-de-l'Enclus, België",
+  "v": 2
+ },
+ "gd-diagonale-mt-de-l-enclus-verviers": {
+  "fetched": "2026-11-06",
+  "organizer": "Kloppen deze gegevens niet?",
+  "price": "",
+  "start": "Parking au Sommet x Mont de l'Enclus, 7750 Mont-de-l'Enclus, België",
+  "v": 2
+ },
+ "gd-diagonale-orval-mont-de-l-enclus": {
+  "fetched": "2026-11-06",
+  "organizer": "Kloppen deze gegevens niet?",
+  "price": "",
+  "start": "Abbaye d'Orval 1 Orval, 6823 Villers-devant-Orval, België",
+  "v": 2
+ },
+ "gd-drenthe-1": {
+  "fetched": "2026-11-06",
+  "organizer": "Enforce Sport Events",
+  "price": "",
+  "start": "Raadhuisstraat, 2652BC Berkel en Rodenrijs, Nederland",
+  "v": 2
+ },
+ "gd-duo-corporate-beachrace": {
+  "fetched": "2026-11-06",
+  "organizer": "Twins Club Bredene",
+  "price": "",
+  "start": "Twins Club Bredene strandpost 1, Driftweg 69, 8450 Bredene, België",
+  "v": 2
+ },
+ "gd-eindejaarstocht-23": {
+  "fetched": "2026-11-06",
+  "organizer": "Torenvrienden Oostham",
+  "price": "",
+  "start": "Kristoffelheem, Schoolstraat  10, 3945 Oostham, België",
   "v": 2
  },
  "gd-fingo-classic-gravel-vwb-2": {
@@ -1008,11 +1088,25 @@
   "start": "camping de Kuilen, 5711CN Someren, Nederland",
   "v": 2
  },
+ "gd-gravelrit-rwc-reusel-2026": {
+  "fetched": "2026-11-06",
+  "organizer": "RWC Reusel",
+  "price": "",
+  "start": "Sportpark  9, 5541DR Reusel, Nederland",
+  "v": 2
+ },
  "gd-graveltocht-vwb-3": {
   "fetched": "2026-11-06",
   "organizer": "WTC SPORTVRIENDEN BOEKT-ZOLDER",
   "price": "",
   "start": "De Veen, Veenderweg 48, 3550 Heusden-Zolder, België",
+  "v": 2
+ },
+ "gd-graveltocht-zandbikers-vwb-1": {
+  "fetched": "2026-11-06",
+  "organizer": "Zandbikers",
+  "price": "",
+  "start": "Sporthal Kerkhoven, Kleuterstraat  4, 3920 Lommel, België",
   "v": 2
  },
  "gd-gronings-mooiste-graveltocht-2026": {
@@ -1022,11 +1116,25 @@
   "start": "Camping Moekesgat, Heembadweg  17, 9561SW Ter Apel, Nederland",
   "v": 2
  },
+ "gd-hei-en-vennentocht-2026": {
+  "fetched": "2026-11-06",
+  "organizer": "Kloppen deze gegevens niet?",
+  "price": "",
+  "start": "Manege Kattevenia, Kattevennen  12, 3600 Genk, België",
+  "v": 2
+ },
  "gd-kaffee-vtt-4": {
   "fetched": "2026-11-06",
   "organizer": "Scouts Tempeliers Gullegem-Moorsele",
   "price": "",
   "start": "Scouts Tempeliers Gullegem-Moorsele, Poststraat 29-31, 8560 Gullegem, België, Facebook",
+  "v": 2
+ },
+ "gd-la-balade-des-voisins-4": {
+  "fetched": "2026-11-06",
+  "organizer": "PLEIN CADRE HERINNES-WARCOING",
+  "price": "",
+  "start": "Maison de village de Bailleul, Rue des Victimes  3, 7730 Bailleul, België",
   "v": 2
  },
  "gd-la-gadouzienne-5": {
@@ -1050,6 +1158,27 @@
   "start": "Sporthal De Berken, Kleitkalseide  109A, 9990 Maldegem, België",
   "v": 2
  },
+ "gd-marathon-maniac-6": {
+  "fetched": "2026-11-06",
+  "organizer": "eco mountainbike team vzw",
+  "price": "",
+  "start": "Sporthal Heverlee, Hertogstraat 180, 3001 Heverlee, België",
+  "v": 2
+ },
+ "gd-mtb-rit-vwb-2": {
+  "fetched": "2026-11-06",
+  "organizer": "Team SMD (Stalse Moosdabbers)",
+  "price": "",
+  "start": "Voetbal kantine Stal Sport, Nieuwendijk  57, 3582 Koersel, België",
+  "v": 2
+ },
+ "gd-mtb-tocht-roparunteam-14-in-t-uur-2027": {
+  "fetched": "2026-11-06",
+  "organizer": "Roparunteam 14 in 't uur",
+  "price": "",
+  "start": "Café Trapke Op, Weg naar Wouw 17, 4635RJ Huijbergen, Nederland, Facebook",
+  "v": 2
+ },
  "gd-mtb-tocht-vwb-12": {
   "fetched": "2026-11-06",
   "organizer": "De Heidefietsers KWB Wijchmaal",
@@ -1062,6 +1191,13 @@
   "organizer": "Kloppen deze gegevens niet?",
   "price": "",
   "start": "Peelweg  47, 5813AD Ysselsteyn, Nederland",
+  "v": 2
+ },
+ "gd-ride-to-unite-gravel": {
+  "fetched": "2026-11-06",
+  "organizer": "Ride to Unite",
+  "price": "",
+  "start": "1000 Brussel, België",
   "v": 2
  },
  "gd-seyns-krieretocht-1": {
@@ -1078,11 +1214,39 @@
   "start": "GITOK bovenbouw, Heuvelspad 20, 2920 Kalmthout, België",
   "v": 2
  },
+ "gd-sterkr-toertocht-gravel-2026": {
+  "fetched": "2026-11-06",
+  "organizer": "RTC Hengelo",
+  "price": "",
+  "start": "BWO Sportcomplex “De Noork”, Oldenzaalsestraat  518, 7558PW Hengelo, Nederland",
+  "v": 2
+ },
  "gd-strade-stoempatori-grvl-vwb": {
   "fetched": "2026-11-06",
   "organizer": "WTC DE STOEMPERS",
   "price": "",
   "start": "Garage Felix, Heiken  66, 2960 Brecht, België",
+  "v": 2
+ },
+ "gd-tbb-totaal-boterkoektocht-gravel": {
+  "fetched": "2026-11-06",
+  "organizer": "WTC Tubbergen",
+  "price": "",
+  "start": "Camping Dal van Mosbeek, Uelserweg 153, 7663TD Mander, Nederland",
+  "v": 2
+ },
+ "gd-toertocht-gassel": {
+  "fetched": "2026-11-06",
+  "organizer": "TWC De Tweewielers Gassel",
+  "price": "",
+  "start": "Pontweg  1, 1797SN Den Hoorn, Nederland",
+  "v": 2
+ },
+ "gd-ultra-vtt-bouillon": {
+  "fetched": "2026-11-06",
+  "organizer": "Kloppen deze gegevens niet?",
+  "price": "",
+  "start": "Province du Luxembourg X Au choix, 6600 Bastogne, België",
   "v": 2
  },
  "gd-ultra-vtt-des-forts-liegeois": {
@@ -1092,11 +1256,25 @@
   "start": "Province de Liège x Au choix, 4000 Liège, België",
   "v": 2
  },
+ "gd-ultra-vtt-des-lacs-de-l-eau-d-heure": {
+  "fetched": "2026-11-06",
+  "organizer": "Kloppen deze gegevens niet?",
+  "price": "",
+  "start": "Province de Hainaut X Au choix, 7000 Mons, België",
+  "v": 2
+ },
  "gd-ultra-vtt-en-province-de-namur": {
   "fetched": "2026-11-06",
   "organizer": "Kloppen deze gegevens niet?",
   "price": "",
   "start": "Province de Namur x Au choix sur la trace, 5000 Namur, België",
+  "v": 2
+ },
+ "gd-vtt-de-la-ferme-fleurie-6": {
+  "fetched": "2026-11-06",
+  "organizer": "Telefoonnummer",
+  "price": "",
+  "start": "La Ferme fleurie, Rue de Tournai  169, 7620 Hollain, België",
   "v": 2
  },
  "gd-vtt-en-cyclotocht-ernest-van-der-haeghen": {
@@ -1113,11 +1291,25 @@
   "start": "Sporthal, Berchovenstraat  25, 2390 Westmalle, België",
   "v": 2
  },
+ "gd-wase-ardennenrit-gravel-vwb": {
+  "fetched": "2026-11-06",
+  "organizer": "Ronde van het Waasland",
+  "price": "",
+  "start": "Tielrode Burgemeester Siegfried, Buytaertdreef  10, 9140 Tielrode, België, Facebook",
+  "v": 2
+ },
  "gd-zwoegers-atb-tocht-2026": {
   "fetched": "2026-11-06",
   "organizer": "TWC de Zwoegers",
   "price": "",
   "start": "Sporthal De Zuiderpoort, Sportlaan  1, 6023BL Budel-Schoot, Nederland",
+  "v": 2
+ },
+ "gd-zwoegers-graveltocht-2026": {
+  "fetched": "2026-11-06",
+  "organizer": "TWC de Zwoegers",
+  "price": "",
+  "start": "Sportlaan  7, 6023BL Budel-Schoot, Nederland",
   "v": 2
  },
  "mb-20261107-arnhem-herfstbostocht-mtb-arnhem": {
@@ -1832,6 +2024,14 @@
   "title": "Méél by Night",
   "v": 2
  },
+ "mb-20261212-sint-job-in-039-t-goor-4e-strade-grigi-gravelrit": {
+  "fetched": "2026-11-06",
+  "organizer": "Pedaleurs2960",
+  "price": "€ 12,00 – € 15,00",
+  "start": "Feestzaal ' t Goorhof, Berklei 18, 2960 Sint Job in ' t Goor, België",
+  "title": "4e Strade Grigi Gravelrit",
+  "v": 2
+ },
  "mb-20261212-stroe-oliebollentocht-mtb": {
   "fetched": "2026-11-05",
   "organizer": "TC Voorthuizen",
@@ -1926,6 +2126,14 @@
   "price": "€ 6,00 – € 8,00",
   "start": "Zaal ' t Goorhof, Kerklei 18, 2960 Sint-Job-in-'t-Goor, België",
   "title": "24e Veldtoertocht Pedaleurs2960",
+  "v": 2
+ },
+ "mb-20261219-kleotinge-mtb-en-wandeltocht-vv-kloetinge": {
+  "fetched": "2026-11-06",
+  "organizer": "Voetbalvereniging Kloetinge",
+  "price": "€ 7,50",
+  "start": "Sportpark Wesselopark, Noordeinde 5 C, 4481 BJ Kleotinge, Nederland",
+  "title": "MTB en Wandeltocht vv Kloetinge",
   "v": 2
  },
  "mb-20261219-menen-xmass-toertocht": {

@@ -167,6 +167,21 @@
     "start": "Kantine Bosparkwijk, Nachtegaallaan 30, 9160 Lokeren, België"
   },
   {
+    "id": "gb-2026-11-07-dirty-splasherr",
+    "title": "Dirty Splasherr",
+    "date": "2026-11-07",
+    "location": "Merksplas",
+    "type": "Gravel",
+    "distances": [],
+    "organizer": "Gravelbike.be",
+    "sourceUrl": "https://www.dehoogstraatsespurtersvzw.be/dirty-splasherr/",
+    "price": "",
+    "source": "Gravelbike.be",
+    "country": "BE",
+    "lat": 51.358,
+    "lon": 4.8627
+  },
+  {
     "id": "mb-20261107-nijkerk-voek-herfstklassieker",
     "title": "VOEK Herfstklassieker",
     "date": "2026-11-07",
@@ -184,6 +199,21 @@
     "lat": 52.2149,
     "lon": 5.4781,
     "start": "Sportpark De Burcht, Bloemendaalseweg  2, 3862 RN Nijkerk, Nederland"
+  },
+  {
+    "id": "gb-2026-11-07-voek-herfstklassieker",
+    "title": "VOEK Herfstklassieker",
+    "date": "2026-11-07",
+    "location": "Nijkerk",
+    "type": "Gravel",
+    "distances": [],
+    "organizer": "Gravelbike.be",
+    "sourceUrl": "https://www.fietssport.nl/toertochten/60109/voek-herftstklassieker-2026",
+    "price": "",
+    "source": "Gravelbike.be",
+    "country": "NL",
+    "lat": 52.2149,
+    "lon": 5.4781
   },
   {
     "id": "gd-brugse-bikers-gravel-75km",
@@ -754,6 +784,21 @@
     "start": "Sporthal Diepvenneke, Diepvenneke 43, 2350 Vosselaar, België"
   },
   {
+    "id": "gb-2026-11-08-vosgravel",
+    "title": "VosGravel",
+    "date": "2026-11-08",
+    "location": "Vosselaar",
+    "type": "Gravel",
+    "distances": [],
+    "organizer": "Gravelbike.be",
+    "sourceUrl": "https://www.bokkespurters.be/alucotec-vtt/",
+    "price": "",
+    "source": "Gravelbike.be",
+    "country": "BE",
+    "lat": 51.3129,
+    "lon": 4.8878
+  },
+  {
     "id": "mb-20261108-weert-land-van-horne-bike-fest",
     "title": "Land van Horne Bike Fest",
     "date": "2026-11-08",
@@ -999,6 +1044,21 @@
     "country": "BE",
     "lat": 50.7742,
     "lon": 4.887
+  },
+  {
+    "id": "gb-2026-11-11-antitank-gravel",
+    "title": "Antitank Gravel",
+    "date": "2026-11-11",
+    "location": "Kanaal Schoten-Dessel",
+    "type": "Gravel",
+    "distances": [],
+    "organizer": "Gravelbike.be",
+    "sourceUrl": "https://www.plugpluggravel.cc/antitank-gravel",
+    "price": "",
+    "source": "Gravelbike.be",
+    "country": "BE",
+    "lat": 51.3263,
+    "lon": 4.8447
   },
   {
     "id": "gd-anti-tank-gravel",
@@ -2049,6 +2109,36 @@
     "start": "Oefenterrein Evergem 2020, Drogenbroodstraat, 9940 Evergem, België"
   },
   {
+    "id": "gb-2026-11-22-gravel-toyota-boone",
+    "title": "Gravel Toyota Boone",
+    "date": "2026-11-22",
+    "location": "Evergem",
+    "type": "Gravel",
+    "distances": [],
+    "organizer": "Gravelbike.be",
+    "sourceUrl": "https://deburggravetrappers.be/",
+    "price": "",
+    "source": "Gravelbike.be",
+    "country": "BE",
+    "lat": 51.1088,
+    "lon": 3.7079
+  },
+  {
+    "id": "gb-2026-11-22-plugplug-groote-heide",
+    "title": "PlugPlug Groote Heide",
+    "date": "2026-11-22",
+    "location": "Hamont-Achel",
+    "type": "Gravel",
+    "distances": [],
+    "organizer": "Gravelbike.be",
+    "sourceUrl": "https://www.countmein.cc/plugpluggrooteheide",
+    "price": "",
+    "source": "Gravelbike.be",
+    "country": "BE",
+    "lat": 51.2548,
+    "lon": 5.4802
+  },
+  {
     "id": "mb-20261122-hengelo-sterkr-toertocht",
     "title": "SterkR-toertocht",
     "date": "2026-11-22",
@@ -2185,6 +2275,21 @@
     "lon": 5.3077
   },
   {
+    "id": "gb-2026-11-22-zandbikers-graveltocht",
+    "title": "Zandbikers Graveltocht",
+    "date": "2026-11-22",
+    "location": "Lommel Kerkhoven",
+    "type": "Gravel",
+    "distances": [],
+    "organizer": "Gravelbike.be",
+    "sourceUrl": "https://www.zandbikers.be/toertocht/",
+    "price": "",
+    "source": "Gravelbike.be",
+    "country": "BE",
+    "lat": 51.16,
+    "lon": 5.2639
+  },
+  {
     "id": "mb-20261122-maldegem-32e-mosseltocht",
     "title": "32e Mosseltocht",
     "date": "2026-11-22",
@@ -2222,6 +2327,21 @@
     "country": "NL",
     "lat": 51.4571,
     "lon": 5.177
+  },
+  {
+    "id": "gb-2026-11-22-gravelty-herfst",
+    "title": "Gravelty Herfst",
+    "date": "2026-11-22",
+    "location": "Terlet",
+    "type": "Gravel",
+    "distances": [],
+    "organizer": "Gravelbike.be",
+    "sourceUrl": "https://www.nltourrides.nl/gravelty-herfst/",
+    "price": "",
+    "source": "Gravelbike.be",
+    "country": "NL",
+    "lat": 52.059,
+    "lon": 5.9413
   },
   {
     "id": "mb-20261122-vlodrop-2-landen-toertocht",
@@ -2752,27 +2872,6 @@
     "start": "Transfo Zwevegem, Blokellestraat 113 B, 8550 Zwevegem, België"
   },
   {
-    "id": "my-21642",
-    "title": "Transfo Bike Fest",
-    "date": "2026-11-29",
-    "location": "Zwevegem",
-    "type": "MTB",
-    "distances": [
-      35,
-      50,
-      60,
-      75
-    ],
-    "organizer": "Guadal-Bikers",
-    "sourceUrl": "https://mtb-you.com/calendar/tour/21642/transfo-bike-fest",
-    "price": "",
-    "source": "MTB-You",
-    "country": "BE",
-    "lat": 50.8055,
-    "lon": 3.3393,
-    "start": "Polyvalente zaal Transfo site, Blokellestraat 113b, 8550 Zwevegem, West-Vlaanderen, België"
-  },
-  {
     "id": "mb-20261205-hertsberge-31e-bossen-van-vlaanderen",
     "title": "31e Bossen van Vlaanderen",
     "date": "2026-12-05",
@@ -2974,6 +3073,21 @@
     "source": "Mountainbike.be",
     "country": "BE",
     "start": "Sporthal De Berken, Kleitkalseide 109 A, 9990 Meldgem, België"
+  },
+  {
+    "id": "gb-2026-12-06-gravelty-viking",
+    "title": "Gravelty Viking",
+    "date": "2026-12-06",
+    "location": "Rijk van Nijmegen",
+    "type": "Gravel",
+    "distances": [],
+    "organizer": "Gravelbike.be",
+    "sourceUrl": "https://www.nltourrides.nl/gravelty-viking/",
+    "price": "",
+    "source": "Gravelbike.be",
+    "country": "NL",
+    "lat": 51.8184,
+    "lon": 5.8337
   },
   {
     "id": "mb-20261206-rucphen-rogelli-veldtoertocht",
@@ -3504,6 +3618,21 @@
     "start": "OC De Spoele, Scheldestraat 14, 8583 Otegem, België"
   },
   {
+    "id": "gb-2026-12-13-seyns-krieretocht",
+    "title": "Seyns Krieretocht",
+    "date": "2026-12-13",
+    "location": "Otegem",
+    "type": "Gravel",
+    "distances": [],
+    "organizer": "Gravelbike.be",
+    "sourceUrl": "https://www.krierecrossers.be/",
+    "price": "",
+    "source": "Gravelbike.be",
+    "country": "BE",
+    "lat": 50.8085,
+    "lon": 3.4218
+  },
+  {
     "id": "mb-20261213-sint-anthonis-tos-winter-veldtourtocht",
     "title": "TOS Winter Veldtourtocht",
     "date": "2026-12-13",
@@ -3788,6 +3917,21 @@
     "startLon": 5.31138
   },
   {
+    "id": "gb-2026-12-20-gooreind-koerse",
+    "title": "Gooreind Koerse",
+    "date": "2026-12-20",
+    "location": "Gooreind",
+    "type": "Gravel",
+    "distances": [],
+    "organizer": "Gravelbike.be",
+    "sourceUrl": "https://www.gooreindkoerse.be",
+    "price": "",
+    "source": "Gravelbike.be",
+    "country": "BE",
+    "lat": 51.3562,
+    "lon": 4.5429
+  },
+  {
     "id": "fs-59818",
     "title": "ATB kersttoertocht Markelo",
     "date": "2026-12-20",
@@ -3954,6 +4098,21 @@
     "start": "Groentenloods Van Hooste, Polken 96, 9190 Stekene, België"
   },
   {
+    "id": "gb-2026-12-20-gravelty-rudolph",
+    "title": "Gravelty Rudolph",
+    "date": "2026-12-20",
+    "location": "Terlet",
+    "type": "Gravel",
+    "distances": [],
+    "organizer": "Gravelbike.be",
+    "sourceUrl": "https://www.nltourrides.nl/gravelty-rudolph/",
+    "price": "",
+    "source": "Gravelbike.be",
+    "country": "NL",
+    "lat": 52.059,
+    "lon": 5.9413
+  },
+  {
     "id": "mb-20261220-wuustwezel-gooreind-koerse-kerstgravel",
     "title": "Gooreind Koerse Kerstgravel",
     "date": "2026-12-20",
@@ -3990,6 +4149,21 @@
     "lat": 51.2241,
     "lon": 4.9199,
     "start": "Sportcentrum, Molenstraat 54, 2460 Lichtaart, België"
+  },
+  {
+    "id": "gb-2026-12-26-lumberjack-winter-edition",
+    "title": "Lumberjack Winter Edition",
+    "date": "2026-12-26",
+    "location": "Borgloon",
+    "type": "Gravel",
+    "distances": [],
+    "organizer": "Gravelbike.be",
+    "sourceUrl": "https://www.cafecoureur.cc/event-details/lumberjack-winter-edition-2026",
+    "price": "",
+    "source": "Gravelbike.be",
+    "country": "BE",
+    "lat": 50.8025,
+    "lon": 5.3436
   },
   {
     "id": "fs-60471",
@@ -4132,6 +4306,21 @@
     "lat": 50.9883,
     "lon": 3.0818,
     "start": "Sporthal Dominiek Savio, Koolskampstraat 24, 8830 Hooglede, België"
+  },
+  {
+    "id": "gb-2026-12-27-gravelty-rudolph",
+    "title": "Gravelty Rudolph",
+    "date": "2026-12-27",
+    "location": "Terlet",
+    "type": "Gravel",
+    "distances": [],
+    "organizer": "Gravelbike.be",
+    "sourceUrl": "https://www.nltourrides.nl/gravelty-rudolph/",
+    "price": "",
+    "source": "Gravelbike.be",
+    "country": "NL",
+    "lat": 52.059,
+    "lon": 5.9413
   },
   {
     "id": "fs-59547",
@@ -5484,6 +5673,24 @@
     "start": "Groenstraat 14e, Berlicum, Nederland",
     "startLat": 51.67079,
     "startLon": 5.41392
+  },
+  {
+    "id": "gd-mtb-tocht-roparunteam-14-in-t-uur-2027",
+    "title": "MTB Tocht Roparunteam 14 in 't uur 2027",
+    "date": "2027-02-21",
+    "location": "Huijbergen",
+    "type": "MTB",
+    "distances": [
+      30,
+      50
+    ],
+    "organizer": "GoDare",
+    "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/mtb-tocht-roparunteam-14-in-t-uur-2027",
+    "price": "",
+    "source": "GoDare",
+    "country": "NL",
+    "lat": 51.433,
+    "lon": 4.3769
   },
   {
     "id": "fs-60227",

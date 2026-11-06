@@ -27,7 +27,7 @@ WEEKS_AHEAD = 12
 EVENTS_FILE = "events.json"
 GEO_FILE = "geocache.json"
 SOURCES_FILE = "sources.json"
-ALL_SOURCES = ["Mountainbike.be", "Fietssport.nl", "MTB-You", "GoDare", "Battistrada"]
+ALL_SOURCES = ["Mountainbike.be", "Fietssport.nl", "MTB-You", "GoDare", "Gravelbike.be"]
 NOMINATIM = "https://nominatim.openstreetmap.org/search"
 
 # Provinciecode op Mountainbike.be -> (volledige naam, landcodes voor de zoekopdracht)
@@ -617,149 +617,72 @@ def godare():
     return events
 
 
-# ---------- bron: Battistrada ----------
-# {d} wordt vervangen door de datum van vandaag (zoals de site die zelf gebruikt, bijv. 4-Nov-26)
-BS_URLS = [
-    "https://battistrada.com/nl/cyclo-kalender/mountainbike/?eventdate={d}&biketype=2",
-    "https://battistrada.com/nl/cyclo-kalender/gravel/?eventdate={d}&biketype=4",
-    "https://battistrada.com/nl/cyclo-kalender/nederland/gravel/?biketype=4",
-]
-BS_COUNTRIES = {"Nederland": "NL", "België": "BE"}
-BS_ID_RE = re.compile(r"/edition/[^/]+/(\d+)/")
-BS_MONTHS = dict(MONTHS, mar=3, may=5, oct=10)
-EN_MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+# ---------- bron: Gravelbike.be ----------
+GB_URL = "https://www.gravelbike.be/gravelevents"
+GB_COUNTRIES = {"NL", "BE"}
+GB_TAIL_RE = re.compile(
+    r"^\s*-\s*(?P<days>\d{1,2}(?:\s*/\s*\d{1,2})*)\s*-\s*(?P<place>.+?)\s+(?P<cc>[A-Z]{2,3})\s*(?:\(.*\))?\s*$")
 
 
-def with_page(url, n):
-    parts = urlparse(url)
-    q = parse_qs(parts.query)
-    q["page"] = [str(n)]
-    return urlunparse(parts._replace(query=urlencode(q, doseq=True)))
+def parse_gb_page(soup, today):
+    # De pagina is een lijst: kopjes "Gravelevents 2026" en per maand regels als "Titel - 3 - Plaats NL".
+    # Het deel "Gravelwedstrijden" (races) slaan we over.
+    events, section, year, month = [], None, None, None
+    for el in soup.select("h1,h2,h3,h4,h5,h6,p"):
+        text = el.get_text(" ", strip=True)
+        if el.name != "p":
+            low = text.lower()
+            if "gravelevents" in low:
+                ym = re.search(r"\d{4}", text)
+                section, year, month = "events", (int(ym.group(0)) if ym else today.year), None
+            elif "gravelwedstrijden" in low:
+                section = "races"
+            elif low in GD_MONTHS:
+                month = GD_MONTHS[low]
+            continue
+        if section != "events" or month is None or year is None:
+            continue
+        for a in el.find_all("a", href=True):
+            tail, node = "", a.next_sibling
+            while node is not None and getattr(node, "name", None) not in ("a", "br"):
+                tail += node.get_text(" ") if hasattr(node, "get_text") else str(node)
+                node = node.next_sibling
+            m = GB_TAIL_RE.match(tail)
+            if not m or m.group("cc") not in GB_COUNTRIES:
+                continue
+            try:
+                d = date(year, month, int(re.split(r"\s*/\s*", m.group("days"))[0]))
+            except ValueError:
+                continue
+            title = a.get_text(" ", strip=True)
+            events.append({
+                "id": f"gb-{d.isoformat()}-{ascii_slug(title)}"[:90],
+                "title": title,
+                "date": d.isoformat(),
+                "location": m.group("place").strip(),
+                "type": kind_from_title(title, "Gravel"),
+                "distances": [],
+                "organizer": "Gravelbike.be",
+                "sourceUrl": urljoin(GB_URL, a["href"]),
+                "price": "",
+                "source": "Gravelbike.be",
+                "_prov": m.group("cc"),
+            })
+    return events
 
 
-def parse_bs_card(card, today):
-    # Geeft een event, "SKIP" (geen MTB/gravel-toertocht), "ABROAD" (ander land) of None (niet herkend)
-    link = card.select_one("a.event-title") or card.select_one('a[href*="/cyclo-kalender/edition/"]')
-    im = BS_ID_RE.search(link.get("href", "")) if link else None
-    icon = card.select_one("i.fa-bicycle")
-    if not im or icon is None:
-        return None
-    text = lambda sel: card.select_one(sel).get_text(" ", strip=True) if card.select_one(sel) else ""
-    mon_txt, day_txt, wk_txt = text(".ai1ec-month"), text(".ai1ec-day"), text(".ai1ec-weekday")
-    year = None
-    if re.fullmatch(r"\d{4}", mon_txt):          # toekomstige jaren: jaar bovenaan, maand eronder
-        year, mon_txt = int(mon_txt), wk_txt
-    mon = BS_MONTHS.get(mon_txt.lower()[:3])
-    if not mon or not day_txt.isdigit():
-        return None
-    try:
-        if year:
-            d = date(year, mon, int(day_txt))
-        else:
-            d = date(today.year, mon, int(day_txt))
-            if d < today - timedelta(days=1):
-                d = date(today.year + 1, mon, int(day_txt))
-    except ValueError:
-        return None
-    flag = card.select_one("img[alt]")
-    country = BS_COUNTRIES.get(flag.get("alt", "").strip()) if flag else None
-    if country is None:
-        return "ABROAD"
-    bikes, _, activity = icon.parent.get_text(" ", strip=True).partition(" - ")
-    bikes = bikes.lower()
-    if "toertocht" not in activity.lower() or not ("gravel" in bikes or "mtb" in bikes):
-        return "SKIP"
-    loc_span = icon.parent.find_previous_sibling("span")
-    place = loc_span.get_text(" ", strip=True) if loc_span else ""
-    tip = loc_span.select_one(".tooltip-custom") if loc_span else None
-    if tip:
-        place = place.replace(tip.get_text(" ", strip=True), "", 1).strip()
-    if not place:
-        return None
-    dist_div = card.select_one("div.col-sm-5")
-    distances = list(dict.fromkeys(int(x) for x in re.findall(r"\d+", dist_div.get_text(" ", strip=True)))) if dist_div else []
-    kind = "Both" if ("gravel" in bikes and "mtb" in bikes) else "Gravel" if "gravel" in bikes else "MTB"
-    return {
-        "id": "bs-" + im.group(1),
-        "title": link.get_text(" ", strip=True),
-        "date": d.isoformat(),
-        "location": place,
-        "type": kind,
-        "distances": distances,
-        "organizer": "Battistrada",
-        "sourceUrl": urljoin("https://battistrada.com", link.get("href", "")),
-        "price": "",
-        "source": "Battistrada",
-        "_prov": country,
-    }
-
-
-def diagnose_battistrada(r, soup, n):
-    name = f"debug_battistrada_{n}.html"
-    with open(name, "w", encoding="utf-8") as f:
-        f.write(r.text)
-    title = soup.title.get_text(strip=True) if soup.title else "(geen titel)"
-    print(f"  Diagnose: status {r.status_code}, {len(r.text)} tekens, titel: {title}")
-    print(f"  De ontvangen pagina is opgeslagen in {name}")
-
-
-def battistrada():
-    today_d = date.today()
-    today = today_d.isoformat()
-    session = requests.Session()
-    session.headers.update(BROWSER_HEADERS)
-    try:
-        session.get("https://battistrada.com/nl/home/", timeout=30)
-        time.sleep(1)
-    except requests.RequestException:
-        pass
-    events, seen, other, unparsed = [], set(), {"SKIP": 0, "ABROAD": 0}, []
-    date_param = f"{today_d.day}-{EN_MONTHS[today_d.month - 1]}-{today_d:%y}"
-    for n, template in enumerate(BS_URLS, 1):
-        base = template.format(d=date_param)
-        print(f"  lijst {n}: {base}")
-        url = base
-        try:
-            for page in range(1, 9):
-                r = session.get(url, timeout=30, headers={"Referer": "https://battistrada.com/nl/home/"})
-                r.raise_for_status()
-                soup = BeautifulSoup(r.text, "html.parser")
-                canon = soup.select_one("link[rel=canonical]")
-                canon = canon.get("href", "") if canon else ""
-                if page == 1:
-                    print(f"  adres volgens de pagina: {canon or '(onbekend)'}")
-                if canon.rstrip("/").endswith("/home"):
-                    print("  Doorgestuurd naar de homepage: dit adres geeft geen kalender.")
-                    diagnose_battistrada(r, soup, n)
-                    break
-                new = kept = 0
-                for card in soup.select("div.shadow-sm.border"):
-                    link = card.select_one('a[href*="/cyclo-kalender/edition/"]')
-                    im = BS_ID_RE.search(link.get("href", "")) if link else None
-                    if not im or im.group(1) in seen:
-                        continue
-                    seen.add(im.group(1))
-                    new += 1
-                    ev = parse_bs_card(card, today_d)
-                    if isinstance(ev, str):
-                        other[ev] += 1
-                    elif ev is None:
-                        unparsed.append(link.get_text(" ", strip=True)[:60])
-                    elif ev["date"] >= today:
-                        events.append(ev)
-                        kept += 1
-                print(f"  pagina {page}: {new} tochten gezien, {kept} bruikbaar")
-                if new == 0:
-                    if page == 1:
-                        diagnose_battistrada(r, soup, n)
-                    break
-                url = next_page_url(soup, url) or with_page(base, page + 1)
-                time.sleep(1)
-        except requests.RequestException as e:
-            print(f"  mislukt: {e}")
-    print(f"  {len(events)} tochten; overgeslagen: {other['ABROAD']} buitenlands, {other['SKIP']} racefiets/geen toertocht")
-    if unparsed:
-        print(f"  {len(unparsed)} tochten niet herkend, bijvoorbeeld: {unparsed[:3]}")
+def gravelbike_be():
+    r = requests.get(GB_URL, headers=BROWSER_HEADERS, timeout=30)
+    r.raise_for_status()
+    today = date.today()
+    seen, events = set(), []
+    for ev in parse_gb_page(BeautifulSoup(r.text, "html.parser"), today):
+        if ev["date"] >= today.isoformat() and ev["id"] not in seen:
+            seen.add(ev["id"])
+            events.append(ev)
+    print(f"  {len(events)} gravelevents in Nederland en België")
+    if not events:
+        print("  Geen events gevonden; is de opbouw van de pagina veranderd?")
     return events
 
 
@@ -817,7 +740,7 @@ SOURCES = {
     "Fietssport.nl": fietssport_nl,
     "MTB-You": mtb_you,
     "GoDare": godare,
-    # "Battistrada": battistrada,   # uitgeschakeld: de site stuurt scripts door naar de homepage
+    "Gravelbike.be": gravelbike_be,
 }
 
 
@@ -915,7 +838,9 @@ def main():
             u["date"] == ev["date"] and same_place(u, ev)
             and (u["title"].lower() == ev["title"].lower()
                  or (u.get("source") != ev.get("source") and set(u["distances"]) & set(ev["distances"])
-                     and (u["type"] == ev["type"] or "Both" in (u["type"], ev["type"]))))
+                     and (u["type"] == ev["type"] or "Both" in (u["type"], ev["type"])))
+                 or (u.get("source") != ev.get("source") and not (u["distances"] and ev["distances"])
+                     and {u["type"], ev["type"]} != {"MTB", "Gravel"}))
             for u in unique
         )
         if not dup:

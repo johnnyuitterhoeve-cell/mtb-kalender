@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-05T06:04:28+00:00",
+  "updated": "2026-11-06T06:44:14+00:00",
   "sources": [
     {
       "name": "Mountainbike.be",
@@ -16,19 +16,19 @@
     {
       "name": "MTB-You",
       "status": "ok",
-      "count": 14,
+      "count": 13,
       "message": ""
     },
     {
       "name": "GoDare",
       "status": "ok",
-      "count": 49,
+      "count": 50,
       "message": ""
     },
     {
-      "name": "Battistrada",
-      "status": "niet gekoppeld",
-      "count": 0,
+      "name": "Gravelbike.be",
+      "status": "ok",
+      "count": 14,
       "message": ""
     }
   ]

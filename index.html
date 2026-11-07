@@ -71,7 +71,14 @@
                         <div id="calendarPop" class="hidden absolute right-0 mt-2 z-20 w-72 bg-slate-900 border border-slate-700 rounded-xl shadow-xl p-4"></div>
                     </div>
                 </div>
-                <p id="statusLine" class="text-xs text-slate-500"></p>
+                <div class="flex flex-wrap items-center justify-between gap-2">
+                    <p id="statusLine" class="text-xs text-slate-500"></p>
+                    <div class="flex items-center gap-1 text-xs">
+                        <span class="text-slate-500 mr-1">Sorteren:</span>
+                        <button type="button" data-sort="date" class="sort-btn px-3 py-1 rounded-lg bg-emerald-600 text-white">Datum</button>
+                        <button type="button" data-sort="distance" class="sort-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700">Afstand</button>
+                    </div>
+                </div>
                 <div id="eventsContainer" class="space-y-4"></div>
             </main>
         </div>
@@ -258,6 +265,7 @@
         // ---------- Status ----------
         var allEvents = prepare(FALLBACK_EVENTS);
         var selectedType = 'Alle';
+        var sortMode = 'date';   // standaard op datum; de knop "Afstand" sorteert op reisafstand
         var sourceLabel = 'ingebouwde data';
 
         // Startpunt: standaard 's-Heer Arendskerke, of de opgeslagen postcode
@@ -493,6 +501,7 @@
             var dateVal = $('dateInput').value;
             var origin = home;
             var maxDist = parseInt($('maxDistance').value, 10);
+            var now = new Date(), todayIso = isoOf(now.getFullYear(), now.getMonth(), now.getDate());
 
             var rows = allEvents.map(function (e) {
                 var vs = e.variants.filter(function (v) {
@@ -503,18 +512,21 @@
                 var e = r.ev;
                 var text = (e.title + ' ' + e.location + ' ' + e.organizer).toLowerCase();
                 return r.variants.length > 0
+                    && (!e.date || e.date >= todayIso)   // tochten van gisteren en eerder niet tonen
                     && text.indexOf(searchVal) > -1
                     && (!dateVal || e.date === dateVal)
                     && (r.dist === null || r.dist <= maxDist);
             });
 
-            // Altijd op kortste reisafstand; onbekende afstand onderaan, daarna op datum
+            // Standaard op datum (bij gelijke datum de kortste reisafstand eerst); onbekende afstand komt achteraan
             rows.sort(function (a, b) {
                 var da = a.dist === null ? 9999 : a.dist, db = b.dist === null ? 9999 : b.dist;
-                return (da - db) || a.ev.date.localeCompare(b.ev.date);
+                var byDate = a.ev.date.localeCompare(b.ev.date);
+                return sortMode === 'distance' ? ((da - db) || byDate) : (byDate || (da - db));
             });
 
-            $('statusLine').textContent = rows.length + ' van ' + allEvents.length + ' tochten (' + sourceLabel + '), gesorteerd op reisafstand';
+            $('statusLine').textContent = rows.length + ' van ' + allEvents.filter(function (e) { return !e.date || e.date >= todayIso; }).length +
+                ' tochten (' + sourceLabel + '), gesorteerd op ' + (sortMode === 'distance' ? 'reisafstand' : 'datum');
 
             if (rows.length === 0) {
                 container.innerHTML = '<div class="text-center py-12 text-slate-500 bg-slate-900 border border-slate-800 rounded-xl">Geen tochten gevonden voor deze selectie. Pas de filters of de datum aan.</div>';
@@ -632,6 +644,19 @@
         }
 
         // ---------- Events koppelen ----------
+        document.querySelectorAll('.sort-btn').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                document.querySelectorAll('.sort-btn').forEach(function (b) {
+                    b.classList.remove('bg-emerald-600', 'text-white');
+                    b.classList.add('bg-slate-800', 'text-slate-300');
+                });
+                btn.classList.remove('bg-slate-800', 'text-slate-300');
+                btn.classList.add('bg-emerald-600', 'text-white');
+                sortMode = btn.getAttribute('data-sort');
+                renderEvents();
+            });
+        });
+
         document.querySelectorAll('.type-btn').forEach(function (btn) {
             btn.addEventListener('click', function () {
                 document.querySelectorAll('.type-btn').forEach(function (b) {

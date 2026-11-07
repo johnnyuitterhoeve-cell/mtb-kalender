@@ -3475,6 +3475,28 @@
     "start": "Sporthal De Zuiderpoort, Sportlaan  1, 6023BL Budel-Schoot, Nederland"
   },
   {
+    "id": "fs-60157",
+    "title": "HRTC DOK - MTB Napoleontocht",
+    "date": "2026-12-13",
+    "location": "Den Helder",
+    "type": "MTB",
+    "distances": [
+      27,
+      30,
+      57
+    ],
+    "organizer": "HRTC DOK",
+    "sourceUrl": "https://www.fietssport.nl/toertochten/60157/hrtc-dok-mtb-napoleontocht-2026",
+    "price": "€ 10,00",
+    "source": "Fietssport.nl",
+    "country": "NL",
+    "lat": 52.9509,
+    "lon": 4.7936,
+    "start": "Guldemondweg, Den Helder, Nederland",
+    "startLat": 52.92953,
+    "startLon": 4.78361
+  },
+  {
     "id": "mb-20261213-den-helder-hrtc-dok-mtb-napoleontocht",
     "title": "HRTC DOK - MTB Napoleontocht",
     "date": "2026-12-13",
@@ -3591,6 +3613,26 @@
     "lat": 52.2506,
     "lon": 6.9117,
     "start": "Kantine VV LSV, Spölminkkamp 40, 7524 DV Lonneker, Nederland"
+  },
+  {
+    "id": "fs-60678",
+    "title": "Op en um n Bölt Gravel",
+    "date": "2026-12-13",
+    "location": "Lonneker",
+    "type": "Gravel",
+    "distances": [
+      75
+    ],
+    "organizer": "WV Lonneker",
+    "sourceUrl": "https://www.fietssport.nl/toertochten/60678/op-en-um-n-bolt-gravel-2026",
+    "price": "€ 6,00",
+    "source": "Fietssport.nl",
+    "country": "NL",
+    "lat": 52.2506,
+    "lon": 6.9117,
+    "start": "Spölminkkamp 40, Lonneker, Nederland",
+    "startLat": 52.24981,
+    "startLon": 6.90705
   },
   {
     "id": "mb-20261213-luyksgestel-plus-najaarstocht",
@@ -4244,6 +4286,25 @@
     "startLon": 5.99627
   },
   {
+    "id": "my-20055",
+    "title": "Toertocht KFC Poppel",
+    "date": "2026-12-26",
+    "location": "Ravels",
+    "type": "MTB",
+    "distances": [
+      28,
+      45
+    ],
+    "organizer": "KFC Poppel",
+    "sourceUrl": "https://mtb-you.com/calendar/tour/20055/toertocht-kfc-poppel-1",
+    "price": "",
+    "source": "MTB-You",
+    "country": "BE",
+    "lat": 51.4496,
+    "lon": 5.0521,
+    "start": "Kantine KFC Poppel, Steenweg Baarle 58, 2382 Ravels, Antwerpen, België"
+  },
+  {
     "id": "fs-60033",
     "title": "ATB Kersttocht",
     "date": "2026-12-26",
@@ -4282,6 +4343,27 @@
     "start": "Pastoor van Winkelstraat 2, Schaijk, Nederland",
     "startLat": 51.74594,
     "startLon": 5.63564
+  },
+  {
+    "id": "fs-60747",
+    "title": "Kerstcross Ursem",
+    "date": "2026-12-26",
+    "location": "Ursem",
+    "type": "MTB",
+    "distances": [
+      40,
+      60
+    ],
+    "organizer": "IJsclub Ursem",
+    "sourceUrl": "https://www.fietssport.nl/toertochten/60747/kerstcross-ursem",
+    "price": "€ 10,00",
+    "source": "Fietssport.nl",
+    "country": "NL",
+    "lat": 52.6277,
+    "lon": 4.891,
+    "start": "Walingsdijk 30, Ursem, Nederland",
+    "startLat": 52.62323,
+    "startLon": 4.89888
   },
   {
     "id": "fs-60339",
@@ -5550,6 +5632,26 @@
     "lat": 51.2408,
     "lon": 2.9648,
     "start": "Twins Club Bredene strandpost 1, Driftweg 69, 8450 Bredene, België"
+  },
+  {
+    "id": "fs-60721",
+    "title": "Wintergraveltocht TC Hulst 2027",
+    "date": "2027-02-07",
+    "location": "Hulst",
+    "type": "Gravel",
+    "distances": [
+      65
+    ],
+    "organizer": "TC Hulst",
+    "sourceUrl": "https://www.fietssport.nl/toertochten/60721/wintergraveltocht-tc-hulst-2027",
+    "price": "€ 7,00",
+    "source": "Fietssport.nl",
+    "country": "NL",
+    "lat": 51.3316,
+    "lon": 4.0877,
+    "start": "Wittebrugstraat 6, Hulst, Nederland",
+    "startLat": 51.28565,
+    "startLon": 4.05846
   },
   {
     "id": "fs-60504",

@@ -509,6 +509,16 @@
   "start_partial": true,
   "v": 2
  },
+ "fs-60157": {
+  "fetched": "2026-11-07",
+  "organizer": "HRTC DOK",
+  "price": "€ 10,00",
+  "start": "Guldemondweg",
+  "start_lat": 52.92953,
+  "start_lon": 4.78361,
+  "start_partial": true,
+  "v": 2
+ },
  "fs-60174": {
   "fetched": "2026-11-05",
   "organizer": "Toerclub Swolland",
@@ -966,6 +976,36 @@
   "start": "Middenweg",
   "start_lat": 52.7888,
   "start_lon": 6.13865,
+  "start_partial": true,
+  "v": 2
+ },
+ "fs-60678": {
+  "fetched": "2026-11-07",
+  "organizer": "WV Lonneker",
+  "price": "€ 6,00",
+  "start": "Spölminkkamp 40",
+  "start_lat": 52.24981,
+  "start_lon": 6.90705,
+  "start_partial": true,
+  "v": 2
+ },
+ "fs-60721": {
+  "fetched": "2026-11-07",
+  "organizer": "TC Hulst",
+  "price": "€ 7,00",
+  "start": "Wittebrugstraat 6",
+  "start_lat": 51.28565,
+  "start_lon": 4.05846,
+  "start_partial": true,
+  "v": 2
+ },
+ "fs-60747": {
+  "fetched": "2026-11-07",
+  "organizer": "IJsclub Ursem",
+  "price": "€ 10,00",
+  "start": "Walingsdijk 30",
+  "start_lat": 52.62323,
+  "start_lon": 4.89888,
   "start_partial": true,
   "v": 2
  },
@@ -2309,6 +2349,13 @@
   "organizer": "",
   "price": "",
   "start": "Voetbal kantine V.V. Kloetinge, Noordeinde 5c, 4481 BJ Kloetinge, Zeeland, Nederland",
+  "v": 2
+ },
+ "my-20055": {
+  "fetched": "2026-11-07",
+  "organizer": "",
+  "price": "",
+  "start": "Kantine KFC Poppel, Steenweg Baarle 58, 2382 Ravels, Antwerpen, België",
   "v": 2
  },
  "my-21342": {

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-06T12:03:07+00:00",
+  "updated": "2026-11-07T06:13:09+00:00",
   "sources": [
     {
       "name": "Mountainbike.be",
@@ -10,20 +10,20 @@
     {
       "name": "Fietssport.nl",
       "status": "ok",
-      "count": 97,
+      "count": 101,
       "message": ""
     },
     {
       "name": "MTB-You",
       "status": "ok",
-      "count": 13,
+      "count": 14,
       "message": ""
     },
     {
       "name": "GoDare",
-      "status": "ok",
+      "status": "oud",
       "count": 49,
-      "message": ""
+      "message": "429 Client Error: Too Many Requests for url: https://www.godare.events/nl/events/mountainbikekalender?page=6"
     },
     {
       "name": "Gravelbike.be",

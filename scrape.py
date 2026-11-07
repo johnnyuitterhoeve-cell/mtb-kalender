@@ -29,6 +29,7 @@ GEO_FILE = "geocache.json"
 SOURCES_FILE = "sources.json"
 ALL_SOURCES = ["Mountainbike.be", "Fietssport.nl", "MTB-You", "GoDare", "Gravelbike.be"]
 NOMINATIM = "https://nominatim.openstreetmap.org/search"
+PLACE_FIXES = {"Kleotinge": "Kloetinge", "Kempenhout": "Kampenhout"}   # typfouten in de bronnen; voeg hier zelf meer toe
 
 # Provinciecode op Mountainbike.be -> (volledige naam, landcodes voor de zoekopdracht)
 PROVINCES = {
@@ -608,14 +609,26 @@ def parse_gd_card(h3, default_kind):
     }
 
 
+def polite_get(url, tries=2):
+    # Haalt een pagina op; bij 429 (te snel gevraagd) wacht hij even en probeert het opnieuw
+    for attempt in range(tries):
+        r = requests.get(url, headers=BROWSER_HEADERS, timeout=30)
+        if r.status_code != 429 or attempt == tries - 1:
+            r.raise_for_status()
+            return r
+        ra = r.headers.get("Retry-After", "")
+        wait = min(int(ra), 120) if ra.isdigit() else 30
+        print(f"  te snel gevraagd, wacht {wait} s...")
+        time.sleep(wait)
+
+
 def godare():
     today = date.today().isoformat()
     events, seen, unparsed = [], set(), []
     for default_kind, base in GD_CALENDARS:
         url = base
         for page in range(1, 7):
-            r = requests.get(url, headers=BROWSER_HEADERS, timeout=30)
-            r.raise_for_status()
+            r = polite_get(url)
             soup = BeautifulSoup(r.text, "html.parser")
             new = 0
             for h3 in soup.select("h3"):
@@ -636,7 +649,7 @@ def godare():
             if new == 0:
                 break
             url = next_page_url(soup, url) or f"{base}?page={page + 1}"
-            time.sleep(1)
+            time.sleep(3)   # GoDare reageert op te snel vragen met een 429
     print(f"  {len(events)} tochten")
     if unparsed:
         print(f"  {len(unparsed)} kaarten niet herkend, bijvoorbeeld: {unparsed[:3]}")
@@ -784,6 +797,7 @@ GEO = load_json(GEO_FILE, {})
 
 def geocode(place, prov):
     place = re.sub(r"^nabij\s+", "", place, flags=re.IGNORECASE)
+    place = PLACE_FIXES.get(place, place)
     key = f"{place}|{prov}"
     if key in GEO:
         return GEO[key]

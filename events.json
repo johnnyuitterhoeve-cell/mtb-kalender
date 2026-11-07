@@ -488,29 +488,6 @@
     "start": "Provinciaal Domein Huizingen, H.Torleylaan 100, 1653 Huizingen, België"
   },
   {
-    "id": "my-21746",
-    "title": "Toertocht Kampenhout TVV 11-11-11",
-    "date": "2026-11-08",
-    "location": "Kampenhout",
-    "type": "MTB",
-    "distances": [
-      30,
-      48,
-      65,
-      90,
-      45,
-      70
-    ],
-    "organizer": "MTB-You",
-    "sourceUrl": "https://mtb-you.com/calendar/tour/21746/toertocht-kampenhout-tvv-11-11-11",
-    "price": "",
-    "source": "MTB-You",
-    "country": "BE",
-    "lat": 50.9413,
-    "lon": 4.5607,
-    "start": "Sporthal De Zeyp, Zeypestraat 26, 1910 Kampenhout, Vlaams-Brabant, België"
-  },
-  {
     "id": "mb-20261108-kempenhout-toertocht-kampenhout-tvv-11-11-11",
     "title": "Toertocht Kampenhout TVV 11-11-11",
     "date": "2026-11-08",
@@ -529,6 +506,8 @@
     "price": "€ 6,00 – € 7,00",
     "source": "Mountainbike.be",
     "country": "BE",
+    "lat": 50.9413,
+    "lon": 4.5496,
     "start": "Sporthal De Zeype, Zeypestraat 26, 1910 Kempenhout, België"
   },
   {
@@ -3847,26 +3826,9 @@
     "price": "€ 7,50",
     "source": "Mountainbike.be",
     "country": "NL",
+    "lat": 51.4985,
+    "lon": 3.9131,
     "start": "Sportpark Wesselopark, Noordeinde 5 C, 4481 BJ Kleotinge, Nederland"
-  },
-  {
-    "id": "my-18997",
-    "title": "MTB en Wandeltocht vv Kloetinge",
-    "date": "2026-12-19",
-    "location": "Kloetinge",
-    "type": "MTB",
-    "distances": [
-      30,
-      50
-    ],
-    "organizer": "VV Kloetinge",
-    "sourceUrl": "https://mtb-you.com/calendar/tour/18997/mtb-en-wandeltocht-vv-kloetinge-2",
-    "price": "",
-    "source": "MTB-You",
-    "country": "NL",
-    "lat": 51.5014,
-    "lon": 3.9168,
-    "start": "Voetbal kantine V.V. Kloetinge, Noordeinde 5c, 4481 BJ Kloetinge, Zeeland, Nederland"
   },
   {
     "id": "gd-vtt-en-cyclotocht-ernest-van-der-haeghen",

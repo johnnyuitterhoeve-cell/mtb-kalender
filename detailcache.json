@@ -1247,6 +1247,13 @@
   "start": "Gemeentelijke Basisschool, Dalestraat  38, 8554 Sint-Denijs, België",
   "v": 2
  },
+ "gd-smg-gravel-ride": {
+  "fetched": "2026-11-07",
+  "organizer": "Wielerclub Sport en Moedig Genk",
+  "price": "",
+  "start": "Eendracht, richter  44, 3600 Genk, België",
+  "v": 2
+ },
  "gd-stephan-aerts-classic-2026": {
   "fetched": "2026-11-06",
   "organizer": "VVKMS 44ste Sint-Maarten",
@@ -1280,6 +1287,13 @@
   "organizer": "TWC De Tweewielers Gassel",
   "price": "",
   "start": "Pontweg  1, 1797SN Den Hoorn, Nederland",
+  "v": 2
+ },
+ "gd-tripel-van-malle": {
+  "fetched": "2026-11-07",
+  "organizer": "White Cliffs of Malle",
+  "price": "",
+  "start": "Sporthal Atheneum Malle, Herentalsebaan 56, 2390 Oostmalle, België",
   "v": 2
  },
  "gd-ultra-vtt-bouillon": {

@@ -4264,6 +4264,27 @@
     "lon": 5.3436
   },
   {
+    "id": "gd-smg-gravel-ride",
+    "title": "SMG gravel ride",
+    "date": "2026-12-26",
+    "location": "Genk",
+    "type": "Gravel",
+    "distances": [
+      20,
+      30,
+      40,
+      90
+    ],
+    "organizer": "Wielerclub Sport en Moedig Genk",
+    "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/smg-gravel-ride",
+    "price": "",
+    "source": "GoDare",
+    "country": "BE",
+    "lat": 50.9655,
+    "lon": 5.5001,
+    "start": "Eendracht, richter  44, 3600 Genk, België"
+  },
+  {
     "id": "fs-60471",
     "title": "KERST MTBGRAVEL- TOCHT LEUDAL",
     "date": "2026-12-26",
@@ -5173,6 +5194,22 @@
     "start": "Borkeldweg 1, Markelo, Nederland",
     "startLat": 52.26985,
     "startLon": 6.47333
+  },
+  {
+    "id": "gd-tripel-van-malle",
+    "title": "Tripel van Malle",
+    "date": "2027-01-03",
+    "location": "Oostmalle",
+    "type": "Gravel",
+    "distances": [],
+    "organizer": "White Cliffs of Malle",
+    "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/tripel-van-malle",
+    "price": "",
+    "source": "GoDare",
+    "country": "BE",
+    "lat": 51.302,
+    "lon": 4.734,
+    "start": "Sporthal Atheneum Malle, Herentalsebaan 56, 2390 Oostmalle, België"
   },
   {
     "id": "fs-60154",

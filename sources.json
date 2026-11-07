@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-07T06:13:09+00:00",
+  "updated": "2026-11-07T06:20:12+00:00",
   "sources": [
     {
       "name": "Mountainbike.be",
@@ -21,9 +21,9 @@
     },
     {
       "name": "GoDare",
-      "status": "oud",
-      "count": 49,
-      "message": "429 Client Error: Too Many Requests for url: https://www.godare.events/nl/events/mountainbikekalender?page=6"
+      "status": "ok",
+      "count": 51,
+      "message": ""
     },
     {
       "name": "Gravelbike.be",

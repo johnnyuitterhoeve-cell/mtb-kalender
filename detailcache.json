@@ -269,16 +269,6 @@
   "start_partial": true,
   "v": 2
  },
- "fs-59781": {
-  "fetched": "2026-11-05",
-  "organizer": "WV Reto",
-  "price": "€ 15,00",
-  "start": "Daam Fockemalaan 5",
-  "start_lat": 51.99963,
-  "start_lon": 5.90266,
-  "start_partial": true,
-  "v": 2
- },
  "fs-59784": {
   "fetched": "2026-11-05",
   "organizer": "TWC De Voorsprong",
@@ -429,16 +419,6 @@
   "start_partial": true,
   "v": 2
  },
- "fs-60058": {
-  "fetched": "2026-11-05",
-  "organizer": "Tourclub DSE",
-  "price": "€ 10,00",
-  "start": ": De Santspuy Zandspui 45 4873 LZ Etten-Leur",
-  "start_lat": 51.53616,
-  "start_lon": 4.65517,
-  "start_partial": true,
-  "v": 2
- },
  "fs-60060": {
   "fetched": "2026-11-05",
   "organizer": "Toerclub HWV Hardenberg",
@@ -516,16 +496,6 @@
   "start": "Guldemondweg",
   "start_lat": 52.92953,
   "start_lon": 4.78361,
-  "start_partial": true,
-  "v": 2
- },
- "fs-60174": {
-  "fetched": "2026-11-05",
-  "organizer": "Toerclub Swolland",
-  "price": "€ 8,00",
-  "start": "Zandbergen 14 Wapenveld",
-  "start_lat": 52.43884,
-  "start_lon": 6.08024,
   "start_partial": true,
   "v": 2
  },
@@ -1009,13 +979,6 @@
   "start_partial": true,
   "v": 2
  },
- "gd-3de-gravel-zwinclassic-vbr": {
-  "fetched": "2026-11-06",
-  "organizer": "WACKY RACERS",
-  "price": "",
-  "start": "Sportcentrum Molenhoek, Herenweg  11A, 8300 Knokke-Heist, België",
-  "v": 2
- },
  "gd-4-gravelrit-pittem-vbr": {
   "fetched": "2026-11-06",
   "organizer": "BIKERSCLUB DE BIKEDEVILS",
@@ -1042,13 +1005,6 @@
   "organizer": "brueghelbikers",
   "price": "",
   "start": "voetbalkantine sporting grote brogel, bocholterweg, 3990 Grote-Brogel, België",
-  "v": 2
- },
- "gd-brugse-bikers-gravel-75km": {
-  "fetched": "2026-11-06",
-  "organizer": "Kloppen deze gegevens niet?",
-  "price": "",
-  "start": "8200 Sint-Andries, België",
   "v": 2
  },
  "gd-cameleon-ride-2": {
@@ -1112,6 +1068,13 @@
   "organizer": "KWB ZOERSEL",
   "price": "",
   "start": "KFC Eendracht Zoersel, Westmallebaan, 2980 Zoersel, België, Facebook",
+  "v": 2
+ },
+ "gd-forza-evo-oudenaarde-vtt-cyclo-2": {
+  "fetched": "2026-11-08",
+  "organizer": "Kloppen deze gegevens niet?",
+  "price": "",
+  "start": "Sporthal t’Sportkot, Sompelplein  39, 9700 Leupegem, België",
   "v": 2
  },
  "gd-frans-claes-classic-11-5": {
@@ -1364,62 +1327,6 @@
   "organizer": "TWC de Zwoegers",
   "price": "",
   "start": "Sportlaan  7, 6023BL Budel-Schoot, Nederland",
-  "v": 2
- },
- "mb-20261107-arnhem-herfstbostocht-mtb-arnhem": {
-  "fetched": "2026-11-05",
-  "organizer": "WV Reto",
-  "price": "€ 14,00 – € 17,00",
-  "start": "Clubhuis RETO, Daam Fockemalaan 5, 6815 DL Arnhem, Nederland",
-  "title": "Herfstbostocht MTB Arnhem",
-  "v": 2
- },
- "mb-20261107-astene-versele-classic": {
-  "fetched": "2026-11-05",
-  "organizer": "WTC Walter Goedefroot",
-  "price": "€ 0,00 – € 8,00",
-  "start": "Zaal Ten Hove, Nieuwstraat 3, 9800 Astene, België",
-  "title": "Versele Classic",
-  "v": 2
- },
- "mb-20261107-brugge-33e-bossentocht": {
-  "fetched": "2026-11-05",
-  "organizer": "De Brugse Bikers",
-  "price": "€ 6,00 – € 8,00",
-  "start": "Voetbalkantine Eendracht Brugge, Koning Leopold III Laan 117, 8200 Brugge, België",
-  "title": "33e Bossentocht",
-  "v": 2
- },
- "mb-20261107-knokke-heist-18e-wacky-toertocht": {
-  "fetched": "2026-11-05",
-  "organizer": "Wacky Racers",
-  "price": "€ 6,00 – € 12,00",
-  "start": "Sportrcentrum Molenhoek, Herenweg 11A, 8300 Knokke-Heist, België",
-  "title": "18e Wacky Toertocht",
-  "v": 2
- },
- "mb-20261107-lokeren-bospark-classic": {
-  "fetched": "2026-11-05",
-  "organizer": "Bosparkspurters",
-  "price": "€ 5,00 – € 7,00",
-  "start": "Kantine Bosparkwijk, Nachtegaallaan 30, 9160 Lokeren, België",
-  "title": "Bospark Classic",
-  "v": 2
- },
- "mb-20261107-nijkerk-voek-herfstklassieker": {
-  "fetched": "2026-11-05",
-  "organizer": "VOEK Toerfietsclub Nijkerk",
-  "price": "€ 5,00 – € 6,00",
-  "start": "Sportpark De Burcht, Bloemendaalseweg  2, 3862 RN Nijkerk, Nederland",
-  "title": "VOEK Herfstklassieker",
-  "v": 2
- },
- "mb-20261107-wapenveld-swolsebostocht-": {
-  "fetched": "2026-11-05",
-  "organizer": "Toerclub Swolland",
-  "price": "€ 8,00 – € 10,00",
-  "start": "Sportpark, Zandbergen 14, 8191 NA Wapenveld, Nederland",
-  "title": "Swolsebostocht",
   "v": 2
  },
  "mb-20261108-alphen-veldtoertocht-": {
@@ -2254,6 +2161,14 @@
   "title": "Seniorenmountainbikers OKRA - KERSTRIT",
   "v": 2
  },
+ "mb-20261226-poppel-veldtoertocht-kfc-poppel": {
+  "fetched": "2026-11-08",
+  "organizer": "KFC Poppel",
+  "price": "€ 6,00",
+  "start": "Kantine KFC Poppel, Steenweg Baarle 58, 2382 Poppel, België",
+  "title": "Veldtoertocht KFC Poppel",
+  "v": 2
+ },
  "mb-20261226-wingene-32e-kerstmeeting-vtt": {
   "fetched": "2026-11-05",
   "organizer": "Sportvrienden-Bikeslippers",
@@ -2334,6 +2249,14 @@
   "title": "ATB Toertocht Huijbergen",
   "v": 2
  },
+ "mb-20270110-putte-gravel-mtb-tocht-": {
+  "fetched": "2026-11-08",
+  "organizer": "TC De Spartaan",
+  "price": "€ 6,00",
+  "start": "Sporthal De Biezen, Schoolstraat 42, 4645 HN Putte, Nederland",
+  "title": "Gravel/MTB Tocht",
+  "v": 2
+ },
  "mb-20270123-ichtegem-ichtegemse-winter-vtt": {
   "fetched": "2026-11-05",
   "organizer": "KWTC Blijf Jong Ichtegem",
@@ -2356,13 +2279,6 @@
   "price": "€ 5,00 – € 7,00",
   "start": "Voetbalkantine KFC De Vrede, Voetbalstraat 25, 2275 Wechelderzande, België",
   "title": "31e Mountainbiketoertocht van Liever Bergaf",
-  "v": 2
- },
- "my-20055": {
-  "fetched": "2026-11-07",
-  "organizer": "",
-  "price": "",
-  "start": "Kantine KFC Poppel, Steenweg Baarle 58, 2382 Ravels, Antwerpen, België",
   "v": 2
  },
  "my-21342": {

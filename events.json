@@ -1,279 +1,5 @@
 [
   {
-    "id": "mb-20261107-arnhem-herfstbostocht-mtb-arnhem",
-    "title": "Herfstbostocht MTB Arnhem",
-    "date": "2026-11-07",
-    "location": "Arnhem",
-    "type": "MTB",
-    "distances": [
-      55,
-      81,
-      95
-    ],
-    "organizer": "WV Reto",
-    "sourceUrl": "https://www.mountainbike.be/toertochten/20261107-arnhem-herfstbostocht-mtb-arnhem",
-    "price": "€ 14,00 – € 17,00",
-    "source": "Mountainbike.be",
-    "country": "NL",
-    "lat": 51.9843,
-    "lon": 5.9109,
-    "start": "Clubhuis RETO, Daam Fockemalaan 5, 6815 DL Arnhem, Nederland"
-  },
-  {
-    "id": "fs-59781",
-    "title": "Avadent Herfstbostocht Gravel Arnhem",
-    "date": "2026-11-07",
-    "location": "Arnhem",
-    "type": "Gravel",
-    "distances": [
-      87
-    ],
-    "organizer": "WV Reto",
-    "sourceUrl": "https://www.fietssport.nl/toertochten/59781/avadent-herfstbostocht-gravel-arnhem-2026",
-    "price": "€ 15,00",
-    "source": "Fietssport.nl",
-    "country": "NL",
-    "lat": 51.9843,
-    "lon": 5.9109,
-    "start": "Daam Fockemalaan 5, Arnhem, Nederland",
-    "startLat": 51.99963,
-    "startLon": 5.90266
-  },
-  {
-    "id": "mb-20261107-astene-versele-classic",
-    "title": "Versele Classic",
-    "date": "2026-11-07",
-    "location": "Astene",
-    "type": "MTB",
-    "distances": [
-      15,
-      25,
-      40,
-      50,
-      70
-    ],
-    "organizer": "WTC Walter Goedefroot",
-    "sourceUrl": "https://www.mountainbike.be/toertochten/20261107-astene-versele-classic",
-    "price": "€ 0,00 – € 8,00",
-    "source": "Mountainbike.be",
-    "country": "BE",
-    "lat": 50.9846,
-    "lon": 3.5628,
-    "start": "Zaal Ten Hove, Nieuwstraat 3, 9800 Astene, België"
-  },
-  {
-    "id": "mb-20261107-brugge-33e-bossentocht",
-    "title": "33e Bossentocht",
-    "date": "2026-11-07",
-    "location": "Brugge",
-    "type": "MTB",
-    "distances": [
-      30,
-      40,
-      50,
-      60,
-      75
-    ],
-    "organizer": "De Brugse Bikers",
-    "sourceUrl": "https://www.mountainbike.be/toertochten/20261107-brugge-33e-bossentocht",
-    "price": "€ 6,00 – € 8,00",
-    "source": "Mountainbike.be",
-    "country": "BE",
-    "lat": 51.2086,
-    "lon": 3.2268,
-    "start": "Voetbalkantine Eendracht Brugge, Koning Leopold III Laan 117, 8200 Brugge, België"
-  },
-  {
-    "id": "fs-60058",
-    "title": "TC DSE Gravelride",
-    "date": "2026-11-07",
-    "location": "Etten-Leur",
-    "type": "Gravel",
-    "distances": [
-      55,
-      85
-    ],
-    "organizer": "Tourclub DSE",
-    "sourceUrl": "https://www.fietssport.nl/toertochten/60058/tc-dse-gravelride",
-    "price": "€ 10,00",
-    "source": "Fietssport.nl",
-    "country": "NL",
-    "lat": 51.5696,
-    "lon": 4.6357,
-    "start": ": De Santspuy Zandspui 45 4873 LZ Etten-Leur, Etten-Leur, Nederland",
-    "startLat": 51.53616,
-    "startLon": 4.65517
-  },
-  {
-    "id": "mb-20261107-knokke-heist-18e-wacky-toertocht",
-    "title": "18e Wacky Toertocht",
-    "date": "2026-11-07",
-    "location": "Knokke-Heist",
-    "type": "MTB",
-    "distances": [
-      35,
-      50,
-      65,
-      90,
-      115
-    ],
-    "organizer": "Wacky Racers",
-    "sourceUrl": "https://www.mountainbike.be/toertochten/20261107-knokke-heist-18e-wacky-toertocht",
-    "price": "€ 6,00 – € 12,00",
-    "source": "Mountainbike.be",
-    "country": "BE",
-    "lat": 51.3434,
-    "lon": 3.2885,
-    "start": "Sportrcentrum Molenhoek, Herenweg 11A, 8300 Knokke-Heist, België"
-  },
-  {
-    "id": "gd-3de-gravel-zwinclassic-vbr",
-    "title": "3de Gravel Zwinclassic   VBR",
-    "date": "2026-11-07",
-    "location": "Knokke-Heist",
-    "type": "Gravel",
-    "distances": [
-      65,
-      90,
-      110
-    ],
-    "organizer": "WACKY RACERS",
-    "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/3de-gravel-zwinclassic-vbr",
-    "price": "",
-    "source": "GoDare",
-    "country": "BE",
-    "lat": 51.3434,
-    "lon": 3.2885,
-    "start": "Sportcentrum Molenhoek, Herenweg  11A, 8300 Knokke-Heist, België"
-  },
-  {
-    "id": "mb-20261107-lokeren-bospark-classic",
-    "title": "Bospark Classic",
-    "date": "2026-11-07",
-    "location": "Lokeren",
-    "type": "MTB",
-    "distances": [
-      32,
-      50,
-      63,
-      87
-    ],
-    "organizer": "Bosparkspurters",
-    "sourceUrl": "https://www.mountainbike.be/toertochten/20261107-lokeren-bospark-classic",
-    "price": "€ 5,00 – € 7,00",
-    "source": "Mountainbike.be",
-    "country": "BE",
-    "lat": 51.1484,
-    "lon": 3.9442,
-    "start": "Kantine Bosparkwijk, Nachtegaallaan 30, 9160 Lokeren, België"
-  },
-  {
-    "id": "gb-2026-11-07-dirty-splasherr",
-    "title": "Dirty Splasherr",
-    "date": "2026-11-07",
-    "location": "Merksplas",
-    "type": "Gravel",
-    "distances": [],
-    "organizer": "Gravelbike.be",
-    "sourceUrl": "https://www.dehoogstraatsespurtersvzw.be/dirty-splasherr/",
-    "price": "",
-    "source": "Gravelbike.be",
-    "country": "BE",
-    "lat": 51.358,
-    "lon": 4.8627
-  },
-  {
-    "id": "mb-20261107-nijkerk-voek-herfstklassieker",
-    "title": "VOEK Herfstklassieker",
-    "date": "2026-11-07",
-    "location": "Nijkerk",
-    "type": "MTB",
-    "distances": [
-      50,
-      70
-    ],
-    "organizer": "VOEK Toerfietsclub Nijkerk",
-    "sourceUrl": "https://www.mountainbike.be/toertochten/20261107-nijkerk-voek-herfstklassieker",
-    "price": "€ 5,00 – € 6,00",
-    "source": "Mountainbike.be",
-    "country": "NL",
-    "lat": 52.2149,
-    "lon": 5.4781,
-    "start": "Sportpark De Burcht, Bloemendaalseweg  2, 3862 RN Nijkerk, Nederland"
-  },
-  {
-    "id": "gb-2026-11-07-voek-herfstklassieker",
-    "title": "VOEK Herfstklassieker",
-    "date": "2026-11-07",
-    "location": "Nijkerk",
-    "type": "Gravel",
-    "distances": [],
-    "organizer": "Gravelbike.be",
-    "sourceUrl": "https://www.fietssport.nl/toertochten/60109/voek-herftstklassieker-2026",
-    "price": "",
-    "source": "Gravelbike.be",
-    "country": "NL",
-    "lat": 52.2149,
-    "lon": 5.4781
-  },
-  {
-    "id": "gd-brugse-bikers-gravel-75km",
-    "title": "Brugse Bikers Gravel 75km",
-    "date": "2026-11-07",
-    "location": "Sint-Andries",
-    "type": "Gravel",
-    "distances": [
-      75
-    ],
-    "organizer": "Kloppen deze gegevens niet?",
-    "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/brugse-bikers-gravel-75km",
-    "price": "",
-    "source": "GoDare",
-    "country": "BE",
-    "lat": 51.192,
-    "lon": 3.178,
-    "start": "8200 Sint-Andries, België"
-  },
-  {
-    "id": "mb-20261107-wapenveld-swolsebostocht-",
-    "title": "Swolsebostocht",
-    "date": "2026-11-07",
-    "location": "Wapenveld",
-    "type": "MTB",
-    "distances": [
-      35,
-      55
-    ],
-    "organizer": "Toerclub Swolland",
-    "sourceUrl": "https://www.mountainbike.be/toertochten/20261107-wapenveld-swolsebostocht-",
-    "price": "€ 8,00 – € 10,00",
-    "source": "Mountainbike.be",
-    "country": "NL",
-    "lat": 52.4315,
-    "lon": 6.0729,
-    "start": "Sportpark, Zandbergen 14, 8191 NA Wapenveld, Nederland"
-  },
-  {
-    "id": "fs-60174",
-    "title": "Swolsebostocht",
-    "date": "2026-11-07",
-    "location": "Wapenveld",
-    "type": "Gravel",
-    "distances": [
-      70
-    ],
-    "organizer": "Toerclub Swolland",
-    "sourceUrl": "https://www.fietssport.nl/toertochten/60174/swolsebostocht-2026",
-    "price": "€ 8,00",
-    "source": "Fietssport.nl",
-    "country": "NL",
-    "lat": 52.4315,
-    "lon": 6.0729,
-    "start": "Zandbergen 14 Wapenveld, Wapenveld, Nederland",
-    "startLat": 52.43884,
-    "startLon": 6.08024
-  },
-  {
     "id": "mb-20261108-alphen-veldtoertocht-",
     "title": "Veldtoertocht",
     "date": "2026-11-08",
@@ -1682,7 +1408,7 @@
     "type": "Gravel",
     "distances": [
       65,
-      80,
+      85,
       105
     ],
     "organizer": "WTC De Doortrappers",
@@ -4269,23 +3995,23 @@
     "startLon": 5.99627
   },
   {
-    "id": "my-20055",
-    "title": "Toertocht KFC Poppel",
+    "id": "mb-20261226-poppel-veldtoertocht-kfc-poppel",
+    "title": "Veldtoertocht KFC Poppel",
     "date": "2026-12-26",
-    "location": "Ravels",
+    "location": "Poppel",
     "type": "MTB",
     "distances": [
       28,
       45
     ],
     "organizer": "KFC Poppel",
-    "sourceUrl": "https://mtb-you.com/calendar/tour/20055/toertocht-kfc-poppel-1",
-    "price": "",
-    "source": "MTB-You",
+    "sourceUrl": "https://www.mountainbike.be/toertochten/20261226-poppel-veldtoertocht-kfc-poppel",
+    "price": "€ 6,00",
+    "source": "Mountainbike.be",
     "country": "BE",
-    "lat": 51.4496,
-    "lon": 5.0521,
-    "start": "Kantine KFC Poppel, Steenweg Baarle 58, 2382 Ravels, Antwerpen, België"
+    "lat": 51.4476,
+    "lon": 5.0428,
+    "start": "Kantine KFC Poppel, Steenweg Baarle 58, 2382 Poppel, België"
   },
   {
     "id": "fs-60033",
@@ -5280,6 +5006,25 @@
     "startLon": 3.90838
   },
   {
+    "id": "mb-20270110-putte-gravel-mtb-tocht-",
+    "title": "Gravel/MTB Tocht",
+    "date": "2027-01-10",
+    "location": "Putte",
+    "type": "Both",
+    "distances": [
+      35,
+      53
+    ],
+    "organizer": "TC De Spartaan",
+    "sourceUrl": "https://www.mountainbike.be/toertochten/20270110-putte-gravel-mtb-tocht-",
+    "price": "€ 6,00",
+    "source": "Mountainbike.be",
+    "country": "NL",
+    "lat": 51.3594,
+    "lon": 4.3958,
+    "start": "Sporthal De Biezen, Schoolstraat 42, 4645 HN Putte, Nederland"
+  },
+  {
     "id": "fs-59705",
     "title": "CarProf Wils Nieuwjaarstocht 2027",
     "date": "2027-01-10",
@@ -6024,6 +5769,32 @@
     "lat": 50.8467,
     "lon": 4.3525,
     "start": "1000 Brussel, België"
+  },
+  {
+    "id": "gd-forza-evo-oudenaarde-vtt-cyclo-2",
+    "title": "Forza Evo Oudenaarde Vtt&Cyclo",
+    "date": "2027-05-22",
+    "location": "Leupegem",
+    "type": "MTB",
+    "distances": [
+      30,
+      35,
+      40,
+      50,
+      60,
+      63,
+      70,
+      90,
+      92
+    ],
+    "organizer": "Kloppen deze gegevens niet?",
+    "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/forza-evo-oudenaarde-vtt-cyclo-2",
+    "price": "",
+    "source": "GoDare",
+    "country": "BE",
+    "lat": 50.8336,
+    "lon": 3.6086,
+    "start": "Sporthal t’Sportkot, Sompelplein  39, 9700 Leupegem, België"
   },
   {
     "id": "my-21342",

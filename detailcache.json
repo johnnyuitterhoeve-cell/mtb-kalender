@@ -119,16 +119,6 @@
   "start_partial": true,
   "v": 2
  },
- "fs-59527": {
-  "fetched": "2026-11-05",
-  "organizer": "TWC Weert",
-  "price": "€ 23,50",
-  "start": "Blauwe Meertje Weert Outdoor Heihuisweg 2 Weert",
-  "start_lat": 51.24534,
-  "start_lon": 5.66985,
-  "start_partial": true,
-  "v": 2
- },
  "fs-59534": {
   "fetched": "2026-11-05",
   "organizer": "CYCLO'78 Wezep",
@@ -179,16 +169,6 @@
   "start_partial": true,
   "v": 2
  },
- "fs-59600": {
-  "fetched": "2026-11-05",
-  "organizer": "WTC Tubbergen",
-  "price": "€ 10,00",
-  "start": "Camping Dal van Mosbeek, Uelserweg 153, Mander",
-  "start_lat": 52.44566,
-  "start_lon": 6.82378,
-  "start_partial": true,
-  "v": 2
- },
  "fs-59606": {
   "fetched": "2026-11-05",
   "organizer": "RTC Hengelo",
@@ -216,16 +196,6 @@
   "start": "Frans van Beststraat 7a",
   "start_lat": 51.35261,
   "start_lon": 5.46437,
-  "start_partial": true,
-  "v": 2
- },
- "fs-59715": {
-  "fetched": "2026-11-05",
-  "organizer": "WSC Zeeland",
-  "price": "€ 6,00",
-  "start": "Boekelsedijk 3",
-  "start_lat": 51.6841,
-  "start_lon": 5.67453,
   "start_partial": true,
   "v": 2
  },
@@ -346,16 +316,6 @@
   "start": "Sint Agathaplein 8",
   "start_lat": 51.60319,
   "start_lon": 5.67387,
-  "start_partial": true,
-  "v": 2
- },
- "fs-59879": {
-  "fetched": "2026-11-05",
-  "organizer": "TFC De Ketting",
-  "price": "€ 15,00",
-  "start": "Heembadweg 17",
-  "start_lat": 52.88466,
-  "start_lon": 7.06976,
   "start_partial": true,
   "v": 2
  },
@@ -759,16 +719,6 @@
   "start_partial": true,
   "v": 2
  },
- "fs-60455": {
-  "fetched": "2026-11-05",
-  "organizer": "TFC De Ketting",
-  "price": "€ 0,00",
-  "start": "Camping Moekesgat, Heembadweg 17",
-  "start_lat": 52.88527,
-  "start_lon": 7.05996,
-  "start_partial": true,
-  "v": 2
- },
  "fs-60459": {
   "fetched": "2026-11-05",
   "organizer": "Tempo Soest",
@@ -1098,25 +1048,11 @@
   "start": "Sportpark  9, 5541DR Reusel, Nederland",
   "v": 2
  },
- "gd-graveltocht-vwb-3": {
-  "fetched": "2026-11-06",
-  "organizer": "WTC SPORTVRIENDEN BOEKT-ZOLDER",
-  "price": "",
-  "start": "De Veen, Veenderweg 48, 3550 Heusden-Zolder, België",
-  "v": 2
- },
  "gd-graveltocht-zandbikers-vwb-1": {
   "fetched": "2026-11-06",
   "organizer": "Zandbikers",
   "price": "",
   "start": "Sporthal Kerkhoven, Kleuterstraat  4, 3920 Lommel, België",
-  "v": 2
- },
- "gd-gronings-mooiste-graveltocht-2026": {
-  "fetched": "2026-11-06",
-  "organizer": "TFC De Ketting",
-  "price": "",
-  "start": "Camping Moekesgat, Heembadweg  17, 9561SW Ter Apel, Nederland",
   "v": 2
  },
  "gd-hei-en-vennentocht-2026": {
@@ -1182,13 +1118,6 @@
   "start": "Café Trapke Op, Weg naar Wouw 17, 4635RJ Huijbergen, Nederland, Facebook",
   "v": 2
  },
- "gd-mtb-tocht-vwb-12": {
-  "fetched": "2026-11-06",
-  "organizer": "De Heidefietsers KWB Wijchmaal",
-  "price": "",
-  "start": "Sporting Wijchmaal, Sportlaan 1, 3990 Peer, België",
-  "v": 2
- },
  "gd-pepernotentocht-2026": {
   "fetched": "2026-11-06",
   "organizer": "Kloppen deze gegevens niet?",
@@ -1236,13 +1165,6 @@
   "organizer": "WTC DE STOEMPERS",
   "price": "",
   "start": "Garage Felix, Heiken  66, 2960 Brecht, België",
-  "v": 2
- },
- "gd-tbb-totaal-boterkoektocht-gravel": {
-  "fetched": "2026-11-06",
-  "organizer": "WTC Tubbergen",
-  "price": "",
-  "start": "Camping Dal van Mosbeek, Uelserweg 153, 7663TD Mander, Nederland",
   "v": 2
  },
  "gd-toertocht-gassel": {
@@ -1327,134 +1249,6 @@
   "organizer": "TWC de Zwoegers",
   "price": "",
   "start": "Sportlaan  7, 6023BL Budel-Schoot, Nederland",
-  "v": 2
- },
- "mb-20261108-alphen-veldtoertocht-": {
-  "fetched": "2026-11-05",
-  "organizer": "WTV Alphen",
-  "price": "€ 6,00 – € 8,00",
-  "start": "Happy Alphen, Stationstraat 57, 5131 BM Alphen, Nederland",
-  "title": "Veldtoertocht",
-  "v": 2
- },
- "mb-20261108-beaufort-knight-ride": {
-  "fetched": "2026-11-05",
-  "organizer": "Knight Rieders Beaufort",
-  "price": "€ 10,00",
-  "start": "Beaufort Youth Hostel, Route de Dillingen 55, 6315 Beaufort, Luxemburg",
-  "title": "Knight Ride",
-  "v": 2
- },
- "mb-20261108-brecht-veldtoertocht": {
-  "fetched": "2026-11-05",
-  "organizer": "Sunshine Trappers",
-  "price": "€ 6,00 – € 8,00",
-  "start": "Sporthal De Ring, Ambachtslaan 7, 2960 Brecht, België",
-  "title": "Veldtoertocht",
-  "v": 2
- },
- "mb-20261108-den-dungen-bioracer-mtb-gravel-tocht": {
-  "fetched": "2026-11-05",
-  "organizer": "WTTC VlugTrug",
-  "price": "€ 6,00 – € 7,00",
-  "start": "Boer Goossens, Heilig Hartplein 1, 5275 BM Den Dungen, Nederland",
-  "title": "Bioracer MTB/Gravel tocht",
-  "v": 2
- },
- "mb-20261108-heusden-zolder-mountainbiketoertocht": {
-  "fetched": "2026-11-05",
-  "organizer": "WTC Sportvrienden Boekt-Zolder",
-  "price": "€ 6,00 – € 8,00",
-  "start": "De Veen, Veenderweg 48, 3550 Heusden-Zolder, België",
-  "title": "Mountainbiketoertocht",
-  "v": 2
- },
- "mb-20261108-houthulst-heuveltjes-van-erika": {
-  "fetched": "2026-11-05",
-  "organizer": "Erika's Baaikers Klerken",
-  "price": "€ 6,00 – € 8,00",
-  "start": "Sporthal, Paardedreef 6, 8650 Houthulst, België",
-  "title": "Heuveltjes van Erika",
-  "v": 2
- },
- "mb-20261108-huizingen-dworpse-bikers-mtb-en-gravel-classic": {
-  "fetched": "2026-11-05",
-  "organizer": "Dworpse bikers",
-  "price": "€ 6,00 – € 8,00",
-  "start": "Provinciaal Domein Huizingen, H.Torleylaan 100, 1653 Huizingen, België",
-  "title": "Dworpse Bikers MTB- en Gravel Classic",
-  "v": 2
- },
- "mb-20261108-kempenhout-toertocht-kampenhout-tvv-11-11-11": {
-  "fetched": "2026-11-05",
-  "organizer": "11 Kampenhout",
-  "price": "€ 6,00 – € 7,00",
-  "start": "Sporthal De Zeype, Zeypestraat 26, 1910 Kempenhout, België",
-  "title": "Toertocht Kampenhout TVV 11-11-11",
-  "v": 2
- },
- "mb-20261108-koewacht-wim-hendriks-trofee": {
-  "fetched": "2026-11-05",
-  "organizer": "Stichting Wim Hendriks Trofee",
-  "price": "€ 7,00",
-  "start": "RKVV Koewacht, Berlaersstraat 4, 4576 AD Koewacht, Nederland",
-  "title": "Wim Hendriks Trofee",
-  "v": 2
- },
- "mb-20261108-rollegem-wtc-de-platse-offroad-classic-": {
-  "fetched": "2026-11-05",
-  "organizer": "WTC De Platse",
-  "price": "€ 6,00 – € 8,00",
-  "start": "Sporthal De Weimeersen, Rollegemkerkstraat, 8510 Rollegem, België",
-  "title": "WTC DE Platse Offroad Classic",
-  "v": 2
- },
- "mb-20261108-seraing-le-chemin-des-sangliers": {
-  "fetched": "2026-11-05",
-  "organizer": "Cycling team aux Assemblées",
-  "price": "€ 2,00 – € 7,00",
-  "start": "Complexe sportif du Bois Abbaye, Avenue des Puddleurs  51-53, 4100 Seraing, België",
-  "title": "Le chemin des Sangliers",
-  "v": 2
- },
- "mb-20261108-ter-apel-gronings-mooiste": {
-  "fetched": "2026-11-05",
-  "organizer": "TFC De Ketting",
-  "price": "€ 8,00 – € 10,00",
-  "start": "Camping Moekesgat, Heembadweg 17, 9561 CS Ter Apel, Nederland",
-  "title": "Gronings Mooiste",
-  "v": 2
- },
- "mb-20261108-tubbergen-boterkoektocht-": {
-  "fetched": "2026-11-05",
-  "organizer": "WTC Tubbergen",
-  "price": "€ 8,00 – € 10,00",
-  "start": "Camping Dal van Mosbeek, Uelserweg 153, 7663 TD Tubbergen, Nederland",
-  "title": "Boterkoektocht",
-  "v": 2
- },
- "mb-20261108-vosselaar-glaswerk-vanheertum-vtt": {
-  "fetched": "2026-11-05",
-  "organizer": "WTC De Bokkespurters",
-  "price": "€ 6,00 – € 8,00",
-  "start": "Sporthal Diepvenneke, Diepvenneke 43, 2350 Vosselaar, België",
-  "title": "Glaswerk Vanheertum VTT",
-  "v": 2
- },
- "mb-20261108-weert-land-van-horne-bike-fest": {
-  "fetched": "2026-11-05",
-  "organizer": "TWC Weert",
-  "price": "€ 8,00 – € 22,50",
-  "start": "Outdoorcentrum, Kruispeelweg, 6006 SX Weert, Nederland",
-  "title": "Land van Horne Bike Fest",
-  "v": 2
- },
- "mb-20261108-zeeland-mtb-ride-maashorst": {
-  "fetched": "2026-11-05",
-  "organizer": "WSC Zeeland",
-  "price": "€ 5,00 – € 6,00",
-  "start": "Voetbalvereniging Festilent, Boekelsedijk 3, 5411 NW Zeeland, Nederland",
-  "title": "MTB Ride Maashorst",
   "v": 2
  },
  "mb-20261110-bergeijk-nederland-seniorenmountainbikers-okra": {
@@ -2295,13 +2089,6 @@
   "start": "OC Albatros, Staatsbaan 241 D, 8610 Kortemark, West-Vlaanderen, België",
   "v": 2
  },
- "my-21574": {
-  "fetched": "2026-11-05",
-  "organizer": "",
-  "price": "",
-  "start": "Hoeve Printhagen, Printhagen 3, 6191 PR Beek, Beek, Nederland",
-  "v": 2
- },
  "my-21575": {
   "fetched": "2026-11-05",
   "organizer": "",
@@ -2330,13 +2117,6 @@
   "start": "Jeugd- en SportArena, Dudenhofenlaan 2B, 8620 Nieuwpoort, West-Vlaanderen, België",
   "v": 2
  },
- "my-21753": {
-  "fetched": "2026-11-05",
-  "organizer": "",
-  "price": "",
-  "start": "Camping Dal van Mosbeek, Uelserweg 153, 7663 TD Mander, Tubbergen, Nederland",
-  "v": 2
- },
  "my-21755": {
   "fetched": "2026-11-05",
   "organizer": "",
@@ -2349,13 +2129,6 @@
   "organizer": "",
   "price": "",
   "start": "Garage Akkermans, Nieuwmoersesteenweg 121, 2910 Essen, Antwerpen, België",
-  "v": 2
- },
- "my-21801": {
-  "fetched": "2026-11-05",
-  "organizer": "",
-  "price": "",
-  "start": "Sporthal, Ambachtslaan 7, 2960 Brecht, Antwerpen, België",
   "v": 2
  }
 }

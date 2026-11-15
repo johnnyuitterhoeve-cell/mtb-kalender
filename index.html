@@ -102,7 +102,17 @@
         <footer class="mt-10 pt-6 border-t border-slate-800 text-xs text-slate-500 space-y-2">
             <p>Dit is een hobbyproject zonder commercieel doel. De tochten komen van de onderliggende websites (zie "Bronnen"); bij elke tocht staat een link naar de bron. Kijk voor de actuele gegevens, prijs en inschrijving altijd op de website van de organisator. Er kunnen fouten of verouderde gegevens in staan. Deze site is niet verbonden aan de genoemde bronnen of organisatoren.</p>
             <p>Privacy: deze site gebruikt geen cookies, geen advertenties en geen statistieken. Je thuislocatie of postcode wordt alleen in je eigen browser bewaard. Voor het opzoeken van een plaats of postcode wordt die aan OpenStreetMap (Nominatim) of PDOK gestuurd. Als je "Gebruik mijn locatie" kiest, wordt je positie (afgerond op ongeveer 1 km) daarvoor naar OpenStreetMap gestuurd. De pagina laadt Tailwind CSS van cdn.tailwindcss.com.</p>
-            <p>Staat jouw evenement hier en wil je dat het wordt aangepast of verwijderd? Neem dan contact op via de beheerder van deze site.</p>
+            <p>Staat jouw evenement hier en wil je dat het wordt aangepast of verwijderd? Neem dan contact op met de beheerder van deze site.</p>
+            <p class="text-[10px] text-slate-600">Contact: <span id="contactMail"></span></p>
+            <script>
+            (function () {
+                var u = ['webbeheer', 'tcarendskerke.nl'], a = u[0] + '@' + u[1];
+                var el = document.getElementById('contactMail');
+                var l = document.createElement('a');
+                l.href = 'mailto:' + a; l.textContent = a; l.className = 'underline hover:text-slate-400';
+                el.appendChild(l);
+            })();
+            </script>
         </footer>
     </div>
 

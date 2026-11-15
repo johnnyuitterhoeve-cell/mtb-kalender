@@ -110,7 +110,8 @@
                     <button type="button" data-quick="" class="quick-btn px-3 py-1.5 rounded-full border bg-emerald-600 border-emerald-600 text-white">Alle datums</button>
                     <button type="button" data-quick="today" class="quick-btn px-3 py-1.5 rounded-full border bg-slate-900 border-slate-700 text-slate-300 hover:border-slate-500">Vandaag</button>
                     <button type="button" data-quick="weekend" class="quick-btn px-3 py-1.5 rounded-full border bg-slate-900 border-slate-700 text-slate-300 hover:border-slate-500">Dit weekend</button>
-                    <button type="button" data-quick="nextweek" class="quick-btn px-3 py-1.5 rounded-full border bg-slate-900 border-slate-700 text-slate-300 hover:border-slate-500">Volgende week</button>
+                    <button type="button" data-quick="nextweekend" class="quick-btn px-3 py-1.5 rounded-full border bg-slate-900 border-slate-700 text-slate-300 hover:border-slate-500">Volgend weekend</button>
+                    <button type="button" data-quick="next7" class="quick-btn px-3 py-1.5 rounded-full border bg-slate-900 border-slate-700 text-slate-300 hover:border-slate-500">Komende 7 dagen</button>
                 </div>
                 <div class="flex flex-wrap items-center justify-between gap-2">
                     <p id="statusLine" class="text-xs text-slate-500"></p>
@@ -525,10 +526,12 @@
                 var sat = add(t, 5 - dow < 0 ? 0 : 5 - dow);                    // komende of huidige zaterdag
                 return { from: iso(sat), to: iso(add(sat, 1)) };
             }
-            if (key === 'nextweek') {
-                var mon = add(t, 7 - dow);
-                return { from: iso(mon), to: iso(add(mon, 6)) };
+            if (key === 'nextweekend') {
+                var thisSat = dow <= 5 ? add(t, 5 - dow) : add(t, -1);        // zaterdag van "dit weekend"
+                var nextSat = add(thisSat, 7);
+                return { from: iso(nextSat), to: iso(add(nextSat, 1)) };
             }
+            if (key === 'next7') return { from: iso(t), to: iso(add(t, 6)) };
             return null;
         }
 

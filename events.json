@@ -1,24 +1,5 @@
 [
   {
-    "id": "mb-20261115-aalten-veldtoertocht-peddelaars",
-    "title": "Veldtoertocht Peddelaars",
-    "date": "2026-11-15",
-    "location": "Aalten",
-    "type": "MTB",
-    "distances": [
-      40,
-      60
-    ],
-    "organizer": "TWV De Peddelaars",
-    "sourceUrl": "https://www.mountainbike.be/toertochten/20261115-aalten-veldtoertocht-peddelaars",
-    "price": "€ 7,00 – € 9,00",
-    "source": "Mountainbike.be",
-    "country": "NL",
-    "lat": 51.9142,
-    "lon": 6.5774,
-    "start": "Sportpark, Bocholtsestraatweg 67 A, 7121 JB Aalten, Nederland"
-  },
-  {
     "id": "fs-59766",
     "title": "Graveltocht Peddelaars Aalten",
     "date": "2026-11-15",
@@ -29,6 +10,27 @@
     ],
     "organizer": "TWV De Peddelaars",
     "sourceUrl": "https://www.fietssport.nl/toertochten/59766/graveltocht-peddelaars-aalten-2026",
+    "price": "€ 7,00",
+    "source": "Fietssport.nl",
+    "country": "NL",
+    "lat": 51.9142,
+    "lon": 6.5774,
+    "start": "Bocholtsestraatweg 67a, Aalten, Nederland",
+    "startLat": 51.91124,
+    "startLon": 6.58514
+  },
+  {
+    "id": "fs-59765",
+    "title": "Veldtoertocht Peddelaars Aalten",
+    "date": "2026-11-15",
+    "location": "Aalten",
+    "type": "MTB",
+    "distances": [
+      40,
+      60
+    ],
+    "organizer": "TWV De Peddelaars",
+    "sourceUrl": "https://www.fietssport.nl/toertochten/59765/veldtoertocht-peddelaars-aalten",
     "price": "€ 7,00",
     "source": "Fietssport.nl",
     "country": "NL",
@@ -57,7 +59,7 @@
     "start": "Maison de village de Bailleul, Rue des Victimes  3, 7730 Bailleul, België"
   },
   {
-    "id": "mb-20261115-de-panne-panne-beach-endurance",
+    "id": "my-21424",
     "title": "Panne Beach Endurance",
     "date": "2026-11-15",
     "location": "De Panne",
@@ -66,34 +68,13 @@
       52
     ],
     "organizer": "Panne Beach Endurance",
-    "sourceUrl": "https://www.mountainbike.be/toertochten/20261115-de-panne-panne-beach-endurance",
-    "price": "€ 25,00",
-    "source": "Mountainbike.be",
+    "sourceUrl": "https://mtb-you.com/calendar/tour/21424/panne-beach-endurance-5",
+    "price": "",
+    "source": "MTB-You",
     "country": "BE",
-    "lat": 51.0988,
-    "lon": 2.5924,
-    "start": "Strand, Leopold I Esplanade, 8660 De Panne, België"
-  },
-  {
-    "id": "mb-20261115-eksel-crossen-door-de-bossen-",
-    "title": "Crossen door de bossen",
-    "date": "2026-11-15",
-    "location": "Eksel",
-    "type": "MTB",
-    "distances": [
-      13,
-      25,
-      35,
-      44
-    ],
-    "organizer": "LMTB De Soorzetters",
-    "sourceUrl": "https://www.mountainbike.be/toertochten/20261115-eksel-crossen-door-de-bossen-",
-    "price": "€ 6,00 – € 8,00",
-    "source": "Mountainbike.be",
-    "country": "",
-    "lat": 51.1538,
-    "lon": 5.3923,
-    "start": "Sporthal, Dennenstraat 8, 3941 Eksel, België"
+    "lat": 51.0807,
+    "lon": 2.5883,
+    "start": "https://beach-endurance.be/, Leopold I Esplanade 1, 8660 De Panne, West-Vlaanderen, België"
   },
   {
     "id": "gd-hei-en-vennentocht-2026",
@@ -117,8 +98,8 @@
     "start": "Manege Kattevenia, Kattevennen  12, 3600 Genk, België"
   },
   {
-    "id": "mb-20261115-geraardsbergen-cameleon-ride",
-    "title": "Cameleon Ride",
+    "id": "my-21580",
+    "title": "Cameleonride",
     "date": "2026-11-15",
     "location": "Geraardsbergen",
     "type": "MTB",
@@ -127,37 +108,117 @@
       45,
       60
     ],
-    "organizer": "CAmeleon Bike",
-    "sourceUrl": "https://www.mountainbike.be/toertochten/20261115-geraardsbergen-cameleon-ride",
-    "price": "€ 6,00 – € 8,00",
-    "source": "Mountainbike.be",
+    "organizer": "Cameleonbike",
+    "sourceUrl": "https://mtb-you.com/calendar/tour/21580/cameleonride-2",
+    "price": "",
+    "source": "MTB-You",
+    "country": "BE",
+    "lat": 50.7708,
+    "lon": 3.8846,
+    "start": "Sporthal De Kubus, Onkerzelestraat 280, 9500 Geraardsbergen, Oost-Vlaanderen, België"
+  },
+  {
+    "id": "gd-cameleon-ride-2",
+    "title": "Cameleon ride",
+    "date": "2026-11-15",
+    "location": "Geraardsbergen",
+    "type": "Gravel",
+    "distances": [
+      60
+    ],
+    "organizer": "CAMELEON BIKE",
+    "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/cameleon-ride-2",
+    "price": "",
+    "source": "GoDare",
     "country": "BE",
     "lat": 50.7716,
     "lon": 3.8827,
-    "start": "Prov. Domein De Gavers, Onkerzelestraat 280, 9500 Geraardsbergen, België"
+    "start": "Provinciaal Domein De Gavers, Onkerzelestraat, 9500 Geraardsbergen, België"
   },
   {
-    "id": "mb-20261115-haarle-dutch-masters-of-mtb",
-    "title": "Dutch Masters of MTB",
+    "id": "fs-59981",
+    "title": "Dutch Masters of MTB 200 km Ultra-Marathon",
     "date": "2026-11-15",
     "location": "Haarle",
     "type": "MTB",
     "distances": [
-      101,
       200
     ],
     "organizer": "Haarlese Wielerclub SaMo",
-    "sourceUrl": "https://www.mountainbike.be/toertochten/20261115-haarle-dutch-masters-of-mtb",
-    "price": "€ 36,50 – € 59,50",
-    "source": "Mountainbike.be",
+    "sourceUrl": "https://www.fietssport.nl/toertochten/59981/dutch-masters-of-mtb-200-km-ultra-marathon-2026",
+    "price": "€ 59,50",
+    "source": "Fietssport.nl",
     "country": "NL",
     "lat": 52.3592,
     "lon": 6.3806,
-    "start": "Manege Haarle, Haarlerveldweg  1, 7448 PR Haarle, Nederland"
+    "start": "Haarlerveldweg 1, Haarle, Nederland",
+    "startLat": 52.35874,
+    "startLon": 6.37597
   },
   {
-    "id": "mb-20261115-hulst-toerclub-hulst-offroad",
-    "title": "Toerclub Hulst Offroad",
+    "id": "fs-59983",
+    "title": "Dutch Masters of MTB 101 km E-Bike Marathon",
+    "date": "2026-11-15",
+    "location": "Haarle",
+    "type": "MTB",
+    "distances": [
+      101
+    ],
+    "organizer": "Haarlese Wielerclub SaMo",
+    "sourceUrl": "https://www.fietssport.nl/toertochten/59983/dutch-masters-of-mtb-101-km-e-bike-marathon-2026",
+    "price": "€ 39,50",
+    "source": "Fietssport.nl",
+    "country": "NL",
+    "lat": 52.3592,
+    "lon": 6.3806,
+    "start": "Haarlerveldweg 1, Haarle, Nederland",
+    "startLat": 52.35888,
+    "startLon": 6.37715
+  },
+  {
+    "id": "fs-59982",
+    "title": "Dutch Masters of MTB 101 km Marathon",
+    "date": "2026-11-15",
+    "location": "Haarle",
+    "type": "MTB",
+    "distances": [
+      101
+    ],
+    "organizer": "Haarlese Wielerclub SaMo",
+    "sourceUrl": "https://www.fietssport.nl/toertochten/59982/dutch-masters-of-mtb-101-km-marathon-2026",
+    "price": "€ 39,50",
+    "source": "Fietssport.nl",
+    "country": "NL",
+    "lat": 52.3592,
+    "lon": 6.3806,
+    "start": "Haarlerveldweg 1, Haarle, Nederland",
+    "startLat": 52.35889,
+    "startLon": 6.37708
+  },
+  {
+    "id": "my-21768",
+    "title": "Crossen door de bossen",
+    "date": "2026-11-15",
+    "location": "Hechtel-Eksel",
+    "type": "MTB",
+    "distances": [
+      13,
+      25,
+      35,
+      44
+    ],
+    "organizer": "MTB-You",
+    "sourceUrl": "https://mtb-you.com/calendar/tour/21768/crossen-door-de-bossen-3",
+    "price": "",
+    "source": "MTB-You",
+    "country": "BE",
+    "lat": 51.1567,
+    "lon": 5.3508,
+    "start": "Sporthal, Dennenstraat 8, 3941 Hechtel-Eksel, Limburg, België"
+  },
+  {
+    "id": "fs-59889",
+    "title": "Veldtoertocht 'Tocht der Tochten' TC Hulst",
     "date": "2026-11-15",
     "location": "Hulst",
     "type": "MTB",
@@ -165,14 +226,16 @@
       35,
       50
     ],
-    "organizer": "Accomodaties",
-    "sourceUrl": "https://www.mountainbike.be/toertochten/20261115-hulst-toerclub-hulst-offroad",
-    "price": "€ 6,00 – € 8,00",
-    "source": "Mountainbike.be",
+    "organizer": "TC Hulst",
+    "sourceUrl": "https://www.fietssport.nl/toertochten/59889/veldtoertocht-tocht-der-tochten-tc-hulst-2026",
+    "price": "€ 7,00",
+    "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.3316,
     "lon": 4.0877,
-    "start": "Partycentrum 't Spoor 011, Spoorweg 8, 461 DX  Hulst, Nederland"
+    "start": "Spoorweg 8, Hulst, Nederland",
+    "startLat": 51.27597,
+    "startLon": 4.04061
   },
   {
     "id": "gd-toerclub-hulst-offroad-vwb",
@@ -194,7 +257,7 @@
     "start": "partycentrum 't spoor 011, Spoorweg  8, 8531 Hulste, België, Facebook"
   },
   {
-    "id": "mb-20261115-kalmthout-stephan-aerts-classic-2026",
+    "id": "my-21529",
     "title": "Stephan Aerts Classic 2026",
     "date": "2026-11-15",
     "location": "Kalmthout",
@@ -202,18 +265,16 @@
     "distances": [
       45,
       60,
-      75,
-      80,
-      100
+      75
     ],
-    "organizer": "VVKMS 44 Sint-Maarten",
-    "sourceUrl": "https://www.mountainbike.be/toertochten/20261115-kalmthout-stephan-aerts-classic-2026",
-    "price": "€ 4,00 – € 7,00",
-    "source": "Mountainbike.be",
+    "organizer": "Scouts 44ste St-Maarten",
+    "sourceUrl": "https://mtb-you.com/calendar/tour/21529/stephan-aerts-classic-2026",
+    "price": "",
+    "source": "MTB-You",
     "country": "BE",
-    "lat": 51.3828,
-    "lon": 4.4765,
-    "start": "GITOK Bovenbouw, Heuvelspad 20, 2920 Kalmthout, België"
+    "lat": 51.3989,
+    "lon": 4.4687,
+    "start": "GITOK bovenbouw, Heuvelspad 20, 2920 Kalmthout, Antwerpen, België"
   },
   {
     "id": "gb-2026-11-15-stephan-aerts-classic",
@@ -231,23 +292,25 @@
     "lon": 4.4765
   },
   {
-    "id": "mb-20261115-langenboom-atb-kuuletocht",
+    "id": "fs-60112",
     "title": "ATB Kuuletocht",
     "date": "2026-11-15",
     "location": "Langenboom",
     "type": "MTB",
     "distances": [
       35,
-      50
+      55
     ],
     "organizer": "WTC De Doortrappers",
-    "sourceUrl": "https://www.mountainbike.be/toertochten/20261115-langenboom-atb-kuuletocht",
-    "price": "€ 6,00 – € 7,00",
-    "source": "Mountainbike.be",
+    "sourceUrl": "https://www.fietssport.nl/toertochten/60112/atb-kuuletocht-2026",
+    "price": "€ 7,00",
+    "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.7006,
     "lon": 5.7287,
-    "start": "Sporthal de Wis, Dominicanenstraat 25, 5453 JN Langenboom, Nederland"
+    "start": "Dominicanenstraat 25, Langenboom, Nederland",
+    "startLat": 51.70052,
+    "startLon": 5.72915
   },
   {
     "id": "fs-60111",
@@ -293,8 +356,8 @@
     "startLon": 4.86905
   },
   {
-    "id": "mb-20261115-moerkerke-vtt-heleblitz-classic",
-    "title": "VTT Heleblitz Classic",
+    "id": "my-21698",
+    "title": "Heleblitz-Classic",
     "date": "2026-11-15",
     "location": "Moerkerke",
     "type": "MTB",
@@ -302,19 +365,19 @@
       26,
       33,
       46,
-      58
+      57
     ],
-    "organizer": "Sint-Rita Trappers",
-    "sourceUrl": "https://www.mountainbike.be/toertochten/20261115-moerkerke-vtt-heleblitz-classic",
-    "price": "€ 6,00 – € 8,00",
-    "source": "Mountainbike.be",
+    "organizer": "WTC Sint-Ritatrappers",
+    "sourceUrl": "https://mtb-you.com/calendar/tour/21698/heleblitz-classic-1",
+    "price": "",
+    "source": "MTB-You",
     "country": "BE",
-    "lat": 51.2455,
-    "lon": 3.341,
-    "start": "Sportpark Meuleweg, Vissersstraat 2 A, 8340 Moerkerke, België"
+    "lat": 51.2522,
+    "lon": 3.3274,
+    "start": "Sportpark Meuleweg, Vissersstraat 2A, 8340 Moerkerke, West-Vlaanderen, België"
   },
   {
-    "id": "mb-20261115-netersel-hei-en-vennentocht",
+    "id": "fs-56922",
     "title": "Hei en Vennentocht",
     "date": "2026-11-15",
     "location": "Netersel",
@@ -324,14 +387,16 @@
       45,
       55
     ],
-    "organizer": "TC Netersel",
-    "sourceUrl": "https://www.mountainbike.be/toertochten/20261115-netersel-hei-en-vennentocht",
-    "price": "€ 6,00 – € 7,00",
-    "source": "Mountainbike.be",
+    "organizer": "TWC Netersel",
+    "sourceUrl": "https://www.fietssport.nl/toertochten/56922/hei-en-vennentocht-2026",
+    "price": "€ 7,00",
+    "source": "Fietssport.nl",
     "country": "NL",
     "lat": 51.4043,
     "lon": 5.208,
-    "start": "Café D’n Driesprong, Carolus Simplexplein 15, 5534 AJ Netersel, Nederland"
+    "start": "Carolus Simplexplein 15, Netersel, Nederland",
+    "startLat": 51.40444,
+    "startLon": 5.20792
   },
   {
     "id": "fs-56921",
@@ -356,28 +421,7 @@
     "startLon": 5.20809
   },
   {
-    "id": "mb-20261115-oekene-25e-mtb-tocht-amp-9e-cyclotocht-oekene",
-    "title": "25e MTB-Tocht & 9e Cyclotocht Oekene",
-    "date": "2026-11-15",
-    "location": "Oekene",
-    "type": "MTB",
-    "distances": [
-      25,
-      35,
-      45,
-      55
-    ],
-    "organizer": "Wielerclub Oekene",
-    "sourceUrl": "https://www.mountainbike.be/toertochten/20261115-oekene-25e-mtb-tocht-amp-9e-cyclotocht-oekene",
-    "price": "€ 5,00 – € 7,00",
-    "source": "Mountainbike.be",
-    "country": "BE",
-    "lat": 50.9209,
-    "lon": 3.1603,
-    "start": "Par. Centrum De Regenboog, Sint-Eloois-Winkelsestraat 59, 8800 Oekene, België"
-  },
-  {
-    "id": "mb-20261115-oldenzaal-rudi-kemna-classic-039-veldtoer",
+    "id": "fs-59914",
     "title": "Rudi Kemna Classic' Veldtoer",
     "date": "2026-11-15",
     "location": "Oldenzaal",
@@ -387,16 +431,39 @@
       55
     ],
     "organizer": "Oldenzaalse Wielerclub",
-    "sourceUrl": "https://www.mountainbike.be/toertochten/20261115-oldenzaal-rudi-kemna-classic-039-veldtoer",
-    "price": "€ 5,00 – € 7,50",
-    "source": "Mountainbike.be",
+    "sourceUrl": "https://www.fietssport.nl/toertochten/59914/rudi-kemna-classic-veldtoer-2026",
+    "price": "€ 7,50",
+    "source": "Fietssport.nl",
     "country": "NL",
     "lat": 52.3117,
     "lon": 6.9242,
-    "start": "Clubgebouw OWC, Oude Almeloseweg 1, 7576 PE Oldenzaal, Nederland"
+    "start": "Clubgebouw OWC, Oude Almeloseweg 1, Oldenzaal, Nederland",
+    "startLat": 52.30965,
+    "startLon": 6.9024
   },
   {
-    "id": "mb-20261115-tremelo-mountainbiketocht-tremelobos",
+    "id": "my-21627",
+    "title": "25e MTB-Tocht & 9e Cyclotocht Oekene",
+    "date": "2026-11-15",
+    "location": "Roeselare",
+    "type": "MTB",
+    "distances": [
+      25,
+      35,
+      45,
+      55
+    ],
+    "organizer": "Wielerclub Oekene vzw",
+    "sourceUrl": "https://mtb-you.com/calendar/tour/21627/25e-mtb-tocht-9e-cyclotocht-oekene-1",
+    "price": "",
+    "source": "MTB-You",
+    "country": "BE",
+    "lat": 50.9368,
+    "lon": 3.1336,
+    "start": "Par. Centrum De Regenboog, Sint-Eloois-Winkelsestraat 59, 8800 Roeselare, West-Vlaanderen, België"
+  },
+  {
+    "id": "my-21769",
     "title": "Mountainbiketocht Tremelobos",
     "date": "2026-11-15",
     "location": "Tremelo",
@@ -406,14 +473,14 @@
       45,
       60
     ],
-    "organizer": "Tremelocos",
-    "sourceUrl": "https://www.mountainbike.be/toertochten/20261115-tremelo-mountainbiketocht-tremelobos",
-    "price": "€ 6,00 – € 8,00",
-    "source": "Mountainbike.be",
+    "organizer": "MTB-You",
+    "sourceUrl": "https://mtb-you.com/calendar/tour/21769/mountainbiketocht-tremelobos",
+    "price": "",
+    "source": "MTB-You",
     "country": "BE",
-    "lat": 50.9919,
-    "lon": 4.7041,
-    "start": "VK Tremelo, Basdongenstraat 1, 3120 Tremelo, België"
+    "lat": 50.9943,
+    "lon": 4.7093,
+    "start": "VK Tremelo, Basdongenstraat 1, 3120 Tremelo, Vlaams-Brabant, België"
   },
   {
     "id": "fs-59610",
@@ -439,7 +506,7 @@
     "startLon": 5.54161
   },
   {
-    "id": "mb-20261115-zoersel-fingo-classic",
+    "id": "my-21767",
     "title": "Fingo Classic",
     "date": "2026-11-15",
     "location": "Zoersel",
@@ -453,14 +520,14 @@
       75,
       100
     ],
-    "organizer": "KWB Zoersel",
-    "sourceUrl": "https://www.mountainbike.be/toertochten/20261115-zoersel-fingo-classic",
-    "price": "€ 6,00 – € 10,00",
-    "source": "Mountainbike.be",
+    "organizer": "MTB-You",
+    "sourceUrl": "https://mtb-you.com/calendar/tour/21767/fingo-classic-12",
+    "price": "",
+    "source": "MTB-You",
     "country": "BE",
-    "lat": 51.2717,
-    "lon": 4.7133,
-    "start": "KFC Eendracht Zoersel, Westmallebaan, 2980 Zoersel, België"
+    "lat": 51.2575,
+    "lon": 4.6698,
+    "start": "KFC Eendracht Zoersel, Westmallebaan, 2980 Zoersel, Antwerpen, België"
   },
   {
     "id": "gd-fingo-classic-gravel-vwb-2",
@@ -483,7 +550,7 @@
     "start": "KFC Eendracht Zoersel, Westmallebaan, 2980 Zoersel, België, Facebook"
   },
   {
-    "id": "mb-20261119-deinze-seniorenbikers-okra-oost-vlaanderen",
+    "id": "my-21776",
     "title": "Seniorenbikers OKRA Oost-Vlaanderen",
     "date": "2026-11-19",
     "location": "Deinze",
@@ -491,93 +558,36 @@
     "distances": [
       42
     ],
-    "organizer": "OKRA",
-    "sourceUrl": "https://www.mountainbike.be/toertochten/20261119-deinze-seniorenbikers-okra-oost-vlaanderen",
+    "organizer": "MTB-You",
+    "sourceUrl": "https://mtb-you.com/calendar/tour/21776/seniorenbikers-okra-oost-vlaanderen-12",
     "price": "",
-    "source": "Mountainbike.be",
+    "source": "MTB-You",
     "country": "BE",
-    "lat": 50.9842,
-    "lon": 3.527,
-    "start": "Naast de kerk van Astene, Nieuwstraat 3, 9800 Deinze, België"
+    "lat": 50.9903,
+    "lon": 3.5165,
+    "start": "Naast de kerk van Astene, Nieuwstraat 3, 9800 Deinze, Oost-Vlaanderen, België"
   },
   {
-    "id": "mb-20261121-maldegem-32e-mosseltocht",
-    "title": "32e Mosseltocht",
+    "id": "fs-59796",
+    "title": "32ste Mosseltocht",
     "date": "2026-11-21",
     "location": "Maldegem",
     "type": "MTB",
     "distances": [
       30,
-      45,
-      57
-    ],
-    "organizer": "IV De Wielertoerist",
-    "sourceUrl": "https://www.mountainbike.be/toertochten/20261121-maldegem-32e-mosseltocht",
-    "price": "€ 6,00 – € 8,00",
-    "source": "Mountainbike.be",
-    "country": "BE",
-    "lat": 51.2089,
-    "lon": 3.4452,
-    "start": "Van Deynse, ²Krommeweg 80, 9990 Maldegem, België"
-  },
-  {
-    "id": "mb-20261122-aartrijke-23e-vtt-classic-aartrijke",
-    "title": "23e VTT Classic Aartrijke",
-    "date": "2026-11-22",
-    "location": "Aartrijke",
-    "type": "MTB",
-    "distances": [
-      28,
       47,
       57
     ],
-    "organizer": "WTC Berg en Dal",
-    "sourceUrl": "https://www.mountainbike.be/toertochten/20261122-aartrijke-23e-vtt-classic-aartrijke",
-    "price": "€ 6,00 – € 8,00",
-    "source": "Mountainbike.be",
-    "country": "BE",
-    "lat": 51.1192,
-    "lon": 3.0903,
-    "start": "KVV Aartrijke, Aartrijksestraat 63/Z, 8211 Aartrijke, België"
-  },
-  {
-    "id": "mb-20261122-de-klinge-memorial-patrick-meersschaert-",
-    "title": "Memorial Patrick Meersschaert",
-    "date": "2026-11-22",
-    "location": "De Klinge",
-    "type": "MTB",
-    "distances": [
-      32,
-      50
-    ],
-    "organizer": "Accomodaties",
-    "sourceUrl": "https://www.mountainbike.be/toertochten/20261122-de-klinge-memorial-patrick-meersschaert-",
-    "price": "€ 6,00 – € 8,00",
-    "source": "Mountainbike.be",
-    "country": "BE",
-    "lat": 51.2565,
-    "lon": 4.0898,
-    "start": "Sporthal, Kieldrechtstraat 12, 9170 De Klinge, België"
-  },
-  {
-    "id": "mb-20261122-den-helder-mtb-toertocht-texel",
-    "title": "MTB Toertocht Texel",
-    "date": "2026-11-22",
-    "location": "Den Helder",
-    "type": "MTB",
-    "distances": [
-      39,
-      46,
-      71
-    ],
-    "organizer": "Wielersport Texel",
-    "sourceUrl": "https://www.mountainbike.be/toertochten/20261122-den-helder-mtb-toertocht-texel",
-    "price": "€ 16,50 – € 19,50",
-    "source": "Mountainbike.be",
+    "organizer": "Int. Ver. De Wielertoerist",
+    "sourceUrl": "https://www.fietssport.nl/toertochten/59796/32ste-mosseltocht-2026",
+    "price": "€ 5,00",
+    "source": "Fietssport.nl",
     "country": "",
-    "lat": 52.9509,
-    "lon": 4.7936,
-    "start": "TESO wachtlokaal, Havenplein 3Verhaven Texel, 1781 AB Den Helder, Nederland"
+    "lat": 51.2089,
+    "lon": 3.4452,
+    "start": "Putboringen Van Deynse, Krommewege 80, Maldegem",
+    "startLat": 51.19423,
+    "startLon": 3.47661
   },
   {
     "id": "fs-60390",
@@ -620,7 +630,7 @@
     "start": "Centre Nautisport, chaussée de Soignies  36, 7850 Edingen, België"
   },
   {
-    "id": "mb-20261122-enghien-la-gadouzienne",
+    "id": "my-21778",
     "title": "La Gadouzienne",
     "date": "2026-11-22",
     "location": "Enghien",
@@ -631,17 +641,17 @@
       55,
       65
     ],
-    "organizer": "Cyclo Bol d'Air",
-    "sourceUrl": "https://www.mountainbike.be/toertochten/20261122-enghien-la-gadouzienne",
-    "price": "€ 6,00 – € 8,00",
-    "source": "Mountainbike.be",
+    "organizer": "MTB-You",
+    "sourceUrl": "https://mtb-you.com/calendar/tour/21778/la-gadouzienne-13",
+    "price": "",
+    "source": "MTB-You",
     "country": "BE",
-    "lat": 50.6957,
-    "lon": 4.0412,
-    "start": "Nautisport, Pavé de Soignies 36, 7850 Enghien, België"
+    "lat": 50.6777,
+    "lon": 4.0303,
+    "start": "Nautisport, Pavé de Soignies 36, 7850 Enghien, Hainaut, België"
   },
   {
-    "id": "mb-20261122-evergem-vtt-cyclo-toyota-boone",
+    "id": "my-21781",
     "title": "VTT - Cyclo Toyota Boone",
     "date": "2026-11-22",
     "location": "Evergem",
@@ -652,14 +662,14 @@
       56,
       64
     ],
-    "organizer": "De Burggravetrappers",
-    "sourceUrl": "https://www.mountainbike.be/toertochten/20261122-evergem-vtt-cyclo-toyota-boone",
-    "price": "€ 2,00 – € 8,00",
-    "source": "Mountainbike.be",
+    "organizer": "MTB-You",
+    "sourceUrl": "https://mtb-you.com/calendar/tour/21781/vtt-cyclo-toyota-boone",
+    "price": "",
+    "source": "MTB-You",
     "country": "BE",
-    "lat": 51.1088,
-    "lon": 3.7079,
-    "start": "Oefenterrein Evergem 2020, Drogenbroodstraat, 9940 Evergem, België"
+    "lat": 51.1433,
+    "lon": 3.7082,
+    "start": "Oefenterrein Evergem 2020, Drogenbroodstraat, 9940 Evergem, Oost-Vlaanderen, België"
   },
   {
     "id": "gb-2026-11-22-gravel-toyota-boone",
@@ -692,24 +702,6 @@
     "lon": 5.4802
   },
   {
-    "id": "mb-20261122-hengelo-sterkr-toertocht",
-    "title": "SterkR-toertocht",
-    "date": "2026-11-22",
-    "location": "Hengelo",
-    "type": "MTB",
-    "distances": [
-      40
-    ],
-    "organizer": "RTC Hengelo",
-    "sourceUrl": "https://www.mountainbike.be/toertochten/20261122-hengelo-sterkr-toertocht",
-    "price": "€ 6,00 – € 7,00",
-    "source": "Mountainbike.be",
-    "country": "NL",
-    "lat": 52.2659,
-    "lon": 6.7924,
-    "start": "BWO Sportcomplex De Noork, Oldenzaalsestraat 518, 7557 PW Hengelo, Nederland"
-  },
-  {
     "id": "fs-59606",
     "title": "SterkR-toertocht Gravel",
     "date": "2026-11-22",
@@ -730,6 +722,26 @@
     "startLon": 6.8251
   },
   {
+    "id": "fs-59578",
+    "title": "SterkR-toertocht MTB",
+    "date": "2026-11-22",
+    "location": "Hengelo",
+    "type": "MTB",
+    "distances": [
+      40
+    ],
+    "organizer": "RTC Hengelo",
+    "sourceUrl": "https://www.fietssport.nl/toertochten/59578/sterkr-toertocht-mtb-2026",
+    "price": "€ 7,00",
+    "source": "Fietssport.nl",
+    "country": "NL",
+    "lat": 52.2659,
+    "lon": 6.7924,
+    "start": "BWOSportcomplex De Noork Oldenzaalsestraat 518 7558 PW Hengelo, Hengelo, Nederland",
+    "startLat": 52.27442,
+    "startLon": 6.82487
+  },
+  {
     "id": "gd-sterkr-toertocht-gravel-2026",
     "title": "SterkR-toertocht Gravel 2026",
     "date": "2026-11-22",
@@ -746,26 +758,6 @@
     "lat": 52.2659,
     "lon": 6.7924,
     "start": "BWO Sportcomplex “De Noork”, Oldenzaalsestraat  518, 7558PW Hengelo, Nederland"
-  },
-  {
-    "id": "mb-20261122-lichtenvoorde-achterhoeks-argste-vishandel-bomers-mtb-tocht",
-    "title": "Achterhoeks Argste / Vishandel Bomers MTB Tocht",
-    "date": "2026-11-22",
-    "location": "Lichtenvoorde",
-    "type": "MTB",
-    "distances": [
-      35,
-      50,
-      60
-    ],
-    "organizer": "WTC Keitrappers",
-    "sourceUrl": "https://www.mountainbike.be/toertochten/20261122-lichtenvoorde-achterhoeks-argste-vishandel-bomers-mtb-tocht",
-    "price": "€ 6,00 – € 7,00",
-    "source": "Mountainbike.be",
-    "country": "NL",
-    "lat": 51.9891,
-    "lon": 6.5717,
-    "start": "Sportpark, Kerkhoflaan 5, 7131 TE Lichtenvoorde, Nederland"
   },
   {
     "id": "fs-57026",
@@ -790,7 +782,29 @@
     "startLon": 6.56622
   },
   {
-    "id": "mb-20261122-lommel-mountainbiketoertocht",
+    "id": "fs-57027",
+    "title": "Achterhoeks Argste Vishandel Bomers MTB Tocht",
+    "date": "2026-11-22",
+    "location": "Lichtenvoorde",
+    "type": "MTB",
+    "distances": [
+      35,
+      50,
+      60
+    ],
+    "organizer": "WTC Keitrappers",
+    "sourceUrl": "https://www.fietssport.nl/toertochten/57027/achterhoeks-argste-vishandel-bomers-mtb-tocht",
+    "price": "€ 7,00",
+    "source": "Fietssport.nl",
+    "country": "NL",
+    "lat": 51.9891,
+    "lon": 6.5717,
+    "start": "Eschpark 15, Lichtenvoorde, Nederland",
+    "startLat": 51.99184,
+    "startLon": 6.5646
+  },
+  {
+    "id": "my-21779",
     "title": "Mountainbiketoertocht",
     "date": "2026-11-22",
     "location": "Lommel",
@@ -801,14 +815,14 @@
       44,
       56
     ],
-    "organizer": "De Zandbikers",
-    "sourceUrl": "https://www.mountainbike.be/toertochten/20261122-lommel-mountainbiketoertocht",
-    "price": "€ 6,00 – € 8,00",
-    "source": "Mountainbike.be",
-    "country": "",
-    "lat": 51.2306,
-    "lon": 5.3077,
-    "start": "Sporthal, Kleuterstraat 4, 3920 Lommel, België"
+    "organizer": "MTB-You",
+    "sourceUrl": "https://mtb-you.com/calendar/tour/21779/mountainbiketoertocht-48",
+    "price": "",
+    "source": "MTB-You",
+    "country": "BE",
+    "lat": 51.2256,
+    "lon": 5.3021,
+    "start": "Sporthal, Kleuterstraat 4, 3920 Lommel, Limburg, België"
   },
   {
     "id": "gd-graveltocht-zandbikers-vwb-1",
@@ -845,8 +859,8 @@
     "lon": 5.2639
   },
   {
-    "id": "mb-20261122-maldegem-32e-mosseltocht",
-    "title": "32e Mosseltocht",
+    "id": "fs-59913",
+    "title": "32ste Mosseltocht",
     "date": "2026-11-22",
     "location": "Maldegem",
     "type": "MTB",
@@ -855,14 +869,16 @@
       45,
       57
     ],
-    "organizer": "IV De Wielertoerist",
-    "sourceUrl": "https://www.mountainbike.be/toertochten/20261122-maldegem-32e-mosseltocht",
-    "price": "€ 6,00 – € 8,00",
-    "source": "Mountainbike.be",
-    "country": "BE",
+    "organizer": "Int. Ver. De Wielertoerist",
+    "sourceUrl": "https://www.fietssport.nl/toertochten/59913/32ste-mosseltocht-2026",
+    "price": "€ 5,00",
+    "source": "Fietssport.nl",
+    "country": "",
     "lat": 51.2089,
     "lon": 3.4452,
-    "start": "Van Deynse, ²Krommeweg 80, 9990 Maldegem, België"
+    "start": "Putboringen Van Deynse, Krommewege 80, Maldegem",
+    "startLat": 51.19422,
+    "startLon": 3.47646
   },
   {
     "id": "gd-gravelrit-rwc-reusel-2026",
@@ -885,6 +901,25 @@
     "start": "Sportpark  9, 5541DR Reusel, Nederland"
   },
   {
+    "id": "my-21780",
+    "title": "Memorial Patrick Meersschaert",
+    "date": "2026-11-22",
+    "location": "Sint-Gillis-Waas",
+    "type": "MTB",
+    "distances": [
+      32,
+      50
+    ],
+    "organizer": "MTB-You",
+    "sourceUrl": "https://mtb-you.com/calendar/tour/21780/memorial-patrick-meersschaert-12",
+    "price": "",
+    "source": "MTB-You",
+    "country": "BE",
+    "lat": 51.2296,
+    "lon": 4.1189,
+    "start": "Sporthal, Kieldrechtstraat 12, 9170 Sint-Gillis-Waas, Oost-Vlaanderen, België"
+  },
+  {
     "id": "gb-2026-11-22-gravelty-herfst",
     "title": "Gravelty Herfst",
     "date": "2026-11-22",
@@ -900,8 +935,8 @@
     "lon": 5.9413
   },
   {
-    "id": "mb-20261122-vlodrop-2-landen-toertocht",
-    "title": "2 Landen Toertocht",
+    "id": "fs-60295",
+    "title": "ATB Club Grenzeloos 2 landen toertocht",
     "date": "2026-11-22",
     "location": "Vlodrop",
     "type": "MTB",
@@ -910,16 +945,38 @@
       50
     ],
     "organizer": "ATB Club Grenzeloos",
-    "sourceUrl": "https://www.mountainbike.be/toertochten/20261122-vlodrop-2-landen-toertocht",
-    "price": "€ 8,00 – € 10,00",
-    "source": "Mountainbike.be",
+    "sourceUrl": "https://www.fietssport.nl/toertochten/60295/atb-club-grenzeloos-2-landen-toertocht-2026",
+    "price": "€ 0,00",
+    "source": "Fietssport.nl",
     "country": "",
     "lat": 51.1321,
     "lon": 6.0779,
-    "start": "Tent, Markt 12, 6063 AD Vlodrop, Nederland"
+    "start": "Markt 12, Vlodrop",
+    "startLat": 51.13196,
+    "startLon": 6.07771
   },
   {
-    "id": "mb-20261124-dessel-seniorenmountainbikers-okra",
+    "id": "my-21783",
+    "title": "23e VTT Classic Aartrijke",
+    "date": "2026-11-22",
+    "location": "Zedelgem",
+    "type": "MTB",
+    "distances": [
+      28,
+      47,
+      57
+    ],
+    "organizer": "MTB-You",
+    "sourceUrl": "https://mtb-you.com/calendar/tour/21783/23e-vtt-classic-aartrijke",
+    "price": "",
+    "source": "MTB-You",
+    "country": "BE",
+    "lat": 51.1172,
+    "lon": 3.0939,
+    "start": "KVV Aartrijke, Aartrijksestraat 63, 8211 Zedelgem, West-Vlaanderen, België"
+  },
+  {
+    "id": "my-21788",
     "title": "Seniorenmountainbikers OKRA",
     "date": "2026-11-24",
     "location": "Dessel",
@@ -927,33 +984,71 @@
     "distances": [
       45
     ],
-    "organizer": "OKRA",
-    "sourceUrl": "https://www.mountainbike.be/toertochten/20261124-dessel-seniorenmountainbikers-okra",
+    "organizer": "MTB-You",
+    "sourceUrl": "https://mtb-you.com/calendar/tour/21788/seniorenmountainbikers-okra-43",
     "price": "",
-    "source": "Mountainbike.be",
+    "source": "MTB-You",
     "country": "BE",
-    "lat": 51.2391,
-    "lon": 5.1128,
-    "start": "Parking Tabloo, Gravensteen 3, 2480 Dessel, België"
+    "lat": 51.2415,
+    "lon": 5.1223,
+    "start": "Parking Tabloo, Gravenstraat 3, 2480 Dessel, Antwerpen, België"
   },
   {
-    "id": "mb-20261128-ertvelde-houtland-vtt-amp-cyclo",
+    "id": "my-21790",
+    "title": "Rillaar",
+    "date": "2026-11-28",
+    "location": "Aarschot",
+    "type": "MTB",
+    "distances": [
+      35
+    ],
+    "organizer": "MTB-You",
+    "sourceUrl": "https://mtb-you.com/calendar/tour/21790/rillaar",
+    "price": "",
+    "source": "MTB-You",
+    "country": "BE",
+    "lat": 50.9744,
+    "lon": 4.8956,
+    "start": "Rillaar Het Schors, Diestsesteenweg, 3202 Aarschot, Vlaams-Brabant, België"
+  },
+  {
+    "id": "my-21791",
+    "title": "Brugse Zot Offroad",
+    "date": "2026-11-28",
+    "location": "Brugge",
+    "type": "MTB",
+    "distances": [
+      25,
+      42,
+      58
+    ],
+    "organizer": "MTB-You",
+    "sourceUrl": "https://mtb-you.com/calendar/tour/21791/brugse-zot-offroad-6",
+    "price": "",
+    "source": "MTB-You",
+    "country": "BE",
+    "lat": 51.2074,
+    "lon": 3.2664,
+    "start": "Sint-Andreaslyceum Sint-Kruis, Veltemweg, 8310 Brugge, West-Vlaanderen, België"
+  },
+  {
+    "id": "my-21789",
     "title": "Houtland VTT & Cyclo",
     "date": "2026-11-28",
-    "location": "Ertvelde",
+    "location": "Evergem",
     "type": "MTB",
     "distances": [
       25,
       47
     ],
-    "organizer": "TC Houtland",
-    "sourceUrl": "https://www.mountainbike.be/toertochten/20261128-ertvelde-houtland-vtt-amp-cyclo",
-    "price": "€ 6,00 – € 8,00",
-    "source": "Mountainbike.be",
+    "organizer": "MTB-You",
+    "sourceUrl": "https://mtb-you.com/calendar/tour/21789/houtland-vtt-cyclo-1",
+    "price": "",
+    "source": "MTB-You",
     "country": "BE",
-    "lat": 51.1794,
-    "lon": 3.7472,
-    "start": "Sportoase Ertvelde, Guldensporenlaan 34, 9940 Ertvelde, België"
+    "lat": 51.1433,
+    "lon": 3.7082,
+    "start": "Sportoase Ertvelde, Guldensporenlaan 34, 9940 Evergem, Oost-Vlaanderen, België"
   },
   {
     "id": "fs-60394",
@@ -974,44 +1069,6 @@
     "start": "Boulevard Zeezijde 21, Katwijk aan Zee, Katwijk, Nederland",
     "startLat": 52.19206,
     "startLon": 4.38053
-  },
-  {
-    "id": "mb-20261128-rillaar-rillaar-hurissalm-",
-    "title": "Rillaar (Hurissalm)",
-    "date": "2026-11-28",
-    "location": "Rillaar",
-    "type": "MTB",
-    "distances": [
-      35
-    ],
-    "organizer": "Rillaarse Bikers",
-    "sourceUrl": "https://www.mountainbike.be/toertochten/20261128-rillaar-rillaar-hurissalm-",
-    "price": "€ 5,00 – € 7,00",
-    "source": "Mountainbike.be",
-    "country": "BE",
-    "lat": 50.9757,
-    "lon": 4.8929,
-    "start": "Rillaar Het Schors, Diestsesteenweg 320, 3202 Rillaar, België"
-  },
-  {
-    "id": "mb-20261128-sint-kruis-brugge-brugse-zot-offroad",
-    "title": "Brugse Zot Offroad",
-    "date": "2026-11-28",
-    "location": "Sint-Kruis-Brugge",
-    "type": "MTB",
-    "distances": [
-      25,
-      42,
-      58
-    ],
-    "organizer": "St. Micheielse Trappers",
-    "sourceUrl": "https://www.mountainbike.be/toertochten/20261128-sint-kruis-brugge-brugse-zot-offroad",
-    "price": "€ 6,00 – € 8,00",
-    "source": "Mountainbike.be",
-    "country": "BE",
-    "lat": 51.2185,
-    "lon": 3.273,
-    "start": "Sint-Andreaslyceum Sint-Kruis, Veltemweg, 8310 Sint-Kruis-Brugge, België"
   },
   {
     "id": "fs-59406",
@@ -1035,7 +1092,7 @@
     "startLon": 5.31871
   },
   {
-    "id": "mb-20261129-brecht-rondom-brecht",
+    "id": "my-21792",
     "title": "Rondom Brecht",
     "date": "2026-11-29",
     "location": "Brecht",
@@ -1045,34 +1102,14 @@
       35,
       45
     ],
-    "organizer": "WTC De Stoempers",
-    "sourceUrl": "https://www.mountainbike.be/toertochten/20261129-brecht-rondom-brecht",
-    "price": "€ 6,00 – € 8,00",
-    "source": "Mountainbike.be",
+    "organizer": "MTB-You",
+    "sourceUrl": "https://mtb-you.com/calendar/tour/21792/rondom-brecht-9",
+    "price": "",
+    "source": "MTB-You",
     "country": "BE",
-    "lat": 51.3485,
-    "lon": 4.6399,
-    "start": "Garage Felix, Heiken 66, 2960 Brecht, België"
-  },
-  {
-    "id": "mb-20261129-brecht-strade-stoempatori-grvl",
-    "title": "Strade Stoempatori GRVL",
-    "date": "2026-11-29",
-    "location": "Brecht",
-    "type": "MTB",
-    "distances": [
-      56,
-      76,
-      96
-    ],
-    "organizer": "WTC De Stoempers",
-    "sourceUrl": "https://www.mountainbike.be/toertochten/20261129-brecht-strade-stoempatori-grvl",
-    "price": "€ 15,50 – € 17,50",
-    "source": "Mountainbike.be",
-    "country": "BE",
-    "lat": 51.3485,
-    "lon": 4.6399,
-    "start": "Garage Felix, Heiken 66, 2960 Brecht, België"
+    "lat": 51.3359,
+    "lon": 4.6282,
+    "start": "Garage Felix, Heiken 66, 2960 Brecht, Antwerpen, België"
   },
   {
     "id": "gd-strade-stoempatori-grvl-vwb",
@@ -1189,7 +1226,7 @@
     "startLon": 6.89317
   },
   {
-    "id": "mb-20261129-pelt-rupsen-mtb-amp-gravel-ride",
+    "id": "my-21538",
     "title": "Rupsen MTB & Gravel Ride",
     "date": "2026-11-29",
     "location": "Pelt",
@@ -1199,17 +1236,16 @@
       23,
       30,
       40,
-      50,
-      70
+      50
     ],
     "organizer": "WTC De Dikke Rupsen",
-    "sourceUrl": "https://www.mountainbike.be/toertochten/20261129-pelt-rupsen-mtb-amp-gravel-ride",
-    "price": "€ 6,00 – € 8,00",
-    "source": "Mountainbike.be",
-    "country": "",
-    "lat": 51.2198,
-    "lon": 5.4299,
-    "start": "De Vranken, Herent 122, 3910 Pelt, België"
+    "sourceUrl": "https://mtb-you.com/calendar/tour/21538/rupsen-mtb-gravel-ride",
+    "price": "",
+    "source": "MTB-You",
+    "country": "BE",
+    "lat": 51.2289,
+    "lon": 5.4595,
+    "start": "OC De Vranken, Herent 122, 3910 Pelt, Limburg, België"
   },
   {
     "id": "fs-60489",
@@ -1253,6 +1289,26 @@
     "startLon": 4.70309
   },
   {
+    "id": "my-21794",
+    "title": "Wase Ardennenrit",
+    "date": "2026-11-29",
+    "location": "Temse",
+    "type": "MTB",
+    "distances": [
+      34,
+      40,
+      52
+    ],
+    "organizer": "MTB-You",
+    "sourceUrl": "https://mtb-you.com/calendar/tour/21794/wase-ardennenrit-16",
+    "price": "",
+    "source": "MTB-You",
+    "country": "BE",
+    "lat": 51.1331,
+    "lon": 4.2058,
+    "start": "VK Tielrode, Burgemeester Siegfried Buytaertdreef 10, 9140 Temse, Oost-Vlaanderen, België"
+  },
+  {
     "id": "my-21808",
     "title": "Wase Ardennreit",
     "date": "2026-11-29",
@@ -1272,26 +1328,6 @@
     "lat": 51.1331,
     "lon": 4.2058,
     "start": "voetbalkantine VK Tielrode, Burgemeester Siegfried Buytaertdreef 10, 9140 Temse, Oost-Vlaanderen, België"
-  },
-  {
-    "id": "mb-20261129-tielrode-wase-ardennenrit",
-    "title": "Wase Ardennenrit",
-    "date": "2026-11-29",
-    "location": "Tielrode",
-    "type": "MTB",
-    "distances": [
-      34,
-      40,
-      52
-    ],
-    "organizer": "Toelichting",
-    "sourceUrl": "https://www.mountainbike.be/toertochten/20261129-tielrode-wase-ardennenrit",
-    "price": "€ 6,00 – € 8,00",
-    "source": "Mountainbike.be",
-    "country": "BE",
-    "lat": 51.1126,
-    "lon": 4.1753,
-    "start": "VK Tielrode, Burgemeester Siegfried Buytaertdreef 10, 9140 Tielrode, België"
   },
   {
     "id": "gd-wase-ardennenrit-gravel-vwb",
@@ -1438,20 +1474,25 @@
     "startLon": 6.35353
   },
   {
-    "id": "mb-20261129-zwevegem-transfo-bike-fest",
+    "id": "my-21642",
     "title": "Transfo Bike Fest",
     "date": "2026-11-29",
     "location": "Zwevegem",
     "type": "MTB",
-    "distances": [],
+    "distances": [
+      35,
+      50,
+      60,
+      75
+    ],
     "organizer": "Guadal-Bikers",
-    "sourceUrl": "https://www.mountainbike.be/toertochten/20261129-zwevegem-transfo-bike-fest",
-    "price": "€ 7,00 – € 9,00",
-    "source": "Mountainbike.be",
+    "sourceUrl": "https://mtb-you.com/calendar/tour/21642/transfo-bike-fest",
+    "price": "",
+    "source": "MTB-You",
     "country": "BE",
-    "lat": 50.7829,
-    "lon": 3.3756,
-    "start": "Transfo Zwevegem, Blokellestraat 113 B, 8550 Zwevegem, België"
+    "lat": 50.8055,
+    "lon": 3.3393,
+    "start": "Polyvalente zaal Transfo site, Blokellestraat 113b, 8550 Zwevegem, West-Vlaanderen, België"
   },
   {
     "id": "mb-20261205-hertsberge-31e-bossen-van-vlaanderen",
@@ -2050,6 +2091,28 @@
     "start": "Sporthal De Zuiderpoort, Sportlaan  1, 6023BL Budel-Schoot, Nederland"
   },
   {
+    "id": "fs-60157",
+    "title": "HRTC DOK - MTB Napoleontocht",
+    "date": "2026-12-13",
+    "location": "Den Helder",
+    "type": "MTB",
+    "distances": [
+      27,
+      30,
+      57
+    ],
+    "organizer": "HRTC DOK",
+    "sourceUrl": "https://www.fietssport.nl/toertochten/60157/hrtc-dok-mtb-napoleontocht-2026",
+    "price": "€ 10,00",
+    "source": "Fietssport.nl",
+    "country": "NL",
+    "lat": 52.9509,
+    "lon": 4.7936,
+    "start": "Guldemondweg, Den Helder, Nederland",
+    "startLat": 52.92953,
+    "startLon": 4.78361
+  },
+  {
     "id": "mb-20261213-den-helder-hrtc-dok-mtb-napoleontocht",
     "title": "HRTC DOK - MTB Napoleontocht",
     "date": "2026-12-13",
@@ -2128,6 +2191,25 @@
     "lat": 50.5416,
     "lon": 3.427,
     "start": "La Ferme Fleurie, Rue de Tournai 169, 7620 Hollain, België"
+  },
+  {
+    "id": "gd-vtt-de-la-ferme-fleurie-6",
+    "title": "VTT de la Ferme Fleurie",
+    "date": "2026-12-13",
+    "location": "Hollain",
+    "type": "MTB",
+    "distances": [
+      5,
+      10
+    ],
+    "organizer": "Telefoonnummer",
+    "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/vtt-de-la-ferme-fleurie-6",
+    "price": "",
+    "source": "GoDare",
+    "country": "BE",
+    "lat": 50.5416,
+    "lon": 3.427,
+    "start": "La Ferme fleurie, Rue de Tournai  169, 7620 Hollain, België"
   },
   {
     "id": "mb-20261213-lonneker-op-en-um-039-n-bolt-mtb",
@@ -3100,6 +3182,28 @@
     "lat": 50.8646,
     "lon": 4.6938,
     "start": "Sporthal, Hertogstraat 182, 3001 Heverlee, België"
+  },
+  {
+    "id": "gd-marathon-maniac-6",
+    "title": "Marathon Maniac",
+    "date": "2026-12-28",
+    "location": "Heverlee",
+    "type": "Gravel",
+    "distances": [
+      40,
+      60,
+      85,
+      120,
+      136
+    ],
+    "organizer": "eco mountainbike team vzw",
+    "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/marathon-maniac-6",
+    "price": "",
+    "source": "GoDare",
+    "country": "BE",
+    "lat": 50.8646,
+    "lon": 4.6938,
+    "start": "Sporthal Heverlee, Hertogstraat 180, 3001 Heverlee, België"
   },
   {
     "id": "mb-20261228-hooglede-24e-mtb-cyclo-gitsbergtoertocht",

@@ -29,6 +29,9 @@ GEO_FILE = "geocache.json"
 SOURCES_FILE = "sources.json"
 ALL_SOURCES = ["Mountainbike.be", "Fietssport.nl", "MTB-You", "GoDare", "Gravelbike.be"]
 NOMINATIM = "https://nominatim.openstreetmap.org/search"
+# Bronnen die je tijdelijk wilt overslaan (bijv. omdat de site niet reageert).
+# De oude tochten van die bron blijven staan. Weer aanzetten: haal de naam hieruit, bijv. DISABLED_SOURCES = set()
+DISABLED_SOURCES = {"Mountainbike.be"}
 PLACE_FIXES = {"Kleotinge": "Kloetinge", "Kempenhout": "Kampenhout"}   # typfouten in de bronnen; voeg hier zelf meer toe
 
 # Provinciecode op Mountainbike.be -> (volledige naam, landcodes voor de zoekopdracht)
@@ -831,9 +834,14 @@ def main():
         previous = []
     for name, fetch in SOURCES.items():
         print(f"{name}:")
-        try:
+        if name in DISABLED_SOURCES:
+            print("  tijdelijk uitgezet, oude gegevens blijven staan")
+            errors[name] = "tijdelijk uitgezet"
+            found = []
+        else:
+          try:
             found = fetch()
-        except Exception as e:  # een kapotte bron mag de rest niet stoppen
+          except Exception as e:  # een kapotte bron mag de rest niet stoppen
             print(f"  FOUT: {e}")
             errors[name] = str(e)[:120]
             found = []

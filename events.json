@@ -244,13 +244,14 @@
       80,
       100
     ],
-    "organizer": "GoDare",
+    "organizer": "VVKMS 44ste Sint-Maarten",
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/stephan-aerts-classic-2026",
     "price": "",
     "source": "GoDare",
     "country": "BE",
     "lat": 51.3828,
-    "lon": 4.4765
+    "lon": 4.4765,
+    "start": "GITOK bovenbouw, Heuvelspad 20, 2920 Kalmthout, België"
   },
   {
     "id": "mb-20261115-langenboom-atb-kuuletocht",
@@ -379,7 +380,7 @@
   },
   {
     "id": "mb-20261115-oekene-25e-mtb-tocht-amp-9e-cyclotocht-oekene",
-    "title": "25e MTB tocht & 9e cyclotocht oekene",
+    "title": "25e MTB-Tocht & 9e Cyclotocht Oekene",
     "date": "2026-11-15",
     "location": "Oekene",
     "type": "MTB",
@@ -389,13 +390,14 @@
       45,
       55
     ],
-    "organizer": "Mountainbike.be",
+    "organizer": "Wielerclub Oekene",
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261115-oekene-25e-mtb-tocht-amp-9e-cyclotocht-oekene",
-    "price": "",
+    "price": "€ 5,00 – € 7,00",
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 50.9209,
-    "lon": 3.1603
+    "lon": 3.1603,
+    "start": "Par. Centrum De Regenboog, Sint-Eloois-Winkelsestraat 59, 8800 Oekene, België"
   },
   {
     "id": "mb-20261115-oldenzaal-rudi-kemna-classic-039-veldtoer",
@@ -631,13 +633,14 @@
     "distances": [
       60
     ],
-    "organizer": "GoDare",
+    "organizer": "CYCLO BOL D'AIR ENGHIEN",
     "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/la-gadouzienne-5",
     "price": "",
     "source": "GoDare",
     "country": "BE",
     "lat": 50.6957,
-    "lon": 4.0412
+    "lon": 4.0412,
+    "start": "Centre Nautisport, chaussée de Soignies  36, 7850 Edingen, België"
   },
   {
     "id": "gd-la-gadouzienne-gravel-vwb",
@@ -1074,7 +1077,7 @@
   },
   {
     "id": "mb-20261129-brecht-rondom-brecht",
-    "title": "Rondom brecht",
+    "title": "Rondom Brecht",
     "date": "2026-11-29",
     "location": "Brecht",
     "type": "MTB",
@@ -1083,17 +1086,18 @@
       35,
       45
     ],
-    "organizer": "Mountainbike.be",
+    "organizer": "WTC De Stoempers",
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261129-brecht-rondom-brecht",
-    "price": "",
+    "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.3485,
-    "lon": 4.6399
+    "lon": 4.6399,
+    "start": "Garage Felix, Heiken 66, 2960 Brecht, België"
   },
   {
     "id": "mb-20261129-brecht-strade-stoempatori-grvl",
-    "title": "Strade stoempatori grvl Brecht",
+    "title": "Strade Stoempatori GRVL",
     "date": "2026-11-29",
     "location": "Brecht",
     "type": "MTB",
@@ -1102,13 +1106,14 @@
       76,
       96
     ],
-    "organizer": "Mountainbike.be",
+    "organizer": "WTC De Stoempers",
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261129-brecht-strade-stoempatori-grvl",
-    "price": "",
+    "price": "€ 15,50 – € 17,50",
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.3485,
-    "lon": 4.6399
+    "lon": 4.6399,
+    "start": "Garage Felix, Heiken 66, 2960 Brecht, België"
   },
   {
     "id": "gd-strade-stoempatori-grvl-vwb",
@@ -1226,7 +1231,7 @@
   },
   {
     "id": "mb-20261129-pelt-rupsen-mtb-amp-gravel-ride",
-    "title": "Rupsen MTB & gravel ride Pelt",
+    "title": "Rupsen MTB & Gravel Ride",
     "date": "2026-11-29",
     "location": "Pelt",
     "type": "Both",
@@ -1238,13 +1243,14 @@
       50,
       70
     ],
-    "organizer": "Mountainbike.be",
+    "organizer": "WTC De Dikke Rupsen",
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261129-pelt-rupsen-mtb-amp-gravel-ride",
-    "price": "",
+    "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
     "country": "",
     "lat": 51.2198,
-    "lon": 5.4299
+    "lon": 5.4299,
+    "start": "De Vranken, Herent 122, 3910 Pelt, België"
   },
   {
     "id": "fs-60489",
@@ -1310,7 +1316,7 @@
   },
   {
     "id": "mb-20261129-tielrode-wase-ardennenrit",
-    "title": "Wase ardennenrit Tielrode",
+    "title": "Wase Ardennenrit",
     "date": "2026-11-29",
     "location": "Tielrode",
     "type": "MTB",
@@ -1319,13 +1325,14 @@
       40,
       52
     ],
-    "organizer": "Mountainbike.be",
+    "organizer": "Toelichting",
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261129-tielrode-wase-ardennenrit",
-    "price": "",
+    "price": "€ 6,00 – € 8,00",
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 51.1126,
-    "lon": 4.1753
+    "lon": 4.1753,
+    "start": "VK Tielrode, Burgemeester Siegfried Buytaertdreef 10, 9140 Tielrode, België"
   },
   {
     "id": "gd-wase-ardennenrit-gravel-vwb",
@@ -1473,18 +1480,19 @@
   },
   {
     "id": "mb-20261129-zwevegem-transfo-bike-fest",
-    "title": "Transfo bike fest Zwevegem",
+    "title": "Transfo Bike Fest",
     "date": "2026-11-29",
     "location": "Zwevegem",
     "type": "MTB",
     "distances": [],
-    "organizer": "Mountainbike.be",
+    "organizer": "Guadal-Bikers",
     "sourceUrl": "https://www.mountainbike.be/toertochten/20261129-zwevegem-transfo-bike-fest",
-    "price": "",
+    "price": "€ 7,00 – € 9,00",
     "source": "Mountainbike.be",
     "country": "BE",
     "lat": 50.7829,
-    "lon": 3.3756
+    "lon": 3.3756,
+    "start": "Transfo Zwevegem, Blokellestraat 113 B, 8550 Zwevegem, België"
   },
   {
     "id": "mb-20261205-hertsberge-31e-bossen-van-vlaanderen",

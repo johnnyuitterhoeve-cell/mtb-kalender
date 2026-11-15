@@ -100,15 +100,8 @@
                         <button type="button" id="dateBtn" class="w-full h-full bg-slate-900 border border-slate-800 rounded-lg px-4 py-3 text-left text-slate-100 hover:border-slate-700 focus:outline-none focus:border-emerald-500 flex items-center justify-between gap-3">
                             <span id="dateBtnLabel">Alle datums</span><svg class="w-4 h-4 shrink-0 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
                         </button>
-                        <div id="calendarPop" class="hidden absolute right-0 mt-2 z-20 w-72 bg-slate-900 border border-slate-700 rounded-xl shadow-xl p-4"></div>
+                        <div id="calendarPop" class="hidden absolute right-0 mt-2 z-20 w-72 max-h-[80vh] overflow-y-auto bg-slate-900 border border-slate-700 rounded-xl shadow-xl p-4"></div>
                     </div>
-                </div>
-                <div id="quickDates" class="flex flex-wrap gap-2 text-sm">
-                    <button type="button" data-quick="" class="quick-btn px-3 py-1.5 rounded-full border bg-emerald-600 border-emerald-600 text-white">Alle datums</button>
-                    <button type="button" data-quick="today" class="quick-btn px-3 py-1.5 rounded-full border bg-slate-900 border-slate-700 text-slate-300 hover:border-slate-500">Vandaag</button>
-                    <button type="button" data-quick="weekend" class="quick-btn px-3 py-1.5 rounded-full border bg-slate-900 border-slate-700 text-slate-300 hover:border-slate-500">Dit weekend</button>
-                    <button type="button" data-quick="nextweekend" class="quick-btn px-3 py-1.5 rounded-full border bg-slate-900 border-slate-700 text-slate-300 hover:border-slate-500">Volgend weekend</button>
-                    <button type="button" data-quick="next7" class="quick-btn px-3 py-1.5 rounded-full border bg-slate-900 border-slate-700 text-slate-300 hover:border-slate-500">Komende 7 dagen</button>
                 </div>
                 <div class="flex flex-wrap items-center justify-between gap-2">
                     <p id="statusLine" class="text-xs text-slate-500"></p>
@@ -491,7 +484,14 @@
             var now = new Date(), todayIso = isoOf(now.getFullYear(), now.getMonth(), now.getDate());
             var offset = (new Date(y, m, 1).getDay() + 6) % 7;   // week begint op maandag
             var days = new Date(y, m + 1, 0).getDate();
-            var html = '<div class="flex items-center justify-between mb-3">' +
+            var html = '<div class="flex flex-wrap gap-2 pb-3 mb-3 border-b border-slate-800">' +
+                QUICK.map(function (q) {
+                    var on = !selected && q[0] === quickKey;
+                    return '<button type="button" data-quick="' + q[0] + '" class="px-3 py-1.5 rounded-full border text-sm ' + (on
+                        ? 'bg-emerald-600 border-emerald-600 text-white'
+                        : 'bg-slate-900 border-slate-700 text-slate-300 hover:border-slate-500') + '">' + q[1] + '</button>';
+                }).join('') + '</div>' +
+                '<div class="flex items-center justify-between mb-3">' +
                 '<button type="button" data-cal="prev" aria-label="Vorige maand" class="px-3 py-1 rounded hover:bg-slate-800 text-slate-300">‹</button>' +
                 '<span class="text-sm font-semibold text-slate-100">' + MONTH_NAMES[m] + ' ' + y + '</span>' +
                 '<button type="button" data-cal="next" aria-label="Volgende maand" class="px-3 py-1 rounded hover:bg-slate-800 text-slate-300">›</button></div>' +
@@ -509,13 +509,12 @@
                 html += '<button type="button" data-day="' + iso + '" class="' + cls + '" title="' + (n ? n + ' tochten' : 'Geen tochten') + '">' + d +
                     (n && iso !== selected ? '<span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-emerald-400"></span>' : '') + '</button>';
             }
-            html += '</div><div class="flex justify-between mt-3">' +
-                '<button type="button" data-cal="clear" class="text-xs text-slate-400 hover:text-slate-200">Alle datums</button>' +
-                '<button type="button" data-cal="today" class="text-xs text-emerald-400 hover:text-emerald-300">Vandaag</button></div>';
+            html += '</div>';
             $('calendarPop').innerHTML = html;
         }
 
-        var quickRange = null;
+        var quickRange = null, quickKey = '';
+        var QUICK = [['', 'Alle datums'], ['today', 'Vandaag'], ['weekend', 'Dit weekend'], ['nextweekend', 'Volgend weekend'], ['next7', 'Komende 7 dagen']];
 
         function quickRangeFor(key) {
             var t = new Date(); t.setHours(0, 0, 0, 0);
@@ -538,28 +537,17 @@
         }
 
         function setQuick(key) {
-            quickRange = quickRangeFor(key);
+            quickKey = key || '';
+            quickRange = quickRangeFor(quickKey);
             $('dateInput').value = '';
-            $('dateBtnLabel').textContent = 'Alle datums';
-            Array.prototype.forEach.call(document.querySelectorAll('.quick-btn'), function (b) {
-                var on = (b.getAttribute('data-quick') || '') === (key || '');
-                b.className = 'quick-btn px-3 py-1.5 rounded-full border ' + (on
-                    ? 'bg-emerald-600 border-emerald-600 text-white'
-                    : 'bg-slate-900 border-slate-700 text-slate-300 hover:border-slate-500');
-            });
+            $('dateBtnLabel').textContent = QUICK.filter(function (q) { return q[0] === quickKey; })[0][1];
+            $('calendarPop').classList.add('hidden');
             renderEvents();
         }
 
         function setDate(iso) {
-            if (iso && quickRange) {            // een datum uit de kalender vervangt de snelkeuze
-                quickRange = null;
-                Array.prototype.forEach.call(document.querySelectorAll('.quick-btn'), function (b) {
-                    var on = !(b.getAttribute('data-quick'));
-                    b.className = 'quick-btn px-3 py-1.5 rounded-full border ' + (on
-                        ? 'bg-emerald-600 border-emerald-600 text-white'
-                        : 'bg-slate-900 border-slate-700 text-slate-300 hover:border-slate-500');
-                });
-            }
+            quickKey = '';
+            quickRange = null;
             $('dateInput').value = iso;
             $('dateBtnLabel').textContent = iso ? formatDate(iso) : 'Alle datums';
             $('calendarPop').classList.add('hidden');
@@ -831,8 +819,9 @@
             ev.stopPropagation();
             var b = ev.target.closest('button');
             if (!b) return;
-            var act = b.getAttribute('data-cal'), day = b.getAttribute('data-day');
-            if (act === 'prev') { calMonth = new Date(calMonth.getFullYear(), calMonth.getMonth() - 1, 1); renderCalendar(); }
+            var act = b.getAttribute('data-cal'), day = b.getAttribute('data-day'), quick = b.getAttribute('data-quick');
+            if (quick !== null) { setQuick(quick); }
+            else if (act === 'prev') { calMonth = new Date(calMonth.getFullYear(), calMonth.getMonth() - 1, 1); renderCalendar(); }
             else if (act === 'next') { calMonth = new Date(calMonth.getFullYear(), calMonth.getMonth() + 1, 1); renderCalendar(); }
             else if (act === 'clear') { setDate(''); }
             else if (act === 'today') { var t = new Date(); setDate(isoOf(t.getFullYear(), t.getMonth(), t.getDate())); }
@@ -840,10 +829,6 @@
         });
         document.addEventListener('click', function () { $('calendarPop').classList.add('hidden'); });
         document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape') $('calendarPop').classList.add('hidden'); });
-        $('quickDates').addEventListener('click', function (ev) {
-            var b = ev.target.closest('.quick-btn');
-            if (b) setQuick(b.getAttribute('data-quick') || '');
-        });
         $('postcodeBtn').addEventListener('click', applyPostcode);
         $('locBtn').addEventListener('click', function () { useLocation(false); });
         $('postcodeInput').addEventListener('keydown', function (e) { if (e.key === 'Enter') applyPostcode(); });

@@ -1028,6 +1028,13 @@
   "start": "Maison de village de Bailleul, Rue des Victimes  3, 7730 Bailleul, België",
   "v": 2
  },
+ "gd-la-gadouzienne-5": {
+  "fetched": "2026-11-15",
+  "organizer": "CYCLO BOL D'AIR ENGHIEN",
+  "price": "",
+  "start": "Centre Nautisport, chaussée de Soignies  36, 7850 Edingen, België",
+  "v": 2
+ },
  "gd-la-gadouzienne-gravel-vwb": {
   "fetched": "2026-11-06",
   "organizer": "Cyclo Bol d'Air Edingen",
@@ -1082,6 +1089,13 @@
   "organizer": "Wielerclub Sport en Moedig Genk",
   "price": "",
   "start": "Eendracht, richter  44, 3600 Genk, België",
+  "v": 2
+ },
+ "gd-stephan-aerts-classic-2026": {
+  "fetched": "2026-11-15",
+  "organizer": "VVKMS 44ste Sint-Maarten",
+  "price": "",
+  "start": "GITOK bovenbouw, Heuvelspad 20, 2920 Kalmthout, België",
   "v": 2
  },
  "gd-sterkr-toertocht-gravel-2026": {
@@ -1269,6 +1283,14 @@
   "title": "Hei en Vennentocht",
   "v": 2
  },
+ "mb-20261115-oekene-25e-mtb-tocht-amp-9e-cyclotocht-oekene": {
+  "fetched": "2026-11-15",
+  "organizer": "Wielerclub Oekene",
+  "price": "€ 5,00 – € 7,00",
+  "start": "Par. Centrum De Regenboog, Sint-Eloois-Winkelsestraat 59, 8800 Oekene, België",
+  "title": "25e MTB-Tocht & 9e Cyclotocht Oekene",
+  "v": 2
+ },
  "mb-20261115-oldenzaal-rudi-kemna-classic-039-veldtoer": {
   "fetched": "2026-11-15",
   "organizer": "Oldenzaalse Wielerclub",
@@ -1419,6 +1441,46 @@
   "price": "€ 6,00 – € 8,00",
   "start": "Sint-Andreaslyceum Sint-Kruis, Veltemweg, 8310 Sint-Kruis-Brugge, België",
   "title": "Brugse Zot Offroad",
+  "v": 2
+ },
+ "mb-20261129-brecht-rondom-brecht": {
+  "fetched": "2026-11-15",
+  "organizer": "WTC De Stoempers",
+  "price": "€ 6,00 – € 8,00",
+  "start": "Garage Felix, Heiken 66, 2960 Brecht, België",
+  "title": "Rondom Brecht",
+  "v": 2
+ },
+ "mb-20261129-brecht-strade-stoempatori-grvl": {
+  "fetched": "2026-11-15",
+  "organizer": "WTC De Stoempers",
+  "price": "€ 15,50 – € 17,50",
+  "start": "Garage Felix, Heiken 66, 2960 Brecht, België",
+  "title": "Strade Stoempatori GRVL",
+  "v": 2
+ },
+ "mb-20261129-pelt-rupsen-mtb-amp-gravel-ride": {
+  "fetched": "2026-11-15",
+  "organizer": "WTC De Dikke Rupsen",
+  "price": "€ 6,00 – € 8,00",
+  "start": "De Vranken, Herent 122, 3910 Pelt, België",
+  "title": "Rupsen MTB & Gravel Ride",
+  "v": 2
+ },
+ "mb-20261129-tielrode-wase-ardennenrit": {
+  "fetched": "2026-11-15",
+  "organizer": "Toelichting",
+  "price": "€ 6,00 – € 8,00",
+  "start": "VK Tielrode, Burgemeester Siegfried Buytaertdreef 10, 9140 Tielrode, België",
+  "title": "Wase Ardennenrit",
+  "v": 2
+ },
+ "mb-20261129-zwevegem-transfo-bike-fest": {
+  "fetched": "2026-11-15",
+  "organizer": "Guadal-Bikers",
+  "price": "€ 7,00 – € 9,00",
+  "start": "Transfo Zwevegem, Blokellestraat 113 B, 8550 Zwevegem, België",
+  "title": "Transfo Bike Fest",
   "v": 2
  },
  "mb-20261205-hertsberge-31e-bossen-van-vlaanderen": {

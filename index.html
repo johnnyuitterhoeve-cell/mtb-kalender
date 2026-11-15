@@ -22,6 +22,11 @@
     <meta name="apple-mobile-web-app-title" content="MTB Kalender">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        summary { list-style: none; }
+        summary::-webkit-details-marker { display: none; }
+        details[open] > summary .chev { transform: rotate(180deg); }
+    </style>
 </head>
 <body class="bg-slate-950 text-slate-100 min-h-screen">
     <div class="max-w-7xl mx-auto px-4 py-8">
@@ -663,32 +668,38 @@
                     var label = multi ? '<span class="text-xs text-slate-500 min-w-[3.5rem]">' + esc(v.type === 'Both' ? 'MTB/Gravel' : v.type) + '</span>' : '';
                     return '<div class="flex flex-wrap items-center gap-2">' + label + chips + '</div>';
                 }).join('');
+                var allD = [];
+                r.variants.forEach(function (v) { v.distances.forEach(function (d) { if (allD.indexOf(d) < 0) allD.push(d); }); });
+                allD.sort(function (a, b) { return a - b; });
+                var distSummary = allD.length ? (allD.length === 1 ? allD[0] : allD[0] + '–' + allD[allD.length - 1]) + ' km' : '';
                 return heading +
-                '<div class="bg-slate-900 border border-slate-800 rounded-xl p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 hover:border-slate-700 transition">' +
-                    '<div class="space-y-2 flex-1">' +
-                        '<div class="flex flex-wrap items-center gap-3">' +
-                            badges +
-                            (byDay && e.date ? '' : '<span class="text-xs text-slate-300">' + ic('calendar') + esc(formatDate(e.date)) + '</span>') +
-                            (r.dist !== null ? '<span class="text-xs text-slate-300 font-medium bg-slate-800 px-2 py-0.5 rounded border border-slate-700">' + ic('car') + r.dist + ' km rijden</span>' : '') +
-                        '</div>' +
-                        '<div class="flex items-center gap-3">' +
-                            '<h3 class="text-xl font-bold text-white">' + esc(e.title) + '</h3>' +
-                        '</div>' +
-                        '<div class="space-y-1.5 text-sm text-slate-400">' +
-                            '<div class="flex flex-wrap items-center gap-x-4 gap-y-1">' +
+                '<details class="group bg-slate-900 border border-slate-800 rounded-xl hover:border-slate-700 transition">' +
+                    '<summary class="cursor-pointer list-none px-4 sm:px-5 py-3 flex items-center gap-3">' +
+                        '<div class="flex-1 min-w-0 space-y-1">' +
+                            '<div class="flex flex-wrap items-center gap-2">' +
+                                badges +
+                                (byDay && e.date ? '' : '<span class="text-xs text-slate-300">' + ic('calendar') + esc(formatDate(e.date)) + '</span>') +
+                            '</div>' +
+                            '<h3 class="text-base sm:text-lg font-semibold text-white">' + esc(e.title) + '</h3>' +
+                            '<div class="flex flex-wrap items-center gap-x-4 gap-y-0.5 text-sm text-slate-400">' +
                                 '<span>' + ic('pin') + esc(e.location) + '</span>' +
-                                '<span>' + ic('users') + esc(e.organizer || 'Onbekend') + '</span>' +
-                                (e.price ? '<span class="text-emerald-400 font-medium">' + ic('euro') + esc(e.price) + '</span>' : '') +
+                                (r.dist !== null ? '<span>' + ic('car') + r.dist + ' km rijden</span>' : '') +
+                                (distSummary ? '<span>' + distSummary + '</span>' : '') +
+                                (e.price ? '<span class="text-emerald-400">' + ic('euro') + esc(e.price) + '</span>' : '') +
                             '</div>' +
-                            (e.start ? '<div><a href="' + esc(mapsUrl(e)) + '" target="_blank" rel="noopener" class="text-slate-300 hover:underline" title="Open de startplaats in Google Maps">' + ic('flag') + esc(shortStart(e)) + '</a></div>' : '') +
-                            '<div class="flex flex-wrap items-center gap-x-4 gap-y-1">' +
-                                '<a href="' + esc(safeUrl(e.sourceUrl)) + '" target="_blank" rel="noopener" class="text-sky-300 hover:text-sky-200 hover:underline">' + ic('link') + 'Bron bekijken</a>' +
-                                (gcal ? '<a href="' + esc(gcal) + '" target="_blank" rel="noopener" class="text-emerald-400 hover:text-emerald-300 hover:underline">' + ic('calendarPlus') + 'Zet in Google Agenda</a>' : '') +
-                            '</div>' +
+                        '</div>' +
+                        '<svg class="chev w-5 h-5 shrink-0 text-slate-500 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>' +
+                    '</summary>' +
+                    '<div class="px-4 sm:px-5 pb-4 pt-3 border-t border-slate-800 space-y-3 text-sm text-slate-400">' +
+                        '<div>' + ic('users') + esc(e.organizer || 'Organisator onbekend') + '</div>' +
+                        (e.start ? '<div><a href="' + esc(mapsUrl(e)) + '" target="_blank" rel="noopener" class="text-slate-300 hover:underline" title="Open de startplaats in Google Maps">' + ic('flag') + esc(shortStart(e)) + '</a></div>' : '') +
+                        '<div class="space-y-2">' + distHtml + '</div>' +
+                        '<div class="flex flex-wrap items-center gap-x-4 gap-y-1">' +
+                            '<a href="' + esc(safeUrl(e.sourceUrl)) + '" target="_blank" rel="noopener" class="text-sky-300 hover:text-sky-200 hover:underline">' + ic('link') + 'Bron bekijken</a>' +
+                            (gcal ? '<a href="' + esc(gcal) + '" target="_blank" rel="noopener" class="text-emerald-400 hover:text-emerald-300 hover:underline">' + ic('calendarPlus') + 'Zet in Google Agenda</a>' : '') +
                         '</div>' +
                     '</div>' +
-                    '<div class="flex flex-col gap-2 md:items-end">' + distHtml + '</div>' +
-                '</div>';
+                '</details>';
             }).join('');
         }
 

@@ -67,10 +67,7 @@
                         <p id="originLabel" class="text-xs text-slate-400 mt-2"></p>
                     </div>
 
-                    <button type="button" id="moreFiltersBtn" class="lg:hidden w-full flex items-center justify-between text-sm text-slate-300 bg-slate-800 border border-slate-700 rounded-lg px-3 py-2" aria-expanded="false" aria-controls="moreFilters">
-                        <span>Meer filters (type en afstand)</span><span id="moreFiltersArrow">▾</span>
-                    </button>
-                    <div id="moreFilters" class="space-y-6 hidden lg:block">
+                    <div id="moreFilters" class="space-y-6">
                     <div>
                         <span class="block text-sm font-medium text-slate-300 mb-2">Type fiets:</span>
                         <div id="typeFilters" class="flex gap-2">
@@ -88,7 +85,7 @@
 
                 </div>
 
-                <div class="pt-6 border-t border-slate-800 space-y-2">
+                <div class="hidden lg:block pt-6 border-t border-slate-800 space-y-2">
                     <h3 class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Bronnen</h3>
                     <ul id="sourceList" class="text-xs text-slate-400 space-y-1.5"></ul>
                     <p id="sourceUpdated" class="text-xs text-slate-500 pt-1"></p>
@@ -125,6 +122,11 @@
             </main>
         </div>
         <footer class="mt-10 pt-6 border-t border-slate-800 text-xs text-slate-500 space-y-2">
+            <div class="lg:hidden pb-4 space-y-2">
+                <h3 class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Bronnen</h3>
+                <ul id="sourceList2" class="text-xs text-slate-400 space-y-1.5"></ul>
+                <p id="sourceUpdated2" class="text-xs text-slate-500 pt-1"></p>
+            </div>
             <p>Dit is een hobbyproject zonder commercieel doel. De tochten komen van de onderliggende websites (zie "Bronnen"); bij elke tocht staat een link naar de bron. Kijk voor de actuele gegevens, prijs en inschrijving altijd op de website van de organisator. Er kunnen fouten of verouderde gegevens in staan. Deze site is niet verbonden aan de genoemde bronnen of organisatoren.</p>
             <p>Privacy: deze site gebruikt geen cookies, geen advertenties en geen statistieken. Je thuislocatie of postcode wordt alleen in je eigen browser bewaard. Voor het opzoeken van een plaats of postcode wordt die aan OpenStreetMap (Nominatim) of PDOK gestuurd. Als je "Gebruik mijn locatie" kiest, wordt je positie (afgerond op ongeveer 1 km) daarvoor naar OpenStreetMap gestuurd. De pagina laadt Tailwind CSS van cdn.tailwindcss.com.</p>
             <p>Staat jouw evenement hier en wil je dat het wordt aangepast of verwijderd? Neem dan contact op met de beheerder van deze site.</p>
@@ -745,12 +747,14 @@
                     '<span class="ml-auto text-slate-500">' + esc(text) + '</span></li>';
             }).join('');
             $('sourceList').innerHTML = html;
+            $('sourceList2').innerHTML = html;
             var up = '';
             if (sourceInfo && sourceInfo.updated) {
                 var d = new Date(sourceInfo.updated);
                 if (!isNaN(d)) up = 'Laatst bijgewerkt: ' + d.toLocaleString('nl-NL', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
             }
             $('sourceUpdated').textContent = up;
+            $('sourceUpdated2').textContent = up;
         }
 
         function loadSources() {
@@ -839,11 +843,6 @@
         $('quickDates').addEventListener('click', function (ev) {
             var b = ev.target.closest('.quick-btn');
             if (b) setQuick(b.getAttribute('data-quick') || '');
-        });
-        $('moreFiltersBtn').addEventListener('click', function () {
-            var box = $('moreFilters'), open = box.classList.toggle('hidden') === false;
-            $('moreFiltersBtn').setAttribute('aria-expanded', open ? 'true' : 'false');
-            $('moreFiltersArrow').textContent = open ? '▴' : '▾';
         });
         $('postcodeBtn').addEventListener('click', applyPostcode);
         $('locBtn').addEventListener('click', function () { useLocation(false); });

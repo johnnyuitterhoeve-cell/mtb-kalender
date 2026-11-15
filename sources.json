@@ -1,34 +1,34 @@
 {
-  "updated": "2026-11-15T16:53:48+00:00",
+  "updated": "2026-11-15T17:14:05+00:00",
   "sources": [
     {
       "name": "Mountainbike.be",
       "status": "ok",
-      "count": 51,
+      "count": 86,
       "message": ""
     },
     {
       "name": "Fietssport.nl",
       "status": "ok",
-      "count": 104,
+      "count": 91,
       "message": ""
     },
     {
       "name": "MTB-You",
       "status": "ok",
-      "count": 33,
+      "count": 11,
       "message": ""
     },
     {
       "name": "GoDare",
       "status": "ok",
-      "count": 40,
+      "count": 42,
       "message": ""
     },
     {
       "name": "Gravelbike.be",
       "status": "ok",
-      "count": 11,
+      "count": 10,
       "message": ""
     }
   ]

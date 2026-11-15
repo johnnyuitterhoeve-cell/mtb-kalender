@@ -19,16 +19,6 @@
   "start_partial": true,
   "v": 2
  },
- "fs-56922": {
-  "fetched": "2026-11-15",
-  "organizer": "TWC Netersel",
-  "price": "€ 7,00",
-  "start": "Carolus Simplexplein 15",
-  "start_lat": 51.40444,
-  "start_lon": 5.20792,
-  "start_partial": true,
-  "v": 2
- },
  "fs-57026": {
   "fetched": "2026-11-05",
   "organizer": "WTC Keitrappers",
@@ -36,16 +26,6 @@
   "start": "Eschpark 15",
   "start_lat": 51.99292,
   "start_lon": 6.56622,
-  "start_partial": true,
-  "v": 2
- },
- "fs-57027": {
-  "fetched": "2026-11-15",
-  "organizer": "WTC Keitrappers",
-  "price": "€ 7,00",
-  "start": "Eschpark 15",
-  "start_lat": 51.99184,
-  "start_lon": 6.5646,
   "start_partial": true,
   "v": 2
  },
@@ -189,16 +169,6 @@
   "start_partial": true,
   "v": 2
  },
- "fs-59578": {
-  "fetched": "2026-11-15",
-  "organizer": "RTC Hengelo",
-  "price": "€ 7,00",
-  "start": "BWOSportcomplex De Noork Oldenzaalsestraat 518 7558 PW Hengelo",
-  "start_lat": 52.27442,
-  "start_lon": 6.82487,
-  "start_partial": true,
-  "v": 2
- },
  "fs-59606": {
   "fetched": "2026-11-05",
   "organizer": "RTC Hengelo",
@@ -249,16 +219,6 @@
   "start_partial": true,
   "v": 2
  },
- "fs-59765": {
-  "fetched": "2026-11-15",
-  "organizer": "TWV De Peddelaars",
-  "price": "€ 7,00",
-  "start": "Bocholtsestraatweg 67a",
-  "start_lat": 51.91124,
-  "start_lon": 6.58514,
-  "start_partial": true,
-  "v": 2
- },
  "fs-59766": {
   "fetched": "2026-11-05",
   "organizer": "TWV De Peddelaars",
@@ -276,16 +236,6 @@
   "start": "Schoonstraat 99B",
   "start_lat": 51.72719,
   "start_lon": 5.53201,
-  "start_partial": true,
-  "v": 2
- },
- "fs-59796": {
-  "fetched": "2026-11-15",
-  "organizer": "Int. Ver. De Wielertoerist",
-  "price": "€ 5,00",
-  "start": "Putboringen Van Deynse, Krommewege 80",
-  "start_lat": 51.19423,
-  "start_lon": 3.47661,
   "start_partial": true,
   "v": 2
  },
@@ -359,16 +309,6 @@
   "start_partial": true,
   "v": 2
  },
- "fs-59889": {
-  "fetched": "2026-11-15",
-  "organizer": "TC Hulst",
-  "price": "€ 7,00",
-  "start": "Spoorweg 8",
-  "start_lat": 51.27597,
-  "start_lon": 4.04061,
-  "start_partial": true,
-  "v": 2
- },
  "fs-59892": {
   "fetched": "2026-11-05",
   "organizer": "WTC Geesteren",
@@ -396,56 +336,6 @@
   "start": "Sportpark FC Axel, Sportlaan 11",
   "start_lat": 51.26508,
   "start_lon": 3.90838,
-  "start_partial": true,
-  "v": 2
- },
- "fs-59913": {
-  "fetched": "2026-11-15",
-  "organizer": "Int. Ver. De Wielertoerist",
-  "price": "€ 5,00",
-  "start": "Putboringen Van Deynse, Krommewege 80",
-  "start_lat": 51.19422,
-  "start_lon": 3.47646,
-  "start_partial": true,
-  "v": 2
- },
- "fs-59914": {
-  "fetched": "2026-11-15",
-  "organizer": "Oldenzaalse Wielerclub",
-  "price": "€ 7,50",
-  "start": "Clubgebouw OWC, Oude Almeloseweg 1",
-  "start_lat": 52.30965,
-  "start_lon": 6.9024,
-  "start_partial": true,
-  "v": 2
- },
- "fs-59981": {
-  "fetched": "2026-11-15",
-  "organizer": "Haarlese Wielerclub SaMo",
-  "price": "€ 59,50",
-  "start": "Haarlerveldweg 1",
-  "start_lat": 52.35874,
-  "start_lon": 6.37597,
-  "start_partial": true,
-  "v": 2
- },
- "fs-59982": {
-  "fetched": "2026-11-15",
-  "organizer": "Haarlese Wielerclub SaMo",
-  "price": "€ 39,50",
-  "start": "Haarlerveldweg 1",
-  "start_lat": 52.35889,
-  "start_lon": 6.37708,
-  "start_partial": true,
-  "v": 2
- },
- "fs-59983": {
-  "fetched": "2026-11-15",
-  "organizer": "Haarlese Wielerclub SaMo",
-  "price": "€ 39,50",
-  "start": "Haarlerveldweg 1",
-  "start_lat": 52.35888,
-  "start_lon": 6.37715,
   "start_partial": true,
   "v": 2
  },
@@ -511,16 +401,6 @@
  },
  "fs-60111": {
   "fetched": "2026-11-05",
-  "organizer": "WTC De Doortrappers",
-  "price": "€ 7,00",
-  "start": "Dominicanenstraat 25",
-  "start_lat": 51.70052,
-  "start_lon": 5.72915,
-  "start_partial": true,
-  "v": 2
- },
- "fs-60112": {
-  "fetched": "2026-11-15",
   "organizer": "WTC De Doortrappers",
   "price": "€ 7,00",
   "start": "Dominicanenstraat 25",
@@ -686,16 +566,6 @@
   "start": "Camping de Meidoorn, Welgelegenweg 9",
   "start_lat": 52.18808,
   "start_lon": 5.66274,
-  "start_partial": true,
-  "v": 2
- },
- "fs-60295": {
-  "fetched": "2026-11-15",
-  "organizer": "ATB Club Grenzeloos",
-  "price": "€ 0,00",
-  "start": "Markt 12",
-  "start_lat": 51.13196,
-  "start_lon": 6.07771,
   "start_partial": true,
   "v": 2
  },
@@ -1319,6 +1189,238 @@
   "start": "Sportlaan  7, 6023BL Budel-Schoot, Nederland",
   "v": 2
  },
+ "mb-20261115-aalten-veldtoertocht-peddelaars": {
+  "fetched": "2026-11-15",
+  "organizer": "TWV De Peddelaars",
+  "price": "€ 7,00 – € 9,00",
+  "start": "Sportpark, Bocholtsestraatweg 67 A, 7121 JB Aalten, Nederland",
+  "title": "Veldtoertocht Peddelaars",
+  "v": 2
+ },
+ "mb-20261115-de-panne-panne-beach-endurance": {
+  "fetched": "2026-11-15",
+  "organizer": "Panne Beach Endurance",
+  "price": "€ 25,00",
+  "start": "Strand, Leopold I Esplanade, 8660 De Panne, België",
+  "title": "Panne Beach Endurance",
+  "v": 2
+ },
+ "mb-20261115-eksel-crossen-door-de-bossen-": {
+  "fetched": "2026-11-15",
+  "organizer": "LMTB De Soorzetters",
+  "price": "€ 6,00 – € 8,00",
+  "start": "Sporthal, Dennenstraat 8, 3941 Eksel, België",
+  "title": "Crossen door de bossen",
+  "v": 2
+ },
+ "mb-20261115-geraardsbergen-cameleon-ride": {
+  "fetched": "2026-11-15",
+  "organizer": "CAmeleon Bike",
+  "price": "€ 6,00 – € 8,00",
+  "start": "Prov. Domein De Gavers, Onkerzelestraat 280, 9500 Geraardsbergen, België",
+  "title": "Cameleon Ride",
+  "v": 2
+ },
+ "mb-20261115-haarle-dutch-masters-of-mtb": {
+  "fetched": "2026-11-15",
+  "organizer": "Haarlese Wielerclub SaMo",
+  "price": "€ 36,50 – € 59,50",
+  "start": "Manege Haarle, Haarlerveldweg  1, 7448 PR Haarle, Nederland",
+  "title": "Dutch Masters of MTB",
+  "v": 2
+ },
+ "mb-20261115-hulst-toerclub-hulst-offroad": {
+  "fetched": "2026-11-15",
+  "organizer": "Accomodaties",
+  "price": "€ 6,00 – € 8,00",
+  "start": "Partycentrum 't Spoor 011, Spoorweg 8, 461 DX  Hulst, Nederland",
+  "title": "Toerclub Hulst Offroad",
+  "v": 2
+ },
+ "mb-20261115-kalmthout-stephan-aerts-classic-2026": {
+  "fetched": "2026-11-15",
+  "organizer": "VVKMS 44 Sint-Maarten",
+  "price": "€ 4,00 – € 7,00",
+  "start": "GITOK Bovenbouw, Heuvelspad 20, 2920 Kalmthout, België",
+  "title": "Stephan Aerts Classic 2026",
+  "v": 2
+ },
+ "mb-20261115-langenboom-atb-kuuletocht": {
+  "fetched": "2026-11-15",
+  "organizer": "WTC De Doortrappers",
+  "price": "€ 6,00 – € 7,00",
+  "start": "Sporthal de Wis, Dominicanenstraat 25, 5453 JN Langenboom, Nederland",
+  "title": "ATB Kuuletocht",
+  "v": 2
+ },
+ "mb-20261115-moerkerke-vtt-heleblitz-classic": {
+  "fetched": "2026-11-15",
+  "organizer": "Sint-Rita Trappers",
+  "price": "€ 6,00 – € 8,00",
+  "start": "Sportpark Meuleweg, Vissersstraat 2 A, 8340 Moerkerke, België",
+  "title": "VTT Heleblitz Classic",
+  "v": 2
+ },
+ "mb-20261115-netersel-hei-en-vennentocht": {
+  "fetched": "2026-11-15",
+  "organizer": "TC Netersel",
+  "price": "€ 6,00 – € 7,00",
+  "start": "Café D’n Driesprong, Carolus Simplexplein 15, 5534 AJ Netersel, Nederland",
+  "title": "Hei en Vennentocht",
+  "v": 2
+ },
+ "mb-20261115-oldenzaal-rudi-kemna-classic-039-veldtoer": {
+  "fetched": "2026-11-15",
+  "organizer": "Oldenzaalse Wielerclub",
+  "price": "€ 5,00 – € 7,50",
+  "start": "Clubgebouw OWC, Oude Almeloseweg 1, 7576 PE Oldenzaal, Nederland",
+  "title": "Rudi Kemna Classic' Veldtoer",
+  "v": 2
+ },
+ "mb-20261115-tremelo-mountainbiketocht-tremelobos": {
+  "fetched": "2026-11-15",
+  "organizer": "Tremelocos",
+  "price": "€ 6,00 – € 8,00",
+  "start": "VK Tremelo, Basdongenstraat 1, 3120 Tremelo, België",
+  "title": "Mountainbiketocht Tremelobos",
+  "v": 2
+ },
+ "mb-20261115-zoersel-fingo-classic": {
+  "fetched": "2026-11-15",
+  "organizer": "KWB Zoersel",
+  "price": "€ 6,00 – € 10,00",
+  "start": "KFC Eendracht Zoersel, Westmallebaan, 2980 Zoersel, België",
+  "title": "Fingo Classic",
+  "v": 2
+ },
+ "mb-20261119-deinze-seniorenbikers-okra-oost-vlaanderen": {
+  "fetched": "2026-11-15",
+  "organizer": "OKRA",
+  "price": "",
+  "start": "Naast de kerk van Astene, Nieuwstraat 3, 9800 Deinze, België",
+  "title": "Seniorenbikers OKRA Oost-Vlaanderen",
+  "v": 2
+ },
+ "mb-20261121-maldegem-32e-mosseltocht": {
+  "fetched": "2026-11-15",
+  "organizer": "IV De Wielertoerist",
+  "price": "€ 6,00 – € 8,00",
+  "start": "Van Deynse, ²Krommeweg 80, 9990 Maldegem, België",
+  "title": "32e Mosseltocht",
+  "v": 2
+ },
+ "mb-20261122-aartrijke-23e-vtt-classic-aartrijke": {
+  "fetched": "2026-11-15",
+  "organizer": "WTC Berg en Dal",
+  "price": "€ 6,00 – € 8,00",
+  "start": "KVV Aartrijke, Aartrijksestraat 63/Z, 8211 Aartrijke, België",
+  "title": "23e VTT Classic Aartrijke",
+  "v": 2
+ },
+ "mb-20261122-de-klinge-memorial-patrick-meersschaert-": {
+  "fetched": "2026-11-15",
+  "organizer": "Accomodaties",
+  "price": "€ 6,00 – € 8,00",
+  "start": "Sporthal, Kieldrechtstraat 12, 9170 De Klinge, België",
+  "title": "Memorial Patrick Meersschaert",
+  "v": 2
+ },
+ "mb-20261122-den-helder-mtb-toertocht-texel": {
+  "fetched": "2026-11-15",
+  "organizer": "Wielersport Texel",
+  "price": "€ 16,50 – € 19,50",
+  "start": "TESO wachtlokaal, Havenplein 3Verhaven Texel, 1781 AB Den Helder, Nederland",
+  "title": "MTB Toertocht Texel",
+  "v": 2
+ },
+ "mb-20261122-enghien-la-gadouzienne": {
+  "fetched": "2026-11-15",
+  "organizer": "Cyclo Bol d'Air",
+  "price": "€ 6,00 – € 8,00",
+  "start": "Nautisport, Pavé de Soignies 36, 7850 Enghien, België",
+  "title": "La Gadouzienne",
+  "v": 2
+ },
+ "mb-20261122-evergem-vtt-cyclo-toyota-boone": {
+  "fetched": "2026-11-15",
+  "organizer": "De Burggravetrappers",
+  "price": "€ 2,00 – € 8,00",
+  "start": "Oefenterrein Evergem 2020, Drogenbroodstraat, 9940 Evergem, België",
+  "title": "VTT - Cyclo Toyota Boone",
+  "v": 2
+ },
+ "mb-20261122-hengelo-sterkr-toertocht": {
+  "fetched": "2026-11-15",
+  "organizer": "RTC Hengelo",
+  "price": "€ 6,00 – € 7,00",
+  "start": "BWO Sportcomplex De Noork, Oldenzaalsestraat 518, 7557 PW Hengelo, Nederland",
+  "title": "SterkR-toertocht",
+  "v": 2
+ },
+ "mb-20261122-lichtenvoorde-achterhoeks-argste-vishandel-bomers-mtb-tocht": {
+  "fetched": "2026-11-15",
+  "organizer": "WTC Keitrappers",
+  "price": "€ 6,00 – € 7,00",
+  "start": "Sportpark, Kerkhoflaan 5, 7131 TE Lichtenvoorde, Nederland",
+  "title": "Achterhoeks Argste / Vishandel Bomers MTB Tocht",
+  "v": 2
+ },
+ "mb-20261122-lommel-mountainbiketoertocht": {
+  "fetched": "2026-11-15",
+  "organizer": "De Zandbikers",
+  "price": "€ 6,00 – € 8,00",
+  "start": "Sporthal, Kleuterstraat 4, 3920 Lommel, België",
+  "title": "Mountainbiketoertocht",
+  "v": 2
+ },
+ "mb-20261122-maldegem-32e-mosseltocht": {
+  "fetched": "2026-11-15",
+  "organizer": "IV De Wielertoerist",
+  "price": "€ 6,00 – € 8,00",
+  "start": "Van Deynse, ²Krommeweg 80, 9990 Maldegem, België",
+  "title": "32e Mosseltocht",
+  "v": 2
+ },
+ "mb-20261122-vlodrop-2-landen-toertocht": {
+  "fetched": "2026-11-15",
+  "organizer": "ATB Club Grenzeloos",
+  "price": "€ 8,00 – € 10,00",
+  "start": "Tent, Markt 12, 6063 AD Vlodrop, Nederland",
+  "title": "2 Landen Toertocht",
+  "v": 2
+ },
+ "mb-20261124-dessel-seniorenmountainbikers-okra": {
+  "fetched": "2026-11-15",
+  "organizer": "OKRA",
+  "price": "",
+  "start": "Parking Tabloo, Gravensteen 3, 2480 Dessel, België",
+  "title": "Seniorenmountainbikers OKRA",
+  "v": 2
+ },
+ "mb-20261128-ertvelde-houtland-vtt-amp-cyclo": {
+  "fetched": "2026-11-15",
+  "organizer": "TC Houtland",
+  "price": "€ 6,00 – € 8,00",
+  "start": "Sportoase Ertvelde, Guldensporenlaan 34, 9940 Ertvelde, België",
+  "title": "Houtland VTT & Cyclo",
+  "v": 2
+ },
+ "mb-20261128-rillaar-rillaar-hurissalm-": {
+  "fetched": "2026-11-15",
+  "organizer": "Rillaarse Bikers",
+  "price": "€ 5,00 – € 7,00",
+  "start": "Rillaar Het Schors, Diestsesteenweg 320, 3202 Rillaar, België",
+  "title": "Rillaar (Hurissalm)",
+  "v": 2
+ },
+ "mb-20261128-sint-kruis-brugge-brugse-zot-offroad": {
+  "fetched": "2026-11-15",
+  "organizer": "St. Micheielse Trappers",
+  "price": "€ 6,00 – € 8,00",
+  "start": "Sint-Andreaslyceum Sint-Kruis, Veltemweg, 8310 Sint-Kruis-Brugge, België",
+  "title": "Brugse Zot Offroad",
+  "v": 2
+ },
  "mb-20261205-hertsberge-31e-bossen-van-vlaanderen": {
   "fetched": "2026-11-05",
   "organizer": "Hertetrappers",
@@ -1741,53 +1843,11 @@
   "start": "OC Albatros, Staatsbaan 241 D, 8610 Kortemark, West-Vlaanderen, België",
   "v": 2
  },
- "my-21424": {
-  "fetched": "2026-11-15",
-  "organizer": "",
-  "price": "",
-  "start": "https://beach-endurance.be/, Leopold I Esplanade 1, 8660 De Panne, West-Vlaanderen, België",
-  "v": 2
- },
- "my-21529": {
-  "fetched": "2026-11-15",
-  "organizer": "",
-  "price": "",
-  "start": "GITOK bovenbouw, Heuvelspad 20, 2920 Kalmthout, Antwerpen, België",
-  "v": 2
- },
- "my-21538": {
-  "fetched": "2026-11-15",
-  "organizer": "",
-  "price": "",
-  "start": "OC De Vranken, Herent 122, 3910 Pelt, Limburg, België",
-  "v": 2
- },
  "my-21575": {
   "fetched": "2026-11-05",
   "organizer": "",
   "price": "",
   "start": "Gemeentelijke basisschool De Zandloper, Gemeenteheistraat 1, 2400 Mol, Antwerpen, België",
-  "v": 2
- },
- "my-21580": {
-  "fetched": "2026-11-15",
-  "organizer": "",
-  "price": "",
-  "start": "Sporthal De Kubus, Onkerzelestraat 280, 9500 Geraardsbergen, Oost-Vlaanderen, België",
-  "v": 2
- },
- "my-21627": {
-  "fetched": "2026-11-15",
-  "organizer": "",
-  "price": "",
-  "start": "Par. Centrum De Regenboog, Sint-Eloois-Winkelsestraat 59, 8800 Roeselare, West-Vlaanderen, België",
-  "v": 2
- },
- "my-21642": {
-  "fetched": "2026-11-15",
-  "organizer": "",
-  "price": "",
-  "start": "Polyvalente zaal Transfo site, Blokellestraat 113b, 8550 Zwevegem, West-Vlaanderen, België",
   "v": 2
  },
  "my-21673": {
@@ -1797,123 +1857,11 @@
   "start": "Restaurant Bargo, Bredasebaan, 4744 RZ Bosschenhoofd, Halderberge, Nederland",
   "v": 2
  },
- "my-21698": {
-  "fetched": "2026-11-15",
-  "organizer": "",
-  "price": "",
-  "start": "Sportpark Meuleweg, Vissersstraat 2A, 8340 Moerkerke, West-Vlaanderen, België",
-  "v": 2
- },
  "my-21701": {
   "fetched": "2026-11-05",
   "organizer": "",
   "price": "",
   "start": "Jeugd- en SportArena, Dudenhofenlaan 2B, 8620 Nieuwpoort, West-Vlaanderen, België",
-  "v": 2
- },
- "my-21767": {
-  "fetched": "2026-11-15",
-  "organizer": "",
-  "price": "",
-  "start": "KFC Eendracht Zoersel, Westmallebaan, 2980 Zoersel, Antwerpen, België",
-  "v": 2
- },
- "my-21768": {
-  "fetched": "2026-11-15",
-  "organizer": "",
-  "price": "",
-  "start": "Sporthal, Dennenstraat 8, 3941 Hechtel-Eksel, Limburg, België",
-  "v": 2
- },
- "my-21769": {
-  "fetched": "2026-11-15",
-  "organizer": "",
-  "price": "",
-  "start": "VK Tremelo, Basdongenstraat 1, 3120 Tremelo, Vlaams-Brabant, België",
-  "v": 2
- },
- "my-21776": {
-  "fetched": "2026-11-15",
-  "organizer": "",
-  "price": "",
-  "start": "Naast de kerk van Astene, Nieuwstraat 3, 9800 Deinze, Oost-Vlaanderen, België",
-  "v": 2
- },
- "my-21778": {
-  "fetched": "2026-11-15",
-  "organizer": "",
-  "price": "",
-  "start": "Nautisport, Pavé de Soignies 36, 7850 Enghien, Hainaut, België",
-  "v": 2
- },
- "my-21779": {
-  "fetched": "2026-11-15",
-  "organizer": "",
-  "price": "",
-  "start": "Sporthal, Kleuterstraat 4, 3920 Lommel, Limburg, België",
-  "v": 2
- },
- "my-21780": {
-  "fetched": "2026-11-15",
-  "organizer": "",
-  "price": "",
-  "start": "Sporthal, Kieldrechtstraat 12, 9170 Sint-Gillis-Waas, Oost-Vlaanderen, België",
-  "v": 2
- },
- "my-21781": {
-  "fetched": "2026-11-15",
-  "organizer": "",
-  "price": "",
-  "start": "Oefenterrein Evergem 2020, Drogenbroodstraat, 9940 Evergem, Oost-Vlaanderen, België",
-  "v": 2
- },
- "my-21783": {
-  "fetched": "2026-11-15",
-  "organizer": "",
-  "price": "",
-  "start": "KVV Aartrijke, Aartrijksestraat 63, 8211 Zedelgem, West-Vlaanderen, België",
-  "v": 2
- },
- "my-21788": {
-  "fetched": "2026-11-15",
-  "organizer": "",
-  "price": "",
-  "start": "Parking Tabloo, Gravenstraat 3, 2480 Dessel, Antwerpen, België",
-  "v": 2
- },
- "my-21789": {
-  "fetched": "2026-11-15",
-  "organizer": "",
-  "price": "",
-  "start": "Sportoase Ertvelde, Guldensporenlaan 34, 9940 Evergem, Oost-Vlaanderen, België",
-  "v": 2
- },
- "my-21790": {
-  "fetched": "2026-11-15",
-  "organizer": "",
-  "price": "",
-  "start": "Rillaar Het Schors, Diestsesteenweg, 3202 Aarschot, Vlaams-Brabant, België",
-  "v": 2
- },
- "my-21791": {
-  "fetched": "2026-11-15",
-  "organizer": "",
-  "price": "",
-  "start": "Sint-Andreaslyceum Sint-Kruis, Veltemweg, 8310 Brugge, West-Vlaanderen, België",
-  "v": 2
- },
- "my-21792": {
-  "fetched": "2026-11-15",
-  "organizer": "",
-  "price": "",
-  "start": "Garage Felix, Heiken 66, 2960 Brecht, Antwerpen, België",
-  "v": 2
- },
- "my-21794": {
-  "fetched": "2026-11-15",
-  "organizer": "",
-  "price": "",
-  "start": "VK Tielrode, Burgemeester Siegfried Buytaertdreef 10, 9140 Temse, Oost-Vlaanderen, België",
   "v": 2
  },
  "my-21798": {

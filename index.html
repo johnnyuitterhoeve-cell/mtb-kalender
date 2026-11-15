@@ -67,6 +67,10 @@
                         <p id="originLabel" class="text-xs text-slate-400 mt-2"></p>
                     </div>
 
+                    <button type="button" id="moreFiltersBtn" class="lg:hidden w-full flex items-center justify-between text-sm text-slate-300 bg-slate-800 border border-slate-700 rounded-lg px-3 py-2" aria-expanded="false" aria-controls="moreFilters">
+                        <span>Meer filters (type en afstand)</span><span id="moreFiltersArrow">▾</span>
+                    </button>
+                    <div id="moreFilters" class="space-y-6 hidden lg:block">
                     <div>
                         <span class="block text-sm font-medium text-slate-300 mb-2">Type fiets:</span>
                         <div id="typeFilters" class="flex gap-2">
@@ -79,6 +83,7 @@
                     <div>
                         <label for="maxDistance" class="block text-sm font-medium text-slate-300 mb-2">Max. reisafstand: <span id="maxDistVal" class="text-emerald-400">250</span> km</label>
                         <input type="range" id="maxDistance" min="10" max="250" value="250" class="w-full accent-emerald-500 cursor-pointer">
+                    </div>
                     </div>
 
                 </div>
@@ -100,6 +105,12 @@
                         </button>
                         <div id="calendarPop" class="hidden absolute right-0 mt-2 z-20 w-72 bg-slate-900 border border-slate-700 rounded-xl shadow-xl p-4"></div>
                     </div>
+                </div>
+                <div id="quickDates" class="flex flex-wrap gap-2 text-sm">
+                    <button type="button" data-quick="" class="quick-btn px-3 py-1.5 rounded-full border bg-emerald-600 border-emerald-600 text-white">Alle datums</button>
+                    <button type="button" data-quick="today" class="quick-btn px-3 py-1.5 rounded-full border bg-slate-900 border-slate-700 text-slate-300 hover:border-slate-500">Vandaag</button>
+                    <button type="button" data-quick="weekend" class="quick-btn px-3 py-1.5 rounded-full border bg-slate-900 border-slate-700 text-slate-300 hover:border-slate-500">Dit weekend</button>
+                    <button type="button" data-quick="nextweek" class="quick-btn px-3 py-1.5 rounded-full border bg-slate-900 border-slate-700 text-slate-300 hover:border-slate-500">Volgende week</button>
                 </div>
                 <div class="flex flex-wrap items-center justify-between gap-2">
                     <p id="statusLine" class="text-xs text-slate-500"></p>
@@ -501,7 +512,49 @@
             $('calendarPop').innerHTML = html;
         }
 
+        var quickRange = null;
+
+        function quickRangeFor(key) {
+            var t = new Date(); t.setHours(0, 0, 0, 0);
+            var iso = function (d) { return isoOf(d.getFullYear(), d.getMonth(), d.getDate()); };
+            var add = function (d, n) { var x = new Date(d); x.setDate(x.getDate() + n); return x; };
+            var dow = (t.getDay() + 6) % 7;                       // 0 = maandag
+            if (key === 'today') return { from: iso(t), to: iso(t) };
+            if (key === 'weekend') {
+                if (dow === 6) return { from: iso(t), to: iso(t) };            // vandaag is zondag
+                var sat = add(t, 5 - dow < 0 ? 0 : 5 - dow);                    // komende of huidige zaterdag
+                return { from: iso(sat), to: iso(add(sat, 1)) };
+            }
+            if (key === 'nextweek') {
+                var mon = add(t, 7 - dow);
+                return { from: iso(mon), to: iso(add(mon, 6)) };
+            }
+            return null;
+        }
+
+        function setQuick(key) {
+            quickRange = quickRangeFor(key);
+            $('dateInput').value = '';
+            $('dateBtnLabel').textContent = 'Alle datums';
+            Array.prototype.forEach.call(document.querySelectorAll('.quick-btn'), function (b) {
+                var on = (b.getAttribute('data-quick') || '') === (key || '');
+                b.className = 'quick-btn px-3 py-1.5 rounded-full border ' + (on
+                    ? 'bg-emerald-600 border-emerald-600 text-white'
+                    : 'bg-slate-900 border-slate-700 text-slate-300 hover:border-slate-500');
+            });
+            renderEvents();
+        }
+
         function setDate(iso) {
+            if (iso && quickRange) {            // een datum uit de kalender vervangt de snelkeuze
+                quickRange = null;
+                Array.prototype.forEach.call(document.querySelectorAll('.quick-btn'), function (b) {
+                    var on = !(b.getAttribute('data-quick'));
+                    b.className = 'quick-btn px-3 py-1.5 rounded-full border ' + (on
+                        ? 'bg-emerald-600 border-emerald-600 text-white'
+                        : 'bg-slate-900 border-slate-700 text-slate-300 hover:border-slate-500');
+                });
+            }
             $('dateInput').value = iso;
             $('dateBtnLabel').textContent = iso ? formatDate(iso) : 'Alle datums';
             $('calendarPop').classList.add('hidden');
@@ -572,6 +625,7 @@
                     && (!e.date || e.date >= todayIso)   // tochten van gisteren en eerder niet tonen
                     && text.indexOf(searchVal) > -1
                     && (!dateVal || e.date === dateVal)
+                    && (!quickRange || (e.date && e.date >= quickRange.from && e.date <= quickRange.to))
                     && (r.dist === null || r.dist <= maxDist);
             });
 
@@ -779,6 +833,15 @@
         });
         document.addEventListener('click', function () { $('calendarPop').classList.add('hidden'); });
         document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape') $('calendarPop').classList.add('hidden'); });
+        $('quickDates').addEventListener('click', function (ev) {
+            var b = ev.target.closest('.quick-btn');
+            if (b) setQuick(b.getAttribute('data-quick') || '');
+        });
+        $('moreFiltersBtn').addEventListener('click', function () {
+            var box = $('moreFilters'), open = box.classList.toggle('hidden') === false;
+            $('moreFiltersBtn').setAttribute('aria-expanded', open ? 'true' : 'false');
+            $('moreFiltersArrow').textContent = open ? '▴' : '▾';
+        });
         $('postcodeBtn').addEventListener('click', applyPostcode);
         $('locBtn').addEventListener('click', function () { useLocation(false); });
         $('postcodeInput').addEventListener('keydown', function (e) { if (e.key === 'Enter') applyPostcode(); });

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://toertochtenkalender.nl/sitemap.xml

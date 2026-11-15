@@ -137,24 +137,6 @@
     "start": "Prov. Domein De Gavers, Onkerzelestraat 280, 9500 Geraardsbergen, België"
   },
   {
-    "id": "gd-cameleon-ride-2",
-    "title": "Cameleon ride",
-    "date": "2026-11-15",
-    "location": "Geraardsbergen",
-    "type": "Gravel",
-    "distances": [
-      60
-    ],
-    "organizer": "CAMELEON BIKE",
-    "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/cameleon-ride-2",
-    "price": "",
-    "source": "GoDare",
-    "country": "BE",
-    "lat": 50.7716,
-    "lon": 3.8827,
-    "start": "Provinciaal Domein De Gavers, Onkerzelestraat, 9500 Geraardsbergen, België"
-  },
-  {
     "id": "mb-20261115-haarle-dutch-masters-of-mtb",
     "title": "Dutch Masters of MTB",
     "date": "2026-11-15",
@@ -234,24 +216,19 @@
     "start": "GITOK Bovenbouw, Heuvelspad 20, 2920 Kalmthout, België"
   },
   {
-    "id": "gd-stephan-aerts-classic-2026",
-    "title": "Stephan Aerts Classic 2026",
+    "id": "gb-2026-11-15-stephan-aerts-classic",
+    "title": "Stephan Aerts Classic",
     "date": "2026-11-15",
     "location": "Kalmthout",
     "type": "Gravel",
-    "distances": [
-      60,
-      80,
-      100
-    ],
-    "organizer": "VVKMS 44ste Sint-Maarten",
-    "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/stephan-aerts-classic-2026",
+    "distances": [],
+    "organizer": "Gravelbike.be",
+    "sourceUrl": "https://vtt.44ste.be",
     "price": "",
-    "source": "GoDare",
+    "source": "Gravelbike.be",
     "country": "BE",
     "lat": 51.3828,
-    "lon": 4.4765,
-    "start": "GITOK bovenbouw, Heuvelspad 20, 2920 Kalmthout, België"
+    "lon": 4.4765
   },
   {
     "id": "mb-20261115-langenboom-atb-kuuletocht",
@@ -623,24 +600,6 @@
     "start": "Pontweg 1, Den Hoorn, Nederland",
     "startLat": 53.02267,
     "startLon": 4.78426
-  },
-  {
-    "id": "gd-la-gadouzienne-5",
-    "title": "La Gadouzienne",
-    "date": "2026-11-22",
-    "location": "Edingen",
-    "type": "Gravel",
-    "distances": [
-      60
-    ],
-    "organizer": "CYCLO BOL D'AIR ENGHIEN",
-    "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/la-gadouzienne-5",
-    "price": "",
-    "source": "GoDare",
-    "country": "BE",
-    "lat": 50.6957,
-    "lon": 4.0412,
-    "start": "Centre Nautisport, chaussée de Soignies  36, 7850 Edingen, België"
   },
   {
     "id": "gd-la-gadouzienne-gravel-vwb",
@@ -2091,28 +2050,6 @@
     "start": "Sporthal De Zuiderpoort, Sportlaan  1, 6023BL Budel-Schoot, Nederland"
   },
   {
-    "id": "fs-60157",
-    "title": "HRTC DOK - MTB Napoleontocht",
-    "date": "2026-12-13",
-    "location": "Den Helder",
-    "type": "MTB",
-    "distances": [
-      27,
-      30,
-      57
-    ],
-    "organizer": "HRTC DOK",
-    "sourceUrl": "https://www.fietssport.nl/toertochten/60157/hrtc-dok-mtb-napoleontocht-2026",
-    "price": "€ 10,00",
-    "source": "Fietssport.nl",
-    "country": "NL",
-    "lat": 52.9509,
-    "lon": 4.7936,
-    "start": "Guldemondweg, Den Helder, Nederland",
-    "startLat": 52.92953,
-    "startLon": 4.78361
-  },
-  {
     "id": "mb-20261213-den-helder-hrtc-dok-mtb-napoleontocht",
     "title": "HRTC DOK - MTB Napoleontocht",
     "date": "2026-12-13",
@@ -2191,25 +2128,6 @@
     "lat": 50.5416,
     "lon": 3.427,
     "start": "La Ferme Fleurie, Rue de Tournai 169, 7620 Hollain, België"
-  },
-  {
-    "id": "gd-vtt-de-la-ferme-fleurie-6",
-    "title": "VTT de la Ferme Fleurie",
-    "date": "2026-12-13",
-    "location": "Hollain",
-    "type": "MTB",
-    "distances": [
-      5,
-      10
-    ],
-    "organizer": "Telefoonnummer",
-    "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/vtt-de-la-ferme-fleurie-6",
-    "price": "",
-    "source": "GoDare",
-    "country": "BE",
-    "lat": 50.5416,
-    "lon": 3.427,
-    "start": "La Ferme fleurie, Rue de Tournai  169, 7620 Hollain, België"
   },
   {
     "id": "mb-20261213-lonneker-op-en-um-039-n-bolt-mtb",
@@ -3182,28 +3100,6 @@
     "lat": 50.8646,
     "lon": 4.6938,
     "start": "Sporthal, Hertogstraat 182, 3001 Heverlee, België"
-  },
-  {
-    "id": "gd-marathon-maniac-6",
-    "title": "Marathon Maniac",
-    "date": "2026-12-28",
-    "location": "Heverlee",
-    "type": "Gravel",
-    "distances": [
-      40,
-      60,
-      85,
-      120,
-      136
-    ],
-    "organizer": "eco mountainbike team vzw",
-    "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/marathon-maniac-6",
-    "price": "",
-    "source": "GoDare",
-    "country": "BE",
-    "lat": 50.8646,
-    "lon": 4.6938,
-    "start": "Sporthal Heverlee, Hertogstraat 180, 3001 Heverlee, België"
   },
   {
     "id": "mb-20261228-hooglede-24e-mtb-cyclo-gitsbergtoertocht",

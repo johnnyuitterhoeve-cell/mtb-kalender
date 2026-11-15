@@ -1,16 +1,16 @@
 {
-  "updated": "2026-11-15T12:12:02+00:00",
+  "updated": "2026-11-15T16:20:49+00:00",
   "sources": [
     {
       "name": "Mountainbike.be",
-      "status": "ok",
+      "status": "oud",
       "count": 86,
-      "message": ""
+      "message": "geen nieuwe tochten opgehaald"
     },
     {
       "name": "Fietssport.nl",
       "status": "ok",
-      "count": 91,
+      "count": 90,
       "message": ""
     },
     {
@@ -22,13 +22,13 @@
     {
       "name": "GoDare",
       "status": "ok",
-      "count": 42,
+      "count": 37,
       "message": ""
     },
     {
       "name": "Gravelbike.be",
       "status": "ok",
-      "count": 10,
+      "count": 11,
       "message": ""
     }
   ]

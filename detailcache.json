@@ -439,16 +439,6 @@
   "start_partial": true,
   "v": 2
  },
- "fs-60157": {
-  "fetched": "2026-11-07",
-  "organizer": "HRTC DOK",
-  "price": "€ 10,00",
-  "start": "Guldemondweg",
-  "start_lat": 52.92953,
-  "start_lon": 4.78361,
-  "start_partial": true,
-  "v": 2
- },
  "fs-60175": {
   "fetched": "2026-11-05",
   "organizer": "SVDO Tourbuffels",
@@ -923,13 +913,6 @@
   "start": "voetbalkantine sporting grote brogel, bocholterweg, 3990 Grote-Brogel, België",
   "v": 2
  },
- "gd-cameleon-ride-2": {
-  "fetched": "2026-11-06",
-  "organizer": "CAMELEON BIKE",
-  "price": "",
-  "start": "Provinciaal Domein De Gavers, Onkerzelestraat, 9500 Geraardsbergen, België",
-  "v": 2
- },
  "gd-de-classic-beachrace": {
   "fetched": "2026-11-06",
   "organizer": "Twins Club Bredene",
@@ -1028,13 +1011,6 @@
   "start": "Maison de village de Bailleul, Rue des Victimes  3, 7730 Bailleul, België",
   "v": 2
  },
- "gd-la-gadouzienne-5": {
-  "fetched": "2026-11-06",
-  "organizer": "CYCLO BOL D'AIR ENGHIEN",
-  "price": "",
-  "start": "Centre Nautisport, chaussée de Soignies  36, 7850 Edingen, België",
-  "v": 2
- },
  "gd-la-gadouzienne-gravel-vwb": {
   "fetched": "2026-11-06",
   "organizer": "Cyclo Bol d'Air Edingen",
@@ -1047,13 +1023,6 @@
   "organizer": "WTC MALDEGEM VZW",
   "price": "",
   "start": "Sporthal De Berken, Kleitkalseide  109A, 9990 Maldegem, België",
-  "v": 2
- },
- "gd-marathon-maniac-6": {
-  "fetched": "2026-11-06",
-  "organizer": "eco mountainbike team vzw",
-  "price": "",
-  "start": "Sporthal Heverlee, Hertogstraat 180, 3001 Heverlee, België",
   "v": 2
  },
  "gd-mtb-en-grindtocht-kattenbos-bevers-2027": {
@@ -1089,13 +1058,6 @@
   "organizer": "Wielerclub Sport en Moedig Genk",
   "price": "",
   "start": "Eendracht, richter  44, 3600 Genk, België",
-  "v": 2
- },
- "gd-stephan-aerts-classic-2026": {
-  "fetched": "2026-11-06",
-  "organizer": "VVKMS 44ste Sint-Maarten",
-  "price": "",
-  "start": "GITOK bovenbouw, Heuvelspad 20, 2920 Kalmthout, België",
   "v": 2
  },
  "gd-sterkr-toertocht-gravel-2026": {
@@ -1159,13 +1121,6 @@
   "organizer": "Kloppen deze gegevens niet?",
   "price": "",
   "start": "Province de Namur x Au choix sur la trace, 5000 Namur, België",
-  "v": 2
- },
- "gd-vtt-de-la-ferme-fleurie-6": {
-  "fetched": "2026-11-06",
-  "organizer": "Telefoonnummer",
-  "price": "",
-  "start": "La Ferme fleurie, Rue de Tournai  169, 7620 Hollain, België",
   "v": 2
  },
  "gd-vtt-en-cyclotocht-ernest-van-der-haeghen": {

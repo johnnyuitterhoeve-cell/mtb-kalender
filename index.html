@@ -25,10 +25,23 @@
 </head>
 <body class="bg-slate-950 text-slate-100 min-h-screen">
     <div class="max-w-7xl mx-auto px-4 py-8">
-        <header class="flex justify-between items-center mb-8 border-b border-slate-800 pb-4">
-            <div>
-                <h1 class="text-3xl font-bold flex items-center gap-2"><span>🚴</span> MTB & Gravel Kalender</h1>
-                <p class="text-slate-400 text-sm mt-1">Alle MTB- en gravel-toertochten in Nederland, België en omgeving op één plek</p>
+        <header class="mb-8 border-b border-slate-800 pb-6">
+            <div class="flex items-center gap-4">
+                <svg class="w-12 h-12 sm:w-14 sm:h-14 shrink-0 rounded-2xl" viewBox="0 0 512 512" aria-hidden="true">
+                    <defs><linearGradient id="logoBg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2f9e5b"/><stop offset="1" stop-color="#14532d"/></linearGradient></defs>
+                    <rect width="512" height="512" fill="url(#logoBg)"/>
+                    <circle cx="372" cy="150" r="34" fill="#fcd34d"/>
+                    <path d="M40 330 L170 160 L250 265 L305 205 L472 330 Z" fill="#0f3d22" opacity=".55"/>
+                    <path d="M30 400 Q256 350 482 400 L482 512 L30 512 Z" fill="#d6b88a"/>
+                    <g fill="none" stroke="#fff" stroke-width="13" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="165" cy="372" r="62"/><circle cx="347" cy="372" r="62"/>
+                        <path d="M165 372 L225 270 L318 270 L347 372M225 270 L262 372 L165 372M262 372 L318 270M205 250 L240 250M318 270 L305 232 L338 224"/>
+                    </g>
+                </svg>
+                <div>
+                    <h1 class="text-2xl sm:text-4xl font-bold tracking-tight">MTB <span class="text-emerald-400">&amp;</span> Gravel Kalender</h1>
+                    <p class="text-slate-400 text-sm sm:text-base mt-1">Alle MTB- en gravel-toertochten in Nederland, België en omgeving op één plek</p>
+                </div>
             </div>
         </header>
 
@@ -292,6 +305,18 @@
             if (!m) return iso || 'Datum onbekend';
             var d = new Date(+m[1], +m[2] - 1, +m[3]);
             return d.toLocaleDateString('nl-NL', { weekday: 'short', day: 'numeric', month: 'long', year: 'numeric' });
+        }
+
+        function dayHeading(iso) {
+            var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso || '');
+            if (!m) return 'Datum onbekend';
+            var d = new Date(+m[1], +m[2] - 1, +m[3]);
+            var t = new Date(); t.setHours(0, 0, 0, 0);
+            var diff = Math.round((d - t) / 86400000);
+            var txt = d.toLocaleDateString('nl-NL', { weekday: 'long', day: 'numeric', month: 'long' });
+            if (diff === 0) return 'Vandaag · ' + txt;
+            if (diff === 1) return 'Morgen · ' + txt;
+            return txt;
         }
 
         // ---------- Status ----------
@@ -566,8 +591,18 @@
                 return;
             }
 
+            var byDay = sortMode === 'date';
+            var perDay = {};
+            rows.forEach(function (r) { var k = r.ev.date || ''; perDay[k] = (perDay[k] || 0) + 1; });
+            var lastDay = null;
             container.innerHTML = rows.map(function (r) {
                 var e = r.ev;
+                var heading = '';
+                if (byDay && (e.date || '') !== lastDay) {
+                    lastDay = e.date || '';
+                    heading = '<div class="flex items-baseline gap-3 pt-4 first:pt-0"><h2 class="text-sm font-semibold text-slate-200 first-letter:uppercase">' + esc(dayHeading(e.date)) +
+                        '</h2><span class="text-xs text-slate-500">' + perDay[lastDay] + (perDay[lastDay] === 1 ? ' tocht' : ' tochten') + '</span><div class="flex-1 border-t border-slate-800"></div></div>';
+                }
                 var multi = r.variants.length > 1;
                 var gcal = gcalUrl(e, r.variants);
                 var badges = r.variants.map(function (v) {
@@ -581,12 +616,12 @@
                     var label = multi ? '<span class="text-xs text-slate-500 min-w-[3.5rem]">' + esc(v.type === 'Both' ? 'MTB/Gravel' : v.type) + '</span>' : '';
                     return '<div class="flex flex-wrap items-center gap-2">' + label + chips + '</div>';
                 }).join('');
-                return '' +
+                return heading +
                 '<div class="bg-slate-900 border border-slate-800 rounded-xl p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 hover:border-slate-700 transition">' +
                     '<div class="space-y-2 flex-1">' +
                         '<div class="flex flex-wrap items-center gap-3">' +
                             badges +
-                            '<span class="text-xs text-slate-300">' + ic('calendar') + esc(formatDate(e.date)) + '</span>' +
+                            (byDay && e.date ? '' : '<span class="text-xs text-slate-300">' + ic('calendar') + esc(formatDate(e.date)) + '</span>') +
                             (r.dist !== null ? '<span class="text-xs text-slate-300 font-medium bg-slate-800 px-2 py-0.5 rounded border border-slate-700">' + ic('car') + r.dist + ' km rijden</span>' : '') +
                         '</div>' +
                         '<div class="flex items-center gap-3">' +

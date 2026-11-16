@@ -1,0 +1,30 @@
+  <!-- snelheidslijnen -->
+  <g stroke="#fff" stroke-width="7" stroke-linecap="round" opacity=".55">
+    <path d="M36 322 H88"/><path d="M52 352 H98"/><path d="M38 384 H74"/>
+  </g>
+  <!-- mountainbike: brede noppenbanden, vork met vering, recht stuur -->
+  <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke-width="20"><circle cx="160" cy="372" r="58"/><circle cx="366" cy="372" r="58"/></g>
+    <g stroke-width="7" stroke-dasharray="5 9" opacity=".75"><circle cx="160" cy="372" r="72"/><circle cx="366" cy="372" r="72"/></g>
+    <g stroke-width="3.5" opacity=".7"><circle cx="160" cy="372" r="40"/><circle cx="366" cy="372" r="40"/>
+      <path d="M160 332V412M120 372H200M132 344L188 400M188 344L132 400"/><path d="M366 332V412M326 372H406M338 344L394 400M394 344L338 400"/></g>
+    <g stroke-width="3" opacity=".9"><circle cx="160" cy="372" r="13"/><circle cx="366" cy="372" r="13"/></g>
+    <g stroke-width="14">
+      <path d="M160 372 L224 272"/>
+      <path d="M224 272 L326 250"/>
+      <path d="M224 272 L256 372 L334 278"/>
+      <path d="M256 372 L160 372"/>
+      <path d="M326 244 L336 278"/>
+    </g>
+    <path d="M336 278 L350 322" stroke-width="19"/>
+    <path d="M350 322 L366 372" stroke-width="11"/>
+    <g stroke-width="11">
+      <path d="M326 244 L338 222"/>
+      <path d="M318 218 L372 214"/>
+      <path d="M224 272 L216 246"/>
+    </g>
+    <path d="M196 240 L242 240" stroke-width="16"/>
+    <path d="M256 372 L280 410" stroke-width="9"/>
+  </g>
+  <circle cx="256" cy="372" r="14" fill="#fff"/>
+  <circle cx="256" cy="372" r="6" fill="#14532d"/>

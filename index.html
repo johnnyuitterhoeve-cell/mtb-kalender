@@ -510,39 +510,49 @@
             allEvents.forEach(function (e) { if (e.date) counts[e.date] = (counts[e.date] || 0) + 1; });
             var selected = $('dateInput').value;
             var now = new Date(), todayIso = isoOf(now.getFullYear(), now.getMonth(), now.getDate());
-            var offset = (new Date(y, m, 1).getDay() + 6) % 7;   // week begint op maandag
+            var curMonth = (y === now.getFullYear() && m === now.getMonth());
+            var firstDay = 1;
+            if (curMonth) firstDay = Math.max(1, now.getDate() - ((now.getDay() + 6) % 7));   // begin bij de huidige week (maandag)
+            var offset = (new Date(y, m, firstDay).getDay() + 6) % 7;   // week begint op maandag
             var days = new Date(y, m + 1, 0).getDate();
-            var html = '<div class="flex flex-wrap gap-2 pb-3 mb-3 border-b border-slate-800">' +
+            var tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+            var quickCount = { '': null, today: counts[todayIso] || 0, tomorrow: counts[isoOf(tomorrow.getFullYear(), tomorrow.getMonth(), tomorrow.getDate())] || 0 };
+            var html = '<div class="grid grid-cols-3 gap-2 pb-3 mb-3 border-b border-slate-800">' +
                 QUICK.map(function (q) {
                     var on = !selected && q[0] === quickKey;
-                    return '<button type="button" data-quick="' + q[0] + '" class="px-3 py-1.5 rounded-full border text-sm ' + (on
+                    var c = quickCount[q[0]];
+                    return '<button type="button" data-quick="' + q[0] + '" class="px-2 py-2 rounded-lg border text-sm leading-tight ' + (on
                         ? 'bg-emerald-600 border-emerald-600 text-white'
-                        : 'bg-slate-900 border-slate-700 text-slate-300 hover:border-slate-500') + '">' + q[1] + '</button>';
+                        : 'bg-slate-900 border-slate-700 text-slate-300 hover:border-slate-500') + '">' + q[1] +
+                        (c === null ? '' : '<span class="block text-xs ' + (on ? 'text-emerald-100' : 'text-slate-500') + '">' + c + (c === 1 ? ' tocht' : ' tochten') + '</span>') + '</button>';
                 }).join('') + '</div>' +
                 '<div class="flex items-center justify-between mb-3">' +
-                '<button type="button" data-cal="prev" aria-label="Vorige maand" class="px-3 py-1 rounded hover:bg-slate-800 text-slate-300">‹</button>' +
+                (curMonth ? '<span class="px-3 py-1 text-slate-700">‹</span>' : '<button type="button" data-cal="prev" aria-label="Vorige maand" class="px-3 py-1 rounded hover:bg-slate-800 text-slate-300">‹</button>') +
                 '<span class="text-sm font-semibold text-slate-100">' + MONTH_NAMES[m] + ' ' + y + '</span>' +
                 '<button type="button" data-cal="next" aria-label="Volgende maand" class="px-3 py-1 rounded hover:bg-slate-800 text-slate-300">›</button></div>' +
                 '<div class="grid grid-cols-7 gap-1 text-center text-xs text-slate-500 mb-1">' +
                 ['ma', 'di', 'wo', 'do', 'vr', 'za', 'zo'].map(function (d) { return '<span>' + d + '</span>'; }).join('') +
                 '</div><div class="grid grid-cols-7 gap-1">';
             for (var i = 0; i < offset; i++) html += '<span></span>';
-            for (var d = 1; d <= days; d++) {
-                var iso = isoOf(y, m, d), n = counts[iso] || 0;
-                var cls = 'relative h-9 rounded-lg text-sm transition ';
-                if (iso === selected) cls += 'bg-emerald-600 text-white font-semibold';
+            for (var d = firstDay; d <= days; d++) {
+                var iso = isoOf(y, m, d), n = counts[iso] || 0, past = iso < todayIso;
+                var inSel = iso === selected || (!selected && quickRange && iso >= quickRange.from && iso <= quickRange.to);
+                var cls = 'relative h-11 rounded-lg text-sm leading-none transition flex flex-col items-center justify-center ';
+                var dis = '';
+                if (inSel) cls += 'bg-emerald-600 text-white font-semibold';
+                else if (past) { cls += 'text-slate-700 cursor-default'; dis = ' disabled'; }
                 else if (n) cls += 'bg-slate-800 text-slate-100 hover:bg-slate-700';
-                else cls += 'text-slate-600 hover:bg-slate-800';
-                if (iso === todayIso && iso !== selected) cls += ' ring-1 ring-emerald-500';
-                html += '<button type="button" data-day="' + iso + '" class="' + cls + '" title="' + (n ? n + ' tochten' : 'Geen tochten') + '">' + d +
-                    (n && iso !== selected ? '<span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-emerald-400"></span>' : '') + '</button>';
+                else { cls += 'text-slate-500 cursor-default'; dis = ' disabled'; }
+                if (iso === todayIso && !inSel) cls += ' ring-1 ring-emerald-500';
+                html += '<button type="button" data-day="' + iso + '"' + dis + ' class="' + cls + '" title="' + (n ? n + ' tochten' : 'Geen tochten') + '">' +
+                    '<span>' + d + '</span>' + (n ? '<span class="text-[10px] mt-0.5 ' + (inSel ? 'text-emerald-100' : 'text-emerald-400') + '">' + n + '</span>' : '') + '</button>';
             }
             html += '</div>';
             $('calendarPop').innerHTML = html;
         }
 
         var quickRange = null, quickKey = '';
-        var QUICK = [['', 'Alle datums'], ['today', 'Vandaag'], ['weekend', 'Dit weekend'], ['nextweekend', 'Volgend weekend'], ['next7', 'Komende 7 dagen']];
+        var QUICK = [['', 'Alle datums'], ['today', 'Vandaag'], ['tomorrow', 'Morgen']];
 
         function quickRangeFor(key) {
             var t = new Date(); t.setHours(0, 0, 0, 0);
@@ -550,17 +560,7 @@
             var add = function (d, n) { var x = new Date(d); x.setDate(x.getDate() + n); return x; };
             var dow = (t.getDay() + 6) % 7;                       // 0 = maandag
             if (key === 'today') return { from: iso(t), to: iso(t) };
-            if (key === 'weekend') {
-                if (dow === 6) return { from: iso(t), to: iso(t) };            // vandaag is zondag
-                var sat = add(t, 5 - dow < 0 ? 0 : 5 - dow);                    // komende of huidige zaterdag
-                return { from: iso(sat), to: iso(add(sat, 1)) };
-            }
-            if (key === 'nextweekend') {
-                var thisSat = dow <= 5 ? add(t, 5 - dow) : add(t, -1);        // zaterdag van "dit weekend"
-                var nextSat = add(thisSat, 7);
-                return { from: iso(nextSat), to: iso(add(nextSat, 1)) };
-            }
-            if (key === 'next7') return { from: iso(t), to: iso(add(t, 6)) };
+            if (key === 'tomorrow') return { from: iso(add(t, 1)), to: iso(add(t, 1)) };
             return null;
         }
 

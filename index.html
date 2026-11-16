@@ -606,8 +606,46 @@
                 '&details=' + encodeURIComponent(lines.join('\n'));
         }
 
+        // ---------- Filters onthouden en delen via de link ----------
+        // Keuzes komen in de adresbalk (deelbaar) en in de browser (voor de volgende keer). Locatie wordt los bewaard.
+        var restoring = true;
+        function saveState() {
+            if (restoring) return;
+            var st = {
+                type: selectedType === 'Alle' ? '' : selectedType,
+                sort: sortMode === 'date' ? '' : sortMode,
+                q: $('searchInput').value.trim(),
+                max: $('maxDistance').value === $('maxDistance').max ? '' : $('maxDistance').value,
+                dag: $('dateInput').value,
+                wanneer: quickKey
+            };
+            try { localStorage.setItem('mtb_filters', JSON.stringify(st)); } catch (err) { /* geen opslag */ }
+            try {
+                var qs = Object.keys(st).filter(function (k) { return st[k]; })
+                    .map(function (k) { return k + '=' + encodeURIComponent(st[k]); }).join('&');
+                history.replaceState(null, '', location.pathname + (qs ? '?' + qs : ''));
+            } catch (err) { /* bv. bij openen als bestand */ }
+        }
+        function restoreState() {
+            var st = {}, fromUrl = false;
+            try {
+                new URLSearchParams(location.search).forEach(function (v, k) { st[k] = v; fromUrl = true; });
+            } catch (err) { /* oude browser */ }
+            if (!fromUrl) { try { st = JSON.parse(localStorage.getItem('mtb_filters')) || {}; } catch (err) { st = {}; } }
+            var t = document.querySelector('.type-btn[data-type="' + (st.type || 'Alle') + '"]');
+            if (t) t.click();
+            var so = document.querySelector('.sort-btn[data-sort="' + (st.sort || 'date') + '"]');
+            if (so) so.click();
+            if (st.q) $('searchInput').value = st.q;
+            var mx = parseInt(st.max, 10);
+            if (mx >= 10 && mx <= 250) { $('maxDistance').value = mx; $('maxDistVal').textContent = mx; }
+            if (st.wanneer && QUICK.some(function (q) { return q[0] === st.wanneer; })) setQuick(st.wanneer);
+            else if (/^\d{4}-\d\d-\d\d$/.test(st.dag || '')) setDate(st.dag);
+        }
+
         // ---------- Renderen ----------
         function renderEvents() {
+            saveState();
             var container = $('eventsContainer');
             var searchVal = $('searchInput').value.toLowerCase().trim();
             var dateVal = $('dateInput').value;
@@ -853,6 +891,8 @@
 
         // Eerst direct tonen met fallback, daarna vervangen door events.json
         $('originLabel').textContent = 'Afstanden vanaf: ' + home.label;
+        restoreState();
+        restoring = false;
         renderEvents();
         renderSources();
         loadEvents().then(loadSources);

@@ -110,7 +110,7 @@
                     </div>
                 </div>
                 <div class="flex flex-wrap items-center justify-between gap-2">
-                    <p class="text-xs text-slate-500"><span id="statusLine"></span> <button type="button" id="clearFilters" class="hidden ml-2 underline text-emerald-400 hover:text-emerald-300">Wis filters</button></p>
+                    <p class="text-xs text-slate-500"><span id="statusLine"></span>  <button type="button" id="shareBtn" class="ml-2 underline text-emerald-400 hover:text-emerald-300">Deel deze selectie</button><button type="button" id="clearFilters" class="hidden ml-2 underline text-emerald-400 hover:text-emerald-300">Wis filters</button></p>
                     <div class="flex items-center gap-1 text-xs">
                         <span class="text-slate-500 mr-1">Sorteren:</span>
                         <button type="button" data-sort="date" class="sort-btn px-3 py-1 rounded-lg bg-emerald-600 text-white">Datum</button>
@@ -856,6 +856,17 @@
         });
 
         $('searchInput').addEventListener('input', renderEvents);
+        $('shareBtn').addEventListener('click', function () {
+            var btn = $('shareBtn'), url = location.href;
+            function done(t) { btn.textContent = t; setTimeout(function () { btn.textContent = 'Deel deze selectie'; }, 2500); }
+            if (navigator.share) {
+                navigator.share({ title: document.title, url: url }).catch(function () { /* geannuleerd */ });
+            } else if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(url).then(function () { done('Link gekopieerd ✓'); }, function () { done('Kopieer de link uit de adresbalk'); });
+            } else {
+                done('Kopieer de link uit de adresbalk');
+            }
+        });
         $('clearFilters').addEventListener('click', function () {
             document.querySelector('.type-btn[data-type="Alle"]').click();
             $('searchInput').value = '';

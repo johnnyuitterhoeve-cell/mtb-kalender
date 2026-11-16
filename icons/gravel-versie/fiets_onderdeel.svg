@@ -1,0 +1,26 @@
+  <!-- snelheidslijnen -->
+  <g stroke="#fff" stroke-width="7" stroke-linecap="round" opacity=".55">
+    <path d="M40 330 H92"/><path d="M58 360 H104"/><path d="M44 392 H80"/>
+  </g>
+  <!-- fiets: sportieve gravel/MTB -->
+  <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke-width="15"><circle cx="160" cy="372" r="62"/><circle cx="366" cy="372" r="62"/></g>
+    <g stroke-width="3.5" opacity=".7"><circle cx="160" cy="372" r="46"/><circle cx="366" cy="372" r="46"/>
+      <path d="M160 326V418M114 372H206M127 339L193 405M193 339L127 405"/><path d="M366 326V418M320 372H412M333 339L399 405M399 339L333 405"/></g>
+    <g stroke-width="13">
+      <path d="M160 372 L222 268 L326 254"/>
+      <path d="M222 268 L256 372 L338 284"/>
+      <path d="M256 372 L160 372"/>
+      <path d="M222 268 L160 372"/>
+      <path d="M326 254 L338 284"/>
+      <path d="M338 284 L366 372"/>
+    </g>
+    <g stroke-width="11">
+      <path d="M326 254 L344 230 L376 226 Q398 226 396 250"/>
+      <path d="M222 268 L213 244"/>
+    </g>
+    <path d="M190 242 L240 242" stroke-width="15"/>
+    <path d="M256 372 L282 408" stroke-width="9"/>
+  </g>
+  <circle cx="256" cy="372" r="14" fill="#fff"/>
+  <circle cx="256" cy="372" r="6" fill="#14532d"/>

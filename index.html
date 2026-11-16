@@ -706,14 +706,20 @@
                 pts.push([g.c.lat, g.c.lon]);
             });
             L.circleMarker([home.lat, home.lon], { radius: 6, color: '#0c4a6e', weight: 2, fillColor: '#38bdf8', fillOpacity: 1 }).bindTooltip('Jouw startpunt').addTo(mapLayer);
-            if (fit && pts.length) map.fitBounds(pts, { padding: [30, 30], maxZoom: 11 });
+            // opnieuw passend zoomen zodra de getoonde tochten veranderen (bv. na het laden van events.json of een filter)
+            var sig = pts.map(function (q) { return q[0] + ',' + q[1]; }).sort().join(';');
+            if ((fit || sig !== lastFitSig) && pts.length) {
+                lastFitSig = sig;
+                map.invalidateSize();
+                map.fitBounds(pts, { padding: [25, 25], maxZoom: 11 });
+            }
             $('mapNote').textContent = lastRows.length - missing + ' van ' + lastRows.length + ' tochten staan op de kaart' + (missing ? ' (' + missing + ' zonder bekende plek)' : '') + '. Klik op een stip voor de tochten.';
         }
 
         // ---------- Filters onthouden en delen via de link ----------
         // Keuzes komen in de adresbalk (deelbaar) en in de browser (voor de volgende keer). Locatie wordt los bewaard.
         var restoring = true;
-        var viewMode = 'list', lastRows = [], map = null, mapLayer = null, mapLoading = false;
+        var lastFitSig = '', viewMode = 'list', lastRows = [], map = null, mapLayer = null, mapLoading = false;
         var focusSlug = '';
         function saveState() {
             if (restoring) return;

@@ -51,13 +51,14 @@
         </header>
 
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
-            <aside class="bg-slate-900 p-6 rounded-xl border border-slate-800 h-fit space-y-6 flex flex-col justify-between">
-                <div class="space-y-6">
+            <aside class="bg-slate-900 p-4 lg:p-6 rounded-xl border border-slate-800 h-fit space-y-4 lg:space-y-6 flex flex-col justify-between">
+                <div class="space-y-4 lg:space-y-6">
 
                     <div>
-                        <label for="postcodeInput" class="block text-sm font-medium text-slate-300 mb-2">Jouw locatie:</label>
-                        <button id="locBtn" type="button" class="w-full mb-2 px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 text-sm hover:bg-slate-700 flex items-center justify-center gap-2"><svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Gebruik mijn locatie</span></button>
-                        <div class="flex gap-2">
+                        <label for="postcodeInput" class="sr-only lg:not-sr-only lg:block text-sm font-medium text-slate-300 lg:mb-2">Jouw locatie:</label>
+                        <div class="flex gap-2 lg:flex-col">
+                        <button id="locBtn" type="button" aria-label="Gebruik mijn locatie" title="Gebruik mijn locatie" class="shrink-0 lg:w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 text-sm hover:bg-slate-700 flex items-center justify-center gap-2"><svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span class="hidden lg:inline">Gebruik mijn locatie</span></button>
+                        <div class="flex gap-2 flex-1 min-w-0">
                             <input type="text" id="postcodeInput" placeholder="of postcode" maxlength="8" class="min-w-0 flex-1 bg-slate-800 border border-slate-700 rounded-lg p-2.5 text-slate-200 placeholder-slate-500 focus:outline-none focus:border-emerald-500">
                             <select id="countrySelect" class="bg-slate-800 border border-slate-700 rounded-lg px-2 text-slate-200 focus:outline-none focus:border-emerald-500">
                                 <option value="nl">NL</option>
@@ -68,13 +69,14 @@
                             </select>
                             <button id="postcodeBtn" type="button" class="px-3 rounded-lg bg-emerald-600 text-white text-sm font-medium hover:bg-emerald-500">OK</button>
                         </div>
+                        </div>
                         <p id="originLabel" class="text-xs text-slate-400 mt-2"></p>
                     </div>
 
-                    <div id="moreFilters" class="space-y-6">
+                    <div id="moreFilters" class="space-y-4 lg:space-y-6">
                     <div>
-                        <span class="block text-sm font-medium text-slate-300 mb-2">Type fiets:</span>
-                        <div id="typeFilters" class="flex gap-2">
+                        <span class="sr-only lg:not-sr-only lg:block text-sm font-medium text-slate-300 lg:mb-2">Type fiets:</span>
+                        <div id="typeFilters" class="grid grid-cols-3 gap-2 lg:flex">
                             <button class="type-btn px-4 py-2 rounded-lg text-sm font-medium bg-emerald-600 text-white" data-type="Alle">Alle</button>
                             <button class="type-btn px-4 py-2 rounded-lg text-sm font-medium bg-slate-800 text-slate-300 hover:bg-slate-700" data-type="MTB">MTB</button>
                             <button class="type-btn px-4 py-2 rounded-lg text-sm font-medium bg-slate-800 text-slate-300 hover:bg-slate-700" data-type="Gravel">Gravel</button>
@@ -82,7 +84,7 @@
                     </div>
 
                     <div>
-                        <label for="maxDistance" class="block text-sm font-medium text-slate-300 mb-2">Max. reisafstand: <span id="maxDistVal" class="text-emerald-400">250</span> km</label>
+                        <label for="maxDistance" class="block text-sm font-medium text-slate-300 mb-1 lg:mb-2">Max. reisafstand: <span id="maxDistVal" class="text-emerald-400">250</span> km</label>
                         <input type="range" id="maxDistance" min="10" max="250" value="250" class="w-full accent-emerald-500 cursor-pointer">
                     </div>
                     </div>

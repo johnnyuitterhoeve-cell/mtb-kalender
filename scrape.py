@@ -32,7 +32,7 @@ NOMINATIM = "https://nominatim.openstreetmap.org/search"
 # Bronnen die je tijdelijk wilt overslaan (bijv. omdat de site niet reageert).
 # De oude tochten van die bron blijven staan. Weer aanzetten: haal de naam hieruit, bijv. DISABLED_SOURCES = set()
 DISABLED_SOURCES = set()
-PLACE_FIXES = {"Kleotinge": "Kloetinge", "Kempenhout": "Kampenhout"}   # typfouten in de bronnen; voeg hier zelf meer toe
+PLACE_FIXES = {"Kleotinge": "Kloetinge", "Kempenhout": "Kampenhout", "Meldgem": "Maldegem"}   # typfouten in de bronnen; voeg hier zelf meer toe
 
 # Provinciecode op Mountainbike.be -> (volledige naam, landcodes voor de zoekopdracht)
 PROVINCES = {

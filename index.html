@@ -110,7 +110,7 @@
                     </div>
                 </div>
                 <div class="flex flex-wrap items-center justify-between gap-2">
-                    <p id="statusLine" class="text-xs text-slate-500"></p>
+                    <p class="text-xs text-slate-500"><span id="statusLine"></span> <button type="button" id="clearFilters" class="hidden ml-2 underline text-emerald-400 hover:text-emerald-300">Wis filters</button></p>
                     <div class="flex items-center gap-1 text-xs">
                         <span class="text-slate-500 mr-1">Sorteren:</span>
                         <button type="button" data-sort="date" class="sort-btn px-3 py-1 rounded-lg bg-emerald-600 text-white">Datum</button>
@@ -619,6 +619,7 @@
                 dag: $('dateInput').value,
                 wanneer: quickKey
             };
+            $('clearFilters').classList.toggle('hidden', !Object.keys(st).some(function (k) { return st[k] && k !== 'sort'; }));
             try { localStorage.setItem('mtb_filters', JSON.stringify(st)); } catch (err) { /* geen opslag */ }
             try {
                 var qs = Object.keys(st).filter(function (k) { return st[k]; })
@@ -855,6 +856,12 @@
         });
 
         $('searchInput').addEventListener('input', renderEvents);
+        $('clearFilters').addEventListener('click', function () {
+            document.querySelector('.type-btn[data-type="Alle"]').click();
+            $('searchInput').value = '';
+            $('maxDistance').value = $('maxDistance').max; $('maxDistVal').textContent = $('maxDistance').max;
+            setQuick('');
+        });
         $('dateBtn').addEventListener('click', function (ev) {
             ev.stopPropagation();
             var pop = $('calendarPop');

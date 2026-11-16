@@ -92,6 +92,7 @@
                         <input type="range" id="maxDistance" min="10" max="250" value="250" class="w-full accent-emerald-500 cursor-pointer">
                     </div>
                     <button type="button" id="clearFilters" class="hidden text-sm underline text-emerald-400 hover:text-emerald-300">Wis filters</button>
+                    <div id="mapSlotSide" class="hidden lg:block"></div>
                     </div>
 
                 </div>
@@ -117,7 +118,7 @@
                 <div class="flex flex-wrap items-center justify-between gap-2">
                     <p id="statusLine" class="text-xs text-slate-500"></p>
                     <div class="flex items-center gap-3 text-xs">
-                    <div class="flex items-center gap-1" role="group" aria-label="Weergave">
+                    <div class="flex items-center gap-1 lg:hidden" role="group" aria-label="Weergave">
                         <button type="button" data-view="list" class="view-btn px-3 py-1 rounded-lg bg-emerald-600 text-white">Lijst</button>
                         <button type="button" data-view="map" class="view-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700">Kaart</button>
                     </div>
@@ -128,6 +129,7 @@
                     </div>
                     </div>
                 </div>
+                <div id="mapSlotMain"></div>
                 <div id="mapWrap" class="hidden">
                     <div id="map" class="w-full rounded-xl border border-slate-800" style="height:70vh;min-height:360px" role="region" aria-label="Kaart met tochten"></div>
                     <p id="mapNote" class="text-xs text-slate-500 mt-2"></p>
@@ -624,16 +626,32 @@
         }
 
         // ---------- Kaart (Leaflet + OpenStreetMap, wordt pas geladen als je op Kaart klikt) ----------
+        var leafletQueue = null;
         function loadLeaflet(cb) {
             if (window.L) return cb(true);
+            if (leafletQueue) { leafletQueue.push(cb); return; }
+            leafletQueue = [cb];
+            function finish(ok) { var q = leafletQueue; if (!ok) leafletQueue = null; q.forEach(function (f) { f(ok); }); }
             var css = document.createElement('link');
             css.rel = 'stylesheet'; css.href = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css';
             document.head.appendChild(css);
             var js = document.createElement('script');
             js.src = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js';
-            js.onload = function () { cb(true); };
-            js.onerror = function () { cb(false); };
+            js.onload = function () { finish(true); };
+            js.onerror = function () { finish(false); };
             document.head.appendChild(js);
+        }
+        var deskMq = window.matchMedia ? window.matchMedia('(min-width: 1024px)') : { matches: false };
+        function mapActive() { return deskMq.matches || viewMode === 'map'; }
+        function placeMap() {
+            var w = $('mapWrap'), side = deskMq.matches;
+            $(side ? 'mapSlotSide' : 'mapSlotMain').appendChild(w);
+            $('map').style.height = side ? '300px' : '70vh';
+            $('map').style.minHeight = side ? '0' : '360px';
+            w.classList.toggle('hidden', !mapActive());
+            $('eventsContainer').classList.toggle('hidden', !side && viewMode === 'map');
+            $('sortGroup').classList.toggle('hidden', !side && viewMode === 'map');
+            if (mapActive()) loadLeaflet(function (ok) { if (ok) updateMap(true); });
         }
         function setView(mode) {
             viewMode = mode;
@@ -642,10 +660,8 @@
                 b.classList.toggle('bg-emerald-600', on); b.classList.toggle('text-white', on);
                 b.classList.toggle('bg-slate-800', !on); b.classList.toggle('text-slate-300', !on);
             });
-            $('mapWrap').classList.toggle('hidden', mode !== 'map');
-            $('eventsContainer').classList.toggle('hidden', mode === 'map');
-            $('sortGroup').classList.toggle('hidden', mode === 'map');
-            if (mode === 'map') {
+            placeMap();
+            if (mapActive()) {
                 $('mapNote').textContent = 'Kaart laden...';
                 loadLeaflet(function (ok) {
                     if (!ok) { $('mapNote').textContent = 'De kaart kon niet geladen worden. Probeer het later opnieuw of gebruik de lijst.'; return; }
@@ -659,9 +675,9 @@
             return coordinates[e.location] || null;
         }
         function updateMap(fit) {
-            if (!window.L || viewMode !== 'map') return;
+            if (!window.L || !mapActive()) return;
             if (!map) {
-                map = L.map('map', { scrollWheelZoom: true }).setView([51.3, 4.9], 8);
+                map = L.map('map', { scrollWheelZoom: !deskMq.matches }).setView([51.3, 4.9], 8);
                 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>' }).addTo(map);
                 mapLayer = L.layerGroup().addTo(map);
                 fit = true;
@@ -772,7 +788,7 @@
 
             var totalUpcoming = allEvents.filter(function (e) { return !e.date || e.date >= todayIso; }).length;
             lastRows = rows;
-            if (viewMode === 'map') updateMap();
+            if (mapActive()) updateMap();
             $('statusLine').textContent = (rows.length === totalUpcoming ? totalUpcoming + ' tochten' : rows.length + ' van ' + totalUpcoming + ' tochten');
 
             if (rows.length === 0) {
@@ -1007,6 +1023,8 @@
         $('originLabel').textContent = 'Afstanden vanaf: ' + home.label;
         restoreState();
         restoring = false;
+        placeMap();
+        if (deskMq.addEventListener) deskMq.addEventListener('change', function () { placeMap(); if (map) { map.invalidateSize(); updateMap(true); } });
         renderEvents();
         function showFocus() {
             if (!focusSlug) return;

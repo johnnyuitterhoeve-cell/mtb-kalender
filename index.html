@@ -507,7 +507,15 @@
         function renderCalendar() {
             var y = calMonth.getFullYear(), m = calMonth.getMonth();
             var counts = {};
-            allEvents.forEach(function (e) { if (e.date) counts[e.date] = (counts[e.date] || 0) + 1; });
+            // alleen tochten tellen die ook door de andere filters (type, zoekwoord, reisafstand) komen
+            var qText = $('searchInput').value.toLowerCase().trim(), qMax = parseInt($('maxDistance').value, 10);
+            allEvents.forEach(function (e) {
+                if (!e.date) return;
+                var okType = e.variants.some(function (v) { return selectedType === 'Alle' || v.type === selectedType || v.type === 'Both'; });
+                var txt = (e.title + ' ' + e.location + ' ' + e.organizer).toLowerCase();
+                var dist = calculateDistance(home, e);
+                if (okType && txt.indexOf(qText) > -1 && (dist === null || dist <= qMax)) counts[e.date] = (counts[e.date] || 0) + 1;
+            });
             var selected = $('dateInput').value;
             var now = new Date(), todayIso = isoOf(now.getFullYear(), now.getMonth(), now.getDate());
             var curMonth = (y === now.getFullYear() && m === now.getMonth());

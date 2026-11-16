@@ -649,8 +649,6 @@
             $('map').style.height = side ? '300px' : '70vh';
             $('map').style.minHeight = side ? '0' : '360px';
             w.classList.toggle('hidden', !mapActive());
-            $('eventsContainer').classList.toggle('hidden', !side && viewMode === 'map');
-            $('sortGroup').classList.toggle('hidden', !side && viewMode === 'map');
             if (mapActive()) loadLeaflet(function (ok) { if (ok) updateMap(true); });
         }
         function setView(mode) {
@@ -981,8 +979,7 @@
             if (!a) return;
             ev.preventDefault();
             focusSlug = a.getAttribute('data-slug');
-            setView('list');
-            showFocus();
+            showFocus();   // de lijst staat onder de kaart; de kaart blijft zichtbaar
         });
         $('searchInput').addEventListener('input', renderEvents);
         $('clearFilters').addEventListener('click', function () {

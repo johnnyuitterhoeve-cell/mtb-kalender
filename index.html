@@ -26,6 +26,10 @@
         summary { list-style: none; }
         summary::-webkit-details-marker { display: none; }
         details[open] > summary .chev { transform: rotate(180deg); }
+        .leaflet-container img { max-width: none !important; }
+    .leaflet-container a { color: #0369a1; }
+    .map-count { background: transparent; border: 0; box-shadow: none; color: #022c22; font-weight: 700; font-size: 11px; padding: 0; }
+    .map-count:before { display: none; }
     </style>
 </head>
 <body class="bg-slate-950 text-slate-100 min-h-screen">
@@ -112,11 +116,21 @@
                 </div>
                 <div class="flex flex-wrap items-center justify-between gap-2">
                     <p id="statusLine" class="text-xs text-slate-500"></p>
-                    <div class="flex items-center gap-1 text-xs">
+                    <div class="flex items-center gap-3 text-xs">
+                    <div class="flex items-center gap-1" role="group" aria-label="Weergave">
+                        <button type="button" data-view="list" class="view-btn px-3 py-1 rounded-lg bg-emerald-600 text-white">Lijst</button>
+                        <button type="button" data-view="map" class="view-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700">Kaart</button>
+                    </div>
+                    <div id="sortGroup" class="flex items-center gap-1">
                         <span class="text-slate-500 mr-1">Sorteren:</span>
                         <button type="button" data-sort="date" class="sort-btn px-3 py-1 rounded-lg bg-emerald-600 text-white">Datum</button>
                         <button type="button" data-sort="distance" class="sort-btn px-3 py-1 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700">Afstand</button>
                     </div>
+                    </div>
+                </div>
+                <div id="mapWrap" class="hidden">
+                    <div id="map" class="w-full rounded-xl border border-slate-800" style="height:70vh;min-height:360px" role="region" aria-label="Kaart met tochten"></div>
+                    <p id="mapNote" class="text-xs text-slate-500 mt-2"></p>
                 </div>
                 <div id="eventsContainer" class="space-y-4"></div>
             </main>
@@ -128,7 +142,7 @@
                 <p id="sourceUpdated2" class="text-xs text-slate-500 pt-1"></p>
             </div>
             <p>Dit is een hobbyproject zonder commercieel doel. De tochten komen van de onderliggende websites (zie "Bronnen"); bij elke tocht staat een link naar de bron. Kijk voor de actuele gegevens, prijs en inschrijving altijd op de website van de organisator. Er kunnen fouten of verouderde gegevens in staan. Deze site is niet verbonden aan de genoemde bronnen of organisatoren.</p>
-            <p>Privacy: deze site gebruikt geen cookies, geen advertenties en geen statistieken. Je thuislocatie of postcode wordt alleen in je eigen browser bewaard. Voor het opzoeken van een plaats of postcode wordt die aan OpenStreetMap (Nominatim) of PDOK gestuurd. Als je "Gebruik mijn locatie" kiest, wordt je positie (afgerond op ongeveer 1 km) daarvoor naar OpenStreetMap gestuurd. De pagina laadt Tailwind CSS van cdn.tailwindcss.com.</p>
+            <p>Privacy: deze site gebruikt geen cookies, geen advertenties en geen statistieken. Je thuislocatie of postcode wordt alleen in je eigen browser bewaard. Voor het opzoeken van een plaats of postcode wordt die aan OpenStreetMap (Nominatim) of PDOK gestuurd. Als je "Gebruik mijn locatie" kiest, wordt je positie (afgerond op ongeveer 1 km) daarvoor naar OpenStreetMap gestuurd. De pagina laadt Tailwind CSS van cdn.tailwindcss.com. Als je de kaart opent, worden Leaflet (van cdnjs.cloudflare.com) en kaartbeelden van OpenStreetMap geladen; die diensten zien dan je IP-adres.</p>
             <p>Staat jouw evenement hier en wil je dat het wordt aangepast of verwijderd? Neem dan contact op met de beheerder van deze site.</p>
             <p class="text-[10px] text-slate-600">Contact: <span id="contactMail"></span></p>
             <script>
@@ -609,9 +623,81 @@
                 '&details=' + encodeURIComponent(lines.join('\n'));
         }
 
+        // ---------- Kaart (Leaflet + OpenStreetMap, wordt pas geladen als je op Kaart klikt) ----------
+        function loadLeaflet(cb) {
+            if (window.L) return cb(true);
+            var css = document.createElement('link');
+            css.rel = 'stylesheet'; css.href = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css';
+            document.head.appendChild(css);
+            var js = document.createElement('script');
+            js.src = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js';
+            js.onload = function () { cb(true); };
+            js.onerror = function () { cb(false); };
+            document.head.appendChild(js);
+        }
+        function setView(mode) {
+            viewMode = mode;
+            document.querySelectorAll('.view-btn').forEach(function (b) {
+                var on = b.getAttribute('data-view') === mode;
+                b.classList.toggle('bg-emerald-600', on); b.classList.toggle('text-white', on);
+                b.classList.toggle('bg-slate-800', !on); b.classList.toggle('text-slate-300', !on);
+            });
+            $('mapWrap').classList.toggle('hidden', mode !== 'map');
+            $('eventsContainer').classList.toggle('hidden', mode === 'map');
+            $('sortGroup').classList.toggle('hidden', mode === 'map');
+            if (mode === 'map') {
+                $('mapNote').textContent = 'Kaart laden...';
+                loadLeaflet(function (ok) {
+                    if (!ok) { $('mapNote').textContent = 'De kaart kon niet geladen worden. Probeer het later opnieuw of gebruik de lijst.'; return; }
+                    updateMap(true);
+                });
+            }
+            renderEvents();
+        }
+        function coordsOf(e) {
+            if (e.lat != null && e.lon != null && !isNaN(+e.lat) && !isNaN(+e.lon)) return { lat: +e.lat, lon: +e.lon };
+            return coordinates[e.location] || null;
+        }
+        function updateMap(fit) {
+            if (!window.L || viewMode !== 'map') return;
+            if (!map) {
+                map = L.map('map', { scrollWheelZoom: true }).setView([51.3, 4.9], 8);
+                L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>' }).addTo(map);
+                mapLayer = L.layerGroup().addTo(map);
+                fit = true;
+            }
+            map.invalidateSize();
+            mapLayer.clearLayers();
+            var groups = {}, missing = 0;
+            lastRows.forEach(function (r) {
+                var c = coordsOf(r.ev);
+                if (!c) { missing++; return; }
+                var k = c.lat.toFixed(3) + ',' + c.lon.toFixed(3);
+                (groups[k] = groups[k] || { c: c, rows: [] }).rows.push(r);
+            });
+            var pts = [];
+            Object.keys(groups).forEach(function (k) {
+                var g = groups[k], n = g.rows.length;
+                var m = L.circleMarker([g.c.lat, g.c.lon], { radius: n > 1 ? 11 : 8, color: '#064e3b', weight: 2, fillColor: '#10b981', fillOpacity: 0.9 });
+                var html = '<div style="min-width:180px;max-width:260px"><strong>' + esc(g.rows[0].ev.location) + '</strong>';
+                g.rows.slice(0, 8).forEach(function (r) {
+                    html += '<div style="margin-top:6px"><a href="#" data-slug="' + esc(r.ev.slug) + '" class="map-open">' + esc(r.ev.title) + '</a><br><span style="color:#64748b;font-size:12px">' + esc(r.ev.date ? formatDate(r.ev.date) : '') + '</span></div>';
+                });
+                if (n > 8) html += '<div style="margin-top:6px;color:#64748b;font-size:12px">en nog ' + (n - 8) + ' tochten</div>';
+                m.bindPopup(html + '</div>');
+                if (n > 1) m.bindTooltip(String(n), { permanent: true, direction: 'center', className: 'map-count' });
+                m.addTo(mapLayer);
+                pts.push([g.c.lat, g.c.lon]);
+            });
+            L.circleMarker([home.lat, home.lon], { radius: 6, color: '#0c4a6e', weight: 2, fillColor: '#38bdf8', fillOpacity: 1 }).bindTooltip('Jouw startpunt').addTo(mapLayer);
+            if (fit && pts.length) map.fitBounds(pts, { padding: [30, 30], maxZoom: 11 });
+            $('mapNote').textContent = lastRows.length - missing + ' van ' + lastRows.length + ' tochten staan op de kaart' + (missing ? ' (' + missing + ' zonder bekende plek)' : '') + '. Klik op een stip voor de tochten.';
+        }
+
         // ---------- Filters onthouden en delen via de link ----------
         // Keuzes komen in de adresbalk (deelbaar) en in de browser (voor de volgende keer). Locatie wordt los bewaard.
         var restoring = true;
+        var viewMode = 'list', lastRows = [], map = null, mapLayer = null, mapLoading = false;
         var focusSlug = '';
         function saveState() {
             if (restoring) return;
@@ -621,7 +707,8 @@
                 q: $('searchInput').value.trim(),
                 max: $('maxDistance').value === $('maxDistance').max ? '' : $('maxDistance').value,
                 dag: $('dateInput').value,
-                wanneer: quickKey
+                wanneer: quickKey,
+                weergave: viewMode === 'map' ? 'kaart' : ''
             };
             $('clearFilters').classList.toggle('hidden', !Object.keys(st).some(function (k) { return st[k] && k !== 'sort'; }));
             try { localStorage.setItem('mtb_filters', JSON.stringify(st)); } catch (err) { /* geen opslag */ }
@@ -640,6 +727,7 @@
             if (!fromUrl) { try { st = JSON.parse(localStorage.getItem('mtb_filters')) || {}; } catch (err) { st = {}; } }
             var t = document.querySelector('.type-btn[data-type="' + (st.type || 'Alle') + '"]');
             if (t) t.click();
+            if (st.weergave === 'kaart' && !st.tocht) setView('map');
             var so = document.querySelector('.sort-btn[data-sort="' + (st.sort || 'date') + '"]');
             if (so) so.click();
             if (st.q) $('searchInput').value = st.q;
@@ -683,6 +771,8 @@
             });
 
             var totalUpcoming = allEvents.filter(function (e) { return !e.date || e.date >= todayIso; }).length;
+            lastRows = rows;
+            if (viewMode === 'map') updateMap();
             $('statusLine').textContent = (rows.length === totalUpcoming ? totalUpcoming + ' tochten' : rows.length + ' van ' + totalUpcoming + ' tochten');
 
             if (rows.length === 0) {
@@ -861,6 +951,17 @@
             });
         });
 
+        document.querySelectorAll('.view-btn').forEach(function (b) {
+            b.addEventListener('click', function () { setView(b.getAttribute('data-view')); });
+        });
+        $('map').addEventListener('click', function (ev) {
+            var a = ev.target.closest ? ev.target.closest('.map-open') : null;
+            if (!a) return;
+            ev.preventDefault();
+            focusSlug = a.getAttribute('data-slug');
+            setView('list');
+            showFocus();
+        });
         $('searchInput').addEventListener('input', renderEvents);
         $('clearFilters').addEventListener('click', function () {
             document.querySelector('.type-btn[data-type="Alle"]').click();

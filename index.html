@@ -87,6 +87,7 @@
                         <label for="maxDistance" class="block text-sm font-medium text-slate-300 mb-1 lg:mb-2">Max. reisafstand: <span id="maxDistVal" class="text-emerald-400">250</span> km</label>
                         <input type="range" id="maxDistance" min="10" max="250" value="250" class="w-full accent-emerald-500 cursor-pointer">
                     </div>
+                    <button type="button" id="clearFilters" class="hidden text-sm underline text-emerald-400 hover:text-emerald-300">Wis filters</button>
                     </div>
 
                 </div>
@@ -110,7 +111,7 @@
                     </div>
                 </div>
                 <div class="flex flex-wrap items-center justify-between gap-2">
-                    <p class="text-xs text-slate-500"><span id="statusLine"></span>  <button type="button" id="shareBtn" class="ml-2 underline text-emerald-400 hover:text-emerald-300">Deel deze selectie</button><button type="button" id="clearFilters" class="hidden ml-2 underline text-emerald-400 hover:text-emerald-300">Wis filters</button></p>
+                    <p id="statusLine" class="text-xs text-slate-500"></p>
                     <div class="flex items-center gap-1 text-xs">
                         <span class="text-slate-500 mr-1">Sorteren:</span>
                         <button type="button" data-sort="date" class="sort-btn px-3 py-1 rounded-lg bg-emerald-600 text-white">Datum</button>
@@ -297,6 +298,8 @@
                 if (g.members.length > 1) out.title = cleanTitle(g.first.title);
                 out.variants = variants;
                 out.ids = g.members.map(function (m) { return m.id; });
+                out.slug = (g.first.date + '-' + g.first.location + '-' + (titleKey(g.first.title) || g.first.title))
+                    .toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 80);
                 return out;
             });
         }
@@ -609,6 +612,7 @@
         // ---------- Filters onthouden en delen via de link ----------
         // Keuzes komen in de adresbalk (deelbaar) en in de browser (voor de volgende keer). Locatie wordt los bewaard.
         var restoring = true;
+        var focusSlug = '';
         function saveState() {
             if (restoring) return;
             var st = {
@@ -632,6 +636,7 @@
             try {
                 new URLSearchParams(location.search).forEach(function (v, k) { st[k] = v; fromUrl = true; });
             } catch (err) { /* oude browser */ }
+            if (st.tocht) { focusSlug = st.tocht; st = {}; fromUrl = true; }   // gedeelde tocht: opgeslagen filters negeren
             if (!fromUrl) { try { st = JSON.parse(localStorage.getItem('mtb_filters')) || {}; } catch (err) { st = {}; } }
             var t = document.querySelector('.type-btn[data-type="' + (st.type || 'Alle') + '"]');
             if (t) t.click();
@@ -667,7 +672,7 @@
                     && text.indexOf(searchVal) > -1
                     && (!dateVal || e.date === dateVal)
                     && (!quickRange || (e.date && e.date >= quickRange.from && e.date <= quickRange.to))
-                    && (r.dist === null || r.dist <= maxDist);
+                    && (r.dist === null || r.dist <= maxDist || (focusSlug && e.slug === focusSlug));
             });
 
             // Standaard op datum (bij gelijke datum de kortste reisafstand eerst); onbekende afstand komt achteraan
@@ -715,7 +720,7 @@
                 allD.sort(function (a, b) { return a - b; });
                 var distSummary = allD.length ? (allD.length === 1 ? allD[0] : allD[0] + '–' + allD[allD.length - 1]) + ' km' : '';
                 return heading +
-                '<details class="group bg-slate-900 border border-slate-800 rounded-xl hover:border-slate-700 transition">' +
+                '<details data-slug="' + esc(e.slug) + '" class="group bg-slate-900 border border-slate-800 rounded-xl hover:border-slate-700 transition">' +
                     '<summary class="cursor-pointer list-none px-4 sm:px-5 py-3 flex items-center gap-3">' +
                         '<div class="flex-1 min-w-0 space-y-1">' +
                             '<div class="flex flex-wrap items-center gap-2">' +
@@ -739,6 +744,7 @@
                         '<div class="flex flex-wrap items-center gap-x-4 gap-y-1">' +
                             '<a href="' + esc(safeUrl(e.sourceUrl)) + '" target="_blank" rel="noopener" class="text-sky-300 hover:text-sky-200 hover:underline">' + ic('link') + 'Bron bekijken</a>' +
                             (gcal ? '<a href="' + esc(gcal) + '" target="_blank" rel="noopener" class="text-emerald-400 hover:text-emerald-300 hover:underline">' + ic('calendarPlus') + 'Zet in Google Agenda</a>' : '') +
+                            '<button type="button" data-share="' + esc(e.slug) + '" data-title="' + esc(e.title) + '" class="text-slate-300 hover:text-white hover:underline">' + ic('link') + '<span>Deel deze tocht</span></button>' +
                         '</div>' +
                     '</div>' +
                 '</details>';
@@ -856,17 +862,6 @@
         });
 
         $('searchInput').addEventListener('input', renderEvents);
-        $('shareBtn').addEventListener('click', function () {
-            var btn = $('shareBtn'), url = location.href;
-            function done(t) { btn.textContent = t; setTimeout(function () { btn.textContent = 'Deel deze selectie'; }, 2500); }
-            if (navigator.share) {
-                navigator.share({ title: document.title, url: url }).catch(function () { /* geannuleerd */ });
-            } else if (navigator.clipboard && navigator.clipboard.writeText) {
-                navigator.clipboard.writeText(url).then(function () { done('Link gekopieerd ✓'); }, function () { done('Kopieer de link uit de adresbalk'); });
-            } else {
-                done('Kopieer de link uit de adresbalk');
-            }
-        });
         $('clearFilters').addEventListener('click', function () {
             document.querySelector('.type-btn[data-type="Alle"]').click();
             $('searchInput').value = '';
@@ -912,8 +907,29 @@
         restoreState();
         restoring = false;
         renderEvents();
+        function showFocus() {
+            if (!focusSlug) return;
+            var d = document.querySelector('details[data-slug="' + focusSlug + '"]');
+            if (!d) return;
+            d.open = true;
+            d.classList.add('ring-2', 'ring-emerald-500');
+            d.scrollIntoView({ block: 'center' });
+            focusSlug = '';
+        }
         renderSources();
-        loadEvents().then(loadSources);
+        loadEvents().then(function () { showFocus(); return loadSources(); });
+        $('eventsContainer').addEventListener('click', function (ev) {
+            var b = ev.target.closest ? ev.target.closest('[data-share]') : null;
+            if (!b) return;
+            var url = location.origin + location.pathname + '?tocht=' + encodeURIComponent(b.getAttribute('data-share'));
+            var lab = b.querySelector('span');
+            function done(t) { lab.textContent = t; setTimeout(function () { lab.textContent = 'Deel deze tocht'; }, 2500); }
+            if (navigator.share) {
+                navigator.share({ title: b.getAttribute('data-title'), url: url }).catch(function () { /* geannuleerd */ });
+            } else if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(url).then(function () { done('Link gekopieerd ✓'); }, function () { done('Kopieer: ' + url); });
+            } else { done('Kopieer: ' + url); }
+        });
         autoLocation();
     })();
     </script>

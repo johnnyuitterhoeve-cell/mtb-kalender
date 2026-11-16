@@ -119,6 +119,7 @@
                     </div>
                 </div>
                 <div id="eventsContainer" class="space-y-4"></div>
+                <p class="text-sm text-slate-400 pt-2">Mis je een tocht of klopt er iets niet? <button type="button" id="addEventBtn" class="underline text-emerald-400 hover:text-emerald-300">Tocht aanmelden of fout melden</button></p>
             </main>
         </div>
         <footer class="mt-10 pt-6 border-t border-slate-800 text-xs text-slate-500 space-y-2">
@@ -745,6 +746,7 @@
                             '<a href="' + esc(safeUrl(e.sourceUrl)) + '" target="_blank" rel="noopener" class="text-sky-300 hover:text-sky-200 hover:underline">' + ic('link') + 'Bron bekijken</a>' +
                             (gcal ? '<a href="' + esc(gcal) + '" target="_blank" rel="noopener" class="text-emerald-400 hover:text-emerald-300 hover:underline">' + ic('calendarPlus') + 'Zet in Google Agenda</a>' : '') +
                             '<button type="button" data-share="' + esc(e.slug) + '" data-title="' + esc(e.title) + '" class="text-slate-300 hover:text-white hover:underline">' + ic('link') + '<span>Deel deze tocht</span></button>' +
+                            '<button type="button" data-report="' + esc(e.slug) + '" data-title="' + esc(e.title) + '" data-date="' + esc(e.date || '') + '" class="text-slate-400 hover:text-white hover:underline">' + ic('flag') + 'Fout melden</button>' +
                         '</div>' +
                     '</div>' +
                 '</details>';
@@ -918,7 +920,21 @@
         }
         renderSources();
         loadEvents().then(function () { showFocus(); return loadSources(); });
+        function mailTo(subject, body) {
+            var a = ['webbeheer', 'tcarendskerke.nl'].join('@');
+            location.href = 'mailto:' + a + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+        }
+        $('addEventBtn').addEventListener('click', function () {
+            mailTo('Toertochtenkalender: tocht aanmelden of fout melden',
+                'Hallo,\n\nIk wil een tocht aanmelden of iets melden.\n\nNaam van de tocht:\nDatum:\nPlaats:\nType (MTB/Gravel):\nAfstanden:\nLink naar de website van de tocht:\n\nOpmerking:\n');
+        });
         $('eventsContainer').addEventListener('click', function (ev) {
+            var r = ev.target.closest ? ev.target.closest('[data-report]') : null;
+            if (r) {
+                mailTo('Fout melden: ' + r.getAttribute('data-title') + ' (' + r.getAttribute('data-date') + ')',
+                    'Hallo,\n\nIk zie een fout bij deze tocht:\n' + location.origin + location.pathname + '?tocht=' + r.getAttribute('data-report') + '\n\nWat klopt er niet?\n');
+                return;
+            }
             var b = ev.target.closest ? ev.target.closest('[data-share]') : null;
             if (!b) return;
             var url = location.origin + location.pathname + '?tocht=' + encodeURIComponent(b.getAttribute('data-share'));

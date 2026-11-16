@@ -636,8 +636,7 @@
             });
 
             var totalUpcoming = allEvents.filter(function (e) { return !e.date || e.date >= todayIso; }).length;
-            $('statusLine').textContent = (rows.length === totalUpcoming ? totalUpcoming + ' tochten' : rows.length + ' van ' + totalUpcoming + ' tochten') +
-                ', gesorteerd op ' + (sortMode === 'distance' ? 'reisafstand' : 'datum');
+            $('statusLine').textContent = (rows.length === totalUpcoming ? totalUpcoming + ' tochten' : rows.length + ' van ' + totalUpcoming + ' tochten');
 
             if (rows.length === 0) {
                 container.innerHTML = '<div class="text-center py-12 text-slate-500 bg-slate-900 border border-slate-800 rounded-xl">Geen tochten gevonden voor deze selectie. Pas de filters of de datum aan.</div>';

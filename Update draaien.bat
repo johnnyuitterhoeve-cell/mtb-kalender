@@ -5,6 +5,9 @@ set PUSH=1
 
 cd /d "%~dp0"
 
+rem Eerst de nieuwste gegevens van GitHub ophalen
+git pull --rebase --autostash -X theirs >nul 2>&1
+
 echo Pakketten controleren...
 python -m pip install -q requests beautifulsoup4
 if errorlevel 1 goto fout
@@ -24,7 +27,7 @@ if errorlevel 1 (
     goto klaar
 )
 
-git add events.json geocache.json sources.json detailcache.json index.html scrape.py
+git add events.json geocache.json sources.json detailcache.json index.html scrape.py manifest.webmanifest icons robots.txt sitemap.xml
 git diff --cached --quiet
 if errorlevel 1 (
     git commit -m "Lokale update van toertochten"

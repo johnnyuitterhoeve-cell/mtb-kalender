@@ -786,7 +786,20 @@
         }
 
         // ---------- Renderen ----------
+        // Een link met het ritnummer (?tocht=mb-2026...) werkt ook: zet het om naar de slug van de samengevoegde kaart
+        function resolveFocus() {
+            if (!focusSlug) return;
+            if (allEvents.some(function (e) { return e.slug === focusSlug; })) return;
+            for (var i = 0; i < allEvents.length; i++) {
+                if (allEvents[i].ids && allEvents[i].ids.indexOf(focusSlug) > -1) { focusSlug = allEvents[i].slug; return; }
+            }
+        }
+
         function renderEvents() {
+<<<<<<< Updated upstream
+=======
+            resolveFocus();
+>>>>>>> Stashed changes
             saveState();
             var container = $('eventsContainer');
             var searchVal = $('searchInput').value.toLowerCase().trim();

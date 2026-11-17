@@ -77,6 +77,25 @@
     "start": "Sporthal, Kieldrechtstraat 12, 9170 De Klinge, België"
   },
   {
+    "id": "gd-memorial-patrick-meersschaert-gravel-vwb",
+    "title": "Memorial Patrick Meersschaert GRAVEL   VWB",
+    "date": "2026-11-22",
+    "location": "De Klinge",
+    "type": "Gravel",
+    "distances": [
+      60,
+      78
+    ],
+    "organizer": "Ronde van het Waasland",
+    "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/memorial-patrick-meersschaert-gravel-vwb",
+    "price": "",
+    "source": "GoDare",
+    "country": "BE",
+    "lat": 51.2565,
+    "lon": 4.0898,
+    "start": "sporthal Kieldrechtstraat  12, 9170 De Klinge, België, Registreer, Facebook"
+  },
+  {
     "id": "mb-20261122-den-helder-mtb-toertocht-texel",
     "title": "MTB Toertocht Texel",
     "date": "2026-11-22",
@@ -117,24 +136,6 @@
     "start": "Pontweg 1, Den Hoorn, Nederland",
     "startLat": 53.02267,
     "startLon": 4.78426
-  },
-  {
-    "id": "gd-la-gadouzienne-5",
-    "title": "La Gadouzienne",
-    "date": "2026-11-22",
-    "location": "Edingen",
-    "type": "Gravel",
-    "distances": [
-      60
-    ],
-    "organizer": "CYCLO BOL D'AIR ENGHIEN",
-    "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/la-gadouzienne-5",
-    "price": "",
-    "source": "GoDare",
-    "country": "BE",
-    "lat": 50.6957,
-    "lon": 4.0412,
-    "start": "Centre Nautisport, chaussée de Soignies  36, 7850 Edingen, België"
   },
   {
     "id": "gd-la-gadouzienne-gravel-vwb",
@@ -527,6 +528,26 @@
     "lat": 50.9757,
     "lon": 4.8929,
     "start": "Rillaar Het Schors, Diestsesteenweg 320, 3202 Rillaar, België"
+  },
+  {
+    "id": "gd-brugse-zot-offroad-vbr-4",
+    "title": "Brugse Zot Offroad   VBR",
+    "date": "2026-11-28",
+    "location": "Sint-Kruis",
+    "type": "MTB",
+    "distances": [
+      30,
+      45,
+      60
+    ],
+    "organizer": "ST. MICHIELSE TRAPPERS WTC",
+    "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/brugse-zot-offroad-vbr-4",
+    "price": "",
+    "source": "GoDare",
+    "country": "BE",
+    "lat": 51.2185,
+    "lon": 3.273,
+    "start": "Sint-Andreaslyceum Sint-Kruis (SASK), Veltemweg, 8310 Sint-Kruis, België"
   },
   {
     "id": "mb-20261128-sint-kruis-brugge-brugse-zot-offroad",
@@ -1156,24 +1177,6 @@
     "start": "Sportcentrum De Dam, Lokerhoutstraat 29, 9160 Lokeren, België"
   },
   {
-    "id": "gd-maldegemse-poldertocht-10",
-    "title": "Maldegemse Poldertocht",
-    "date": "2026-12-06",
-    "location": "Maldegem",
-    "type": "Gravel",
-    "distances": [
-      50
-    ],
-    "organizer": "WTC MALDEGEM VZW",
-    "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/maldegemse-poldertocht-10",
-    "price": "",
-    "source": "GoDare",
-    "country": "BE",
-    "lat": 51.2089,
-    "lon": 3.4452,
-    "start": "Sporthal De Berken, Kleitkalseide  109A, 9990 Maldegem, België"
-  },
-  {
     "id": "mb-20261206-meldgem-maldegemse-poldertocht",
     "title": "Maldegemse Poldertocht",
     "date": "2026-12-06",
@@ -1191,7 +1194,9 @@
     "price": "€ 2,00 – € 8,00",
     "source": "Mountainbike.be",
     "country": "BE",
-    "start": "Sporthal De Berken, Kleitkalseide 109 A, 9990 Meldgem, België"
+    "start": "Sporthal De Berken, Kleitkalseide 109 A, 9990 Meldgem, België",
+    "lat": 51.2089,
+    "lon": 3.4452
   },
   {
     "id": "gb-2026-12-06-gravelty-viking",
@@ -1585,28 +1590,6 @@
     "start": "Sporthal De Zuiderpoort, Sportlaan  1, 6023BL Budel-Schoot, Nederland"
   },
   {
-    "id": "fs-60157",
-    "title": "HRTC DOK - MTB Napoleontocht",
-    "date": "2026-12-13",
-    "location": "Den Helder",
-    "type": "MTB",
-    "distances": [
-      27,
-      30,
-      57
-    ],
-    "organizer": "HRTC DOK",
-    "sourceUrl": "https://www.fietssport.nl/toertochten/60157/hrtc-dok-mtb-napoleontocht-2026",
-    "price": "€ 10,00",
-    "source": "Fietssport.nl",
-    "country": "NL",
-    "lat": 52.9509,
-    "lon": 4.7936,
-    "start": "Guldemondweg, Den Helder, Nederland",
-    "startLat": 52.92953,
-    "startLon": 4.78361
-  },
-  {
     "id": "mb-20261213-den-helder-hrtc-dok-mtb-napoleontocht",
     "title": "HRTC DOK - MTB Napoleontocht",
     "date": "2026-12-13",
@@ -1685,25 +1668,6 @@
     "lat": 50.5416,
     "lon": 3.427,
     "start": "La Ferme Fleurie, Rue de Tournai 169, 7620 Hollain, België"
-  },
-  {
-    "id": "gd-vtt-de-la-ferme-fleurie-6",
-    "title": "VTT de la Ferme Fleurie",
-    "date": "2026-12-13",
-    "location": "Hollain",
-    "type": "MTB",
-    "distances": [
-      5,
-      10
-    ],
-    "organizer": "Telefoonnummer",
-    "sourceUrl": "https://www.godare.events/nl/events/mountainbikekalender/vtt-de-la-ferme-fleurie-6",
-    "price": "",
-    "source": "GoDare",
-    "country": "BE",
-    "lat": 50.5416,
-    "lon": 3.427,
-    "start": "La Ferme fleurie, Rue de Tournai  169, 7620 Hollain, België"
   },
   {
     "id": "mb-20261213-lonneker-op-en-um-039-n-bolt-mtb",
@@ -2676,28 +2640,6 @@
     "lat": 50.8646,
     "lon": 4.6938,
     "start": "Sporthal, Hertogstraat 182, 3001 Heverlee, België"
-  },
-  {
-    "id": "gd-marathon-maniac-6",
-    "title": "Marathon Maniac",
-    "date": "2026-12-28",
-    "location": "Heverlee",
-    "type": "Gravel",
-    "distances": [
-      40,
-      60,
-      85,
-      120,
-      136
-    ],
-    "organizer": "eco mountainbike team vzw",
-    "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/marathon-maniac-6",
-    "price": "",
-    "source": "GoDare",
-    "country": "BE",
-    "lat": 50.8646,
-    "lon": 4.6938,
-    "start": "Sporthal Heverlee, Hertogstraat 180, 3001 Heverlee, België"
   },
   {
     "id": "mb-20261228-hooglede-24e-mtb-cyclo-gitsbergtoertocht",

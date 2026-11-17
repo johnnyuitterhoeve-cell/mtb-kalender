@@ -760,20 +760,23 @@
                 weergave: viewMode === 'map' ? 'kaart' : ''
             };
             $('clearFilters').classList.toggle('hidden', !Object.keys(st).some(function (k) { return st[k] && k !== 'sort'; }));
-            try { localStorage.setItem('mtb_filters', JSON.stringify(st)); } catch (err) { /* geen opslag */ }
+            // Datumkeuzes worden niet onthouden tot de volgende dag (anders sta je morgen op een lege dag); alleen de link bewaart ze
+            var keep = {}; Object.keys(st).forEach(function (k) { if (k !== 'dag' && k !== 'wanneer') keep[k] = st[k]; });
+            try { localStorage.setItem('mtb_filters', JSON.stringify(keep)); } catch (err) { /* geen opslag */ }
             try {
                 var qs = Object.keys(st).filter(function (k) { return st[k]; })
                     .map(function (k) { return k + '=' + encodeURIComponent(st[k]); }).join('&');
                 history.replaceState(null, '', location.pathname + (qs ? '?' + qs : ''));
             } catch (err) { /* bv. bij openen als bestand */ }
         }
+        function todayIsoStr() { var n = new Date(); return n.getFullYear() + '-' + ('0' + (n.getMonth() + 1)).slice(-2) + '-' + ('0' + n.getDate()).slice(-2); }
         function restoreState() {
             var st = {}, fromUrl = false;
             try {
                 new URLSearchParams(location.search).forEach(function (v, k) { st[k] = v; fromUrl = true; });
             } catch (err) { /* oude browser */ }
             if (st.tocht) { focusSlug = st.tocht; st = {}; fromUrl = true; }   // gedeelde tocht: opgeslagen filters negeren
-            if (!fromUrl) { try { st = JSON.parse(localStorage.getItem('mtb_filters')) || {}; } catch (err) { st = {}; } }
+            if (!fromUrl) { try { st = JSON.parse(localStorage.getItem('mtb_filters')) || {}; } catch (err) { st = {}; } delete st.dag; delete st.wanneer; }
             var t = document.querySelector('.type-btn[data-type="' + (st.type || 'Alle') + '"]');
             if (t) t.click();
             if (st.weergave === 'kaart' && !st.tocht) setView('map');
@@ -782,7 +785,7 @@
             var mx = parseInt(st.max, 10);
             if (mx >= 10 && mx <= 250) { $('maxDistance').value = mx; $('maxDistVal').textContent = mx; }
             if (st.wanneer && QUICK.some(function (q) { return q[0] === st.wanneer; })) setQuick(st.wanneer);
-            else if (/^\d{4}-\d\d-\d\d$/.test(st.dag || '')) setDate(st.dag);
+            else if (/^\d{4}-\d\d-\d\d$/.test(st.dag || '') && st.dag >= todayIsoStr()) setDate(st.dag);
         }
 
         // ---------- Renderen ----------
@@ -834,7 +837,8 @@
             $('statusLine').textContent = (rows.length === totalUpcoming ? totalUpcoming + ' tochten' : rows.length + ' van ' + totalUpcoming + ' tochten');
 
             if (rows.length === 0) {
-                container.innerHTML = '<div class="text-center py-12 text-slate-500 bg-slate-900 border border-slate-800 rounded-xl">Geen tochten gevonden voor deze selectie. Pas de filters of de datum aan.</div>';
+                container.innerHTML = '<div class="text-center py-12 text-slate-500 bg-slate-900 border border-slate-800 rounded-xl">Geen tochten gevonden voor deze selectie.<br><button type="button" id="emptyClear" class="mt-3 px-4 py-2 rounded-lg bg-emerald-600 text-white hover:bg-emerald-500">Wis alle filters</button></div>';
+                var ec = document.getElementById('emptyClear'); if (ec) ec.addEventListener('click', function () { $('clearFilters').click(); });
                 return;
             }
 

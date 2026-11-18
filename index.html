@@ -1028,7 +1028,7 @@
                             '<a href="' + esc(safeUrl(e.sourceUrl)) + '" target="_blank" rel="noopener" class="py-1.5 text-sky-300 hover:text-sky-200 hover:underline">' + ic('link') + 'Bron bekijken</a>' +
                             '<a href="' + esc(routeUrl(e)) + '" target="_blank" rel="noopener" class="py-1.5 text-slate-300 hover:text-white hover:underline" title="Route vanaf jouw startpunt (' + esc(home.label) + ')">' + ic('flag') + 'Route erheen</a>' +
                             (gcal ? '<a href="' + esc(gcal) + '" target="_blank" rel="noopener" class="py-1.5 text-emerald-400 hover:text-emerald-300 hover:underline">' + ic('calendarPlus') + 'Zet in Google Agenda</a>' : '') +
-                            '<button type="button" data-share="' + esc(e.slug) + '" data-title="' + esc(e.title) + '" class="py-1.5 text-slate-300 hover:text-white hover:underline">' + ic('link') + '<span>Deel deze tocht</span></button>' +
+                            '<a href="' + esc(whatsappUrl(e)) + '" target="_blank" rel="noopener" class="py-1.5 text-emerald-400 hover:text-emerald-300 hover:underline" title="Deel deze tocht via WhatsApp">' + ic('whatsapp') + 'Deel via WhatsApp</a>' +
                         '</div>' +
                         weatherSlot(e) +
                     '</div>' +
@@ -1045,8 +1045,16 @@
             users: '<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14.5a6.5 6.5 0 0 1 3.5 5.5"/>',
             euro: '<path d="M18 6.5A7 7 0 1 0 18 17.5M4 10h10M4 14h10"/>',
             flag: '<path d="M5 21V4M5 4h11l-2 4 2 4H5"/>',
+            whatsapp: '<path d="M3 21l1.7-5A8.5 8.5 0 1 1 8 19.4z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.5-2-1-1 .8c-1-.4-2-1.400-2.400-2.400l.8-1-1-2z"/>',
             link: '<path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/>'
         };
+        function whatsappUrl(e) {
+            var url = location.origin + location.pathname + '?tocht=' + encodeURIComponent(e.slug);
+            var wat = [e.title, formatDate(e.date) + (e.location ? ' in ' + e.location : '')];
+            if (e.distances && e.distances.length) wat.push(e.distances.join(' / ') + ' km');
+            wat.push(url);
+            return 'https://wa.me/?text=' + encodeURIComponent(wat.join('\n'));
+        }
         function ic(name) {
             return '<svg class="inline-block w-4 h-4 -mt-0.5 mr-1 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + ICONS[name] + '</svg>';
         }
@@ -1219,18 +1227,6 @@
             var d = ev.target;
             if (d && d.tagName === 'DETAILS' && d.open) { var sl = d.querySelector('.wx'); if (sl) loadWeather(sl); }
         }, true);
-        $('eventsContainer').addEventListener('click', function (ev) {
-            var b = ev.target.closest ? ev.target.closest('[data-share]') : null;
-            if (!b) return;
-            var url = location.origin + location.pathname + '?tocht=' + encodeURIComponent(b.getAttribute('data-share'));
-            var lab = b.querySelector('span');
-            function done(t) { lab.textContent = t; setTimeout(function () { lab.textContent = 'Deel deze tocht'; }, 2500); }
-            if (navigator.share) {
-                navigator.share({ title: b.getAttribute('data-title'), url: url }).catch(function () { /* geannuleerd */ });
-            } else if (navigator.clipboard && navigator.clipboard.writeText) {
-                navigator.clipboard.writeText(url).then(function () { done('Link gekopieerd ✓'); }, function () { done('Kopieer: ' + url); });
-            } else { done('Kopieer: ' + url); }
-        });
         autoLocation();
     })();
     </script>

@@ -680,6 +680,17 @@
             var names = ['noorden', 'noordoosten', 'oosten', 'zuidoosten', 'zuiden', 'zuidwesten', 'westen', 'noordwesten'];
             return names[Math.round(deg / 45) % 8];
         }
+        // Pijl in de richting waarin de wind waait (de voorspelling geeft de richting waaruit hij komt)
+        function wxArrow(deg) {
+            var arrows = ['\u2191', '\u2197', '\u2192', '\u2198', '\u2193', '\u2199', '\u2190', '\u2196'];
+            return arrows[Math.round(((deg + 180) % 360) / 45) % 8];
+        }
+        function wxBeaufort(kmh) {
+            var limits = [1, 6, 12, 20, 29, 39, 50, 62, 75, 89, 103, 118];
+            for (var i = 0; i < limits.length; i++) if (kmh < limits[i]) return i;
+            return 12;
+        }
+
         function loadWeather(slot) {
             if (slot.getAttribute('data-wx-done')) return;
             slot.setAttribute('data-wx-done', '1');
@@ -698,8 +709,10 @@
                 if (i < 0) { slot.remove(); return; }
                 var w = wxDescribe(dl.weather_code[i]);
                 slot.className = 'wx text-slate-300';
-                slot.innerHTML = '<span title="Weersvoorspelling van Open-Meteo">' + w[0] + ' ' + w[1] + ' \u00b7 ' + Math.round(dl.temperature_2m_min[i]) + '\u2013' + Math.round(dl.temperature_2m_max[i]) +
-                    '\u00b0C \u00b7 regen ' + Math.round(dl.precipitation_probability_max[i] || 0) + '% \u00b7 wind ' + Math.round(dl.wind_speed_10m_max[i]) + ' km/u uit het ' + wxWind(dl.wind_direction_10m_dominant[i]) + '</span>';
+                var kmh = Math.round(dl.wind_speed_10m_max[i]), dir = dl.wind_direction_10m_dominant[i];
+                slot.innerHTML = '<span title="Weersvoorspelling van Open-Meteo. Wind: ' + kmh + ' km/u uit het ' + wxWind(dir) + '">' + w[0] + ' ' + w[1] + ' \u00b7 ' +
+                    Math.round(dl.temperature_2m_min[i]) + '\u2013' + Math.round(dl.temperature_2m_max[i]) + '\u00b0C \u00b7 \uD83D\uDCA7 ' +
+                    Math.round(dl.precipitation_probability_max[i] || 0) + '% \u00b7 ' + wxArrow(dir) + ' ' + wxBeaufort(kmh) + ' Bft</span>';
             }).catch(function () { delete wxCache[key]; slot.remove(); });
         }
 

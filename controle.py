@@ -25,10 +25,12 @@ def lees(naam):
 
 
 # 1. Geen Git-conflicttekst ("<<<<<<<") in de bestanden (dat breekt de pagina)
-for naam in ("index.html", "scrape.py", "events.json", "sources.json", "geocache.json", "detailcache.json", "manifest.webmanifest"):
+for naam in ("index.html", "scrape.py", "events.json", "sources.json", "geocache.json", "detailcache.json", "manifest.webmanifest", "gravel/index.html", "mtb/index.html", "sitemap.xml"):
     try:
         tekst = lees(naam)
     except FileNotFoundError:
+        if naam.startswith(("gravel", "mtb", "sitemap")):
+            continue   # de vaste pagina's zijn nieuw; ontbreken is geen fout
         fouten.append(f"{naam} ontbreekt")
         continue
     if re.search(r"^(<<<<<<<|>>>>>>>)", tekst, re.M) or re.search(r"^=======$", tekst, re.M):

@@ -8,7 +8,13 @@ python3 controle.py || {
     git checkout -- events.json geocache.json sources.json detailcache.json
     exit 1
 }
-git add events.json geocache.json sources.json detailcache.json
+python3 paginas.py || echo "Let op: de vaste pagina's (gravel/mtb) maken mislukte; de rest gaat gewoon door."
+python3 controle.py || {
+    echo "De tweede controle is mislukt: niets wordt geupload."
+    git checkout -- events.json geocache.json sources.json detailcache.json gravel mtb sitemap.xml
+    exit 1
+}
+git add events.json geocache.json sources.json detailcache.json gravel mtb sitemap.xml
 if git diff --cached --quiet; then
     echo "Geen wijzigingen om te uploaden."
 else

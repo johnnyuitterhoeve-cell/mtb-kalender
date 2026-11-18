@@ -37,7 +37,16 @@ if errorlevel 1 (
     goto klaar
 )
 
-git add events.json geocache.json sources.json detailcache.json
+python paginas.py
+if errorlevel 1 echo Let op: de vaste paginas ^(gravel/mtb^) maken mislukte; de rest gaat gewoon door.
+python controle.py
+if errorlevel 1 (
+    echo De tweede controle is mislukt: niets wordt geupload.
+    git checkout -- events.json geocache.json sources.json detailcache.json gravel mtb sitemap.xml
+    goto fout
+)
+
+git add events.json geocache.json sources.json detailcache.json gravel mtb sitemap.xml
 git diff --cached --quiet
 if errorlevel 1 (
     git commit -m "Lokale update van toertochten"

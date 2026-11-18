@@ -633,6 +633,17 @@
             return 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(q);
         }
 
+        // Route vanaf het ingestelde startpunt (jouw postcode of locatie) naar de start van de tocht
+        function routeUrl(e) {
+            var q;
+            if (okNum(e.startLat) && okNum(e.startLon)) q = (+e.startLat) + ',' + (+e.startLon);
+            else if (e.start) q = e.start;
+            else if (okNum(e.lat) && okNum(e.lon)) q = (+e.lat) + ',' + (+e.lon);
+            else q = placeText(e);
+            return 'https://www.google.com/maps/dir/?api=1&origin=' + encodeURIComponent(home.lat + ',' + home.lon) +
+                '&destination=' + encodeURIComponent(q) + '&travelmode=driving';
+        }
+
         function shortStart(e) {
             return String(e.start || '').replace(/,\s*(Nederland|België|Duitsland|Luxemburg|Frankrijk)$/, '');
         }
@@ -895,6 +906,7 @@
                         '<div class="space-y-2">' + distHtml + '</div>' +
                         '<div class="flex flex-wrap items-center gap-x-4 gap-y-1">' +
                             '<a href="' + esc(safeUrl(e.sourceUrl)) + '" target="_blank" rel="noopener" class="text-sky-300 hover:text-sky-200 hover:underline">' + ic('link') + 'Bron bekijken</a>' +
+                            '<a href="' + esc(routeUrl(e)) + '" target="_blank" rel="noopener" class="text-slate-300 hover:text-white hover:underline" title="Route vanaf jouw startpunt (' + esc(home.label) + ')">' + ic('flag') + 'Route erheen</a>' +
                             (gcal ? '<a href="' + esc(gcal) + '" target="_blank" rel="noopener" class="text-emerald-400 hover:text-emerald-300 hover:underline">' + ic('calendarPlus') + 'Zet in Google Agenda</a>' : '') +
                             '<button type="button" data-share="' + esc(e.slug) + '" data-title="' + esc(e.title) + '" class="text-slate-300 hover:text-white hover:underline">' + ic('link') + '<span>Deel deze tocht</span></button>' +
                         '</div>' +

@@ -6,6 +6,8 @@ set PUSH=1
 cd /d "%~dp0"
 
 rem Eerst de nieuwste gegevens van GitHub ophalen
+rem Lokale wijzigingen aan de pagina zelf weggooien: die komt altijd van GitHub (voorkomt botsingen)
+git checkout -- index.html scrape.py >nul 2>&1
 git pull --rebase --autostash -X theirs >nul 2>&1
 
 echo Pakketten controleren...
@@ -15,6 +17,14 @@ if errorlevel 1 goto fout
 echo Toertochten ophalen (de eerste keer duurt dit enkele minuten)...
 python scrape.py
 if errorlevel 1 goto fout
+
+python controle.py
+if errorlevel 1 (
+    echo.
+    echo De controle is mislukt: de nieuwe gegevens worden NIET geupload.
+    git checkout -- events.json geocache.json sources.json detailcache.json
+    goto fout
+)
 
 if not "%PUSH%"=="1" goto klaar
 
@@ -27,7 +37,7 @@ if errorlevel 1 (
     goto klaar
 )
 
-git add events.json geocache.json sources.json detailcache.json index.html scrape.py manifest.webmanifest icons robots.txt sitemap.xml
+git add events.json geocache.json sources.json detailcache.json
 git diff --cached --quiet
 if errorlevel 1 (
     git commit -m "Lokale update van toertochten"

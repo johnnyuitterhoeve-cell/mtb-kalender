@@ -710,9 +710,10 @@
                 var w = wxDescribe(dl.weather_code[i]);
                 slot.className = 'wx text-slate-300';
                 var kmh = Math.round(dl.wind_speed_10m_max[i]), dir = dl.wind_direction_10m_dominant[i];
-                slot.innerHTML = '<span title="Weersvoorspelling van Open-Meteo. Wind: ' + kmh + ' km/u uit het ' + wxWind(dir) + '">' + w[0] + ' ' + w[1] + ' \u00b7 ' +
-                    Math.round(dl.temperature_2m_min[i]) + '\u2013' + Math.round(dl.temperature_2m_max[i]) + '\u00b0C \u00b7 \uD83D\uDCA7 ' +
-                    Math.round(dl.precipitation_probability_max[i] || 0) + '% \u00b7 ' + wxArrow(dir) + ' ' + wxBeaufort(kmh) + ' Bft</span>';
+                var bft = wxBeaufort(kmh);
+                var tip = 'Weersvoorspelling: ' + w[1] + ', ' + Math.round(dl.temperature_2m_min[i]) + '\u2013' + Math.round(dl.temperature_2m_max[i]) + '\u00b0C, ' +
+                    Math.round(dl.precipitation_probability_max[i] || 0) + '% kans op regen, wind ' + kmh + ' km/u uit het ' + wxWind(dir) + ' (windkracht ' + bft + '). Bron: Open-Meteo';
+                slot.innerHTML = '<span title="' + tip + '" aria-label="' + tip + '">' + w[0] + ' ' + Math.round(dl.temperature_2m_max[i]) + '\u00b0 \u00b7 ' + wxArrow(dir) + ' ' + bft + '</span>';
             }).catch(function () { delete wxCache[key]; slot.remove(); });
         }
 

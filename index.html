@@ -31,6 +31,7 @@
     .map-count { background: transparent; border: 0; box-shadow: none; color: #022c22; font-weight: 700; font-size: 11px; padding: 0; }
     .map-count:before { display: none; }
     </style>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"MTB & Gravel Kalender","url":"https://toertochtenkalender.nl/","description":"Alle MTB- en gravel-toertochten in Nederland, België en omgeving op één plek","inLanguage":"nl-NL"}</script>
 </head>
 <body class="bg-slate-950 text-slate-100 min-h-screen">
     <div class="max-w-7xl mx-auto px-4 py-8">
@@ -644,6 +645,51 @@
                 '&destination=' + encodeURIComponent(q) + '&travelmode=driving';
         }
 
+        // ---------- Gestructureerde gegevens (schema.org Event) voor zoekmachines ----------
+        function priceNumbers(txt) {
+            var m = String(txt || '').match(/\d+(?:[.,]\d+)?/g) || [];
+            return m.map(function (x) { return parseFloat(x.replace(',', '.')); }).filter(function (x) { return x >= 0; });
+        }
+        function writeStructuredData() {
+            var today = todayIsoStr(), list = [];
+            allEvents.forEach(function (e) {
+                if (!e.date || e.date < today) return;
+                var types = e.variants.map(function (v) { return v.type === 'Both' ? 'MTB/Gravel' : v.type; }).join(' en ');
+                var dists = [];
+                e.variants.forEach(function (v) { v.distances.forEach(function (d) { if (dists.indexOf(d) < 0) dists.push(d); }); });
+                dists.sort(function (a, b) { return a - b; });
+                var addr = { '@type': 'PostalAddress', addressLocality: e.location };
+                if (e.start) addr.streetAddress = e.start;
+                if (e.country === 'NL' || e.country === 'BE') addr.addressCountry = e.country;
+                var place = { '@type': 'Place', name: e.start || e.location, address: addr };
+                var c = wxCoords(e);
+                if (c) place.geo = { '@type': 'GeoCoordinates', latitude: c.lat, longitude: c.lon };
+                var ev = {
+                    '@type': 'Event',
+                    name: e.title,
+                    startDate: e.date,
+                    eventStatus: 'https://schema.org/EventScheduled',
+                    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+                    location: place,
+                    image: location.origin + '/icons/icon-512.png',
+                    description: types + '-toertocht in ' + e.location + ' op ' + formatDate(e.date) + (dists.length ? '. Afstanden: ' + dists.join(', ') + ' km.' : '.'),
+                    url: location.origin + '/?tocht=' + encodeURIComponent(e.slug),
+                    sameAs: safeUrl(e.sourceUrl)
+                };
+                if (e.organizer) ev.organizer = { '@type': 'Organization', name: e.organizer };
+                var pr = priceNumbers(e.price);
+                if (pr.length) ev.offers = { '@type': 'Offer', price: Math.min.apply(null, pr).toFixed(2), priceCurrency: 'EUR', url: safeUrl(e.sourceUrl), availability: 'https://schema.org/InStock' };
+                list.push(ev);
+            });
+            var old = document.getElementById('ldEvents');
+            if (old) old.remove();
+            var sc = document.createElement('script');
+            sc.type = 'application/ld+json';
+            sc.id = 'ldEvents';
+            sc.textContent = JSON.stringify({ '@context': 'https://schema.org', '@graph': list }).replace(/</g, '\\u003c');
+            document.head.appendChild(sc);
+        }
+
         // ---------- Weersvoorspelling per tocht (Open-Meteo, gratis, zonder inlog) ----------
         var WX_DAYS = 14, wxCache = {};
         function wxCoords(e) {
@@ -1167,7 +1213,7 @@
             focusSlug = '';
         }
         renderSources();
-        loadEvents().then(function () { showFocus(); return loadSources(); });
+        loadEvents().then(function () { try { writeStructuredData(); } catch (err) { /* nooit de pagina breken */ } showFocus(); return loadSources(); });
         $('eventsContainer').addEventListener('toggle', function (ev) {
             var d = ev.target;
             if (d && d.tagName === 'DETAILS' && d.open) { var sl = d.querySelector('.wx'); if (sl) loadWeather(sl); }

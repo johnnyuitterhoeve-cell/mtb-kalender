@@ -660,7 +660,7 @@
         function weatherSlot(e) {
             var d = daysFromToday(e.date), c = wxCoords(e);
             if (d === null || d < 0 || d > WX_DAYS || !c) return '';
-            return '<div class="wx" data-wx-date="' + esc(e.date) + '" data-wx-lat="' + c.lat.toFixed(2) + '" data-wx-lon="' + c.lon.toFixed(2) + '"></div>';
+            return '<div class="wx pt-2" data-wx-date="' + esc(e.date) + '" data-wx-lat="' + c.lat.toFixed(2) + '" data-wx-lon="' + c.lon.toFixed(2) + '"></div>';
         }
         function wxDescribe(code) {
             if (code === 0) return ['\u2600\uFE0F', 'zonnig'];
@@ -697,7 +697,7 @@
             var lat = slot.getAttribute('data-wx-lat'), lon = slot.getAttribute('data-wx-lon'), date = slot.getAttribute('data-wx-date');
             var key = lat + ',' + lon;
             slot.textContent = 'Weer laden...';
-            slot.className = 'wx text-slate-500';
+            slot.className = 'wx pt-2 text-slate-500';
             if (!wxCache[key]) {
                 wxCache[key] = fetch('https://api.open-meteo.com/v1/forecast?latitude=' + lat + '&longitude=' + lon +
                     '&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,wind_speed_10m_max,wind_direction_10m_dominant' +
@@ -708,7 +708,7 @@
                 var dl = j.daily, i = dl.time.indexOf(date);
                 if (i < 0) { slot.remove(); return; }
                 var w = wxDescribe(dl.weather_code[i]);
-                slot.className = 'wx text-slate-300';
+                slot.className = 'wx pt-2 text-slate-300';
                 var kmh = Math.round(dl.wind_speed_10m_max[i]), dir = dl.wind_direction_10m_dominant[i];
                 var bft = wxBeaufort(kmh);
                 var tip = 'Weersvoorspelling: ' + w[1] + ', ' + Math.round(dl.temperature_2m_min[i]) + '\u2013' + Math.round(dl.temperature_2m_max[i]) + '\u00b0C, ' +
@@ -977,11 +977,11 @@
                         '<div>' + ic('users') + esc(e.organizer || 'Organisator onbekend') + '</div>' +
                         (e.start ? '<div><a href="' + esc(mapsUrl(e)) + '" target="_blank" rel="noopener" class="text-slate-300 hover:underline" title="Open de startplaats in Google Maps">' + ic('flag') + esc(shortStart(e)) + '</a></div>' : '') +
                         '<div class="space-y-2">' + distHtml + '</div>' +
-                        '<div class="flex flex-wrap items-center gap-x-4 gap-y-1">' +
-                            '<a href="' + esc(safeUrl(e.sourceUrl)) + '" target="_blank" rel="noopener" class="text-sky-300 hover:text-sky-200 hover:underline">' + ic('link') + 'Bron bekijken</a>' +
-                            '<a href="' + esc(routeUrl(e)) + '" target="_blank" rel="noopener" class="text-slate-300 hover:text-white hover:underline" title="Route vanaf jouw startpunt (' + esc(home.label) + ')">' + ic('flag') + 'Route erheen</a>' +
-                            (gcal ? '<a href="' + esc(gcal) + '" target="_blank" rel="noopener" class="text-emerald-400 hover:text-emerald-300 hover:underline">' + ic('calendarPlus') + 'Zet in Google Agenda</a>' : '') +
-                            '<button type="button" data-share="' + esc(e.slug) + '" data-title="' + esc(e.title) + '" class="text-slate-300 hover:text-white hover:underline">' + ic('link') + '<span>Deel deze tocht</span></button>' +
+                        '<div class="flex flex-wrap items-center gap-x-5 gap-y-3">' +
+                            '<a href="' + esc(safeUrl(e.sourceUrl)) + '" target="_blank" rel="noopener" class="py-1.5 text-sky-300 hover:text-sky-200 hover:underline">' + ic('link') + 'Bron bekijken</a>' +
+                            '<a href="' + esc(routeUrl(e)) + '" target="_blank" rel="noopener" class="py-1.5 text-slate-300 hover:text-white hover:underline" title="Route vanaf jouw startpunt (' + esc(home.label) + ')">' + ic('flag') + 'Route erheen</a>' +
+                            (gcal ? '<a href="' + esc(gcal) + '" target="_blank" rel="noopener" class="py-1.5 text-emerald-400 hover:text-emerald-300 hover:underline">' + ic('calendarPlus') + 'Zet in Google Agenda</a>' : '') +
+                            '<button type="button" data-share="' + esc(e.slug) + '" data-title="' + esc(e.title) + '" class="py-1.5 text-slate-300 hover:text-white hover:underline">' + ic('link') + '<span>Deel deze tocht</span></button>' +
                         '</div>' +
                         weatherSlot(e) +
                     '</div>' +

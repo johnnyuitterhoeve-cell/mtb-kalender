@@ -976,7 +976,6 @@
                     '<div class="px-4 sm:px-5 pb-4 pt-3 border-t border-slate-800 space-y-3 text-sm text-slate-400">' +
                         '<div>' + ic('users') + esc(e.organizer || 'Organisator onbekend') + '</div>' +
                         (e.start ? '<div><a href="' + esc(mapsUrl(e)) + '" target="_blank" rel="noopener" class="text-slate-300 hover:underline" title="Open de startplaats in Google Maps">' + ic('flag') + esc(shortStart(e)) + '</a></div>' : '') +
-                        weatherSlot(e) +
                         '<div class="space-y-2">' + distHtml + '</div>' +
                         '<div class="flex flex-wrap items-center gap-x-4 gap-y-1">' +
                             '<a href="' + esc(safeUrl(e.sourceUrl)) + '" target="_blank" rel="noopener" class="text-sky-300 hover:text-sky-200 hover:underline">' + ic('link') + 'Bron bekijken</a>' +
@@ -984,6 +983,7 @@
                             (gcal ? '<a href="' + esc(gcal) + '" target="_blank" rel="noopener" class="text-emerald-400 hover:text-emerald-300 hover:underline">' + ic('calendarPlus') + 'Zet in Google Agenda</a>' : '') +
                             '<button type="button" data-share="' + esc(e.slug) + '" data-title="' + esc(e.title) + '" class="text-slate-300 hover:text-white hover:underline">' + ic('link') + '<span>Deel deze tocht</span></button>' +
                         '</div>' +
+                        weatherSlot(e) +
                     '</div>' +
                 '</details>';
             }).join('');

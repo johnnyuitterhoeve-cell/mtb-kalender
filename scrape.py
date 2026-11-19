@@ -27,7 +27,7 @@ WEEKS_AHEAD = 12
 EVENTS_FILE = "events.json"
 GEO_FILE = "geocache.json"
 SOURCES_FILE = "sources.json"
-ALL_SOURCES = ["Mountainbike.be", "Fietssport.nl", "MTB-You", "GoDare", "Gravelbike.be"]
+ALL_SOURCES = ["Mountainbike.be", "Fietssport.nl", "MTB-You", "GoDare", "Gravelbike.be", "Bikers.be"]
 NOMINATIM = "https://nominatim.openstreetmap.org/search"
 # Bronnen die je tijdelijk wilt overslaan (bijv. omdat de site niet reageert).
 # De oude tochten van die bron blijven staan. Weer aanzetten: haal de naam hieruit, bijv. DISABLED_SOURCES = set()
@@ -728,6 +728,125 @@ def gravelbike_be():
     return events
 
 
+# ---------- bron: Bikers.be (O2Bikers, openbare iCalendar-feed) ----------
+BK_URL = "https://www.bikers.be/nl/?post_type=tribe_events&ical=1&eventDisplay=list"
+# Geen tochten maar andere evenementen die op die agenda staan
+BK_SKIP_RE = re.compile(r"run\s*(&|and|en)\s*bike|beach\s*challenge|\bloop\b|estafette|trail\s*run|hemonight|social\s*ride|brevet|kampioenschap|championnat",
+                        re.IGNORECASE)
+
+
+def ics_unescape(text):
+    return (text.replace("\\n", " ").replace("\\N", " ").replace("\\,", ",").replace("\\;", ";")
+            .replace("\\\\", "\\").strip())
+
+
+def ics_events(text):
+    """Leest een iCalendar-tekst en geeft per VEVENT een dict {veldnaam: (waarde, parameters)}."""
+    lines = []
+    for raw in text.replace("\r\n", "\n").replace("\r", "\n").split("\n"):
+        if raw[:1] in (" ", "\t") and lines:
+            lines[-1] += raw[1:]          # doorlopende regel
+        else:
+            lines.append(raw)
+    events, cur = [], None
+    for line in lines:
+        if line == "BEGIN:VEVENT":
+            cur = {}
+        elif line == "END:VEVENT":
+            if cur is not None:
+                events.append(cur)
+            cur = None
+        elif cur is not None and ":" in line:
+            head, value = line.split(":", 1)
+            name, _, params = head.partition(";")
+            cur.setdefault(name.upper(), (value, params))
+    return events
+
+
+def split_ics_location(loc):
+    """'Sporthal De Berken, Kerkstraat 1, Maldegem, 8340, Belgium' -> (plaats, postcode, land)."""
+    parts = [p.strip() for p in re.split(r"(?<!\\),", loc.replace("\\,", ",\x00")) if p.strip()]
+    parts = [p.replace("\x00", "").strip() for p in parts]
+    country = ""
+    if parts and re.fullmatch(r"(belgi[eë]|belgique|belgium|nederland|netherlands|the netherlands|luxembourg|luxemburg|france|frankrijk|deutschland|germany)", parts[-1], re.IGNORECASE):
+        low = parts.pop().lower()
+        country = {"belgië": "BE", "belgie": "BE", "belgique": "BE", "belgium": "BE", "nederland": "NL", "netherlands": "NL",
+                   "the netherlands": "NL", "luxembourg": "LU", "luxemburg": "LU", "france": "FR", "frankrijk": "FR",
+                   "deutschland": "DE", "germany": "DE"}.get(low, "")
+    pc, city = "", ""
+    for i, p in enumerate(parts):
+        m = re.fullmatch(r"(\d{4})(?:\s?([A-Z]{2}))?(?:\s+(.+))?", p)
+        if m:
+            pc = m.group(1) + (m.group(2) or "")
+            if m.group(3):
+                city = m.group(3)
+            else:
+                for cand in (parts[i - 1] if i else "", parts[i + 1] if i + 1 < len(parts) else ""):
+                    if cand and not re.search(r"\d", cand):
+                        city = cand
+                        break
+            break
+    if not city:
+        # geen postcode: pak het eerste deel zonder cijfers dat niet op een straat lijkt
+        for p in parts[1:] or parts:
+            if not re.search(r"\d", p) and not re.search(r"(straat|laan|weg|plein|rue|chemin|avenue|steenweg)", p, re.IGNORECASE):
+                city = p
+                break
+    return city, pc, country
+
+
+def bikers_be():
+    r = requests.get(BK_URL, headers=BROWSER_HEADERS, timeout=30)
+    r.raise_for_status()
+    if "BEGIN:VCALENDAR" not in r.text:
+        raise RuntimeError("geen iCalendar-bestand ontvangen (is de feed veranderd?)")
+    today = date.today().isoformat()
+    events, skipped, seen = [], 0, set()
+    for ev in ics_events(r.text):
+        title = ics_unescape(ev.get("SUMMARY", ("", ""))[0])
+        start = ev.get("DTSTART", ("", ""))[0]
+        m = re.match(r"(\d{4})(\d{2})(\d{2})", start)
+        if not title or not m:
+            continue
+        d = f"{m.group(1)}-{m.group(2)}-{m.group(3)}"
+        if d < today:
+            continue
+        if BK_SKIP_RE.search(title):
+            skipped += 1
+            continue
+        city, pc, cc = split_ics_location(ev.get("LOCATION", ("", ""))[0])
+        if not city:
+            continue
+        link = ics_unescape(ev.get("URL", ("", ""))[0])
+        if not link.startswith("http"):
+            link = "https://www.bikers.be/nl/agenda/"
+        desc = ics_unescape(ev.get("DESCRIPTION", ("", ""))[0])
+        new = {
+            "id": f"bk-{d}-{ascii_slug(title)}-{ascii_slug(city)}"[:90],
+            "title": title,
+            "date": d,
+            "location": city,
+            "type": kind_from_title(title, "MTB"),
+            "distances": unique_ints(desc),
+            "organizer": "",
+            "sourceUrl": link,
+            "price": "",
+            "source": "Bikers.be",
+            "_prov": cc or "BE",
+        }
+        if pc and (cc or "BE") in ("BE", "NL"):
+            new["_pc"] = (pc, cc or "BE")
+        if new["id"] not in seen:
+            seen.add(new["id"])
+            events.append(new)
+    print(f"  {len(events)} tochten ({skipped} geen tocht overgeslagen)")
+    for e in events[:3]:
+        print(f"  voorbeeld: {e['date']} {e['title']} | {e['location']} | {e.get('_pc')}")
+    if not events:
+        print("  Geen tochten gevonden; is de feed veranderd?")
+    return events
+
+
 def country_of(prov):
     # Landcode (NL/BE/...) uit de provinciecode of het land van de bron; leeg als dat niet zeker is
     if prov in ("NL", "BE", "DE", "FR", "LU"):
@@ -783,6 +902,7 @@ SOURCES = {
     "MTB-You": mtb_you,
     "GoDare": godare,
     "Gravelbike.be": gravelbike_be,
+    "Bikers.be": bikers_be,   # laatste: bij dezelfde tocht winnen de andere bronnen
 }
 
 

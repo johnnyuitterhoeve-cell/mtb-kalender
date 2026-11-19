@@ -677,7 +677,7 @@
                     url: location.origin + '/?tocht=' + encodeURIComponent(e.slug),
                     sameAs: safeUrl(e.sourceUrl)
                 };
-                if (e.organizer) ev.organizer = { '@type': 'Organization', name: e.organizer };
+                if (e.organizer) { ev.organizer = { '@type': 'Organization', name: e.organizer }; if (/^https?:\/\//i.test(e.sourceUrl || '')) ev.organizer.url = e.sourceUrl; }
                 var pr = priceNumbers(e.price);
                 if (pr.length) ev.offers = { '@type': 'Offer', price: Math.min.apply(null, pr).toFixed(2), priceCurrency: 'EUR', url: safeUrl(e.sourceUrl), availability: 'https://schema.org/InStock' };
                 list.push(ev);

@@ -268,6 +268,8 @@ def maak_pagina(spec, lijst, vandaag, regio_links, ander_link, indeling):
             ev["sameAs"] = e["sourceUrl"]
         if e.get("organizer"):
             ev["organizer"] = {"@type": "Organization", "name": e["organizer"]}
+            if veilige_url(e.get("sourceUrl")):
+                ev["organizer"]["url"] = e["sourceUrl"]
         pr = prijs_getallen(e.get("price"))
         if pr and veilige_url(e.get("sourceUrl")):
             ev["offers"] = {"@type": "Offer", "price": f"{min(pr):.2f}", "priceCurrency": "EUR", "url": e["sourceUrl"],

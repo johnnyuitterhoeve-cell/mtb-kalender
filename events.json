@@ -284,19 +284,6 @@
     "start": "BWO Sportcomplex “De Noork”, Oldenzaalsestraat  518, 7558PW Hengelo, Nederland"
   },
   {
-    "id": "bk-2026-11-22-memorial-patrick-meersschaert-ronde-van-het-waasland-kieldrechtsraat",
-    "title": "Memorial Patrick Meersschaert - Ronde van het Waasland",
-    "date": "2026-11-22",
-    "location": "Kieldrechtsraat",
-    "type": "MTB",
-    "distances": [],
-    "organizer": "",
-    "sourceUrl": "https://www.bikers.be/nl/evenement/memorial-patrick-meersschaert-ronde-van-het-waasland-2/",
-    "price": "",
-    "source": "Bikers.be",
-    "country": "BE"
-  },
-  {
     "id": "mb-20261122-lichtenvoorde-achterhoeks-argste-vishandel-bomers-mtb-tocht",
     "title": "Achterhoeks Argste / Vishandel Bomers MTB Tocht",
     "date": "2026-11-22",
@@ -503,19 +490,6 @@
     "lat": 51.1794,
     "lon": 3.7472,
     "start": "Sportoase Ertvelde, Guldensporenlaan 34, 9940 Ertvelde, België"
-  },
-  {
-    "id": "bk-2026-11-28-winter-tt-huriss-alm-huriss-alm",
-    "title": "Winter TT Hüriss Alm",
-    "date": "2026-11-28",
-    "location": "Huriss Alm",
-    "type": "MTB",
-    "distances": [],
-    "organizer": "",
-    "sourceUrl": "https://www.bikers.be/nl/evenement/winter-tt-huriss-alm/",
-    "price": "",
-    "source": "Bikers.be",
-    "country": "BE"
   },
   {
     "id": "fs-60394",
@@ -1163,21 +1137,6 @@
     "start": "voetbalkantine sporting grote brogel, bocholterweg, 3990 Grote-Brogel, België"
   },
   {
-    "id": "bk-2026-12-06-2-h-vtt-du-cercle-hainaut",
-    "title": "2 H VTT du Cercle",
-    "date": "2026-12-06",
-    "location": "Hainaut",
-    "type": "MTB",
-    "distances": [],
-    "organizer": "",
-    "sourceUrl": "https://www.bikers.be/nl/evenement/2-h-vtt-du-cercle/",
-    "price": "",
-    "source": "Bikers.be",
-    "country": "BE",
-    "lat": 50.5922,
-    "lon": 3.3878
-  },
-  {
     "id": "fs-60219",
     "title": "Niederrhein Gravel Race Nordrhein-Westfalen -",
     "date": "2026-12-06",
@@ -1272,6 +1231,21 @@
     "lat": 51.5209,
     "lon": 4.5694,
     "start": "Sportpark, Sportpromenade 5, 4715 SM Rucphen, Nederland"
+  },
+  {
+    "id": "bk-2026-12-06-2-h-vtt-du-cercle-tournai",
+    "title": "2 H VTT du Cercle",
+    "date": "2026-12-06",
+    "location": "Tournai",
+    "type": "MTB",
+    "distances": [],
+    "organizer": "",
+    "sourceUrl": "https://www.bikers.be/nl/evenement/2-h-vtt-du-cercle/",
+    "price": "",
+    "source": "Bikers.be",
+    "country": "BE",
+    "lat": 50.5922,
+    "lon": 3.3878
   },
   {
     "id": "mb-20261206-vorden-grote-veldrit",
@@ -1372,21 +1346,6 @@
     "start": "Restaurant Bargo, Bredasebaan, 4744 RZ Bosschenhoofd, Halderberge, Nederland"
   },
   {
-    "id": "bk-2026-12-12-4-strade-grigi-gravel-antwerpen",
-    "title": "4° Strade Grigi Gravel",
-    "date": "2026-12-12",
-    "location": "Antwerpen",
-    "type": "Gravel",
-    "distances": [],
-    "organizer": "",
-    "sourceUrl": "https://www.bikers.be/nl/evenement/4-strade-grigi-gravel/",
-    "price": "",
-    "source": "Bikers.be",
-    "country": "BE",
-    "lat": 51.3359,
-    "lon": 4.6282
-  },
-  {
     "id": "fs-60468",
     "title": "Veluwse Wintercompetitie Apeldoorn",
     "date": "2026-12-12",
@@ -1483,6 +1442,21 @@
     "lat": 51.292,
     "lon": 4.5773,
     "start": "Feestzaal ' t Goorhof, Berklei 18, 2960 Sint Job in ' t Goor, België"
+  },
+  {
+    "id": "bk-2026-12-12-4-strade-grigi-gravel-sint-job-int-goor",
+    "title": "4° Strade Grigi Gravel",
+    "date": "2026-12-12",
+    "location": "Sint-Job-In’t-Goor",
+    "type": "Gravel",
+    "distances": [],
+    "organizer": "",
+    "sourceUrl": "https://www.bikers.be/nl/evenement/4-strade-grigi-gravel/",
+    "price": "",
+    "source": "Bikers.be",
+    "country": "BE",
+    "lat": 51.3359,
+    "lon": 4.6282
   },
   {
     "id": "mb-20261212-stroe-oliebollentocht-mtb",

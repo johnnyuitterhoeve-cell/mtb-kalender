@@ -763,35 +763,44 @@ def ics_events(text):
     return events
 
 
+SMALL_WORDS = {"in", "'t", "'n", "aan", "op", "bij", "en", "sur", "la", "le", "les", "lez", "sous", "de", "van", "der", "den"}
+
+
+def nice_place(text):
+    """'SINT-KRUIS' -> 'Sint-Kruis', 'SINT-JOB-IN-'T-GOOR' -> 'Sint-Job-in-'t-Goor' (eerste woord altijd met hoofdletter)."""
+    tokens = re.split(r"([ \-])", text.strip().lower())
+    out, first = [], True
+    for t in tokens:
+        if t in (" ", "-") or not t:
+            out.append(t)
+            continue
+        if first or t not in SMALL_WORDS:
+            t = t[:1].upper() + t[1:]
+        if t.startswith("'") and len(t) > 1 and t not in SMALL_WORDS:
+            t = "'" + t[1:2].upper() + t[2:]
+        first = False
+        out.append(t)
+    res = "".join(out)
+    return res[:1].upper() + res[1:]
+
+
 def split_ics_location(loc):
-    """'Sporthal De Berken, Kerkstraat 1, Maldegem, 8340, Belgium' -> (plaats, postcode, land)."""
-    parts = [p.strip() for p in re.split(r"(?<!\\),", loc.replace("\\,", ",\x00")) if p.strip()]
-    parts = [p.replace("\x00", "").strip() for p in parts]
+    """Bikers.be: 'MALDEGEM\\, Sporthal De Berken\\, Kleitkalseide 109a\\, MALDEGEM\\, Flandre Orientale\\, 9990\\, Belgium'.
+    Het eerste deel is de plaats (in hoofdletters); een postcode en het land staan er soms achter."""
+    parts = [p.strip() for p in loc.split("\\,") if p.strip()]
     country = ""
-    if parts and re.fullmatch(r"(belgi[eë]|belgique|belgium|nederland|netherlands|the netherlands|luxembourg|luxemburg|france|frankrijk|deutschland|germany)", parts[-1], re.IGNORECASE):
-        low = parts.pop().lower()
-        country = {"belgië": "BE", "belgie": "BE", "belgique": "BE", "belgium": "BE", "nederland": "NL", "netherlands": "NL",
-                   "the netherlands": "NL", "luxembourg": "LU", "luxemburg": "LU", "france": "FR", "frankrijk": "FR",
-                   "deutschland": "DE", "germany": "DE"}.get(low, "")
-    pc, city = "", ""
-    for i, p in enumerate(parts):
-        m = re.fullmatch(r"(\d{4})(?:\s?([A-Z]{2}))?(?:\s+(.+))?", p)
+    names = {"belgië": "BE", "belgie": "BE", "belgique": "BE", "belgium": "BE", "nederland": "NL", "netherlands": "NL",
+             "the netherlands": "NL", "luxembourg": "LU", "luxemburg": "LU", "france": "FR", "frankrijk": "FR",
+             "deutschland": "DE", "germany": "DE"}
+    if parts and parts[-1].lower() in names:
+        country = names[parts.pop().lower()]
+    pc = ""
+    for p in parts:
+        m = re.fullmatch(r"(\d{4})(?:\s?([A-Z]{2}))?", p)
         if m:
             pc = m.group(1) + (m.group(2) or "")
-            if m.group(3):
-                city = m.group(3)
-            else:
-                for cand in (parts[i - 1] if i else "", parts[i + 1] if i + 1 < len(parts) else ""):
-                    if cand and not re.search(r"\d", cand):
-                        city = cand
-                        break
             break
-    if not city:
-        # geen postcode: pak het eerste deel zonder cijfers dat niet op een straat lijkt
-        for p in parts[1:] or parts:
-            if not re.search(r"\d", p) and not re.search(r"(straat|laan|weg|plein|rue|chemin|avenue|steenweg)", p, re.IGNORECASE):
-                city = p
-                break
+    city = nice_place(parts[0]) if parts and not re.fullmatch(r"\d{4}.*", parts[0]) else ""
     return city, pc, country
 
 

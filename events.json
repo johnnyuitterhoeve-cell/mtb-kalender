@@ -2033,7 +2033,7 @@
     "location": "Deurne",
     "type": "MTB",
     "distances": [
-      30,
+      35,
       45,
       65
     ],
@@ -2055,8 +2055,8 @@
     "location": "Deurne",
     "type": "Gravel",
     "distances": [
-      60,
-      85
+      50,
+      75
     ],
     "organizer": "TWC \"De Wekkers\"",
     "sourceUrl": "https://www.fietssport.nl/toertochten/59536/gravel-tocht-de-wekkers-deurne-2026",
@@ -2068,6 +2068,25 @@
     "start": "Sportpark Leeuwkensbroek, Kuilvenweg 9, Deurne, Nederland",
     "startLat": 51.47521,
     "startLon": 5.79826
+  },
+  {
+    "id": "gd-gravel-tocht-de-wekkers-deurne-2026",
+    "title": "Gravel-tocht de Wekkers - Deurne 2026",
+    "date": "2026-12-20",
+    "location": "Deurne",
+    "type": "Gravel",
+    "distances": [
+      60,
+      85
+    ],
+    "organizer": "TWC \"De Wekkers\"",
+    "sourceUrl": "https://www.godare.events/nl/events/gravel-ride-kalender/gravel-tocht-de-wekkers-deurne-2026",
+    "price": "",
+    "source": "GoDare",
+    "country": "NL",
+    "lat": 51.4283,
+    "lon": 5.828,
+    "start": "Sportpark Leeuwkensbroek, Kuilvenweg  9, 5752BC Deurne, Nederland"
   },
   {
     "id": "fs-60462",

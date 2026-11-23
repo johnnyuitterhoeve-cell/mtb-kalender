@@ -27,7 +27,7 @@ WEEKS_AHEAD = 12
 EVENTS_FILE = "events.json"
 GEO_FILE = "geocache.json"
 SOURCES_FILE = "sources.json"
-ALL_SOURCES = ["Mountainbike.be", "Fietssport.nl", "MTB-You", "GoDare", "Gravelbike.be", "Bikers.be"]
+ALL_SOURCES = ["Mountainbike.be", "Fietssport.nl", "MTB-You", "GoDare", "Gravelbike.be", "Bikers.be", "Toertochten.be"]
 NOMINATIM = "https://nominatim.openstreetmap.org/search"
 # Bronnen die je tijdelijk wilt overslaan (bijv. omdat de site niet reageert).
 # De oude tochten van die bron blijven staan. Weer aanzetten: haal de naam hieruit, bijv. DISABLED_SOURCES = set()
@@ -856,6 +856,139 @@ def bikers_be():
     return events
 
 
+# ---------- bron: Toertochten.be (robots.txt staat alles toe; tochten zijn door organisatoren bevestigd) ----------
+TT_BASE = "https://www.toertochten.be"
+TT_LISTS = [("MTB", TT_BASE + "/en/mtb/"), ("Gravel", TT_BASE + "/en/gravel/")]
+TT_EVENT_RE = re.compile(r'href="(/events/[^"/]+/)"')
+TT_LD_RE = re.compile(r'<script type="application/ld\+json">(.*?)</script>', re.DOTALL)
+TT_LOC_RE = re.compile(r'location:\s*(\{"city".*?\}),\s*\n')
+TT_SKIP_RE = re.compile(r"run\s*(&|and|en)\s*bike|beach\s*challenge|estafette|trail\s*run|hemonight|social\s*ride|brevet|kampioenschap|championnat|wedstrijd|\bcup\b",
+                        re.IGNORECASE)
+
+
+def tt_robots_allows():
+    """Leest robots.txt; geeft een functie terug die zegt of een pad opgehaald mag worden."""
+    from urllib.robotparser import RobotFileParser
+    r = requests.get(TT_BASE + "/robots.txt", headers=BROWSER_HEADERS, timeout=30)
+    rp = RobotFileParser()
+    rp.parse(r.text.splitlines() if r.status_code == 200 else [])
+    return lambda url: rp.can_fetch(BROWSER_HEADERS["User-Agent"], url)
+
+
+def tt_event_node(soup_text):
+    for m in TT_LD_RE.finditer(soup_text):
+        try:
+            data = json.loads(m.group(1))
+        except ValueError:
+            continue
+        nodes = data if isinstance(data, list) else data.get("@graph", [data]) if isinstance(data, dict) else []
+        for n in nodes:
+            t = n.get("@type") if isinstance(n, dict) else None
+            if t == "Event" or (isinstance(t, list) and "Event" in t) or (isinstance(t, str) and t.endswith("Event")):
+                return n
+    return None
+
+
+def tt_parse_event(slug_path, html, kind):
+    node = tt_event_node(html)
+    if not node:
+        return None
+    title = (node.get("name") or "").strip()
+    start = str(node.get("startDate") or "")
+    m = re.match(r"(\d{4}-\d{2}-\d{2})", start)
+    if not title or not m:
+        return None
+    if "cancel" in str(node.get("eventStatus", "")).lower():
+        return None
+    loc = {}
+    lm = TT_LOC_RE.search(html)
+    if lm:
+        try:
+            loc = json.loads(lm.group(1))
+        except ValueError:
+            loc = {}
+    place = node.get("location") if isinstance(node.get("location"), dict) else {}
+    city = (loc.get("city") or place.get("name") or "").strip()
+    if not city:
+        return None
+    offers = node.get("offers") or []
+    offers = offers if isinstance(offers, list) else [offers]
+    dist, prices = [], []
+    for o in offers:
+        if not isinstance(o, dict):
+            continue
+        dist += [int(x) for x in re.findall(r"(\d+)(?:[.,]\d+)?\s*km", str(o.get("name", "")))]
+        try:
+            prices.append(float(str(o.get("price")).replace(",", ".")))
+        except (TypeError, ValueError):
+            pass
+    org = node.get("organizer")
+    org = (org.get("name", "") if isinstance(org, dict) else str(org or "")).strip()
+    ev = {
+        "id": "tt-" + slug_path.strip("/").split("/")[-1],
+        "title": title,
+        "date": m.group(1),
+        "location": city,
+        "type": kind_from_title(title, kind),
+        "distances": list(dict.fromkeys(dist)),
+        "organizer": org,
+        "sourceUrl": TT_BASE + slug_path,
+        "price": ("€ " + f"{min(prices):.2f}".replace(".", ",")) if prices else "",
+        "source": "Toertochten.be",
+        "_prov": loc.get("country") if loc.get("country") in ("NL", "BE", "DE", "FR", "LU") else "BE",
+    }
+    if isinstance(loc.get("lat"), (int, float)) and isinstance(loc.get("lng"), (int, float)):
+        ev["lat"], ev["lon"] = round(loc["lat"], 4), round(loc["lng"], 4)
+    return ev
+
+
+def toertochten_be():
+    allowed = tt_robots_allows()
+    today = date.today().isoformat()
+    paths = {}                                   # pad -> set van soorten
+    for kind, url in TT_LISTS:
+        if not allowed(url):
+            print(f"  {url} mag volgens robots.txt niet; overgeslagen")
+            continue
+        r = requests.get(url, headers=BROWSER_HEADERS, timeout=30)
+        if r.status_code == 404:
+            print(f"  {url}: niet gevonden")
+            continue
+        r.raise_for_status()
+        found = set(TT_EVENT_RE.findall(r.text))
+        print(f"  lijst {kind}: {len(found)} tochten")
+        for p in found:
+            paths.setdefault(p, set()).add(kind)
+        time.sleep(1)
+    events, failed = [], 0
+    for p, kinds in sorted(paths.items()):
+        url = TT_BASE + p
+        if not allowed(url):
+            continue
+        try:
+            r = requests.get(url, headers=BROWSER_HEADERS, timeout=30)
+            r.raise_for_status()
+        except requests.RequestException as e:
+            failed += 1
+            code = getattr(getattr(e, "response", None), "status_code", None)
+            if code in (401, 403, 429) or failed >= 5:
+                print(f"  gestopt na een fout ({e})")
+                break
+            continue
+        ev = tt_parse_event(p, r.text, "MTB" if kinds == {"MTB"} else "Gravel")
+        if ev and kinds == {"MTB", "Gravel"}:
+            ev["type"] = "Both"
+        if ev and ev["date"] >= today and not TT_SKIP_RE.search(ev["title"]):
+            events.append(ev)
+        time.sleep(1)
+    print(f"  {len(events)} tochten ({failed} pagina's mislukt)")
+    for e in events[:3]:
+        print(f"  voorbeeld: {e['date']} {e['title']} | {e['location']} | {e['distances']} | {e['price']}")
+    if not events and paths:
+        raise RuntimeError("geen tochten herkend op de pagina's (is de opbouw veranderd?)")
+    return events
+
+
 def country_of(prov):
     # Landcode (NL/BE/...) uit de provinciecode of het land van de bron; leeg als dat niet zeker is
     if prov in ("NL", "BE", "DE", "FR", "LU"):
@@ -911,7 +1044,8 @@ SOURCES = {
     "MTB-You": mtb_you,
     "GoDare": godare,
     "Gravelbike.be": gravelbike_be,
-    "Bikers.be": bikers_be,   # laatste: bij dezelfde tocht winnen de andere bronnen
+    "Bikers.be": bikers_be,
+    "Toertochten.be": toertochten_be,   # laatste: bij dezelfde tocht winnen de andere bronnen
 }
 
 

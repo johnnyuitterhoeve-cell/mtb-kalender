@@ -1,10 +1,10 @@
 {
-  "updated": "2026-11-19T18:02:22+00:00",
+  "updated": "2026-11-23T05:01:29+00:00",
   "sources": [
     {
       "name": "Mountainbike.be",
       "status": "oud",
-      "count": 73,
+      "count": 61,
       "message": "toegang geweigerd (403)"
     },
     {
@@ -16,25 +16,25 @@
     {
       "name": "MTB-You",
       "status": "ok",
-      "count": 11,
+      "count": 17,
       "message": ""
     },
     {
       "name": "GoDare",
       "status": "ok",
-      "count": 35,
+      "count": 31,
       "message": ""
     },
     {
       "name": "Gravelbike.be",
       "status": "ok",
-      "count": 10,
+      "count": 6,
       "message": ""
     },
     {
       "name": "Bikers.be",
       "status": "ok",
-      "count": 2,
+      "count": 4,
       "message": ""
     }
   ]

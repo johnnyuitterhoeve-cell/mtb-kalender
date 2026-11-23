@@ -136,6 +136,23 @@
     "startLon": 5.31871
   },
   {
+    "id": "tt-brm200-luctor-et-emergo",
+    "title": "BRM200 Luctor et Emergo",
+    "date": "2026-11-28",
+    "location": "Wemeldinge",
+    "type": "Gravel",
+    "distances": [
+      200
+    ],
+    "organizer": "Randonneurs Nederland",
+    "sourceUrl": "https://www.toertochten.be/events/brm200-luctor-et-emergo/",
+    "price": "€ 8,00",
+    "source": "Toertochten.be",
+    "lat": 51.518,
+    "lon": 4.0017,
+    "country": "NL"
+  },
+  {
     "id": "mb-20261129-brecht-rondom-brecht",
     "title": "Rondom Brecht",
     "date": "2026-11-29",
@@ -245,6 +262,42 @@
     "start": "Dorpstraat 2, Gassel, Nederland",
     "startLat": 51.7401,
     "startLon": 5.78052
+  },
+  {
+    "id": "tt-toertocht-gassel",
+    "title": "Toertocht Gassel",
+    "date": "2026-11-29",
+    "location": "Gassel",
+    "type": "MTB",
+    "distances": [
+      45
+    ],
+    "organizer": "TWC De Tweewielers Gassel",
+    "sourceUrl": "https://www.toertochten.be/events/toertocht-gassel/",
+    "price": "€ 5,50",
+    "source": "Toertochten.be",
+    "lat": 51.7376,
+    "lon": 5.7869,
+    "country": "NL"
+  },
+  {
+    "id": "tt-orbea-mtb-challenge",
+    "title": "ORBEA MTB-Challenge",
+    "date": "2026-11-29",
+    "location": "Lemelerveld",
+    "type": "MTB",
+    "distances": [
+      40,
+      60,
+      95
+    ],
+    "organizer": "Cycling Lemelerveld",
+    "sourceUrl": "https://www.toertochten.be/events/orbea-mtb-challenge/",
+    "price": "€ 15,00",
+    "source": "Toertochten.be",
+    "lat": 52.4402,
+    "lon": 6.3437,
+    "country": "NL"
   },
   {
     "id": "fs-59892",
@@ -853,6 +906,25 @@
     "start": "Ons Huis, Kostersvoetweg 2, 1982 Weerde, België"
   },
   {
+    "id": "tt-2e-the-hybrid-ride-best-of-both-worlds",
+    "title": "2e \"The Hybrid Ride - Best of Both Worlds\"",
+    "date": "2026-12-06",
+    "location": "Weerde",
+    "type": "Gravel",
+    "distances": [
+      25,
+      48,
+      75
+    ],
+    "organizer": "Raak Weerede",
+    "sourceUrl": "https://www.toertochten.be/events/2e-the-hybrid-ride-best-of-both-worlds/",
+    "price": "€ 8,00",
+    "source": "Toertochten.be",
+    "lat": 50.9721,
+    "lon": 4.478,
+    "country": "BE"
+  },
+  {
     "id": "mb-20261208-veerle-laakdal-okra-groepsrit-",
     "title": "OKRA Groepsrit",
     "date": "2026-12-08",
@@ -888,6 +960,23 @@
     "lat": 51.5546,
     "lon": 4.5564,
     "start": "Restaurant Bargo, Bredasebaan, 4744 RZ Bosschenhoofd, Halderberge, Nederland"
+  },
+  {
+    "id": "tt-brm200-rondje-utrecht",
+    "title": "BRM200 Rondje Utrecht",
+    "date": "2026-12-12",
+    "location": "Amsterdam",
+    "type": "Gravel",
+    "distances": [
+      200
+    ],
+    "organizer": "Randonneurs Nederland",
+    "sourceUrl": "https://www.toertochten.be/events/brm200-rondje-utrecht/",
+    "price": "€ 8,00",
+    "source": "Toertochten.be",
+    "lat": 52.3818,
+    "lon": 4.8214,
+    "country": "NL"
   },
   {
     "id": "fs-60468",

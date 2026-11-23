@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-23T05:01:29+00:00",
+  "updated": "2026-11-23T05:37:41+00:00",
   "sources": [
     {
       "name": "Mountainbike.be",
@@ -35,6 +35,12 @@
       "name": "Bikers.be",
       "status": "ok",
       "count": 4,
+      "message": ""
+    },
+    {
+      "name": "Toertochten.be",
+      "status": "ok",
+      "count": 5,
       "message": ""
     }
   ]

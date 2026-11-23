@@ -942,11 +942,38 @@ def tt_parse_event(slug_path, html, kind):
     return ev
 
 
+TT_CARDS = [TT_BASE + "/en/mtb/cards.json", TT_BASE + "/en/gravel/cards.json"]
+TT_CACHE_FILE = "toertochten_cache.json"     # alleen op de computer waar de update draait; niet in GitHub
+TT_CACHE_DAYS = 14
+
+
+def tt_card_event(card, path, kinds):
+    """Bouwt een tocht uit alleen de gegevens van de lijst (als de tochtpagina niet op te halen is)."""
+    m = re.match(r"(\d{4}-\d{2}-\d{2})", str(card.get("date", "")))
+    title, city = (card.get("name") or "").strip(), (card.get("city") or "").strip()
+    if not (m and title and city):
+        return None
+    cc = card.get("country")
+    return {
+        "id": "tt-" + path.strip("/").split("/")[-1],
+        "title": title,
+        "date": m.group(1),
+        "location": city,
+        "type": kind_from_title(title, "MTB" if kinds == {"mtb"} else "Gravel"),
+        "distances": list(dict.fromkeys(int(x) for x in re.findall(r"\d+", str(card.get("distances", ""))))),
+        "organizer": (card.get("org") or "").strip(),
+        "sourceUrl": TT_BASE + path,
+        "price": "",
+        "source": "Toertochten.be",
+        "_prov": cc if cc in ("NL", "BE", "DE", "FR", "LU") else "BE",
+    }
+
+
 def toertochten_be():
     allowed = tt_robots_allows()
     today = date.today().isoformat()
-    paths = {}                                   # pad -> set van soorten
-    for kind, url in TT_LISTS:
+    cards = {}                                   # pad -> (kaart, soorten)
+    for url in TT_CARDS:
         if not allowed(url):
             print(f"  {url} mag volgens robots.txt niet; overgeslagen")
             continue
@@ -955,37 +982,55 @@ def toertochten_be():
             print(f"  {url}: niet gevonden")
             continue
         r.raise_for_status()
-        found = set(TT_EVENT_RE.findall(r.text))
-        print(f"  lijst {kind}: {len(found)} tochten")
-        for p in found:
-            paths.setdefault(p, set()).add(kind)
+        items = r.json().get("events", [])
+        print(f"  {url.rsplit('/', 2)[-2]}: {len(items)} items")
+        for c in items:
+            pm = TT_EVENT_RE.search(c.get("html", ""))
+            if not pm or c.get("eventKind", "tour") != "tour" or str(c.get("date", "")) < today:
+                continue
+            kinds = {k.strip() for k in str(c.get("types", "")).split(",")} & {"mtb", "gravel"}
+            if not kinds or TT_SKIP_RE.search(c.get("name", "")):
+                continue
+            old = cards.get(pm.group(1))
+            cards[pm.group(1)] = (c, kinds | (old[1] if old else set()))
         time.sleep(1)
-    events, failed = [], 0
-    for p, kinds in sorted(paths.items()):
-        url = TT_BASE + p
-        if not allowed(url):
+    cache = load_json(TT_CACHE_FILE, {})
+    events, fetched, failed, stop = [], 0, 0, False
+    for path, (card, kinds) in sorted(cards.items()):
+        ev, entry = None, cache.get(path)
+        if entry and (date.today() - date.fromisoformat(entry["fetched"])).days < TT_CACHE_DAYS:
+            ev = entry["event"]
+        elif not stop and allowed(TT_BASE + path):
+            try:
+                time.sleep(1)
+                r = requests.get(TT_BASE + path, headers=BROWSER_HEADERS, timeout=30)
+                r.raise_for_status()
+                ev = tt_parse_event(path, r.text, "MTB" if kinds == {"mtb"} else "Gravel")
+                if ev:
+                    cache[path] = {"fetched": today, "event": ev}
+                    fetched += 1
+            except requests.RequestException as e:
+                failed += 1
+                code = getattr(getattr(e, "response", None), "status_code", None)
+                if code in (401, 403, 429) or failed >= 5:
+                    print(f"  geen tochtpagina's meer opgehaald na een fout ({e}); de rest komt uit de lijst")
+                    stop = True
+        if ev is None:
+            ev = tt_card_event(card, path, kinds)
+        if ev is None or ev["date"] < today:
             continue
-        try:
-            r = requests.get(url, headers=BROWSER_HEADERS, timeout=30)
-            r.raise_for_status()
-        except requests.RequestException as e:
-            failed += 1
-            code = getattr(getattr(e, "response", None), "status_code", None)
-            if code in (401, 403, 429) or failed >= 5:
-                print(f"  gestopt na een fout ({e})")
-                break
-            continue
-        ev = tt_parse_event(p, r.text, "MTB" if kinds == {"MTB"} else "Gravel")
-        if ev and kinds == {"MTB", "Gravel"}:
-            ev["type"] = "Both"
-        if ev and ev["date"] >= today and not TT_SKIP_RE.search(ev["title"]):
-            events.append(ev)
-        time.sleep(1)
-    print(f"  {len(events)} tochten ({failed} pagina's mislukt)")
+        ev = dict(ev)
+        ev["type"] = "Both" if kinds == {"mtb", "gravel"} else ("MTB" if kinds == {"mtb"} else "Gravel")
+        if ev["type"] != "Both":
+            ev["type"] = kind_from_title(ev["title"], ev["type"])
+        events.append(ev)
+    with open(TT_CACHE_FILE, "w", encoding="utf-8") as f:
+        json.dump({p: v for p, v in cache.items() if v["event"]["date"] >= today}, f, ensure_ascii=False)
+    print(f"  {len(events)} tochten ({fetched} pagina's nieuw opgehaald, {failed} mislukt)")
     for e in events[:3]:
         print(f"  voorbeeld: {e['date']} {e['title']} | {e['location']} | {e['distances']} | {e['price']}")
-    if not events and paths:
-        raise RuntimeError("geen tochten herkend op de pagina's (is de opbouw veranderd?)")
+    if not events and cards:
+        raise RuntimeError("geen tochten herkend (is de opbouw veranderd?)")
     return events
 
 

@@ -49,6 +49,7 @@ NL_PC = [(1000, 1299, "Noord-Holland"), (1300, 1379, "Flevoland"), (1380, 2199, 
          (8300, 8399, "Flevoland"), (8400, 9299, "Friesland"), (9300, 9499, "Drenthe"), (9500, 9999, "Groningen")]
 # plaatsen waarvan de bron geen postcode geeft (aanvullen als er nieuwe bijkomen; onbekende plaatsen worden via de dichtstbijzijnde tocht ingedeeld)
 PLAATS_PROVINCIE = {
+    "Aardenburg": "Zeeland", "Bunnik": "Utrecht", "Denderbelle": "Oost-Vlaanderen", "Dordrecht": "Zuid-Holland", "Enghien": "Henegouwen", "Groningen": "Groningen", "Herzele": "Oost-Vlaanderen", "Londerzeel": "Vlaams-Brabant", "Lummen": "Limburg (BE)", "Melsele": "Oost-Vlaanderen", "Nederhasselt": "Oost-Vlaanderen", "Pollare": "Oost-Vlaanderen", "Zottegem": "Oost-Vlaanderen", "Zwolle": "Overijssel",
     "Aalten": "Gelderland", "Arnhem": "Gelderland", "Groenlo": "Gelderland", "Winterswijk": "Gelderland",
     "Amsterdam": "Noord-Holland", "Leglise": "Luxemburg (BE)",
     "Terlet": "Gelderland", "Katwijk": "Zuid-Holland", "Soest": "Utrecht", "Gassel": "Noord-Brabant", "Nabij Vasse": "Overijssel",

@@ -31,13 +31,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://toertochtenkalender.nl/gravel/noord-brabant/</loc>
+    <loc>https://toertochtenkalender.nl/gravel/oost-vlaanderen/</loc>
     <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://toertochtenkalender.nl/gravel/oost-vlaanderen/</loc>
+    <loc>https://toertochtenkalender.nl/gravel/noord-brabant/</loc>
     <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -62,6 +62,18 @@
   </url>
   <url>
     <loc>https://toertochtenkalender.nl/gravel/west-vlaanderen/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://toertochtenkalender.nl/gravel/vlaams-brabant/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://toertochtenkalender.nl/gravel/utrecht/</loc>
     <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -127,12 +139,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://toertochtenkalender.nl/mtb/noord-holland/</loc>
-    <lastmod>2026-11-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://toertochtenkalender.nl/mtb/vlaams-brabant/</loc>
     <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -145,6 +151,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://toertochtenkalender.nl/mtb/noord-holland/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://toertochtenkalender.nl/mtb/limburg-nederland/</loc>
     <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -152,6 +164,12 @@
   </url>
   <url>
     <loc>https://toertochtenkalender.nl/mtb/henegouwen/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://toertochtenkalender.nl/mtb/zeeland/</loc>
     <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>

@@ -13,13 +13,19 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://toertochtenkalender.nl/gravel/belgie/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://toertochtenkalender.nl/gravel/nederland/</loc>
     <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://toertochtenkalender.nl/gravel/belgie/</loc>
+    <loc>https://toertochtenkalender.nl/gravel/antwerpen/</loc>
     <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -31,7 +37,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://toertochtenkalender.nl/gravel/antwerpen/</loc>
+    <loc>https://toertochtenkalender.nl/gravel/oost-vlaanderen/</loc>
     <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -55,6 +61,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://toertochtenkalender.nl/gravel/west-vlaanderen/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://toertochtenkalender.nl/gravel/limburg-nederland/</loc>
     <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -67,19 +79,13 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://toertochtenkalender.nl/mtb/nederland/</loc>
-    <lastmod>2026-11-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://toertochtenkalender.nl/mtb/belgie/</loc>
     <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://toertochtenkalender.nl/mtb/noord-brabant/</loc>
+    <loc>https://toertochtenkalender.nl/mtb/nederland/</loc>
     <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -97,6 +103,18 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://toertochtenkalender.nl/mtb/oost-vlaanderen/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://toertochtenkalender.nl/mtb/noord-brabant/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://toertochtenkalender.nl/mtb/overijssel/</loc>
     <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -109,25 +127,25 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://toertochtenkalender.nl/mtb/oost-vlaanderen/</loc>
-    <lastmod>2026-11-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://toertochtenkalender.nl/mtb/noord-holland/</loc>
     <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://toertochtenkalender.nl/mtb/limburg-nederland/</loc>
+    <loc>https://toertochtenkalender.nl/mtb/vlaams-brabant/</loc>
     <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://toertochtenkalender.nl/mtb/limburg-belgie/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://toertochtenkalender.nl/mtb/limburg-nederland/</loc>
     <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>

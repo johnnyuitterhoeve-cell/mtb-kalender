@@ -1529,6 +1529,25 @@
     "start": "Zaal ' t Goorhof, Kerklei 18, 2960 Sint-Job-in-'t-Goor, België"
   },
   {
+    "id": "tt-24ste-veldtoertocht-pedaleurs2960",
+    "title": "24ste veldtoertocht Pedaleurs2960",
+    "date": "2026-12-13",
+    "location": "Sint-Job-in-'t-Goor",
+    "type": "MTB",
+    "distances": [
+      33,
+      43,
+      54
+    ],
+    "organizer": "PEDALEURS2960",
+    "sourceUrl": "https://www.toertochten.be/events/24ste-veldtoertocht-pedaleurs2960/",
+    "price": "€ 6,00",
+    "source": "Toertochten.be",
+    "lat": 51.2918,
+    "lon": 4.5794,
+    "country": "BE"
+  },
+  {
     "id": "my-21828",
     "title": "Randonnée des 3 Provinces",
     "date": "2026-12-13",
@@ -1630,6 +1649,42 @@
     "lat": 51.4985,
     "lon": 3.9131,
     "start": "Sportpark Wesselopark, Noordeinde 5 C, 4481 BJ Kleotinge, Nederland"
+  },
+  {
+    "id": "tt-alleycat-race",
+    "title": "Alleycat Race",
+    "date": "2026-12-19",
+    "location": "Knesselare (Aalter)",
+    "type": "Gravel",
+    "distances": [
+      50
+    ],
+    "organizer": "Pecora Cycling Club",
+    "sourceUrl": "https://www.toertochten.be/events/alleycat-race/",
+    "price": "€ 22,50",
+    "source": "Toertochten.be",
+    "lat": 51.1457,
+    "lon": 3.4032,
+    "country": "BE"
+  },
+  {
+    "id": "tt-pecora-gravel-rit",
+    "title": "Pecora Gravel rit",
+    "date": "2026-12-19",
+    "location": "Knesselare (Aalter)",
+    "type": "Gravel",
+    "distances": [
+      43,
+      57,
+      100
+    ],
+    "organizer": "Pecora Cycling Club",
+    "sourceUrl": "https://www.toertochten.be/events/pecora-gravel-rit/",
+    "price": "",
+    "source": "Toertochten.be",
+    "lat": 51.1393,
+    "lon": 3.4124,
+    "country": "BE"
   },
   {
     "id": "bk-2026-12-19-2-a-travers-la-foret-d-anlier-leglise",
@@ -1746,6 +1801,25 @@
     "lat": 51.3121,
     "lon": 3.9133,
     "start": "Sportpark, Sportlaan 1, 4543 AC Zaamslag, Nederland"
+  },
+  {
+    "id": "tt-hrtc-dok-mtb-napoleontocht",
+    "title": "HRTC DOK - MTB Napoleontocht",
+    "date": "2026-12-20",
+    "location": "Den Helder",
+    "type": "MTB",
+    "distances": [
+      23,
+      37,
+      50
+    ],
+    "organizer": "HRTC DOK",
+    "sourceUrl": "https://www.toertochten.be/events/hrtc-dok-mtb-napoleontocht/",
+    "price": "€ 8,00",
+    "source": "Toertochten.be",
+    "lat": 52.9214,
+    "lon": 4.7884,
+    "country": "NL"
   },
   {
     "id": "fs-59535",
@@ -2352,6 +2426,24 @@
     "start": "Sporthal Berckhoven, Berckhovenstraat 25, 2390 Malle, Antwerpen, België"
   },
   {
+    "id": "tt-tchwv-3e-kerstdag-mtb-toertocht",
+    "title": "TCHWV 3e Kerstdag MTB Toertocht",
+    "date": "2026-12-27",
+    "location": "Rheeze",
+    "type": "MTB",
+    "distances": [
+      50,
+      70
+    ],
+    "organizer": "Toerclub HWV Hardenberg",
+    "sourceUrl": "https://www.toertochten.be/events/tchwv-3e-kerstdag-mtb-toertocht/",
+    "price": "€ 6,00",
+    "source": "Toertochten.be",
+    "lat": 52.5448,
+    "lon": 6.57,
+    "country": "NL"
+  },
+  {
     "id": "gb-2026-12-27-gravelty-rudolph",
     "title": "Gravelty Rudolph",
     "date": "2026-12-27",
@@ -2620,6 +2712,23 @@
     "lat": 51.1933,
     "lon": 3.2573,
     "start": "Bloso Centrum Julien Saelens, Nijverheidsstraat 112, 8310 Assebroek, België"
+  },
+  {
+    "id": "tt-brm200-tecklenbrug",
+    "title": "BRM200 Tecklenbrug",
+    "date": "2026-12-30",
+    "location": "Enschede",
+    "type": "Gravel",
+    "distances": [
+      200
+    ],
+    "organizer": "Randonneurs Nederland",
+    "sourceUrl": "https://www.toertochten.be/events/brm200-tecklenbrug/",
+    "price": "€ 8,00",
+    "source": "Toertochten.be",
+    "lat": 52.204,
+    "lon": 6.7966,
+    "country": "NL"
   },
   {
     "id": "fs-60086",
@@ -2997,6 +3106,23 @@
     "startLon": 5.73306
   },
   {
+    "id": "tt-graveltocht-meer",
+    "title": "Graveltocht Meer",
+    "date": "2027-01-03",
+    "location": "Hoogstraten",
+    "type": "Gravel",
+    "distances": [
+      88
+    ],
+    "organizer": "All Out",
+    "sourceUrl": "https://www.toertochten.be/events/graveltocht-meer/",
+    "price": "€ 5,00",
+    "source": "Toertochten.be",
+    "lat": 51.4484,
+    "lon": 4.7312,
+    "country": "BE"
+  },
+  {
     "id": "mb-20270103-huijbergen-atb-toertocht-huijbergen",
     "title": "ATB Toertocht Huijbergen",
     "date": "2027-01-03",
@@ -3014,6 +3140,29 @@
     "lat": 51.433,
     "lon": 4.3769,
     "start": "MFC De Kloek, Prior Borrekensstraat 1, 4635 AD Huijbergen, Nederland"
+  },
+  {
+    "id": "tt-29ste-wintertocht-mtb-palmvelden",
+    "title": "29ste Wintertocht MTB Palmvelden",
+    "date": "2027-01-03",
+    "location": "Londerzeel",
+    "type": "MTB",
+    "distances": [
+      18,
+      53,
+      36,
+      45,
+      66,
+      71,
+      80
+    ],
+    "organizer": "MTB PALMVELDEN",
+    "sourceUrl": "https://www.toertochten.be/events/29ste-wintertocht-mtb-palmvelden/",
+    "price": "",
+    "source": "Toertochten.be",
+    "lat": 51.0306,
+    "lon": 4.3029,
+    "country": "BE"
   },
   {
     "id": "my-21804",
@@ -3080,6 +3229,25 @@
     "startLon": 6.47333
   },
   {
+    "id": "tt-veldtoertocht-meer",
+    "title": "Veldtoertocht Meer",
+    "date": "2027-01-03",
+    "location": "Meer",
+    "type": "Both",
+    "distances": [
+      33,
+      48,
+      88
+    ],
+    "organizer": "ALL OUT",
+    "sourceUrl": "https://www.toertochten.be/events/veldtoertocht-meer/",
+    "price": "€ 7,00",
+    "source": "Toertochten.be",
+    "lat": 51.4484,
+    "lon": 4.7312,
+    "country": "BE"
+  },
+  {
     "id": "gd-tripel-van-malle",
     "title": "Tripel van Malle",
     "date": "2027-01-03",
@@ -3094,6 +3262,61 @@
     "lat": 51.302,
     "lon": 4.734,
     "start": "Sporthal Atheneum Malle, Herentalsebaan 56, 2390 Oostmalle, België"
+  },
+  {
+    "id": "tt-vtt-cyclo-driekoningenrit-zottegem",
+    "title": "VTT & Cyclo Driekoningenrit Zottegem",
+    "date": "2027-01-03",
+    "location": "Zottegem",
+    "type": "MTB",
+    "distances": [
+      45,
+      28,
+      40,
+      52
+    ],
+    "organizer": "WTC SINT ANDRIES STRIJPEN",
+    "sourceUrl": "https://www.toertochten.be/events/vtt-cyclo-driekoningenrit-zottegem/",
+    "price": "€ 5,00",
+    "source": "Toertochten.be",
+    "lat": 50.867,
+    "lon": 3.8263,
+    "country": "BE"
+  },
+  {
+    "id": "tt-brm200-bunnik-onder-nap",
+    "title": "BRM200 Bunnik Onder NAP",
+    "date": "2027-01-09",
+    "location": "Bunnik",
+    "type": "Gravel",
+    "distances": [
+      200
+    ],
+    "organizer": "Randonneurs Nederland",
+    "sourceUrl": "https://www.toertochten.be/events/brm200-bunnik-onder-nap/",
+    "price": "€ 8,00",
+    "source": "Toertochten.be",
+    "lat": 52.0641,
+    "lon": 5.1847,
+    "country": "NL"
+  },
+  {
+    "id": "tt-boverhoff-veldtoertocht-tc-heerde-2027",
+    "title": "Boverhoff Veldtoertocht TC Heerde 2027",
+    "date": "2027-01-09",
+    "location": "Heerde",
+    "type": "MTB",
+    "distances": [
+      30,
+      50
+    ],
+    "organizer": "Toerclub Heerde",
+    "sourceUrl": "https://www.toertochten.be/events/boverhoff-veldtoertocht-tc-heerde-2027/",
+    "price": "€ 6,00",
+    "source": "Toertochten.be",
+    "lat": 52.4105,
+    "lon": 6.0426,
+    "country": "NL"
   },
   {
     "id": "fs-60154",
@@ -3136,6 +3359,28 @@
     "start": "Brekeldlaan 18, Rijssen, Rijssen, Nederland",
     "startLat": 52.29928,
     "startLon": 6.50707
+  },
+  {
+    "id": "tt-de-acht-van-sijsele",
+    "title": "De Acht van Sijsele",
+    "date": "2027-01-09",
+    "location": "Sijsele",
+    "type": "Both",
+    "distances": [
+      28,
+      38,
+      48,
+      58,
+      65,
+      50
+    ],
+    "organizer": "WTC OLYMPIA SIJSELE",
+    "sourceUrl": "https://www.toertochten.be/events/de-acht-van-sijsele/",
+    "price": "",
+    "source": "Toertochten.be",
+    "lat": 51.2032,
+    "lon": 3.3224,
+    "country": "BE"
   },
   {
     "id": "fs-60479",
@@ -3264,6 +3509,46 @@
     "startLon": 5.66344
   },
   {
+    "id": "tt-veldtoertocht-2027-01-10",
+    "title": "Veldtoertocht",
+    "date": "2027-01-10",
+    "location": "Wortel",
+    "type": "MTB",
+    "distances": [
+      15,
+      25,
+      45
+    ],
+    "organizer": "WTC DE ZWAANTJES",
+    "sourceUrl": "https://www.toertochten.be/events/veldtoertocht-2027-01-10/",
+    "price": "",
+    "source": "Toertochten.be",
+    "lat": 51.3986,
+    "lon": 4.7948,
+    "country": "BE"
+  },
+  {
+    "id": "tt-schelde-en-durmerit",
+    "title": "Schelde- en Durmerit",
+    "date": "2027-01-10",
+    "location": "Zele",
+    "type": "MTB",
+    "distances": [
+      30,
+      40,
+      45,
+      50,
+      55
+    ],
+    "organizer": "Ronde van het Waasland",
+    "sourceUrl": "https://www.toertochten.be/events/schelde-en-durmerit/",
+    "price": "",
+    "source": "Toertochten.be",
+    "lat": 51.0669,
+    "lon": 4.0448,
+    "country": "BE"
+  },
+  {
     "id": "fs-60347",
     "title": "B B Veldtoertocht 2027",
     "date": "2027-01-16",
@@ -3285,6 +3570,64 @@
     "startLon": 6.21223
   },
   {
+    "id": "tt-33-door-en-rondom-varsenare",
+    "title": "33° Door en rondom Varsenare",
+    "date": "2027-01-16",
+    "location": "Varsenare",
+    "type": "MTB",
+    "distances": [
+      30,
+      45,
+      60
+    ],
+    "organizer": "WTC VARSENARE",
+    "sourceUrl": "https://www.toertochten.be/events/33-door-en-rondom-varsenare/",
+    "price": "",
+    "source": "Toertochten.be",
+    "lat": 51.1896,
+    "lon": 3.1428,
+    "country": "BE"
+  },
+  {
+    "id": "tt-mtb-poldertocht",
+    "title": "MTB POLDERTOCHT",
+    "date": "2027-01-17",
+    "location": "Aardenburg",
+    "type": "MTB",
+    "distances": [
+      35,
+      55
+    ],
+    "organizer": "TRIMCLUB AARDENBURG",
+    "sourceUrl": "https://www.toertochten.be/events/mtb-poldertocht/",
+    "price": "€ 5,00",
+    "source": "Toertochten.be",
+    "lat": 51.2725,
+    "lon": 3.4331,
+    "country": "NL"
+  },
+  {
+    "id": "tt-jubileum-winter-vtt-cyclo",
+    "title": "Jubileum Winter VTT & cyclo",
+    "date": "2027-01-17",
+    "location": "Berlare (Overmere)",
+    "type": "MTB",
+    "distances": [
+      37,
+      55,
+      22,
+      39,
+      53
+    ],
+    "organizer": "CT UITBERGEN 2.0",
+    "sourceUrl": "https://www.toertochten.be/events/jubileum-winter-vtt-cyclo/",
+    "price": "€ 5,00",
+    "source": "Toertochten.be",
+    "lat": 51.0439,
+    "lon": 3.9421,
+    "country": "BE"
+  },
+  {
     "id": "fs-60847",
     "title": "MTB Toertocht Texel",
     "date": "2027-01-17",
@@ -3304,6 +3647,24 @@
     "start": "Pontweg 1, Den Hoorn, Nederland",
     "startLat": 53.02562,
     "startLon": 4.75278
+  },
+  {
+    "id": "tt-toffe-wintertocht-powered-by-svdo-tourbuffels",
+    "title": "Toffe wintertocht, powered by SVDO Tourbuffels",
+    "date": "2027-01-17",
+    "location": "Hellendoorn",
+    "type": "MTB",
+    "distances": [
+      30,
+      50
+    ],
+    "organizer": "SVDO Tourbuffels",
+    "sourceUrl": "https://www.toertochten.be/events/toffe-wintertocht-powered-by-svdo-tourbuffels/",
+    "price": "€ 8,00",
+    "source": "Toertochten.be",
+    "lat": 52.3913,
+    "lon": 6.4497,
+    "country": "NL"
   },
   {
     "id": "gd-bockentocht-mtb-antilopen-lage-mierde",
@@ -3371,6 +3732,27 @@
     "startLon": 6.90689
   },
   {
+    "id": "tt-negende-pinguntocht-moorslede",
+    "title": "Negende Pinguïntocht Moorslede",
+    "date": "2027-01-17",
+    "location": "Moorslede",
+    "type": "MTB",
+    "distances": [
+      45,
+      65,
+      25,
+      38,
+      50
+    ],
+    "organizer": "BOSKANTRIJDERS-WESTROZEBEKE",
+    "sourceUrl": "https://www.toertochten.be/events/negende-pinguntocht-moorslede/",
+    "price": "€ 5,00",
+    "source": "Toertochten.be",
+    "lat": 50.8884,
+    "lon": 3.0539,
+    "country": "BE"
+  },
+  {
     "id": "fs-60576",
     "title": "Gérard kocken MTB tocht 2027",
     "date": "2027-01-17",
@@ -3416,6 +3798,42 @@
     "startLon": 5.15104
   },
   {
+    "id": "tt-33-door-en-rondom-varsenare-2027-01-17",
+    "title": "33 Door en rondom Varsenare",
+    "date": "2027-01-17",
+    "location": "Varsenare",
+    "type": "MTB",
+    "distances": [
+      30,
+      45,
+      60
+    ],
+    "organizer": "WTC VARSENARE",
+    "sourceUrl": "https://www.toertochten.be/events/33-door-en-rondom-varsenare-2027-01-17/",
+    "price": "",
+    "source": "Toertochten.be",
+    "lat": 51.1896,
+    "lon": 3.1428,
+    "country": "BE"
+  },
+  {
+    "id": "tt-brm200-dordrecht-maasvlakte",
+    "title": "BRM200 Dordrecht Maasvlakte",
+    "date": "2027-01-23",
+    "location": "Dordrecht",
+    "type": "Gravel",
+    "distances": [
+      200
+    ],
+    "organizer": "Randonneurs Nederland",
+    "sourceUrl": "https://www.toertochten.be/events/brm200-dordrecht-maasvlakte/",
+    "price": "€ 8,00",
+    "source": "Toertochten.be",
+    "lat": 51.8143,
+    "lon": 4.7536,
+    "country": "NL"
+  },
+  {
     "id": "mb-20270123-ichtegem-ichtegemse-winter-vtt",
     "title": "Ichtegemse Winter VTT",
     "date": "2027-01-23",
@@ -3434,6 +3852,63 @@
     "lat": 51.0925,
     "lon": 3.0103,
     "start": "Sportcentrum, Keibergstraat, 8480 Ichtegem, België"
+  },
+  {
+    "id": "tt-30e-trappers-trophy",
+    "title": "30e Trappers Trophy",
+    "date": "2027-01-23",
+    "location": "Stekene",
+    "type": "MTB",
+    "distances": [
+      27,
+      48,
+      28,
+      38
+    ],
+    "organizer": "WTC DE SNELTRAPPERS VZW",
+    "sourceUrl": "https://www.toertochten.be/events/30e-trappers-trophy/",
+    "price": "€ 5,00",
+    "source": "Toertochten.be",
+    "lat": 51.2086,
+    "lon": 4.0461,
+    "country": "BE"
+  },
+  {
+    "id": "tt-mtb-ritten",
+    "title": "MTB Ritten",
+    "date": "2027-01-24",
+    "location": "Belsele (Sint-Niklaas)",
+    "type": "MTB",
+    "distances": [
+      15,
+      30,
+      50
+    ],
+    "organizer": "WTC KONTAKT",
+    "sourceUrl": "https://www.toertochten.be/events/mtb-ritten/",
+    "price": "",
+    "source": "Toertochten.be",
+    "lat": 51.1476,
+    "lon": 4.0952,
+    "country": "BE"
+  },
+  {
+    "id": "tt-vtt-halle-zoersel",
+    "title": "VTT Halle-Zoersel",
+    "date": "2027-01-24",
+    "location": "Halle (Kempen)",
+    "type": "MTB",
+    "distances": [
+      25,
+      40
+    ],
+    "organizer": "WTC DE TRAPPERS ST. ANTONIUS",
+    "sourceUrl": "https://www.toertochten.be/events/vtt-halle-zoersel/",
+    "price": "€ 5,00",
+    "source": "Toertochten.be",
+    "lat": 51.2575,
+    "lon": 4.6698,
+    "country": "BE"
   },
   {
     "id": "fs-60175",
@@ -3579,6 +4054,51 @@
     "startLon": 5.90247
   },
   {
+    "id": "tt-martinus-winter-vtt-cyclo",
+    "title": "Martinus Winter VTT & Cyclo",
+    "date": "2027-01-30",
+    "location": "Lievegem",
+    "type": "MTB",
+    "distances": [
+      25,
+      50,
+      30,
+      40
+    ],
+    "organizer": "SPORTVERENIGING ZOMERGEM VZW",
+    "sourceUrl": "https://www.toertochten.be/events/martinus-winter-vtt-cyclo/",
+    "price": "€ 7,00",
+    "source": "Toertochten.be",
+    "lat": 51.1235,
+    "lon": 3.5629,
+    "country": "BE"
+  },
+  {
+    "id": "tt-hoogstraatse-wielertoeristen-vzw",
+    "title": "Hoogstraatse Wielertoeristen VZW.",
+    "date": "2027-01-31",
+    "location": "Hoogstraten",
+    "type": "Both",
+    "distances": [
+      18,
+      27,
+      35,
+      43,
+      48,
+      50,
+      60,
+      70,
+      90
+    ],
+    "organizer": "HOOGSTRAATSE WIELERTOERISTEN VZW",
+    "sourceUrl": "https://www.toertochten.be/events/hoogstraatse-wielertoeristen-vzw/",
+    "price": "",
+    "source": "Toertochten.be",
+    "lat": 51.3986,
+    "lon": 4.7584,
+    "country": "BE"
+  },
+  {
     "id": "fs-60199",
     "title": "Airco Service Slotman Wintermarathon 2027",
     "date": "2027-01-31",
@@ -3598,6 +4118,26 @@
     "start": "Verbindingsweg 1A, Lemelerveld, Nederland",
     "startLat": 52.44111,
     "startLon": 6.34383
+  },
+  {
+    "id": "tt-martinus-winter-vtt-cyclo-2027-01-31",
+    "title": "Martinus Winter VTT & Cyclo",
+    "date": "2027-01-31",
+    "location": "Lievegem",
+    "type": "MTB",
+    "distances": [
+      25,
+      30,
+      50,
+      40
+    ],
+    "organizer": "SPORTVERENIGING ZOMERGEM VZW",
+    "sourceUrl": "https://www.toertochten.be/events/martinus-winter-vtt-cyclo-2027-01-31/",
+    "price": "€ 7,00",
+    "source": "Toertochten.be",
+    "lat": 51.1235,
+    "lon": 3.5629,
+    "country": "BE"
   },
   {
     "id": "fs-60637",
@@ -3665,6 +4205,26 @@
     "startLon": 5.57774
   },
   {
+    "id": "tt-mountainbiketocht-keiheuvel-balen",
+    "title": "Mountainbiketocht Keiheuvel Balen",
+    "date": "2027-02-06",
+    "location": "Balen",
+    "type": "MTB",
+    "distances": [
+      18,
+      36,
+      47,
+      57
+    ],
+    "organizer": "WTC De Spoortrekkers",
+    "sourceUrl": "https://www.toertochten.be/events/mountainbiketocht-keiheuvel-balen/",
+    "price": "",
+    "source": "Toertochten.be",
+    "lat": 51.1773,
+    "lon": 5.2024,
+    "country": "BE"
+  },
+  {
     "id": "mb-20270206-dikkebus-toertocht-dikkebus",
     "title": "Toertocht Dikkebus",
     "date": "2027-02-06",
@@ -3686,6 +4246,65 @@
     "start": "Dikkebusvijver, Dikkebusvijverstraat, 8900 Dikkebus, België"
   },
   {
+    "id": "tt-from-dust-till-dark-2",
+    "title": "From dust till dark #2",
+    "date": "2027-02-06",
+    "location": "Meerhout",
+    "type": "Gravel",
+    "distances": [
+      50
+    ],
+    "organizer": "wtc Groezrock",
+    "sourceUrl": "https://www.toertochten.be/events/from-dust-till-dark-2/",
+    "price": "",
+    "source": "Toertochten.be",
+    "lat": 51.1427,
+    "lon": 5.0827,
+    "country": "BE"
+  },
+  {
+    "id": "tt-brm200-zwolle-boekelo-zwolle",
+    "title": "BRM200 Zwolle - Boekelo - Zwolle",
+    "date": "2027-02-06",
+    "location": "Zwolle",
+    "type": "Gravel",
+    "distances": [
+      200
+    ],
+    "organizer": "Randonneurs Nederland",
+    "sourceUrl": "https://www.toertochten.be/events/brm200-zwolle-boekelo-zwolle/",
+    "price": "€ 8,00",
+    "source": "Toertochten.be",
+    "lat": 52.5067,
+    "lon": 6.062,
+    "country": "NL"
+  },
+  {
+    "id": "tt-dwars-door-de-bossen-van-vlaanderen",
+    "title": "Dwars door de bossen van Vlaanderen",
+    "date": "2027-02-07",
+    "location": "Aalter",
+    "type": "MTB",
+    "distances": [
+      30,
+      50,
+      21,
+      28,
+      32,
+      38,
+      42,
+      52,
+      56
+    ],
+    "organizer": "AALTER SPORTIEF",
+    "sourceUrl": "https://www.toertochten.be/events/dwars-door-de-bossen-van-vlaanderen/",
+    "price": "€ 7,00",
+    "source": "Toertochten.be",
+    "lat": 51.0816,
+    "lon": 3.439,
+    "country": "BE"
+  },
+  {
     "id": "gd-duo-corporate-beachrace",
     "title": "Duo & Corporate Beachrace",
     "date": "2027-02-07",
@@ -3700,6 +4319,62 @@
     "lat": 51.2408,
     "lon": 2.9648,
     "start": "Twins Club Bredene strandpost 1, Driftweg 69, 8450 Bredene, België"
+  },
+  {
+    "id": "tt-wintergraveltocht-tc-hulst-2027",
+    "title": "Wintergraveltocht TC Hulst 2027",
+    "date": "2027-02-07",
+    "location": "Hulst",
+    "type": "Gravel",
+    "distances": [
+      65
+    ],
+    "organizer": "TC Hulst",
+    "sourceUrl": "https://www.toertochten.be/events/wintergraveltocht-tc-hulst-2027/",
+    "price": "€ 6,00",
+    "source": "Toertochten.be",
+    "lat": 51.2857,
+    "lon": 4.0585,
+    "country": "NL"
+  },
+  {
+    "id": "tt-peltercrossers-winter-mtb-tocht",
+    "title": "Peltercrossers Winter MTB Tocht",
+    "date": "2027-02-07",
+    "location": "Pelt",
+    "type": "MTB",
+    "distances": [
+      13,
+      23,
+      45,
+      53
+    ],
+    "organizer": "Peltercrossers MTB Team",
+    "sourceUrl": "https://www.toertochten.be/events/peltercrossers-winter-mtb-tocht/",
+    "price": "",
+    "source": "Toertochten.be",
+    "lat": 51.2088,
+    "lon": 5.3814,
+    "country": "BE"
+  },
+  {
+    "id": "tt-blijf-jong-mtb",
+    "title": "Blijf Jong MTB",
+    "date": "2027-02-07",
+    "location": "Stekene",
+    "type": "MTB",
+    "distances": [
+      20,
+      40,
+      50
+    ],
+    "organizer": "WTC BLIJF JONG STEKENE",
+    "sourceUrl": "https://www.toertochten.be/events/blijf-jong-mtb/",
+    "price": "",
+    "source": "Toertochten.be",
+    "lat": 51.2038,
+    "lon": 4.0068,
+    "country": "BE"
   },
   {
     "id": "fs-60504",
@@ -3807,6 +4482,28 @@
     "startLon": 6.06545
   },
   {
+    "id": "tt-lets-ride-vtt-gravel-cyclo-kids-tour",
+    "title": "Lets Ride - VTT - Gravel - Cyclo - Kids Tour",
+    "date": "2027-02-13",
+    "location": "Sint-Laureins",
+    "type": "Both",
+    "distances": [
+      25,
+      60,
+      80,
+      35,
+      45,
+      55
+    ],
+    "organizer": "WTC ´T KRUISKEN ADEGEM",
+    "sourceUrl": "https://www.toertochten.be/events/lets-ride-vtt-gravel-cyclo-kids-tour/",
+    "price": "€ 5,00",
+    "source": "Toertochten.be",
+    "lat": 51.2415,
+    "lon": 3.5236,
+    "country": "BE"
+  },
+  {
     "id": "fs-60459",
     "title": "Gooische Strade Bianche XVI 2027",
     "date": "2027-02-13",
@@ -3890,6 +4587,26 @@
     "startLon": 4.05846
   },
   {
+    "id": "tt-21ste-mtb-toertocht-lichtaart",
+    "title": "21ste MTB-Toertocht Lichtaart",
+    "date": "2027-02-14",
+    "location": "Lichtaart",
+    "type": "MTB",
+    "distances": [
+      25,
+      35,
+      48,
+      65
+    ],
+    "organizer": "Mountainbike Team VOBAKO/De Jachthoorn",
+    "sourceUrl": "https://www.toertochten.be/events/21ste-mtb-toertocht-lichtaart/",
+    "price": "",
+    "source": "Toertochten.be",
+    "lat": 51.2356,
+    "lon": 4.9231,
+    "country": "BE"
+  },
+  {
     "id": "fs-59476",
     "title": "Eshuis Accountants Holterberg ATB Tocht 2027",
     "date": "2027-02-14",
@@ -3910,6 +4627,42 @@
     "start": "Ardoer camping Noetselerberg, Nijverdal, Nederland",
     "startLat": 52.34958,
     "startLon": 6.46017
+  },
+  {
+    "id": "tt-brm200-groningen-wadden-wierden-en-wouden",
+    "title": "BRM200 Groningen Wadden, Wierden en Wouden",
+    "date": "2027-02-20",
+    "location": "Groningen",
+    "type": "Gravel",
+    "distances": [
+      200
+    ],
+    "organizer": "Randonneurs Nederland",
+    "sourceUrl": "https://www.toertochten.be/events/brm200-groningen-wadden-wierden-en-wouden/",
+    "price": "€ 8,00",
+    "source": "Toertochten.be",
+    "lat": 53.215,
+    "lon": 6.5539,
+    "country": "NL"
+  },
+  {
+    "id": "tt-flanders-field-vtt-2027-02-20",
+    "title": "FLANDERS FIELD VTT",
+    "date": "2027-02-20",
+    "location": "Waregem",
+    "type": "MTB",
+    "distances": [
+      20,
+      40,
+      60
+    ],
+    "organizer": "WTC NIEUWENHOVESPURTERS VZW",
+    "sourceUrl": "https://www.toertochten.be/events/flanders-field-vtt-2027-02-20/",
+    "price": "",
+    "source": "Toertochten.be",
+    "lat": 50.8661,
+    "lon": 3.4024,
+    "country": "BE"
   },
   {
     "id": "fs-60575",
@@ -3973,6 +4726,27 @@
     "start": "Café Trapke Op, Weg naar Wouw 17, 4635 RJ Huijbergen, Woensdrecht, Nederland"
   },
   {
+    "id": "tt-toontjes-mountainbiketocht",
+    "title": "Toontjes mountainbiketocht",
+    "date": "2027-02-21",
+    "location": "Langemark-Poelkapelle",
+    "type": "MTB",
+    "distances": [
+      25,
+      33,
+      48,
+      40,
+      60
+    ],
+    "organizer": "KERMISCOMITÉ SINT-JULIAAN",
+    "sourceUrl": "https://www.toertochten.be/events/toontjes-mountainbiketocht/",
+    "price": "€ 6,00",
+    "source": "Toertochten.be",
+    "lat": 50.8894,
+    "lon": 2.9379,
+    "country": "BE"
+  },
+  {
     "id": "fs-60227",
     "title": "Winter MTB-toertocht Bikefun Liessel",
     "date": "2027-02-21",
@@ -3995,6 +4769,59 @@
     "startLon": 5.8113
   },
   {
+    "id": "tt-portaal-bike-or-run",
+    "title": "Portaal Bike or Run",
+    "date": "2027-02-21",
+    "location": "Melsele",
+    "type": "Gravel",
+    "distances": [
+      50
+    ],
+    "organizer": "CT 't Portaal",
+    "sourceUrl": "https://www.toertochten.be/events/portaal-bike-or-run/",
+    "price": "",
+    "source": "Toertochten.be",
+    "lat": 51.2217,
+    "lon": 4.2865,
+    "country": "BE"
+  },
+  {
+    "id": "tt-flanders-field-vtt-2027-02-21",
+    "title": "FLANDERS FIELD VTT",
+    "date": "2027-02-21",
+    "location": "Waregem",
+    "type": "MTB",
+    "distances": [
+      20,
+      40,
+      60
+    ],
+    "organizer": "WTC NIEUWENHOVESPURTERS VZW",
+    "sourceUrl": "https://www.toertochten.be/events/flanders-field-vtt-2027-02-21/",
+    "price": "",
+    "source": "Toertochten.be",
+    "lat": 50.8661,
+    "lon": 3.4024,
+    "country": "BE"
+  },
+  {
+    "id": "tt-graaveltoertochtt",
+    "title": "Graaveltoertochtt",
+    "date": "2027-02-21",
+    "location": "Zonhoven",
+    "type": "Gravel",
+    "distances": [
+      83
+    ],
+    "organizer": "Heuvens Kliekske",
+    "sourceUrl": "https://www.toertochten.be/events/graaveltoertochtt/",
+    "price": "",
+    "source": "Toertochten.be",
+    "lat": 50.9881,
+    "lon": 5.413,
+    "country": "BE"
+  },
+  {
     "id": "fs-60405",
     "title": "Nightride 't Muurtje 2027",
     "date": "2027-02-26",
@@ -4014,6 +4841,23 @@
     "start": "Bocholtsestraatweg 67a Aalten, Aalten, Nederland",
     "startLat": 51.92095,
     "startLon": 6.58076
+  },
+  {
+    "id": "tt-brm200-doetinchem-baumberge",
+    "title": "BRM200 Doetinchem Baumberge",
+    "date": "2027-02-27",
+    "location": "Doetinchem",
+    "type": "Gravel",
+    "distances": [
+      200
+    ],
+    "organizer": "Randonneurs Nederland",
+    "sourceUrl": "https://www.toertochten.be/events/brm200-doetinchem-baumberge/",
+    "price": "€ 8,00",
+    "source": "Toertochten.be",
+    "lat": 51.9627,
+    "lon": 6.2915,
+    "country": "NL"
   },
   {
     "id": "gd-kaffee-vtt-4",
@@ -4054,6 +4898,46 @@
     "start": "Blauknopke, Surhuisterveen, Nederland",
     "startLat": 53.18486,
     "startLon": 6.15605
+  },
+  {
+    "id": "tt-belsele-sportief-gravelt-2027-02-28",
+    "title": "Belsele Sportief GRAVELT",
+    "date": "2027-02-28",
+    "location": "Belsele (Sint-Niklaas)",
+    "type": "Both",
+    "distances": [
+      32,
+      61,
+      70,
+      82
+    ],
+    "organizer": "Ronde van het Waasland",
+    "sourceUrl": "https://www.toertochten.be/events/belsele-sportief-gravelt-2027-02-28/",
+    "price": "",
+    "source": "Toertochten.be",
+    "lat": 51.1485,
+    "lon": 4.0952,
+    "country": "BE"
+  },
+  {
+    "id": "tt-achter-dhei-veldtoertocht-2027-02-28",
+    "title": "Achter d'Hei Veldtoertocht",
+    "date": "2027-02-28",
+    "location": "Kalmthout",
+    "type": "MTB",
+    "distances": [
+      15,
+      25,
+      35,
+      45
+    ],
+    "organizer": "ACHTER D'HEI",
+    "sourceUrl": "https://www.toertochten.be/events/achter-dhei-veldtoertocht-2027-02-28/",
+    "price": "",
+    "source": "Toertochten.be",
+    "lat": 51.3772,
+    "lon": 4.4824,
+    "country": "BE"
   },
   {
     "id": "my-21575",
@@ -4097,6 +4981,421 @@
     "start": "Garage Akkermans, Nieuwmoersesteenweg 121, 2910 Essen, Antwerpen, België"
   },
   {
+    "id": "tt-zeeuws-vlaamse-toertocht",
+    "title": "Zeeuws-Vlaamse Toertocht",
+    "date": "2027-03-13",
+    "location": "Oostakker",
+    "type": "Gravel",
+    "distances": [
+      38,
+      55,
+      75,
+      105,
+      25,
+      72
+    ],
+    "organizer": "WSC OOSTAKKER - LOCHRISTI",
+    "sourceUrl": "https://www.toertochten.be/events/zeeuws-vlaamse-toertocht/",
+    "price": "€ 3,00",
+    "source": "Toertochten.be",
+    "lat": 51.085,
+    "lon": 3.7664,
+    "country": "BE"
+  },
+  {
+    "id": "tt-baliolis-cycling-tour-1",
+    "title": "Baliolis Cycling Tour #1",
+    "date": "2027-03-21",
+    "location": "Denderbelle",
+    "type": "Gravel",
+    "distances": [
+      60,
+      90,
+      55,
+      80
+    ],
+    "organizer": "BALIOLIS CYCLING",
+    "sourceUrl": "https://www.toertochten.be/events/baliolis-cycling-tour-1/",
+    "price": "€ 6,00",
+    "source": "Toertochten.be",
+    "lat": 51.0011,
+    "lon": 4.0836,
+    "country": "BE"
+  },
+  {
+    "id": "tt-mtb-the-moosebikers-lummen",
+    "title": "MTB The Moosebikers Lummen",
+    "date": "2027-03-21",
+    "location": "Lummen",
+    "type": "MTB",
+    "distances": [
+      29,
+      44,
+      59
+    ],
+    "organizer": "The Moosebikers",
+    "sourceUrl": "https://www.toertochten.be/events/mtb-the-moosebikers-lummen/",
+    "price": "",
+    "source": "Toertochten.be",
+    "lat": 50.9953,
+    "lon": 5.1833,
+    "country": "BE"
+  },
+  {
+    "id": "tt-eerste-paljassen-mtb-rit",
+    "title": "Eerste paljassen MTB rit",
+    "date": "2027-03-21",
+    "location": "Zuienkerke",
+    "type": "MTB",
+    "distances": [
+      45
+    ],
+    "organizer": "Dudzeelse Trappers",
+    "sourceUrl": "https://www.toertochten.be/events/eerste-paljassen-mtb-rit/",
+    "price": "",
+    "source": "Toertochten.be",
+    "lat": 51.2519,
+    "lon": 3.1923,
+    "country": "BE"
+  },
+  {
+    "id": "tt-fietsen-voor-kom-op-tegen-kanker",
+    "title": "Fietsen voor Kom op tegen Kanker",
+    "date": "2027-03-29",
+    "location": "Herzele",
+    "type": "Gravel",
+    "distances": [
+      65,
+      100,
+      45,
+      70
+    ],
+    "organizer": "SPORTICO",
+    "sourceUrl": "https://www.toertochten.be/events/fietsen-voor-kom-op-tegen-kanker/",
+    "price": "€ 8,00",
+    "source": "Toertochten.be",
+    "lat": 50.8965,
+    "lon": 3.8913,
+    "country": "BE"
+  },
+  {
+    "id": "tt-5de-ertveldse-cycling-tour-mervielde",
+    "title": "5de Ertveldse Cycling Tour Mervielde",
+    "date": "2027-04-03",
+    "location": "Ertvelde",
+    "type": "Gravel",
+    "distances": [
+      27,
+      65,
+      110,
+      75
+    ],
+    "organizer": "MERVIELDE CYCLING TEAM",
+    "sourceUrl": "https://www.toertochten.be/events/5de-ertveldse-cycling-tour-mervielde/",
+    "price": "€ 5,00",
+    "source": "Toertochten.be",
+    "lat": 51.1751,
+    "lon": 3.7789,
+    "country": "BE"
+  },
+  {
+    "id": "tt-sinaai-offroadbiking",
+    "title": "SINAAI offroadbiking",
+    "date": "2027-04-04",
+    "location": "Sinaai-Waas",
+    "type": "MTB",
+    "distances": [
+      28,
+      40,
+      50
+    ],
+    "organizer": "Ronde van het Waasland",
+    "sourceUrl": "https://www.toertochten.be/events/sinaai-offroadbiking/",
+    "price": "",
+    "source": "Toertochten.be",
+    "lat": 51.1991,
+    "lon": 3.9703,
+    "country": "BE"
+  },
+  {
+    "id": "tt-huysman-en-ramaco-tour",
+    "title": "Huysman en Ramaco Tour",
+    "date": "2027-04-10",
+    "location": "Eeklo",
+    "type": "Gravel",
+    "distances": [
+      50,
+      75,
+      105,
+      100
+    ],
+    "organizer": "VZW WIELERCOMITE EEKLO",
+    "sourceUrl": "https://www.toertochten.be/events/huysman-en-ramaco-tour/",
+    "price": "€ 5,00",
+    "source": "Toertochten.be",
+    "lat": 51.1867,
+    "lon": 3.549,
+    "country": "BE"
+  },
+  {
+    "id": "tt-ac-hagelandse-off-road-parels-in-de-bloesems-gravel",
+    "title": "A.C. Hagelandse Off-Road Parels in de bloesems GRAVEL",
+    "date": "2027-04-11",
+    "location": "Waanrode",
+    "type": "Gravel",
+    "distances": [
+      28,
+      40,
+      50,
+      55,
+      60,
+      75
+    ],
+    "organizer": "Fit & Move Kortenaken",
+    "sourceUrl": "https://www.toertochten.be/events/ac-hagelandse-off-road-parels-in-de-bloesems-gravel/",
+    "price": "€ 6,00",
+    "source": "Toertochten.be",
+    "lat": 50.9146,
+    "lon": 5.0036,
+    "country": "BE"
+  },
+  {
+    "id": "tt-ac-hagelandse-off-road-parels-in-de-bloesems-mtb",
+    "title": "A.C. Hagelandse Off-Road Parels in de bloesems MTB",
+    "date": "2027-04-11",
+    "location": "Waanrode",
+    "type": "MTB",
+    "distances": [
+      28,
+      40,
+      50,
+      60,
+      55,
+      75
+    ],
+    "organizer": "Fit & Move Kortenaken",
+    "sourceUrl": "https://www.toertochten.be/events/ac-hagelandse-off-road-parels-in-de-bloesems-mtb/",
+    "price": "€ 6,00",
+    "source": "Toertochten.be",
+    "lat": 50.9146,
+    "lon": 5.0036,
+    "country": "BE"
+  },
+  {
+    "id": "tt-26e-mtb-weekendhappening",
+    "title": "26e MTB Weekendhappening",
+    "date": "2027-04-17",
+    "location": "Rillaar",
+    "type": "MTB",
+    "distances": [
+      25,
+      35,
+      45,
+      55,
+      70
+    ],
+    "organizer": "RILLAARSE BIKERS",
+    "sourceUrl": "https://www.toertochten.be/events/26e-mtb-weekendhappening/",
+    "price": "€ 6,00",
+    "source": "Toertochten.be",
+    "lat": 50.9744,
+    "lon": 4.8956,
+    "country": "BE"
+  },
+  {
+    "id": "tt-4e-gravelrit",
+    "title": "4e Gravelrit",
+    "date": "2027-04-17",
+    "location": "Rillaar",
+    "type": "Gravel",
+    "distances": [
+      75,
+      120
+    ],
+    "organizer": "RILLAARSE BIKERS",
+    "sourceUrl": "https://www.toertochten.be/events/4e-gravelrit/",
+    "price": "€ 15,00",
+    "source": "Toertochten.be",
+    "lat": 50.9744,
+    "lon": 4.8956,
+    "country": "BE"
+  },
+  {
+    "id": "tt-gravelrit-op-gps-campinatrappers-2027-04-18",
+    "title": "Gravelrit op GPS - CAMPINATRAPPERS",
+    "date": "2027-04-18",
+    "location": "Dessel",
+    "type": "Gravel",
+    "distances": [
+      50,
+      84
+    ],
+    "organizer": "Campinatrappers",
+    "sourceUrl": "https://www.toertochten.be/events/gravelrit-op-gps-campinatrappers-2027-04-18/",
+    "price": "",
+    "source": "Toertochten.be",
+    "lat": 51.2403,
+    "lon": 5.0938,
+    "country": "BE"
+  },
+  {
+    "id": "tt-memorial-tommy-van-de-ponseele",
+    "title": "Memorial Tommy Van De Ponseele",
+    "date": "2027-04-18",
+    "location": "Herzele",
+    "type": "Gravel",
+    "distances": [
+      40,
+      67,
+      80,
+      50
+    ],
+    "organizer": "WTC DE PALINGRIJDERS - ST LIEVENS ESSE",
+    "sourceUrl": "https://www.toertochten.be/events/memorial-tommy-van-de-ponseele/",
+    "price": "€ 4,00",
+    "source": "Toertochten.be",
+    "lat": 50.8611,
+    "lon": 3.8781,
+    "country": "BE"
+  },
+  {
+    "id": "tt-brandweer-offroad",
+    "title": "Brandweer Offroad",
+    "date": "2027-04-18",
+    "location": "Waasmunster",
+    "type": "MTB",
+    "distances": [
+      30,
+      40,
+      50
+    ],
+    "organizer": "Ronde van het Waasland",
+    "sourceUrl": "https://www.toertochten.be/events/brandweer-offroad/",
+    "price": "",
+    "source": "Toertochten.be",
+    "lat": 51.1053,
+    "lon": 4.086,
+    "country": "BE"
+  },
+  {
+    "id": "tt-delirium-velo-tour",
+    "title": "DELIRIUM VELO TOUR",
+    "date": "2027-04-24",
+    "location": "Nazareth-De Pinte",
+    "type": "Gravel",
+    "distances": [
+      25,
+      50,
+      75,
+      100,
+      150,
+      110
+    ],
+    "organizer": "KONINKLIJKE WIELERVRIENDEN NAZARETH",
+    "sourceUrl": "https://www.toertochten.be/events/delirium-velo-tour/",
+    "price": "€ 12,00",
+    "source": "Toertochten.be",
+    "lat": 50.9574,
+    "lon": 3.6087,
+    "country": "BE"
+  },
+  {
+    "id": "tt-de-blauwe-pijl-gravel",
+    "title": "DE BLAUWE PIJL Gravel",
+    "date": "2027-04-24",
+    "location": "Waardamme",
+    "type": "Gravel",
+    "distances": [
+      68,
+      104
+    ],
+    "organizer": "WTC BLAUWE WIMPEL RUDDERVOORDE",
+    "sourceUrl": "https://www.toertochten.be/events/de-blauwe-pijl-gravel/",
+    "price": "",
+    "source": "Toertochten.be",
+    "lat": 51.1125,
+    "lon": 3.2208,
+    "country": "BE"
+  },
+  {
+    "id": "tt-verada-classic",
+    "title": "Verada Classic",
+    "date": "2027-04-24",
+    "location": "Zwevegem",
+    "type": "Gravel",
+    "distances": [
+      60,
+      80,
+      100,
+      120,
+      140,
+      75,
+      115
+    ],
+    "organizer": "TEAM VERADA",
+    "sourceUrl": "https://www.toertochten.be/events/verada-classic/",
+    "price": "€ 12,00",
+    "source": "Toertochten.be",
+    "lat": 50.8191,
+    "lon": 3.3298,
+    "country": "BE"
+  },
+  {
+    "id": "tt-33ste-wijnegemse-pjl",
+    "title": "33ste Wijnegemse Pïjl",
+    "date": "2027-04-25",
+    "location": "Wijnegem",
+    "type": "MTB",
+    "distances": [
+      50,
+      75
+    ],
+    "organizer": "KONINKLIJKE WIJNEGEM BICYCLECLUB",
+    "sourceUrl": "https://www.toertochten.be/events/33ste-wijnegemse-pjl/",
+    "price": "€ 4,00",
+    "source": "Toertochten.be",
+    "lat": 51.2258,
+    "lon": 4.5141,
+    "country": "BE"
+  },
+  {
+    "id": "tt-vma-cyclo-gravel-tour",
+    "title": "VMA CYCLO & GRAVEL TOUR",
+    "date": "2027-05-01",
+    "location": "Sint-Martens-Latem",
+    "type": "Gravel",
+    "distances": [
+      35,
+      50,
+      80,
+      120
+    ],
+    "organizer": "VMA CYCLING CLUB",
+    "sourceUrl": "https://www.toertochten.be/events/vma-cyclo-gravel-tour/",
+    "price": "€ 5,00",
+    "source": "Toertochten.be",
+    "lat": 50.9972,
+    "lon": 3.6076,
+    "country": "BE"
+  },
+  {
+    "id": "tt-mtb-hhn-ronde-van-schoonderhage-2027-05-06",
+    "title": "MTB - HHN - Ronde van Schoonderhage",
+    "date": "2027-05-06",
+    "location": "Pollare",
+    "type": "MTB",
+    "distances": [
+      50
+    ],
+    "organizer": "NINOVE CYCLING TEAM",
+    "sourceUrl": "https://www.toertochten.be/events/mtb-hhn-ronde-van-schoonderhage-2027-05-06/",
+    "price": "",
+    "source": "Toertochten.be",
+    "lat": 50.8174,
+    "lon": 3.9958,
+    "country": "BE"
+  },
+  {
     "id": "gd-ride-to-unite-gravel",
     "title": "Ride to Unite - Gravel",
     "date": "2027-05-07",
@@ -4113,6 +5412,138 @@
     "lat": 50.8467,
     "lon": 4.3525,
     "start": "1000 Brussel, België"
+  },
+  {
+    "id": "tt-46ste-brakelse-lenteveldtoertocht",
+    "title": "46STE BRAKELSE LENTEVELDTOERTOCHT",
+    "date": "2027-05-09",
+    "location": "Brakel",
+    "type": "MTB",
+    "distances": [
+      31,
+      45,
+      65
+    ],
+    "organizer": "W.T.C. TER-LINDE",
+    "sourceUrl": "https://www.toertochten.be/events/46ste-brakelse-lenteveldtoertocht/",
+    "price": "",
+    "source": "Toertochten.be",
+    "lat": 50.7985,
+    "lon": 3.718,
+    "country": "BE"
+  },
+  {
+    "id": "tt-graveltocht-atb-merksplas-wtc-de-tenierkens",
+    "title": "Graveltocht ATB Merksplas WTC De Tenierkens",
+    "date": "2027-05-09",
+    "location": "Merksplas",
+    "type": "Both",
+    "distances": [
+      70,
+      112
+    ],
+    "organizer": "WTC DE TENIERKENS",
+    "sourceUrl": "https://www.toertochten.be/events/graveltocht-atb-merksplas-wtc-de-tenierkens/",
+    "price": "€ 5,00",
+    "source": "Toertochten.be",
+    "lat": 51.3589,
+    "lon": 4.8315,
+    "country": "BE"
+  },
+  {
+    "id": "tt-29-ste-bulscamp-vtt",
+    "title": "29 ste Bulscamp VTT",
+    "date": "2027-05-15",
+    "location": "Hertsberge",
+    "type": "MTB",
+    "distances": [
+      30,
+      45,
+      60,
+      35
+    ],
+    "organizer": "HERTETRAPPERS HERTSBERGE",
+    "sourceUrl": "https://www.toertochten.be/events/29-ste-bulscamp-vtt/",
+    "price": "",
+    "source": "Toertochten.be",
+    "lat": 51.1051,
+    "lon": 3.2731,
+    "country": "BE"
+  },
+  {
+    "id": "tt-stenenmuurfeesten-gravelrit",
+    "title": "Stenenmuurfeesten gravelrit",
+    "date": "2027-05-16",
+    "location": "Sinaai-Waas",
+    "type": "Gravel",
+    "distances": [
+      49,
+      75
+    ],
+    "organizer": "Ronde van het Waasland",
+    "sourceUrl": "https://www.toertochten.be/events/stenenmuurfeesten-gravelrit/",
+    "price": "",
+    "source": "Toertochten.be",
+    "lat": 51.1991,
+    "lon": 3.9703,
+    "country": "BE"
+  },
+  {
+    "id": "tt-stenenmuurfeesten-offroad",
+    "title": "Stenenmuurfeesten Offroad",
+    "date": "2027-05-16",
+    "location": "Sinaai-Waas",
+    "type": "MTB",
+    "distances": [
+      32,
+      49,
+      75
+    ],
+    "organizer": "Ronde van het Waasland",
+    "sourceUrl": "https://www.toertochten.be/events/stenenmuurfeesten-offroad/",
+    "price": "",
+    "source": "Toertochten.be",
+    "lat": 51.1991,
+    "lon": 3.9703,
+    "country": "BE"
+  },
+  {
+    "id": "tt-la-boldairienne-2027-gravel",
+    "title": "La Boldairienne 2027 (Gravel)",
+    "date": "2027-05-17",
+    "location": "Enghien",
+    "type": "Gravel",
+    "distances": [
+      50,
+      80,
+      40
+    ],
+    "organizer": "Cyclo Bol d'Air Edingen",
+    "sourceUrl": "https://www.toertochten.be/events/la-boldairienne-2027-gravel/",
+    "price": "",
+    "source": "Toertochten.be",
+    "lat": 50.6843,
+    "lon": 4.0322,
+    "country": "BE"
+  },
+  {
+    "id": "tt-fietshappening-pinkstermaandag",
+    "title": "Fietshappening Pinkstermaandag",
+    "date": "2027-05-17",
+    "location": "Sint-Gillis-Waas",
+    "type": "MTB",
+    "distances": [
+      39,
+      52,
+      64
+    ],
+    "organizer": "Ronde van het Waasland",
+    "sourceUrl": "https://www.toertochten.be/events/fietshappening-pinkstermaandag/",
+    "price": "",
+    "source": "Toertochten.be",
+    "lat": 51.22,
+    "lon": 4.1245,
+    "country": "BE"
   },
   {
     "id": "my-21806",
@@ -4138,6 +5569,176 @@
     "start": "Sportkot, Sompelplein 39, 9700 Oudenaarde, Oost-Vlaanderen, België"
   },
   {
+    "id": "tt-spetsers-gravelrit-op-gps-niet-gepijld",
+    "title": "Spetsers-gravelrit (op gps, niet gepijld)",
+    "date": "2027-05-23",
+    "location": "Merksplas",
+    "type": "Gravel",
+    "distances": [
+      70
+    ],
+    "organizer": "KATENA",
+    "sourceUrl": "https://www.toertochten.be/events/spetsers-gravelrit-op-gps-niet-gepijld/",
+    "price": "",
+    "source": "Toertochten.be",
+    "lat": 51.3576,
+    "lon": 4.8601,
+    "country": "BE"
+  },
+  {
+    "id": "tt-potjeir-2de-gravelrit-gpx",
+    "title": "Potjeir 2de gravelrit - GPX",
+    "date": "2027-05-29",
+    "location": "Boom",
+    "type": "Gravel",
+    "distances": [],
+    "organizer": "WTC Schorretrappers",
+    "sourceUrl": "https://www.toertochten.be/events/potjeir-2de-gravelrit-gpx/",
+    "price": "",
+    "source": "Toertochten.be",
+    "lat": 51.0828,
+    "lon": 4.3815,
+    "country": "BE"
+  },
+  {
+    "id": "tt-vlierbeekriders-gravel-classic-2027",
+    "title": "Vlierbeekriders Gravel Classic 2027",
+    "date": "2027-05-29",
+    "location": "Kessel-Lo",
+    "type": "Gravel",
+    "distances": [
+      80,
+      100
+    ],
+    "organizer": "VLIERBEEKRIDERS",
+    "sourceUrl": "https://www.toertochten.be/events/vlierbeekriders-gravel-classic-2027/",
+    "price": "",
+    "source": "Toertochten.be",
+    "lat": 50.8921,
+    "lon": 4.7341,
+    "country": "BE"
+  },
+  {
+    "id": "tt-de-sweat-it-out-offroadritten",
+    "title": "de \"sweat it out\" offroadritten",
+    "date": "2027-05-30",
+    "location": "Nieuwkerken-Waas",
+    "type": "MTB",
+    "distances": [
+      35,
+      55
+    ],
+    "organizer": "Ronde van het Waasland",
+    "sourceUrl": "https://www.toertochten.be/events/de-sweat-it-out-offroadritten/",
+    "price": "",
+    "source": "Toertochten.be",
+    "lat": 51.1956,
+    "lon": 4.1772,
+    "country": "BE"
+  },
+  {
+    "id": "tt-17de-wijngaardberg-mtb-toertocht",
+    "title": "17de Wijngaardberg MTB toertocht",
+    "date": "2027-05-30",
+    "location": "Rotselaar",
+    "type": "MTB",
+    "distances": [
+      27,
+      37,
+      47,
+      67
+    ],
+    "organizer": "VZW KFC Rapide Wezemaal",
+    "sourceUrl": "https://www.toertochten.be/events/17de-wijngaardberg-mtb-toertocht/",
+    "price": "€ 5,00",
+    "source": "Toertochten.be",
+    "lat": 50.9566,
+    "lon": 4.7296,
+    "country": "BE"
+  },
+  {
+    "id": "tt-dust-the-ride-6",
+    "title": "Dust the Ride #6",
+    "date": "2027-06-05",
+    "location": "Meerhout",
+    "type": "Gravel",
+    "distances": [
+      65,
+      82,
+      134,
+      158
+    ],
+    "organizer": "wtc Groezrock",
+    "sourceUrl": "https://www.toertochten.be/events/dust-the-ride-6/",
+    "price": "€ 6,00",
+    "source": "Toertochten.be",
+    "lat": 51.119,
+    "lon": 5.0934,
+    "country": "BE"
+  },
+  {
+    "id": "tt-29ste-zomer-mtb-palmvelden-gravelbike-tocht",
+    "title": "29ste Zomer MTB Palmvelden + Gravelbike Tocht",
+    "date": "2027-06-06",
+    "location": "Londerzeel",
+    "type": "Both",
+    "distances": [
+      23,
+      36,
+      42,
+      51,
+      66,
+      71,
+      80,
+      63,
+      96
+    ],
+    "organizer": "MTB PALMVELDEN",
+    "sourceUrl": "https://www.toertochten.be/events/29ste-zomer-mtb-palmvelden-gravelbike-tocht/",
+    "price": "",
+    "source": "Toertochten.be",
+    "lat": 51.0306,
+    "lon": 4.3029,
+    "country": "BE"
+  },
+  {
+    "id": "tt-2de-gravelbike-tocht-mtb-palmvelden",
+    "title": "2de Gravelbike Tocht MTB Palmvelden",
+    "date": "2027-06-06",
+    "location": "Londerzeel",
+    "type": "Both",
+    "distances": [
+      63,
+      96
+    ],
+    "organizer": "MTB PALMVELDEN",
+    "sourceUrl": "https://www.toertochten.be/events/2de-gravelbike-tocht-mtb-palmvelden/",
+    "price": "",
+    "source": "Toertochten.be",
+    "lat": 51.0306,
+    "lon": 4.3029,
+    "country": "BE"
+  },
+  {
+    "id": "tt-13e-lakebikers-mtb-challenge",
+    "title": "13e lakebikers mtb challenge",
+    "date": "2027-06-06",
+    "location": "Lummen",
+    "type": "MTB",
+    "distances": [
+      22,
+      46,
+      70
+    ],
+    "organizer": "LAKE BIKERS",
+    "sourceUrl": "https://www.toertochten.be/events/13e-lakebikers-mtb-challenge/",
+    "price": "€ 6,00",
+    "source": "Toertochten.be",
+    "lat": 50.9725,
+    "lon": 5.1466,
+    "country": "BE"
+  },
+  {
     "id": "my-21342",
     "title": "2027 Gravel Man",
     "date": "2027-06-12",
@@ -4158,6 +5759,27 @@
     "start": "Domein OC Albatros, Staatsbaan 241 D, 8610 Kortemark, West-Vlaanderen, België"
   },
   {
+    "id": "tt-33ste-dwars-door-de-denderstreek",
+    "title": "33ste Dwars door de Denderstreek",
+    "date": "2027-06-12",
+    "location": "Nederhasselt",
+    "type": "MTB",
+    "distances": [
+      26,
+      40,
+      55,
+      72,
+      100
+    ],
+    "organizer": "33ste Dwars Door De Denderstreek",
+    "sourceUrl": "https://www.toertochten.be/events/33ste-dwars-door-de-denderstreek/",
+    "price": "€ 4,00",
+    "source": "Toertochten.be",
+    "lat": 50.8466,
+    "lon": 3.981,
+    "country": "BE"
+  },
+  {
     "id": "my-21343",
     "title": "2027 Gravel Man",
     "date": "2027-06-13",
@@ -4176,5 +5798,26 @@
     "lat": 51.0248,
     "lon": 3.0018,
     "start": "OC Albatros, Staatsbaan 241 D, 8610 Kortemark, West-Vlaanderen, België"
+  },
+  {
+    "id": "tt-vtt-rudy-dhaenens-2027",
+    "title": "VTT RUDY DHAENENS 2027",
+    "date": "2027-11-14",
+    "location": "Landegem (Deinze)",
+    "type": "MTB",
+    "distances": [
+      30,
+      45,
+      55,
+      40,
+      75
+    ],
+    "organizer": "VTT RUDY DHAENENS",
+    "sourceUrl": "https://www.toertochten.be/events/vtt-rudy-dhaenens-2027/",
+    "price": "",
+    "source": "Toertochten.be",
+    "lat": 51.0595,
+    "lon": 3.5731,
+    "country": "BE"
   }
 ]

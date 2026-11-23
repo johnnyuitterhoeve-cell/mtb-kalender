@@ -37,13 +37,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://toertochtenkalender.nl/gravel/overijssel/</loc>
+    <loc>https://toertochtenkalender.nl/gravel/gelderland/</loc>
     <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://toertochtenkalender.nl/gravel/gelderland/</loc>
+    <loc>https://toertochtenkalender.nl/gravel/overijssel/</loc>
     <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -103,13 +103,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://toertochtenkalender.nl/mtb/oost-vlaanderen/</loc>
+    <loc>https://toertochtenkalender.nl/mtb/gelderland/</loc>
     <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://toertochtenkalender.nl/mtb/gelderland/</loc>
+    <loc>https://toertochtenkalender.nl/mtb/oost-vlaanderen/</loc>
     <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>

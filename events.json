@@ -136,23 +136,6 @@
     "startLon": 5.31871
   },
   {
-    "id": "tt-brm200-luctor-et-emergo",
-    "title": "BRM200 Luctor et Emergo",
-    "date": "2026-11-28",
-    "location": "Wemeldinge",
-    "type": "Gravel",
-    "distances": [
-      200
-    ],
-    "organizer": "Randonneurs Nederland",
-    "sourceUrl": "https://www.toertochten.be/events/brm200-luctor-et-emergo/",
-    "price": "€ 8,00",
-    "source": "Toertochten.be",
-    "lat": 51.518,
-    "lon": 4.0017,
-    "country": "NL"
-  },
-  {
     "id": "mb-20261129-brecht-rondom-brecht",
     "title": "Rondom Brecht",
     "date": "2026-11-29",
@@ -960,23 +943,6 @@
     "lat": 51.5546,
     "lon": 4.5564,
     "start": "Restaurant Bargo, Bredasebaan, 4744 RZ Bosschenhoofd, Halderberge, Nederland"
-  },
-  {
-    "id": "tt-brm200-rondje-utrecht",
-    "title": "BRM200 Rondje Utrecht",
-    "date": "2026-12-12",
-    "location": "Amsterdam",
-    "type": "Gravel",
-    "distances": [
-      200
-    ],
-    "organizer": "Randonneurs Nederland",
-    "sourceUrl": "https://www.toertochten.be/events/brm200-rondje-utrecht/",
-    "price": "€ 8,00",
-    "source": "Toertochten.be",
-    "lat": 52.3818,
-    "lon": 4.8214,
-    "country": "NL"
   },
   {
     "id": "fs-60468",
@@ -2714,23 +2680,6 @@
     "start": "Bloso Centrum Julien Saelens, Nijverheidsstraat 112, 8310 Assebroek, België"
   },
   {
-    "id": "tt-brm200-tecklenbrug",
-    "title": "BRM200 Tecklenbrug",
-    "date": "2026-12-30",
-    "location": "Enschede",
-    "type": "Gravel",
-    "distances": [
-      200
-    ],
-    "organizer": "Randonneurs Nederland",
-    "sourceUrl": "https://www.toertochten.be/events/brm200-tecklenbrug/",
-    "price": "€ 8,00",
-    "source": "Toertochten.be",
-    "lat": 52.204,
-    "lon": 6.7966,
-    "country": "NL"
-  },
-  {
     "id": "fs-60086",
     "title": "CityLido Klassieker Gravelride 45 en 70 km",
     "date": "2026-12-30",
@@ -3284,23 +3233,6 @@
     "country": "BE"
   },
   {
-    "id": "tt-brm200-bunnik-onder-nap",
-    "title": "BRM200 Bunnik Onder NAP",
-    "date": "2027-01-09",
-    "location": "Bunnik",
-    "type": "Gravel",
-    "distances": [
-      200
-    ],
-    "organizer": "Randonneurs Nederland",
-    "sourceUrl": "https://www.toertochten.be/events/brm200-bunnik-onder-nap/",
-    "price": "€ 8,00",
-    "source": "Toertochten.be",
-    "lat": 52.0641,
-    "lon": 5.1847,
-    "country": "NL"
-  },
-  {
     "id": "tt-boverhoff-veldtoertocht-tc-heerde-2027",
     "title": "Boverhoff Veldtoertocht TC Heerde 2027",
     "date": "2027-01-09",
@@ -3817,23 +3749,6 @@
     "country": "BE"
   },
   {
-    "id": "tt-brm200-dordrecht-maasvlakte",
-    "title": "BRM200 Dordrecht Maasvlakte",
-    "date": "2027-01-23",
-    "location": "Dordrecht",
-    "type": "Gravel",
-    "distances": [
-      200
-    ],
-    "organizer": "Randonneurs Nederland",
-    "sourceUrl": "https://www.toertochten.be/events/brm200-dordrecht-maasvlakte/",
-    "price": "€ 8,00",
-    "source": "Toertochten.be",
-    "lat": 51.8143,
-    "lon": 4.7536,
-    "country": "NL"
-  },
-  {
     "id": "mb-20270123-ichtegem-ichtegemse-winter-vtt",
     "title": "Ichtegemse Winter VTT",
     "date": "2027-01-23",
@@ -4263,23 +4178,6 @@
     "country": "BE"
   },
   {
-    "id": "tt-brm200-zwolle-boekelo-zwolle",
-    "title": "BRM200 Zwolle - Boekelo - Zwolle",
-    "date": "2027-02-06",
-    "location": "Zwolle",
-    "type": "Gravel",
-    "distances": [
-      200
-    ],
-    "organizer": "Randonneurs Nederland",
-    "sourceUrl": "https://www.toertochten.be/events/brm200-zwolle-boekelo-zwolle/",
-    "price": "€ 8,00",
-    "source": "Toertochten.be",
-    "lat": 52.5067,
-    "lon": 6.062,
-    "country": "NL"
-  },
-  {
     "id": "tt-dwars-door-de-bossen-van-vlaanderen",
     "title": "Dwars door de bossen van Vlaanderen",
     "date": "2027-02-07",
@@ -4629,23 +4527,6 @@
     "startLon": 6.46017
   },
   {
-    "id": "tt-brm200-groningen-wadden-wierden-en-wouden",
-    "title": "BRM200 Groningen Wadden, Wierden en Wouden",
-    "date": "2027-02-20",
-    "location": "Groningen",
-    "type": "Gravel",
-    "distances": [
-      200
-    ],
-    "organizer": "Randonneurs Nederland",
-    "sourceUrl": "https://www.toertochten.be/events/brm200-groningen-wadden-wierden-en-wouden/",
-    "price": "€ 8,00",
-    "source": "Toertochten.be",
-    "lat": 53.215,
-    "lon": 6.5539,
-    "country": "NL"
-  },
-  {
     "id": "tt-flanders-field-vtt-2027-02-20",
     "title": "FLANDERS FIELD VTT",
     "date": "2027-02-20",
@@ -4841,23 +4722,6 @@
     "start": "Bocholtsestraatweg 67a Aalten, Aalten, Nederland",
     "startLat": 51.92095,
     "startLon": 6.58076
-  },
-  {
-    "id": "tt-brm200-doetinchem-baumberge",
-    "title": "BRM200 Doetinchem Baumberge",
-    "date": "2027-02-27",
-    "location": "Doetinchem",
-    "type": "Gravel",
-    "distances": [
-      200
-    ],
-    "organizer": "Randonneurs Nederland",
-    "sourceUrl": "https://www.toertochten.be/events/brm200-doetinchem-baumberge/",
-    "price": "€ 8,00",
-    "source": "Toertochten.be",
-    "lat": 51.9627,
-    "lon": 6.2915,
-    "country": "NL"
   },
   {
     "id": "gd-kaffee-vtt-4",

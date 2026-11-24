@@ -731,7 +731,7 @@ def gravelbike_be():
 # ---------- bron: Bikers.be (O2Bikers, openbare iCalendar-feed) ----------
 BK_URL = "https://www.bikers.be/nl/?post_type=tribe_events&ical=1&eventDisplay=list"
 # Geen tochten maar andere evenementen die op die agenda staan
-BK_SKIP_RE = re.compile(r"run\s*(&|and|en)\s*bike|beach\s*challenge|\bloop\b|estafette|trail\s*run|hemonight|social\s*ride|brevet|kampioenschap|championnat",
+BK_SKIP_RE = re.compile(r"\bBRM\s?\d{2,3}\b|audax|randonn?eur|run\s*(&|and|en)\s*bike|beach\s*challenge|\bloop\b|estafette|trail\s*run|hemonight|social\s*ride|brevet|kampioenschap|championnat",
                         re.IGNORECASE)
 
 
@@ -862,7 +862,7 @@ TT_LISTS = [("MTB", TT_BASE + "/en/mtb/"), ("Gravel", TT_BASE + "/en/gravel/")]
 TT_EVENT_RE = re.compile(r'href="(/events/[^"/]+/)"')
 TT_LD_RE = re.compile(r'<script type="application/ld\+json">(.*?)</script>', re.DOTALL)
 TT_LOC_RE = re.compile(r'location:\s*(\{"city".*?\}),\s*\n')
-TT_SKIP_RE = re.compile(r"run\s*(&|and|en)\s*bike|beach\s*challenge|estafette|trail\s*run|hemonight|social\s*ride|brevet|kampioenschap|championnat|wedstrijd|\bcup\b",
+TT_SKIP_RE = re.compile(r"\bBRM\s?\d{2,3}\b|audax|randonn?eur|run\s*(&|and|en)\s*bike|beach\s*challenge|estafette|trail\s*run|hemonight|social\s*ride|brevet|kampioenschap|championnat|wedstrijd|\bcup\b",
                         re.IGNORECASE)
 
 
